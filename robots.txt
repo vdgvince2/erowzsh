@@ -1,0 +1,144 @@
+User-agent: *
+Disallow: /fallback.php
+Disallow: /data/
+Disallow: /scripts/
+Disallow: /sh-img/
+
+# agressives bots.
+User-agent: Yandex
+Crawl-delay: 1
+
+User-agent: serpstatbot
+Disallow: /
+
+User-Agent: ImagesiftBot 
+Disallow: /
+
+User-Agent: SEOkicks 
+Disallow: /
+
+User-Agent: MediaPriceBot
+User-Agent: LompBot
+User-Agent: search.marginalia.nu
+User-agent: LCC
+User-agent: LivelapBot
+User-agent: webzio
+User-agent: Pingdom
+User-agent: PingdomPageSpeed
+User-agent: ScrapeBot
+User-agent: quillbot.com
+User-agent: PlagAware
+User-agent: PlagAwareBot
+User-agent: dataprovider
+User-agent: DnBCrawler
+User-agent: ktor-client
+User-agent: Impressumscrawler
+User-agent: iaskspider
+User-agent: parisbot
+User-agent: Spider
+User-agent: ComparorBot
+User-agent: Typhoeus
+User-agent: SpazioDati
+User-agent: shapbot
+User-agent: Photon
+User-agent: GuzzleHttp
+User-agent: Anthill
+User-agent: GammaLiveCrawlBot
+User-agent: IbouBot
+User-agent: Observer
+User-agent: HappyWing
+User-agent: ZanistaBot
+User-agent: EurolixBot
+User-agent: FarmerDuckyBot
+User-agent: barkrowler
+User-agent: scoopit-crawler
+User-agent: ChatGLM-Spider
+User-agent: netEstate NE Crawler
+User-agent: MegaIndex
+User-agent: MegaIndex.ru
+User-agent: megaindex.com
+User-agent: SkyworkSpider
+User-agent: SenutoBot
+User-agent: BluechipBacklinks
+User-agent: StractBot
+User-agent: EzoicBot
+User-agent: OpenindexSpider
+User-agent: SurdotlyBot
+User-agent: serpstatbot
+User-agent: MBCrawler
+User-agent: proximic
+User-agent: pyspider
+User-agent: IonCrawl
+User-agent: scoop.it
+User-agent: MojeekBot
+User-agent: CCBot
+User-agent: Timpibot
+User-agent: ZoominfoBot
+User-agent: Cincraw
+User-agent: SiteCheckerBotCrawler
+User-agent: YaK
+User-agent: SearchmetricsBot
+User-Agent: trendictionbot
+User-agent: GnowitNewsbot
+User-agent: WellKnownBot
+User-agent: Bytespider
+User-agent: HawaiiBot
+User-agent: Mediatoolkitbot
+User-agent: 360Spider
+User-agent: scoop.it
+User-agent: SeekportBot
+User-agent: SemanticScholarBot
+User-agent: VelenPublicWebCrawler
+User-agent: keys-so-bot
+User-agent: Brightbot
+User-agent: Exabot
+User-agent: Friendly_Crawler
+User-agent: FriendlyCrawler
+User-agent: GnowitNewsbot/2.0
+User-agent: UptimeRobot/2.0
+User-agent: AwarioRssBot
+User-agent: AwarioSmartBot
+User-agent: BrightEdge Crawler
+User-agent: GeedoProductSearch
+User-agent: TurnitinBot
+User-agent: Turnitin Robot
+User-agent: SeznamBot
+User-agent: DataForSeoBot
+User-agent: Neevabot
+User-agent: Screaming Frog SEO Spider
+User-agent: Qwantify
+User-agent: LamarkBot
+User-agent: yacybot
+User-agent: BLEXBot
+User-agent: colly
+User-agent: Nuclei
+User-agent: PetalBot
+User-agent: sogou
+User-agent: sogou spider
+User-agent: Sogou web spider
+User-agent: MJ12bot
+User-agent: DomainCrawler
+User-agent: GarlikCrawler
+User-agent: dotbot
+User-agent: SplitSignalBot
+User-agent: HTTrack
+User-agent: Scrapy
+User-agent: Cloudflare
+User-agent: ZoomBot
+User-agent: BrandVerity
+User-agent: SpiderLing
+User-agent: CloudFlare Always Online
+User-agent: CloudFlare AlwaysOnline
+User-agent: Cloudflare-Traffic-Manager
+User-agent: CloudFlare-AlwaysOnline
+User-agent: Buck
+User-agent: TigerBot
+User-agent: Cloudflare-AMP
+User-agent: ltx71
+User-agent: ltx71 - (http://ltx71.com/)
+User-agent: linkfluence
+User-agent: bot@linkfluence.net
+User-agent: evc-batch
+User-agent: zgrab
+User-agent: adscanner
+Disallow: /

@@ -1,0 +1,69 @@
+Country passed : ie
+KwId: 55168 | Country: IE | fcat
+Categorie from ebay: Adult Learning & University
+Categorie match :  ()
+Import OK for keyword_id=55168. Inserted 48 ads.
+OK: 'fcat' (0/500) => keyword_id=55168; KW not found #9565 supprimé.
+KwId: 59710 | Country: IE | lpg injectors
+Categorie from ebay: Fuel Injectors
+Categorie match :  ()
+Import OK for keyword_id=59710. Inserted 48 ads.
+OK: 'lpg injectors' (1/500) => keyword_id=59710; KW not found #9570 supprimé.
+KwId: 59711 | Country: IE | rifdet
+Skip: <= 5 products in JSON.
+OK: 'rifdet' (2/500) => keyword_id=59711; KW not found #9571 supprimé.
+KwId: 59712 | Country: IE | heater plug
+Categorie from ebay: Glow Plugs
+Categorie match :  ()
+Import OK for keyword_id=59712. Inserted 48 ads.
+OK: 'heater plug' (3/500) => keyword_id=59712; KW not found #9577 supprimé.
+KwId: 59713 | Country: IE | peavey bass bins
+Categorie from ebay: Wall Decals & Stickers
+Categorie match : Sports Stickers, Collections & Albums (390)
+Import OK for keyword_id=59713. Inserted 6 ads.
+OK: 'peavey bass bins' (4/500) => keyword_id=59713; KW not found #9580 supprimé.
+KwId: 59714 | Country: IE | nike liberty
+Categorie from ebay: Trainers
+Categorie match :  ()
+Import OK for keyword_id=59714. Inserted 48 ads.
+OK: 'nike liberty' (5/500) => keyword_id=59714; KW not found #9584 supprimé.
+KwId: 59715 | Country: IE | tx1 taxi
+Categorie from ebay: Brake Disc Rotors
+Categorie match :  ()
+Import OK for keyword_id=59715. Inserted 48 ads.
+OK: 'tx1 taxi' (6/500) => keyword_id=59715; KW not found #9586 supprimé.
+KwId: 59716 | Country: IE | 3d
+Categorie from ebay: 3D Printer Consumables
+Categorie match :  ()
+Import OK for keyword_id=59716. Inserted 48 ads.
+OK: '3d' (7/500) => keyword_id=59716; KW not found #9588 supprimé.
+KwId: 59717 | Country: IE | womens polo neck jumpers
+Categorie from ebay: Jumpers & Cardigans
+Categorie match :  ()
+Import OK for keyword_id=59717. Inserted 48 ads.
+OK: 'womens polo neck jumpers' (8/500) => keyword_id=59717; KW not found #9589 supprimé.
+KwId: 59718 | Country: IE | beneagles
+Categorie from ebay: Ornaments
+Categorie match :  ()
+Import OK for keyword_id=59718. Inserted 48 ads.
+OK: 'beneagles' (9/500) => keyword_id=59718; KW not found #9595 supprimé.
+KwId: 59719 | Country: IE | balconies
+Categorie from ebay: Railings
+Categorie match :  ()
+Import OK for keyword_id=59719. Inserted 48 ads.
+OK: 'balconies' (10/500) => keyword_id=59719; KW not found #9601 supprimé.
+KwId: 59720 | Country: IE | wallace sacks leather
+Categorie from ebay: Coats, Jackets & Waistcoats
+Categorie match :  ()
+Import OK for keyword_id=59720. Inserted 48 ads.
+OK: 'wallace sacks leather' (11/500) => keyword_id=59720; KW not found #9610 supprimé.
+KwId: 59721 | Country: IE | islamic silver
+Categorie from ebay: Islamic/Middle Eastern
+Categorie match :  ()
+Import OK for keyword_id=59721. Inserted 48 ads.
+OK: 'islamic silver' (12/500) => keyword_id=59721; KW not found #9614 supprimé.
+KwId: 59722 | Country: IE | plastic bowls
+Categorie from ebay: Party Tableware
+Categorie match : Decorative Cookware & Tableware (247)
+Import OK for keyword_id=59722. Inserted 48 ads.
+OK: 'plastic bowls' (13/500) => keyword_id=59722; KW not found #9625 supprimé.

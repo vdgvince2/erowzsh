@@ -1,0 +1,18 @@
+Country passed : be
+KwId: 39385 | Country: BE | sbeaute bien etre parfumsmaquillage
+Skip: <= 5 products in JSON.
+OK: 'sbeaute bien etre parfumsmaquillage' (0/500) => keyword_id=39385; KW not found #4805 supprimé.
+KwId: 39386 | Country: BE | sbebe puericulturealimentation pour bebe
+Skip: <= 5 products in JSON.
+OK: 'sbebe puericulturealimentation pour bebe' (1/500) => keyword_id=39386; KW not found #4806 supprimé.
+KwId: 39387 | Country: BE | perle verte
+Categorie from ebay: Perles
+Categorie match :  ()
+Import OK for keyword_id=39387. Inserted 48 ads.
+OK: 'perle verte' (2/500) => keyword_id=39387; KW not found #4808 supprimé.
+KwId: 39388 | Country: BE | buzz l a a a a clair
+Skip: <= 5 products in JSON.
+OK: 'buzz l a a a a clair' (3/500) => keyword_id=39388; KW not found #4809 supprimé.
+KwId: 39389 | Country: BE | sonia kashuk brush
+Skip: <= 5 products in JSON.
+OK: 'sonia kashuk brush' (4/500) => keyword_id=39389; KW not found #4810 supprimé.

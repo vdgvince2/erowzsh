@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishing Chairs | For Sale</title>
+    <meta name="description" content="26 Fishing Chairs for Sale in UK : discover the best prices for new, used and Refurbished items, easy to use.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .custom-checkbox:checked {
+            background-color: #3665f3;
+        }
+        .custom-checkbox:checked::after {
+            content: '✓';
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .price-range-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #ddd;
+            outline: none;
+        }
+        .price-range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #3665f3;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .star-rating i {
+            color: #ffb800;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .filter-section {
+            transition: all 0.3s ease;
+        }
+        .filter-content {
+            max-height: 1000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .filter-content.collapsed {
+            max-height: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-2xl font-bold text-blue-600">For Sale</a>
+                    <div class="relative hidden md:block">
+                        <select class="border border-gray-300 rounded-l-md px-3 py-2 bg-gray-100 text-sm">
+                            <option>All Categories</option>
+                            <option>Sporting Goods</option>
+                            <option>Fishing</option>
+                            <option>Outdoor Sports</option>
+                        </select>
+                    </div>
+                    <div class="relative flex-grow hidden md:block">
+                        <input type="text" placeholder="Search for anything" class="border border-gray-300 px-4 py-2 w-full rounded-r-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="absolute right-0 top-0 h-full px-4 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-sm hover:text-blue-600">Summary</a>
+                    <a href="#" class="text-sm hover:text-blue-600">Watchlist</a>
+                    <a href="#" class="text-sm hover:text-blue-600">My Account</a>
+                    <a href="#" class="text-sm hover:text-blue-600">Sell</a>
+                    <a href="#" class="text-sm hover:text-blue-600">Help & Contact</a>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-user-circle text-gray-500"></i>
+                        <span class="text-sm">Username</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden mt-3">
+                <div class="relative">
+                    <input type="text" placeholder="Search for anything" class="border border-gray-300 px-4 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button class="absolute right-0 top-0 h-full px-4 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 py-3 text-sm">
+        <div class="flex items-center space-x-2 text-gray-600">
+            <a href="#" class="hover:text-blue-600">Home</a>
+            <span>/</span>
+            <span>All</span>
+            <span>/</span>
+            <span class="font-medium">fishing chairs</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col md:flex-row">
+            <!-- Filters Sidebar -->
+            <div class="w-full md:w-1/4 lg:w-1/5 pr-4 mb-6">
+                <div class="bg-white rounded-lg shadow p-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="font-bold text-lg">Filters</h2>
+                        <button id="toggle-filters" class="md:hidden text-blue-600">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    
+                    <div id="filters-container">
+                        <!-- Price Range -->
+                        <div class="filter-section mb-6">
+                            <div class="filter-header flex justify-between items-center cursor-pointer">
+                                <h3 class="font-medium">Price</h3>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </div>
+                            <div class="filter-content">
+                                <div class="flex items-center space-x-2 mb-2 mt-3">
+                                    <span class="text-gray-500">£</span>
+                                    <input type="text" placeholder="Min" class="border border-gray-300 px-2 py-1 w-20 rounded text-sm">
+                                    <span class="text-gray-500">to</span>
+                                    <input type="text" placeholder="Max" class="border border-gray-300 px-2 py-1 w-20 rounded text-sm">
+                                </div>
+                                <input type="range" min="0" max="200" value="50" class="price-range-slider my-2">
+                                <div class="flex justify-between text-xs text-gray-500">
+                                    <span>£0</span>
+                                    <span>£200+</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Condition -->
+                        <div class="filter-section mb-6">
+                            <div class="filter-header flex justify-between items-center cursor-pointer" >
+                                <h3 class="font-medium">Condition</h3>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </div>
+                            <div class="filter-content">
+                                <div class="space-y-2 mt-3">
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>New</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Used</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Refurbished</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Brand -->
+                        <div class="filter-section mb-6">
+                            <div class="filter-header flex justify-between items-center cursor-pointer" >
+                                <h3 class="font-medium">Brand</h3>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </div>
+                            <div class="filter-content">
+                                <div class="space-y-2 mt-3">
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Fox</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Preston</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Korum</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Daiwa</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Delivery Options -->
+                        <div class="filter-section mb-6">
+                            <div class="filter-header flex justify-between items-center cursor-pointer" >
+                                <h3 class="font-medium">Delivery Options</h3>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </div>
+                            <div class="filter-content">
+                                <div class="space-y-2 mt-3">
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Free postage</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer">
+                                        <input type="checkbox" class="custom-checkbox appearance-none w-4 h-4 border border-gray-300 rounded checked:bg-blue-600 relative">
+                                        <span>Collection available</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Apply Filters</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Products List -->
+            <div class="w-full md:w-3/4 lg:w-4/5">
+                <div class="bg-white rounded-lg shadow p-4 mb-4">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <h1 class="text-xl font-bold mb-2 md:mb-0">Fishing chairs For sale in UK</h1>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-sm text-gray-600">1,234 results</span>
+                            <select class="border border-gray-300 px-3 py-1 rounded text-sm">
+                                <option>Best Match</option>
+                                <option>Price + Shipping: lowest first</option>
+                                <option>Price + Shipping: highest first</option>
+                                <option>Time: ending soonest</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                    <!-- Product Card 1 -->
+                     
+                    <a href="https://www.ebay.co.uk/sch/i.html?_nkw=fishing+chairs&_sacat=0&_from=R40&rt=nc&LH_ItemCondition=3000&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339107427&customid=fishingchairs&toolid=10001&mkevt=1">
+                    <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
+                        <div class="relative">
+                            <img src="images/f_1.png" alt="Fishing Chair" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">HOT</div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-medium text-sm mb-1 line-clamp-2">Fox Adjustable Fishing Chair with Footplate and Side Tray - Comfortable Angling</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(124)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg">£89.99</span>
+                                <span class="text-xs text-gray-500">Free postage</span>
+                            </div>
+                            <div class="mt-2 text-xs text-gray-500">Brand: Fox</div>
+                            <div class="mt-2 text-xs text-green-600">Only 3 left!</div>
+                        </div>
+                    </div>
+                    </a>
+                    
+                    <!-- Product Card 2 -->
+                    <a href="https://www.ebay.co.uk/sch/i.html?_nkw=fishing+chairs&_sacat=0&_from=R40&rt=nc&LH_ItemCondition=3000&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339107427&customid=fishingchairs&toolid=10001&mkevt=1">
+                    <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
+                        <div class="relative">
+                            <img src="images/f_2.png" alt="Fishing Chair" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-medium text-sm mb-1 line-clamp-2">Korum Accessory Chair Compact & Lightweight Fishing Chair with Carry Bag</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(87)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg">£64.99</span>
+                                <span class="text-xs text-gray-500">+ £5.99 postage</span>
+                            </div>
+                            <div class="mt-2 text-xs text-gray-500">Brand: Korum</div>
+                            <div class="mt-2 text-xs text-blue-600">Eligible for free collection</div>
+                        </div>
+                    </div>
+                    </a>
+                    
+                    <!-- Product Card 3 -->
+                    <a href="https://www.ebay.co.uk/sch/i.html?_nkw=fishing+chairs&_sacat=0&_from=R40&rt=nc&LH_ItemCondition=3000&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339107427&customid=fishingchairs&toolid=10001&mkevt=1">
+                    <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
+                        <div class="relative">
+                            <img src="images/f_3.png" alt="Fishing Chair" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">DEAL</div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-medium text-sm mb-1 line-clamp-2">Preston Innovations Absolute Fishing Chair with 4 Legs & Side Tray - New</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(215)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg">£129.99</span>
+                                <span class="text-xs text-gray-500">Free postage</span>
+                            </div>
+                            <div class="mt-2 text-xs text-gray-500">Brand: Preston</div>
+                            <div class="mt-2 text-xs text-green-600">10+ sold</div>
+                        </div>
+                    </div>
+                    </a>
+                    
+                    <!-- Product Card 4 -->
+                    <a href="https://www.ebay.co.uk/sch/i.html?_nkw=fishing+chairs&_sacat=0&_from=R40&rt=nc&LH_ItemCondition=3000&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339107427&customid=fishingchairs&toolid=10001&mkevt=1"> 
+                    <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
+                        <div class="relative">
+                            <img src="images/f_4.png" alt="Fishing Chair" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-medium text-sm mb-1 line-clamp-2">Daiwa Mission Fishing Chair with Adjustable Legs & Carry Strap - Comfortable</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(156)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg">£79.99</span>
+                                <span class="text-xs text-gray-500">+ £6.99 postage</span>
+                            </div>
+                            <div class="mt-2 text-xs text-gray-500">Brand: Daiwa</div>
+                            <div class="mt-2 text-xs text-red-600">Ending soon</div>
+                        </div>
+                    </div>
+                    </a>
+
+                    <!-- Product Card 5 -->
+                    <a href="https://www.ebay.co.uk/sch/i.html?_nkw=fishing+chairs&_sacat=0&_from=R40&rt=nc&LH_ItemCondition=3000&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339107427&customid=fishingchairs&toolid=10001&mkevt=1">
+                    <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
+                        <div class="relative">
+                            <img src="images/f_5.png" alt="Fishing Chair" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-medium text-sm mb-1 line-clamp-2">Nash Scope Fishing Chair with Footplate and Side Tray - Comfortable Design</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(42)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg">£109.99</span>
+                                <span class="text-xs text-gray-500">Free postage</span>
+                            </div>
+                            <div class="mt-2 text-xs text-gray-500">Brand: Nash</div>
+                            <div class="mt-2 text-xs text-blue-600">Make an offer</div>
+                        </div>
+                    </div>
+                    </a>
+                    
+                    <!-- Product Card 6 -->
+                    <a href="https://www.ebay.co.uk/sch/i.html?_nkw=fishing+chairs&_sacat=0&_from=R40&rt=nc&LH_ItemCondition=3000&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339107427&customid=fishingchairs&toolid=10001&mkevt=1"> 
+                    <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
+                        <div class="relative">
+                            <img src="images/f_6.png" alt="Fishing Chair" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">NEW</div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-medium text-sm mb-1 line-clamp-2">Sonik SKCS Compact Fishing Chair with Carry Bag - Lightweight & Portable</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(31)</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-lg">£49.99</span>
+                                <span class="text-xs text-gray-500">+ £4.99 postage</span>
+                            </div>
+                            <div class="mt-2 text-xs text-gray-500">Brand: Sonik</div>
+                            <div class="mt-2 text-xs text-green-600">5+ sold</div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+                
+                <!-- Pagination -->
+                <div class="flex justify-center mt-8">
+                    <nav class="flex items-center space-x-1">
+                        <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="px-3 py-1 rounded border border-blue-600 bg-blue-600 text-white">1</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">2</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">3</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">4</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">5</button>
+                        <span class="px-2">...</span>
+                        <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">20</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 mt-8">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold mb-4">Buy</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-600">Registration</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Money Back Guarantee</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Bidding & buying help</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Stores</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Sell</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-600">Start selling</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Learn to sell</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Business sellers</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Seller Centre</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Tools & apps</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-600">Developers</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Security centre</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Site map</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Official time</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Stay connected</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="text-sm">
+                        <p>Download our app</p>
+                        <div class="flex space-x-2 mt-2">
+                            <a href="#"><img src="https://ir.ebaystatic.com/cr/v/c1/app-store-badge-en.svg" alt="App Store" class="h-10"></a>
+                            <a href="#"><img src="https://ir.ebaystatic.com/cr/v/c1/google-play-badge-en.svg" alt="Google Play" class="h-10"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-sm text-gray-600">
+                <p>Copyright © 1995-2023 For Sale Inc. All Rights Reserved. <a href="#" class="hover:text-blue-600">Accessibility</a>, <a href="#" class="hover:text-blue-600">User Agreement</a>, <a href="#" class="hover:text-blue-600">Privacy</a>, <a href="#" class="hover:text-blue-600">Cookies</a>, <a href="#" class="hover:text-blue-600">Do not sell my personal information</a> and <a href="#" class="hover:text-blue-600">AdChoice</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Price range slider functionality
+            const priceSlider = document.querySelector('.price-range-slider');
+            if (priceSlider) {
+                priceSlider.addEventListener('input', function() {
+                    // You could update the min/max inputs here
+                });
+            }
+            
+            // Mobile menu toggle could be added here
+            // Product card click handlers
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // In a real app, this would navigate to the product page
+                    console.log('Product clicked');
+                });
+            });
+            
+            // Toggle filters on mobile
+            const toggleFiltersBtn = document.getElementById('toggle-filters');
+            const filtersContainer = document.getElementById('filters-container');
+            let filtersVisible = true;
+            
+            if (toggleFiltersBtn && filtersContainer) {
+                // On mobile, start with filters collapsed
+                if (window.innerWidth < 768) {
+                    filtersContainer.style.display = 'none';
+                    filtersVisible = false;
+                    toggleFiltersBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                }
+                
+                toggleFiltersBtn.addEventListener('click', function() {
+                    if (filtersVisible) {
+                        filtersContainer.style.display = 'none';
+                        toggleFiltersBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    } else {
+                        filtersContainer.style.display = 'block';
+                        toggleFiltersBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    }
+                    filtersVisible = !filtersVisible;
+                });
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    filtersContainer.style.display = 'block';
+                    toggleFiltersBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    filtersVisible = true;
+                } else if (!filtersVisible) {
+                    filtersContainer.style.display = 'none';
+                }
+            });
+        });
+    
+    </script>
+</body>
+</html>

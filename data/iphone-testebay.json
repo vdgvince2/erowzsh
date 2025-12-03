@@ -1,0 +1,1736 @@
+{
+    "href": "https://api.ebay.com/buy/browse/v1/item_summary/search?q=phone&limit=20&offset=0",
+    "total": 1687682,
+    "next": "https://api.ebay.com/buy/browse/v1/item_summary/search?q=phone&limit=20&offset=20",
+    "limit": 20,
+    "offset": 0,
+    "itemSummaries": [
+        {
+            "itemId": "v1|126763041324|427833883778",
+            "title": "Apple IPhone 11 A2111 64GB 128GB Unlocked Verizon, AT&T, T-Mobile All carriers",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=126763041324",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/fgEAAeSw-Ixo78nF/s-l225.jpg"
+            },
+            "price": {
+                "value": "169.89",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C126763041324%7C427833883778",
+            "seller": {
+                "username": "nikatronics",
+                "feedbackPercentage": "99.0",
+                "feedbackScore": 61298
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/fgEAAeSw-Ixo78nF/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/126763041324?_skw=phone&hash=item1d83aa822c:g:fgEAAeSw-Ixo78nF&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UbuLNcpdaFLf7sSL3ucAzzJVtS1yD4Q2AOun%2B8TpWa75bS%2BZOvk0JKUXbOrMkaSk--af4XE82jOIGqH7ZZqzGuKXI%2FGKC83fTMKiqIRGhTWP6b2%2BWrTnoFInf2IOKl1fhezZp8yM%2FHkfezRwe9zueT6%2BnrMb7%2BXfGkGOdjCSABAeCUmnsrMvhab9c1ryR0O9kkjCKyhLSHtDWT8m5IQ4k4qM7OflFL%2BKk36cLxK%2FdXGO%2FBFjOgV%2FCi%2BOOHYywyTicYeoWMR8NhhevcxghJLa7t%2F",
+            "itemLocation": {
+                "postalCode": "488**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/8QEAAOSwi3ZnK4Bw/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/tBcAAOSwW2JoSC8U/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/RGMAAOSwdEJoSC8Z/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/oQgAAOSw1DNoSC8U/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/mNQAAOSwhnBoSC8W/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/1psAAOSwFCRoSC8e/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/ATYAAOSwKLRoSC8Z/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/iucAAOSw1XBoSC8j/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/4RsAAOSwc5FoSC8d/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/LxoAAOSwfd9oSC8U/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/BGMAAOSw~F1oSC8e/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/6usAAOSwydloSC8V/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/21kAAOSw0vtoSC8Z/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "126763041324",
+            "availableCoupons": false,
+            "itemOriginDate": "2024-11-06T14:51:51.000Z",
+            "itemCreationDate": "2024-11-06T14:51:51.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|167822874266|0",
+            "title": "UNLOCKED Smartphone - Android",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/b1kAAeSwIY9o2fUT/s-l225.jpg"
+            },
+            "price": {
+                "value": "29.99",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C167822874266%7C0",
+            "seller": {
+                "username": "lqdtechoutlet",
+                "feedbackPercentage": "99.7",
+                "feedbackScore": 5662
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/b1kAAeSwIY9o2fUT/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/167822874266?_skw=phone&hash=item271305d69a:g:b1kAAeSwIY9o2fUT&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UZ%2FGgcXvogoSn00TST%2B%2Fp7%2BEkaUAIQFwwMYUuEO5D3%2FxEX59y7xe%2BsTlxutO9H%2BGAudJI4kyWmKeb%2Bf80sDCoD5p048lakIyJcnMpFln4R3QNPymW33jtwGcmBgej%2FyncvIauIU6cUT%2BokjJjgM4RX2K80n7Q7%2Be8IWmEJIBjb9t%2BKN3fC4qJyZkcm%2FEQ3h0kC%2BqvtQyHV9oTKNh8g13ZBbA0r%2BBOe%2BfGvJASOvMiU5cvebC9wkf90L9zsi65Jm7yPMiRj97f9a6Ap%2BGqhu72Qy",
+            "itemLocation": {
+                "postalCode": "983**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/rDkAAeSwVvpo2fUU/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/Gi8AAeSweIJo2fUT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/qukAAeSwgOJo2fUT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/ClMAAeSwZp9o2fUT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/J0MAAeSwrXFo2fUT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/Ck8AAeSwkDxo2fUT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/-i8AAeSwkZ1o2fUU/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/IdcAAeSwqtdo2fUT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/LccAAeSwDPBo2fUT/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "167822874266",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-09-29T02:56:01.000Z",
+            "itemCreationDate": "2025-09-29T02:56:01.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|225970676295|525594915113",
+            "title": "Apple iPhone 12, 64/128/256GB -  Unlocked - Used Very Good - All colors",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=225970676295",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/t4wAAOSwg4hkCgdI/s-l225.jpg"
+            },
+            "price": {
+                "value": "219.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C225970676295%7C525594915113",
+            "seller": {
+                "username": "electronicdea1s",
+                "feedbackPercentage": "98.2",
+                "feedbackScore": 18961
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/t4wAAOSwg4hkCgdI/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "16041709972",
+            "itemWebUrl": "https://www.ebay.com/itm/225970676295?_skw=phone&hash=item349ce6e247:g:t4wAAOSwg4hkCgdI&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UbjdUCC7Wndp%2FOEEY%2BTUj7Nl64k5kd%2BQERCMdDuU0jqk7AFuIcHNIauETqoLf3RkFr004MFUMtHZJv%2FY6PK7Z2te3fP8qmXmg7g3fj%2F6DpfJY7FU9yItZ9BeTaOckD%2B%2F4LFQhayIt84xukkQ42hYkLRDhVe8vl5W%2BPDO4z6JitHZXWywi1QML2My6djo4%2BeYFo9pbNicAmKgIcZRuqeqosENBnXoaT%2FcBd79K06dfrnG3SjAkeW0iyNvg%2B3QwS33tBQC9%2F%2B2zgm%2Bcvae5AyEZi2",
+            "itemLocation": {
+                "postalCode": "112**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/xfQAAOSwPHRkCgdY/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/xZYAAOSwL9BkCg7v/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/yKsAAOSw2MZkCg7v/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/g8AAAOSwt0xkCg~R/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/Ip8AAOSwBSxkCg~R/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/-okAAOSw0w9kCg~R/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/PsEAAOSwU-BkCg~R/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "225970676295",
+            "availableCoupons": false,
+            "itemOriginDate": "2024-01-22T19:19:29.000Z",
+            "itemCreationDate": "2024-01-22T19:19:29.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|187600783379|0",
+            "title": "BLU C5L MAX  (Unlocked) Black 16GB 2GB RAM  5.7\" Quad-Core  C0175WWBLA Android",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/ENkAAeSw9NpooPNp/s-l225.jpg"
+            },
+            "price": {
+                "value": "39.99",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C187600783379%7C0",
+            "seller": {
+                "username": "percomart",
+                "feedbackPercentage": "97.4",
+                "feedbackScore": 1274
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/ENkAAeSw9NpooPNp/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/187600783379?_skw=phone&hash=item2bade0c813:g:ENkAAeSw9NpooPNp&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UZxkMa9nrxKy%2FxP54UUFISvwFyCDqiYyTK7mTfjGyKaBnOSOCzk7iBcjnLlu%2FZR3Ir9XnilLLY7CG83O%2FGhg168rv9WhNEb%2B6ld5J4wovaUcF%2BnJ5jD%2F5sOOjBGG%2B5rJeW3B41DAuCRCmv0PRCbHvsyI%2F710cakqPsnEAR5zjUOtI8kG5m5gdMwIerDwCS8VgcstAED5gfg73ppnOTUATR16UC40NI9BQzyFk6f1iQNRx1eGHjS2xwc6IhhKLqXwXAdhqUJUrG7d5ttB7nb7xAd",
+            "itemLocation": {
+                "postalCode": "921**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/F~IAAeSwKe1ooPOl/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/RocAAeSwGX5ooPOl/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/GM8AAeSwMq9ooPOl/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/qTsAAeSwTotooPOl/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/B8wAAeSwmANooPOl/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/M3EAAeSw9c9ooPOl/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "187600783379",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-08-16T21:14:39.000Z",
+            "itemCreationDate": "2025-09-27T00:55:54.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|167898822601|0",
+            "title": "Android Smartphone Cellphone",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/pMMAAeSwdiFpCrxD/s-l225.jpg"
+            },
+            "price": {
+                "value": "19.99",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C167898822601%7C0",
+            "seller": {
+                "username": "lqdtechoutlet",
+                "feedbackPercentage": "99.7",
+                "feedbackScore": 5662
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/pMMAAeSwdiFpCrxD/s-l960.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/167898822601?_skw=phone&hash=item27178cb7c9:g:pMMAAeSwdiFpCrxD",
+            "itemLocation": {
+                "postalCode": "983**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/mT4AAeSwUBppBmIt/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/howAAeSwAJZpBmIt/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/h4IAAeSwrGBpBmIt/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/CiAAAeSwiG5pBmIt/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/BocAAeSwF69pBmIt/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/9tAAAeSwTTNpBmIt/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/-TsAAeSwvKFpBmIt/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "167898822601",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-11-01T19:42:03.000Z",
+            "itemCreationDate": "2025-11-01T19:42:03.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|256754180033|557197034005",
+            "title": "Samsung Galaxy S24 Ultra 512GB S928U Unlocked - Excellent",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=256754180033",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/DksAAeSwmIdoL3Jv/s-l225.jpg"
+            },
+            "price": {
+                "value": "627.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C256754180033%7C557197034005",
+            "seller": {
+                "username": "cellfeee",
+                "feedbackPercentage": "98.9",
+                "feedbackScore": 140888
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "1419.99",
+                    "currency": "USD"
+                },
+                "discountPercentage": "56",
+                "discountAmount": {
+                    "value": "792.00",
+                    "currency": "USD"
+                },
+                "priceTreatment": "LIST_PRICE"
+            },
+            "condition": "Excellent - Refurbished",
+            "conditionId": "2010",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/DksAAeSwmIdoL3Jv/s-l640.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "7064930794",
+            "itemWebUrl": "https://www.ebay.com/itm/256754180033?_skw=phone&hash=item3bc7bddfc1:g:DksAAeSwmIdoL3Jv",
+            "itemLocation": {
+                "postalCode": "111**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/7-gAAeSwAK1oL3Jv/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "256754180033",
+            "availableCoupons": false,
+            "itemOriginDate": "2024-12-17T17:36:21.000Z",
+            "itemCreationDate": "2024-12-17T17:36:21.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|335656354149|545173298228",
+            "title": "120W 4-Port USB C Fast Wall Charger Block For All Cell Phone iPad lot",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=335656354149",
+            "leafCategoryIds": [
+                "123417"
+            ],
+            "categories": [
+                {
+                    "categoryId": "123417",
+                    "categoryName": "Chargers & Cradles"
+                },
+                {
+                    "categoryId": "9394",
+                    "categoryName": "Cell Phone Accessories"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/MTIAAOSw34Nm0sjK/s-l225.jpg"
+            },
+            "price": {
+                "value": "461.36",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C335656354149%7C545173298228",
+            "seller": {
+                "username": "wonderland_883",
+                "feedbackPercentage": "98.3",
+                "feedbackScore": 43418
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "576.70",
+                    "currency": "USD"
+                },
+                "discountPercentage": "20",
+                "discountAmount": {
+                    "value": "115.34",
+                    "currency": "USD"
+                },
+                "priceTreatment": "MARKDOWN"
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/MTIAAOSw34Nm0sjK/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-18T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/335656354149?_skw=phone&hash=item4e26ad8165:g:MTIAAOSw34Nm0sjK",
+            "itemLocation": {
+                "postalCode": "191**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/zHwAAOSwauNm0sXs/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/BM0AAOSwqIFl~YKJ/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/Y9sAAOSwgmll~YKO/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/k2gAAOSwuptl~YKM/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/g3IAAOSwMg1mVbUV/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/DlMAAOSwTMZl~YKU/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/B9IAAOSwEHhmVbUQ/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/hj8AAOSwCzZl~YKa/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/jQcAAOSwA79l~YKD/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "335656354149",
+            "availableCoupons": false,
+            "itemOriginDate": "2024-11-05T07:02:12.000Z",
+            "itemCreationDate": "2024-11-05T07:02:12.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|356605660694|625572168483",
+            "title": "Apple iPhone 16 Pro 128GB Unlocked Very Good Condition",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=356605660694",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/mSMAAeSwZ6JnvQH9/s-l225.jpg"
+            },
+            "price": {
+                "value": "655.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C356605660694%7C625572168483",
+            "seller": {
+                "username": "directauth",
+                "feedbackPercentage": "98.8",
+                "feedbackScore": 39178
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "937.99",
+                    "currency": "USD"
+                },
+                "discountPercentage": "30",
+                "discountAmount": {
+                    "value": "282.00",
+                    "currency": "USD"
+                },
+                "priceTreatment": "LIST_PRICE"
+            },
+            "condition": "Very Good - Refurbished",
+            "conditionId": "2020",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/mSMAAeSwZ6JnvQH9/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "22071465404",
+            "itemWebUrl": "https://www.ebay.com/itm/356605660694?_skw=phone&hash=item53075a8e16:g:mSMAAeSwZ6JnvQH9",
+            "itemLocation": {
+                "postalCode": "750**",
+                "country": "US"
+            },
+            "adultOnly": false,
+            "legacyItemId": "356605660694",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-02-24T23:30:23.000Z",
+            "itemCreationDate": "2025-02-24T23:30:23.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|167404741783|0",
+            "title": "One RANDOM Smartphone - Working! |",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/F24AAOSwu1Jn5Ciw/s-l225.jpg"
+            },
+            "price": {
+                "value": "18.99",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C167404741783%7C0",
+            "seller": {
+                "username": "lqdtechoutlet",
+                "feedbackPercentage": "99.7",
+                "feedbackScore": 5662
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "19.99",
+                    "currency": "USD"
+                },
+                "discountPercentage": "5",
+                "discountAmount": {
+                    "value": "1.00",
+                    "currency": "USD"
+                },
+                "priceTreatment": "MARKDOWN"
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/F24AAOSwu1Jn5Ciw/s-l1200.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/167404741783?_skw=phone&hash=item26fa19a497:g:F24AAOSwu1Jn5Ciw",
+            "itemLocation": {
+                "postalCode": "983**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/uXYAAOSwLjln5Ci8/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/L~kAAOSw7A9n5Cjx/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/w~4AAOSwHVtn5Cia/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/QtIAAOSwKzVn5Cju/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "167404741783",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-03-26T16:25:53.000Z",
+            "itemCreationDate": "2025-03-26T16:25:53.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|185698601733|694403158216",
+            "title": "Samsung Galaxy S21 5G SM-G991U 128GB 256GB Unlocked Very Good Refurbished",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=185698601733",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/8fUAAOSwKQFi5E5W/s-l225.jpg"
+            },
+            "price": {
+                "value": "135.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C185698601733%7C694403158216",
+            "seller": {
+                "username": "cellularstream",
+                "feedbackPercentage": "97.7",
+                "feedbackScore": 162294
+            },
+            "condition": "Very Good - Refurbished",
+            "conditionId": "2020",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/8fUAAOSwKQFi5E5W/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/185698601733?_skw=phone&hash=item2b3c7fcb05:g:8fUAAOSwKQFi5E5W",
+            "itemLocation": {
+                "postalCode": "600**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/HccAAOSwNzNizIEH/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/XiQAAOSwXAxizIFN/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/frEAAOSw7-JizIGC/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/5k4AAOSwPwRizIGo/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/~iUAAOSw-XlizIFH/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/gr4AAOSwfjJizIFw/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/NJoAAOSw8jpizIGY/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/~6oAAOSwPDVizIIN/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/qzEAAOSwLoti5E5j/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "185698601733",
+            "availableCoupons": false,
+            "itemOriginDate": "2022-12-14T19:48:32.000Z",
+            "itemCreationDate": "2022-12-14T19:48:32.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|355095070816|624350343870",
+            "title": "Apple iPhone 14 128GB Network Unlocked Very Good Condition",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=355095070816",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/xSYAAOSwLd5lJIrP/s-l225.jpg"
+            },
+            "price": {
+                "value": "269.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C355095070816%7C624350343870",
+            "seller": {
+                "username": "directauth",
+                "feedbackPercentage": "98.8",
+                "feedbackScore": 39178
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "699.00",
+                    "currency": "USD"
+                },
+                "discountPercentage": "61",
+                "discountAmount": {
+                    "value": "429.01",
+                    "currency": "USD"
+                },
+                "priceTreatment": "LIST_PRICE"
+            },
+            "condition": "Very Good - Refurbished",
+            "conditionId": "2020",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/xSYAAOSwLd5lJIrP/s-l1200.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "20056257992",
+            "itemWebUrl": "https://www.ebay.com/itm/355095070816?_skw=phone&hash=item52ad50c860:g:xSYAAOSwLd5lJIrP",
+            "itemLocation": {
+                "postalCode": "750**",
+                "country": "US"
+            },
+            "adultOnly": false,
+            "legacyItemId": "355095070816",
+            "availableCoupons": false,
+            "itemOriginDate": "2023-10-09T23:19:15.000Z",
+            "itemCreationDate": "2023-10-09T23:19:15.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|125654714303|426681764836",
+            "title": "Apple iPhone 5s - 16/32/64GB - ALL COLORS Unlocked/AT&T/T-Mobile A1453",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=125654714303",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/uj4AAOSw8X1jkqCg/s-l225.jpg"
+            },
+            "price": {
+                "value": "37.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C125654714303%7C426681764836",
+            "seller": {
+                "username": "smartsalesusa",
+                "feedbackPercentage": "98.8",
+                "feedbackScore": 12022
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/uj4AAOSw8X1jkqCg/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "804675902",
+            "itemWebUrl": "https://www.ebay.com/itm/125654714303?_skw=phone&hash=item1d419ac7bf:g:uj4AAOSw8X1jkqCg",
+            "itemLocation": {
+                "postalCode": "212**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/hfoAAOSw1dVjkqCh/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "125654714303",
+            "availableCoupons": false,
+            "itemOriginDate": "2022-12-09T02:44:38.000Z",
+            "itemCreationDate": "2022-12-09T02:44:38.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|256460585805|556609999487",
+            "title": "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Good",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=256460585805",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/am8AAeSwvzdoL7An/s-l225.jpg"
+            },
+            "price": {
+                "value": "429.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C256460585805%7C556609999487",
+            "seller": {
+                "username": "cellfeee",
+                "feedbackPercentage": "98.9",
+                "feedbackScore": 140888
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "1199.99",
+                    "currency": "USD"
+                },
+                "discountPercentage": "64",
+                "discountAmount": {
+                    "value": "770.00",
+                    "currency": "USD"
+                },
+                "priceTreatment": "LIST_PRICE"
+            },
+            "condition": "Good - Refurbished",
+            "conditionId": "2030",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/am8AAeSwvzdoL7An/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "26059055049",
+            "itemWebUrl": "https://www.ebay.com/itm/256460585805?_skw=phone&hash=item3bb63dfb4d:g:am8AAeSwvzdoL7An",
+            "itemLocation": {
+                "postalCode": "111**",
+                "country": "US"
+            },
+            "adultOnly": false,
+            "legacyItemId": "256460585805",
+            "availableCoupons": false,
+            "itemOriginDate": "2024-03-27T22:24:53.000Z",
+            "itemCreationDate": "2024-03-27T22:24:53.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|397235072607|0",
+            "title": "Apple iPhone 12 mini Product Red",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/LX8AAeSw4tVpDBip/s-l225.jpg"
+            },
+            "price": {
+                "value": "140.00",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C397235072607%7C0",
+            "seller": {
+                "username": "jakit_1218",
+                "feedbackPercentage": "0.0",
+                "feedbackScore": 17
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/LX8AAeSw4tVpDBip/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-18T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE",
+                "BEST_OFFER"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/397235072607?_skw=phone&hash=item5c7d0e2e5f:g:LX8AAeSw4tVpDBip&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UZtmAf8N0RPWEsJYIoWp8HIiCBeWhZRiqZHpxaZra02WWQDpViU8bOfJkwtPe7uORlKO72mcR1FCO5Unv1IDU1FyC%2BgdfaEZ2UGt83OX%2BaHppLxB13yJopdOsw5uG2t2N6gH4Hz30UXS1mkIPFxPZvd7g4krHEnWM%2B17hmA0Ad9SnJQdxa%2FUQ5B6%2B4xrJlpbV9erB2YefJc62G4Vh0lh%2FIzwNlIKSKzmSsYY3xLUAXj1RcNEBxWMaRqLdxAoPE8sQtb3I5tQmAbzhMfC5e815WU",
+            "itemLocation": {
+                "postalCode": "297**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/ddUAAeSwZAdpDBi1/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/djYAAeSw8cBpDBjA/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/Aj0AAeSw2FtpDBjS/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/hdUAAeSwO8tpDBjo/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/pW8AAeSwSpdpDBj0/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/HtwAAeSwNIdpDBkD/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "397235072607",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-11-06T03:44:50.000Z",
+            "itemCreationDate": "2025-11-06T18:46:22.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|397089064558|0",
+            "title": "Motorola Moto G04 | 128GB + 4GB RAM, *International* - Concord Black",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/7KkAAeSwHRhpDMgn/s-l225.jpg"
+            },
+            "price": {
+                "value": "99.99",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C397089064558%7C0",
+            "seller": {
+                "username": "tradeportdirect",
+                "feedbackPercentage": "98.0",
+                "feedbackScore": 62248
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "96.72",
+                    "currency": "USD"
+                },
+                "discountPercentage": "-3",
+                "discountAmount": {
+                    "value": "-3.27",
+                    "currency": "USD"
+                },
+                "priceTreatment": "LIST_PRICE"
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/7KkAAeSwHRhpDMgn/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE",
+                "BEST_OFFER"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/397089064558?_skw=phone&hash=item5c745a466e:g:7KkAAeSwHRhpDMgn&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UaiXVPAaQKhVcJMLaXE9XYzN6GNAR46qcpxUCruMcTyOh3CBCKKr4cT9dhbu%2BkZIVoB2%2Fk%2Bni4K6uLfFu6ETnVi7HIoU7FjGrbrLd4lE%2BzmFFdM4CvtcOlPTBlix9W9uwuzqDvdvEd9iQEovJrccUAtRhn%2FV8%2F54hv57lMZIwhYfsvQNMmO6sFct5f8kMBq2cJ3zcqghG4ozYI1nm7%2BT6Ipa8BriLYm0R8--BCYFpaFrCWwabV6x72dXukB6L4FoiOkRjR8l718kmPkQMDPv69d",
+            "itemLocation": {
+                "postalCode": "038**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/tvEAAeSwomRpDMgn/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "397089064558",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-05-14T13:06:19.000Z",
+            "itemCreationDate": "2025-09-24T18:05:35.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|286280034824|588418375445",
+            "title": "Samsung Galaxy S10 S10e G973U Unlocked T-Mobile TRADE IN PROMO ONLY",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=286280034824",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/zesAAOSwNClnfUix/s-l225.jpg"
+            },
+            "price": {
+                "value": "129.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C286280034824%7C588418375445",
+            "seller": {
+                "username": "mobile-us",
+                "feedbackPercentage": "99.0",
+                "feedbackScore": 11307
+            },
+            "condition": "Excellent - Refurbished",
+            "conditionId": "2010",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/zesAAOSwNClnfUix/s-l640.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-12T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "https://www.ebay.com/itm/286280034824?_skw=phone&hash=item42a79eaa08:g:zesAAOSwNClnfUix&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UYIic3bFIBbMYCa6wn1HxmqxB85okFWqg6Jnp2zCEPglDeHP34Sdw%2B6HwwNdonBUwc1Q0juVvI23fdchYIQIjhEA1l%2F0IgLdayG1DeC7fwtma1my5%2FVJplXHcU9IwNG5eigiq3050yl4xhF2GtzdpHvZeoHqAipYDOo4ZKOXcamNQRYsn82e0KHiGPmRkwAx2V4ZJpadKj1sEdrcfChNNkwGw7nBfBqvqQipQG5xlfGq29HKQSdrotPHeD%2Fsukh3DTqsgEYhJkqFOFknaAphoPy",
+            "itemLocation": {
+                "postalCode": "600**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/MtYAAOSw4IRnfUir/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/cPYAAOSwtipnfUir/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/IfQAAOSw2~ZnfUir/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/cKAAAOSwWodnfUir/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/WqgAAOSwarpnfUir/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/bDsAAOSwGVlnfUir/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/8K8AAOSwrh9nfUis/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/txIAAOSwxHpnfUix/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/1WEAAOSwt0RnfUix/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/TCAAAOSwADpnfUix/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/rAgAAOSwHh5nfUix/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/GfEAAOSwGXVnfUiy/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/~o8AAOSw~B5nfUix/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "286280034824",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-01-23T17:42:53.000Z",
+            "itemCreationDate": "2025-01-23T17:42:53.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|357518005199|626152243133",
+            "title": "Apple iPhone 16e 128GB Unlocked Excellent Condition",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=357518005199",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/FYQAAeSwuq5owxzR/s-l225.jpg"
+            },
+            "price": {
+                "value": "384.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C357518005199%7C626152243133",
+            "seller": {
+                "username": "directauth",
+                "feedbackPercentage": "98.8",
+                "feedbackScore": 39178
+            },
+            "marketingPrice": {
+                "originalPrice": {
+                    "value": "599.99",
+                    "currency": "USD"
+                },
+                "discountPercentage": "36",
+                "discountAmount": {
+                    "value": "215.00",
+                    "currency": "USD"
+                },
+                "priceTreatment": "LIST_PRICE"
+            },
+            "condition": "Excellent - Refurbished",
+            "conditionId": "2010",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/FYQAAeSwuq5owxzR/s-l1200.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "10075287556",
+            "itemWebUrl": "https://www.ebay.com/itm/357518005199?_skw=phone&hash=item533dbbd3cf:g:FYQAAeSwuq5owxzR",
+            "itemLocation": {
+                "postalCode": "750**",
+                "country": "US"
+            },
+            "adultOnly": false,
+            "legacyItemId": "357518005199",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-08-25T21:32:36.000Z",
+            "itemCreationDate": "2025-08-25T21:32:36.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|356227859677|625224544960",
+            "title": "Apple iPhone 15 Pro Max A2849 256GB Unlocked Very Good",
+            "itemGroupHref": "https://api.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=356227859677",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/YX8AAOSwuilm4fHk/s-l225.jpg"
+            },
+            "price": {
+                "value": "619.99",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C356227859677%7C625224544960",
+            "seller": {
+                "username": "directauth",
+                "feedbackPercentage": "98.8",
+                "feedbackScore": 39178
+            },
+            "condition": "Very Good - Refurbished",
+            "conditionId": "2020",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/YX8AAOSwuilm4fHk/s-l1200.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    },
+                    "minEstimatedDeliveryDate": "2025-11-08T08:00:00.000Z",
+                    "maxEstimatedDeliveryDate": "2025-11-10T08:00:00.000Z"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "epid": "20062769681",
+            "itemWebUrl": "https://www.ebay.com/itm/356227859677?_skw=phone&hash=item52f0d5c4dd:g:YX8AAOSwuilm4fHk",
+            "itemLocation": {
+                "postalCode": "750**",
+                "country": "US"
+            },
+            "adultOnly": false,
+            "legacyItemId": "356227859677",
+            "availableCoupons": false,
+            "itemOriginDate": "2024-09-11T19:35:30.000Z",
+            "itemCreationDate": "2024-11-05T19:32:44.000Z",
+            "topRatedBuyingExperience": true,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|205654565849|0",
+            "title": "CAT S22 FLIP phone - 16 GB - Black (T-Mobile) NEW ",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/OKQAAOSw1t9oWwcn/s-l225.jpg"
+            },
+            "price": {
+                "value": "129.97",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C205654565849%7C0",
+            "seller": {
+                "username": "dostri-89",
+                "feedbackPercentage": "98.2",
+                "feedbackScore": 100
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/OKQAAOSw1t9oWwcn/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "CALCULATED"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE",
+                "BEST_OFFER"
+            ],
+            "epid": "21051759336",
+            "itemWebUrl": "https://www.ebay.com/itm/205654565849?_skw=phone&hash=item2fe1f7a3d9:g:OKQAAOSw1t9oWwcn&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UZslViGbdqlI0X6J6gTeQlWLUATVew6R8q2ARQcmV%2FElxGTOAwEfb76kzAzLvh10HcVn6dPFZHIfIuGUWWROzBWS8%2BH%2BKjmfokD7DOUSynXmk%2FNou7cy%2F1HLIpZqJDoWxs25%2FET13ao9Y4uM1W5r9upJfV53pnJBN3z10pKNoLQeNllHAppnavCDQ9EyDBScweUevPLCRKCyD1tRcjmcP1XNrDzo5TR88PSImqpunRlfFtmKfOZXzohcqKoJkpLqBdukgy9Dl7T9mzW3hlQqEmm",
+            "itemLocation": {
+                "postalCode": "070**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/Rd4AAOSwLmFoWwc2/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/rGIAAOSw63toWwdE/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/2-cAAOSwmSVoWwdX/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "205654565849",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-06-24T20:17:17.000Z",
+            "itemCreationDate": "2025-08-05T21:41:34.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|187717293107|0",
+            "title": "Samsung Galaxy Note 10  Unlocked used",
+            "leafCategoryIds": [
+                "9355"
+            ],
+            "categories": [
+                {
+                    "categoryId": "9355",
+                    "categoryName": "Cell Phones & Smartphones"
+                },
+                {
+                    "categoryId": "15032",
+                    "categoryName": "Cell Phones & Accessories"
+                }
+            ],
+            "image": {
+                "imageUrl": "https://i.ebayimg.com/images/g/2jAAAeSwBy9pDOhT/s-l225.jpg"
+            },
+            "price": {
+                "value": "120.00",
+                "currency": "USD"
+            },
+            "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C187717293107%7C0",
+            "seller": {
+                "username": "jatingupta5",
+                "feedbackPercentage": "100.0",
+                "feedbackScore": 208
+            },
+            "condition": "Used",
+            "conditionId": "3000",
+            "thumbnailImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/2jAAAeSwBy9pDOhT/s-l1600.jpg"
+                }
+            ],
+            "shippingOptions": [
+                {
+                    "shippingCostType": "CALCULATED"
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE",
+                "BEST_OFFER"
+            ],
+            "epid": "8033753133",
+            "itemWebUrl": "https://www.ebay.com/itm/187717293107?_skw=phone&hash=item2bb4d29433:g:2jAAAeSwBy9pDOhT&amdata=enc%3AAQAKAAAA4PeG5RIuIyokJHJy903%2F5UZKqVIRU6k25xZIbJEF6eW%2B%2FkLC9hfkpJX%2BBqmuLFW7EaEeBF85AsqnORUxZkQY6UZk95kJNO6qMnovfuZSTcpLSqH7bU2Hi4en%2B3GoV6VOJMc4eHz2MviAy9%2FWde%2BJs6brw%2F3UYjKC0IeU2nMEh0OSa6HbftUBNPzCjJv5F%2FspW%2FE6RQPhVBy6AzMMY2a5U%2Fo81cG4lv14zbXoSokWdzHEk%2FjMRZ%2B2p2R%2FgeqBI0lP84ID%2FGnH4GleLIkW9tlmkvc56BbF4m6n%2BZ2vPSAb9g4I",
+            "itemLocation": {
+                "postalCode": "951**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/5FYAAeSwbIppDOhS/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/3JoAAeSwd29pDOhS/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/Nw8AAeSwNsppDOhS/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/buEAAeSwMYBpDOhS/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/BUIAAeSwMf9pDOhS/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/SkQAAeSwf5JpDOhT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/FtkAAeSw8RZpDOhT/s-l225.jpg"
+                },
+                {
+                    "imageUrl": "https://i.ebayimg.com/images/g/2o8AAeSwLdVpDOjn/s-l225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "187717293107",
+            "availableCoupons": false,
+            "itemOriginDate": "2025-11-06T18:31:02.000Z",
+            "itemCreationDate": "2025-11-06T18:31:02.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": true,
+            "listingMarketplaceId": "EBAY_US"
+        }
+    ]
+}

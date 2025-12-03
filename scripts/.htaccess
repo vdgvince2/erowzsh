@@ -1,0 +1,6 @@
+ErrorDocument 401 "Authorisation Required"
+AuthType Basic
+AuthName "Veuillez entrer vos identifiants"
+AuthUserFile .htpasswd
+Require user username
+Satisfy All
