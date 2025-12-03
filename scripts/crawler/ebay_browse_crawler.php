@@ -4,11 +4,6 @@
  * EBAY ACCOUNT : vdgvincemdo
  * App ID (Client ID) : 
 
-Dev ID
-0076888c-5f73-47bc-8838-923e580c7f55
-Cert ID (Client Secret)
-SBX-72a069ab7efd-6639-4f09-b3c3-9b3d
-Rotate (Reset) Cert ID
 * eBay Browse API – Minimal keyword crawler (PHP)
  * - Auth: Client Credentials (application token)
  * - Caches access token on disk to avoid re-auth

@@ -44,7 +44,7 @@ $categories = $stmt->fetchAll();
 
 <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
   <!-- Hero / Search -->
-  <section class="py-8 sm:py-12">
+  <section class="py-8 sm:py-2">
     <div class="rounded-2xl bg-gray-50 p-6 sm:p-10 shadow-sm">
       <h1 class="text-2xl sm:text-4xl font-bold tracking-tight"><?= htmlspecialchars($label_hero_title, ENT_QUOTES, 'UTF-8') ?></h1>
       <p class="mt-3 text-gray-600 max-w-2xl"><?= htmlspecialchars($label_hero_subtitle, ENT_QUOTES, 'UTF-8') ?></p>
@@ -62,61 +62,93 @@ $categories = $stmt->fetchAll();
     </div>
   </section>
 
-  <!-- Popular Categories -->
-  <section id="categories" class="py-6 sm:py-8">
-    <div class="mb-5 flex items-center justify-between">
-        <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_popular_categories, ENT_QUOTES, 'UTF-8') ?></h2>
-        
-    </div>
+  <section id="localbargain" class="py-8 sm:py-2 rounded-2xl bg-gray-50">
 
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        <?php if (!empty($categories)): ?>
-        <?php foreach ($categories as $cat): ?>
-            <a href="<?=$rootDomain.$base;?>s/<?= htmlspecialchars($cat['url'], ENT_QUOTES, 'UTF-8') ?>"
-            class="rounded-xl border border-gray-200 bg-white px-3 py-2 hover:shadow-sm">
-            <?= htmlspecialchars($cat['name'], ENT_QUOTES, 'UTF-8') ?>
-            </a>
-        <?php endforeach; ?>
-        <?php else: ?>
-        <p class="text-gray-500 col-span-full text-center"><?= htmlspecialchars($label_no_categories, ENT_QUOTES, 'UTF-8') ?></p>
-        <?php endif; ?>
+  <div class="p-6 sm:p-10 shadow-sm">
+         
+          <h2 class="text-xl sm:text-2xl font-semibold"><?=$label_bargain_local;?></h2>
+          <p class="text-gray-600"><?=$label_bargain_tagline;?></p>
+         
+
+          <div class="mt-8 flex gap-3">
+              <a href="<?=$rootDomain.$base;?>bargain.php?mode=local" class="px-2 py-2 rounded-xl border flex">
+                  <span class="text-xl">📍</span>
+                  <span class="text-sm font-semibold"><?=$label_bargain_local;?></span>
+              </a>
+              <a href="<?=$rootDomain.$base;?>bargain.php?mode=misspelled" class="px-2 py-2 rounded-xl border flex">
+                  <span class="text-xl">A?</span>
+                  <span class="text-sm font-semibold"><?=$label_bargain_misspelled;?></span>
+              </a>
+              <a href="<?=$rootDomain.$base;?>bargain.php?mode=lastminute" class="px-2 py-2 rounded-xl border flex">
+                  <span class="text-xl">⏱</span>
+                  <span class="text-sm font-semibold"><?=$label_bargain_lastminute;?></span>
+              </a>
+          </div>
+      </div>
+
+  </section>
+
+  <!-- Popular Categories -->
+  <section id="categories" class="py-6 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="p-6 sm:p-10 shadow-sm">
+      <div class="mb-5 flex items-center justify-between">
+          <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_popular_categories, ENT_QUOTES, 'UTF-8') ?></h2>
+          
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+          <?php if (!empty($categories)): ?>
+          <?php foreach ($categories as $cat): ?>
+              <a href="<?=$rootDomain.$base;?>s/<?= htmlspecialchars($cat['url'], ENT_QUOTES, 'UTF-8') ?>"
+              class="rounded-xl border border-gray-200 bg-white px-3 py-2 hover:shadow-sm">
+              <?= htmlspecialchars($cat['name'], ENT_QUOTES, 'UTF-8') ?>
+              </a>
+          <?php endforeach; ?>
+          <?php else: ?>
+          <p class="text-gray-500 col-span-full text-center"><?= htmlspecialchars($label_no_categories, ENT_QUOTES, 'UTF-8') ?></p>
+          <?php endif; ?>
+      </div>
     </div>
   </section>
 
   <?php if($countryCode =="US" or $isLocal){ ?>
   <!-- MAGAZINE SECTION -->
-  <section id="magazine" class="py-8 sm:py-10">
+  <section id="magazine" class="py-8 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="p-6 sm:p-10 shadow-sm">
       <h2 class="text-xl font-semibold"><?=$label_last_news;?></h2>
-      <ul id="rss-feed" class="homelist bg-white py-8 px-8">
+      <ul id="rss-feed" class="homelist py-8 px-8">
           <?=homepageBlog($pdo);?>
       </ul>
+    </div>
   </section>
   <?php } ?>
 
   <!-- TOP 20 Products -->
-  <section id="top20" class="py-8 sm:py-10">
-    <div class="mb-5 flex items-center justify-between">
-      <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_top20_title, ENT_QUOTES, 'UTF-8') ?></h2>
-      
-    </div>
+  <section id="top20" class="py-8 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="p-6 sm:p-10 shadow-sm">
+      <div class="mb-5 flex items-center justify-between">
+        <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_top20_title, ENT_QUOTES, 'UTF-8') ?></h2>
+        
+      </div>
 
-    <!-- Grid of product cards -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-      <?php foreach ($products as $prod): ?>
-        <article class="group rounded-2xl border border-gray-200 bg-white px-3 py-2 hover:shadow-sm">
-          <a href="<?= htmlspecialchars($prod['keywordURL'] ?? '#', ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="nofollow noopener" class="block">            
-            
-              <?= htmlspecialchars($prod['keyword_name'] ?? $label_fallback_untitled, ENT_QUOTES, 'UTF-8') ?>
-            
-          </a>         
-        </article>
-      <?php endforeach; ?>
+      <!-- Grid of product cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <?php foreach ($products as $prod): ?>
+          <article class="group rounded-2xl border border-gray-200 bg-white px-3 py-2 hover:shadow-sm">
+            <a href="<?= htmlspecialchars($prod['keywordURL'] ?? '#', ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="nofollow noopener" class="block">            
+              
+                <?= htmlspecialchars($prod['keyword_name'] ?? $label_fallback_untitled, ENT_QUOTES, 'UTF-8') ?>
+              
+            </a>         
+          </article>
+        <?php endforeach; ?>
+      </div>
     </div>
   </section>
 
   <!-- International Network -->
-  <section class="py-10 sm:py-12">
-    <div class="rounded-2xl bg-white p-6 sm:p-8 border border-gray-200">
+  <section class="py-10 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="rounded-2xl bg-white p-6 sm:p-8 border border-gray-200 p-6 sm:p-10 shadow-sm">
       <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_international_title, ENT_QUOTES, 'UTF-8') ?></h2>
       <div class="prose max-w-none prose-p:mt-2 prose-p:leading-relaxed">
         <p><?= htmlspecialchars($label_international_p1, ENT_QUOTES, 'UTF-8') ?></p>
