@@ -1,5 +1,74 @@
 <?php
 
+/* SPECIFIC FUNCTIONS FOR THE BARGAIN PAGE */
+
+/**
+ * Affiche un dropdown des catégories eBay pour un pays donné.
+ *
+ * @param string      $countryCode  Code pays (ex: 'GB', 'US', 'FR')
+ * @param string      $name         Name de l'input (ex: 'category_id')
+ * @param string|null $selectedId   ID de catégorie pré-sélectionnée (optionnel)
+ * @param string      $assetsDir    Chemin vers le dossier assets (par défaut: __DIR__ . '/assets')
+ */
+function renderEbayCategoryDropdown(
+    string $ebay_marketplace,
+    string $name = 'category_id',
+    ?string $selectedId = null
+){
+
+    global $label_bargain_category_notavailable, $label_bargain_category_errorloading, $label_bargain_category_invalid, $label_bargain_category_allcateg;
+ 
+    $assetsDir = __DIR__ . '/../assets/JSON';
+
+    $marketplaceSuffix = strtoupper($ebay_marketplace);
+    $filePath = rtrim($assetsDir, '/\\') . "/category-{$marketplaceSuffix}.min.json";
+
+    if (!file_exists($filePath)) {
+        echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm" disabled>'
+           . '<option value="">'.$label_bargain_category_notavailable.'</option>'
+           . '</select>';
+        return;
+    }
+
+    $json = file_get_contents($filePath);
+
+    if ($json === false) {
+        echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm" disabled>'
+           . '<option value="">'.$label_bargain_category_errorloading.'</option>'
+           . '</select>';
+        return;
+    }
+
+    $data = json_decode($json, true);
+    if (!is_array($data) || empty($data['children']) || !is_array($data['children'])) {
+        echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm" disabled>'
+           . '<option value="">'.$label_bargain_category_invalid.'</option>'
+           . '</select>';
+        return;
+    }
+
+    echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm">' . PHP_EOL;
+    echo '  <option value="">'.$label_bargain_category_allcateg.'</option>' . PHP_EOL;
+
+    foreach ($data['children'] as $cat) {
+        if (!isset($cat['id'], $cat['name'])) {
+            continue;
+        }
+        $id   = (string)$cat['id'];
+        $nameLabel = (string)$cat['name'];
+
+        $selectedAttr = ($selectedId !== null && $selectedId === $id) ? ' selected' : '';
+
+        echo '  <option value="' . htmlspecialchars($id, ENT_QUOTES) . '"' . $selectedAttr . '>'
+           . htmlspecialchars($nameLabel, ENT_QUOTES)
+           . '</option>' . PHP_EOL;
+    }
+
+    echo '</select>' . PHP_EOL;
+}
+
+
+
 /**
  * Appel simple de l’API Browse (reprend l’esprit d’un crawler classique).
  */
@@ -58,7 +127,7 @@ function ebay_browse_search(array $params, string $filter = null, ?string $autoC
     $raw = curl_exec($ch);    
     
     if ($raw === false) {
-        log_local_write(" CURL ERROR ($curlErrno): $curlError");
+        //log_local_write(" CURL ERROR ($curlErrno): $curlError");
         curl_close($ch);
         return null;
     }
@@ -87,8 +156,8 @@ function ebay_browse_search(array $params, string $filter = null, ?string $autoC
     }
 
     // 🔍 LOG DEBUG
-    log_local_write(" URL: " . $url . " | filter: " . $filter);
-    if (!empty($data['warnings'])) log_local_write(print_r($data['warnings'], true));
+    //log_local_write(" URL: " . $url . " | filter: " . $filter);
+    //if (!empty($data['warnings'])) log_local_write(print_r($data['warnings'], true));
 
     return $data;
 }
@@ -335,7 +404,7 @@ function map_browse_to_products(array $data, ?int $keywordId = null): array
 /* DISPLAY THE BARGAIN FROM EBAY */
 function render_bargain_results($postcode, $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, $mode) {
 
-global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $label_bargain_calculating, $label_bargain_endson;
+global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $label_bargain_calculating, $label_bargain_endson, $countryCode;
 
     ?>
     <?php if ($errorMsg): ?>
@@ -348,7 +417,7 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
             <?php foreach ($products as $prod) : ?>
             <!-- Product Card 1 -->                            
                 <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
-                    <a href="<?= htmlspecialchars(tracking_link_builder($searchTerm, $countryCode, $prod['url']), ENT_QUOTES); ?>" target="_blank" rel="noopener noreferrer" class="flex p-4 gap-4">
+                    <a href="<?= htmlspecialchars(tracking_link_builder($searchTerm, $countryCode, $prod['url']), ENT_QUOTES); ?>" target="_blank" rel="noopener noreferrer" class="flex">
                         <?php if (!empty($prod['photo'])): ?>
                             <div class="flex-shrink-0 w-24 h-24 bg-gray-50 flex items-center justify-center overflow-hidden">
                             <img src="<?= htmlspecialchars($prod['photo'], ENT_QUOTES); ?>"
@@ -428,7 +497,7 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
         
                             </div>
 
-                            <div class="mt-2 flex items-center justify-between calltoaction">                                
+                            <div class="mt-2 w-full calltoaction">                                
                                 <button class="w-full bg-bluecustom text-white py-2 rounded-md mt-3"><?= htmlspecialchars($label_viewdetails, ENT_QUOTES); ?>
                                 </button>
                             </div>

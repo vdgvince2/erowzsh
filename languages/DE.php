@@ -148,5 +148,24 @@ $label_bargain_seller = "Verkäufer";
 $label_bargain_endsin = "Endet in";
 $label_bargain_calculating = "Berechnung läuft...";
 $label_bargain_endson = "Endet am";
+$label_bargain_category_notavailable = "Kategorien nicht verfügbar";
+$label_bargain_category_errorloading = "Fehler beim Laden der Kategorien";
+$label_bargain_category_invalid = "Ungültige Kategorien-Daten";
+$label_bargain_category_allcateg = "Alle Kategorien";
 
+/* crawler stopwords for ngram */
+$Array_language_stopwords = [
+    'der','die','das',
+    'ein','eine','einer','eines','einem','einen',
+    'und','oder','aber',
+    'für','mit','ohne',
+    'auf','unter','über',
+    'in','im','ins','am','an',
+    'aus','von','vom','zu','zum','zur','bei','nach','vor','hinter','zwischen',
+    'dieser','diese','dieses','diesen','diesem','dieser',
+    'jeder','jede','jedes','jeden','jedem',
+    'alle','alles',
+    'ist','sind','war','waren','sein',
+    'habe','hast','hat','haben'
+];
 ?>

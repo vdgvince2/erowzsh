@@ -148,4 +148,15 @@ $label_bargain_seller = "Seller";
 $label_bargain_endsin = "Ends in";
 $label_bargain_calculating = "Calculating...";
 $label_bargain_endson = "Ends on";
+$label_bargain_category_notavailable = "Categories not available";
+$label_bargain_category_errorloading = "Error loading categories";
+$label_bargain_category_invalid = "Invalid categories data";
+$label_bargain_category_allcateg = "All categories";
+
+/* crawler stopwords for ngram */
+$Array_language_stopwords = [
+        'the','a','an','of','on','in','and','or','for','to','by','with',
+        'each','every','size','small','image','featuring','designed',
+        'approx','x','cm','cms'
+    ];
 ?>

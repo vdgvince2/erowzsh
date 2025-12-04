@@ -84,18 +84,19 @@
                 </div>
                 
                 <!-- Product Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                
+                <section id="results" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
                  <?php foreach ($products as $prod) : ?>
                 <!-- Product Card 1 -->                            
-                    <div class="clickable-product cursor-pointer" data-url="<?= base64_encode($AffiliateSearchLink) ?>">
-                    <div class="grid grid-cols-1 md:grid-cols-2 bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
-                        <div class="relative">
-                            <img src="<?=$rootDomain.$base;?>image.php?url=<?= base64_encode($prod['photo']) ?>" alt="<?= htmlspecialchars($prod['title_original'] ?? 'Image produit', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" class="w-full h-48 object-cover" fetchpriority="high">
-                            <div class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded"><?= randomSticker();?></div>
+                   <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300 clickable-product cursor-pointer" data-url="<?= base64_encode($AffiliateSearchLink) ?>">
+                        <div class="flex-shrink-0 w-24 h-24 bg-gray-50 flex items-center justify-center overflow-hidden">
+                            <img src="<?=$rootDomain.$base;?>image.php?url=<?= base64_encode($prod['photo']) ?>" 
+                                 alt="<?= htmlspecialchars($prod['title_original'] ?? 'Image produit', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" 
+                                 class="max-w-full max-h-full object-contain" fetchpriority="high">
+                            <?php /* <div class="top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded"><?= randomSticker();?></div> */?>
                         </div>
-                        <div class="px-2">
-                            <h3 class="font-medium text-sm mb-1 line-clamp-2 prettyprint">
+                        <div class="flex-1 flex flex-col gap-2">
+                            <h3 class="font-bold text-m mb-1 line-clamp-2">
                                 <?php
                                 try{
                                     $titleGenerator = new titleGenerator();
@@ -109,8 +110,8 @@
                             <div class="items-center justify-between">
                                 <strong><?=$currency;?><?= htmlspecialchars($prod['price'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></strong>
                                 <p class="text-sm text-gray-600">
-                                    <?=$label_freepostage;?><br>
-                                    <?=$label_condition;?>
+                                    <?= html_entity_decode($prod['description_itemspecs'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>
+                                    - <?=$label_freepostage;?> - <?=$label_condition;?>
                                 </p>
                             </div>
                             <div class="mt-4">
@@ -119,12 +120,17 @@
                                 <span class="text-xs text-gray-500">#sponsored</span>
                             </div>
                         </div>
-                    </div>
-                 </div>
+                    </div>  
                 <?php endforeach; ?>                                     
-            </div>
+            </section>
+
+
             <!-- Pagination -->            
-            <div class="flex flex-wrap items-center">   
+            <div class="flex flex-wrap items-center">  
+                <?php
+                // Add the pagination in the custom ID.
+                $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_PAGINATION_", $AffiliateSearchLink);
+                ?> 
             <div class="w-full items-center justify-center flex mt-8 items-center clickable-product cursor-pointer" data-url="<?= base64_encode($AffiliateSearchLink) ?>">
                 <nav class="w-full items-center justify-center flex items-center space-x-1">
                     <?php

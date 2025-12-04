@@ -57,10 +57,10 @@ h3.prettyprint{
 .flex-shrink-0 { flex-shrink: 0; }
 .rounded-md { border-radius: 0.375rem; }
 /* Forcer le lien parent en flex */
-.product-card > a {
+.product-card {
     display: flex !important;
     gap: 1rem;           /* équivalent de gap-4 */
-    padding: 1rem;       /* p-4 */
+    padding: 0.5rem;       /* p-4 */
     text-decoration: none;
 }
 .lg-grid-cols-2 {

@@ -454,69 +454,125 @@ function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilter
     return $AffiliateSearchLink;
 }
 
-
-
-/**
- * Affiche un dropdown des catégories eBay pour un pays donné.
- *
- * @param string      $countryCode  Code pays (ex: 'GB', 'US', 'FR')
- * @param string      $name         Name de l'input (ex: 'category_id')
- * @param string|null $selectedId   ID de catégorie pré-sélectionnée (optionnel)
- * @param string      $assetsDir    Chemin vers le dossier assets (par défaut: __DIR__ . '/assets')
- */
-function renderEbayCategoryDropdown(
-    string $ebay_marketplace,
-    string $name = 'category_id',
-    ?string $selectedId = null
-){
- 
-    $assetsDir = __DIR__ . '/../assets/json';
-
-    $marketplaceSuffix = strtoupper($ebay_marketplace);
-    $filePath = rtrim($assetsDir, '/\\') . "/category-{$marketplaceSuffix}.min.json";
-
-    if (!file_exists($filePath)) {
-        echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm" disabled>'
-           . '<option value="">Categories not available</option>'
-           . '</select>';
-        return;
+// cut a string but don't split a word in two.
+function truncate_no_cut($text, $limit = 30)
+{
+    // Si texte trop court → rien à faire
+    if (strlen($text) <= $limit) {
+        return $text;
     }
 
-    $json = file_get_contents($filePath);
+    // On coupe au limit "brut"
+    $cut = substr($text, 0, $limit);
 
-    if ($json === false) {
-        echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm" disabled>'
-           . '<option value="">Error loading categories</option>'
-           . '</select>';
-        return;
-    }
-
-    $data = json_decode($json, true);
-    if (!is_array($data) || empty($data['children']) || !is_array($data['children'])) {
-        echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm" disabled>'
-           . '<option value="">Invalid categories data</option>'
-           . '</select>';
-        return;
-    }
-
-    echo '<select name="' . htmlspecialchars($name, ENT_QUOTES) . '" class="w-full border rounded px-2 py-1 text-sm">' . PHP_EOL;
-    echo '  <option value="">All categories</option>' . PHP_EOL;
-
-    foreach ($data['children'] as $cat) {
-        if (!isset($cat['id'], $cat['name'])) {
-            continue;
+    // Si le caractère suivant existe et est un espace → on n’est pas en milieu de mot
+    if (isset($text[$limit]) && $text[$limit] === ' ') {
+        $result = rtrim($cut);
+    } else {
+        // Sinon on recule au dernier espace trouvé
+        $lastSpace = strrpos($cut, ' ');
+        if ($lastSpace !== false) {
+            $result = rtrim(substr($cut, 0, $lastSpace));
+        } else {
+            // Aucun espace avant → on renvoie quand même les 30 chars (mot trop long)
+            $result = rtrim($cut);
         }
-        $id   = (string)$cat['id'];
-        $nameLabel = (string)$cat['name'];
-
-        $selectedAttr = ($selectedId !== null && $selectedId === $id) ? ' selected' : '';
-
-        echo '  <option value="' . htmlspecialchars($id, ENT_QUOTES) . '"' . $selectedAttr . '>'
-           . htmlspecialchars($nameLabel, ENT_QUOTES)
-           . '</option>' . PHP_EOL;
     }
 
-    echo '</select>' . PHP_EOL;
+    // On enlève une éventuelle ponctuation en fin de chaîne (virgule, point, etc.)
+    $result = rtrim($result, ",.;:!?");
+
+    return $result;
+}
+
+
+
+//Ngram extraction from the crawler
+function extract_top_ngrams(string $text, int $minN = 1, int $maxN = 3, int $topK = 3): string
+{
+
+    global $Array_language_stopwords;
+    
+    // 1) Normalisation
+    $text = strtolower($text);
+
+    // On garde lettres, chiffres, espaces et points
+    $text = preg_replace('/[^a-z0-9\s\.]+/', ' ', $text);
+    $text = preg_replace('/((?<!\d)\.)|(\.(?!\d))/', ' ', $text);
+
+    $tokens = preg_split('/\s+/', trim($text));
+
+    // 2) Filtrage des tokens (stopwords + très courts)
+    $cleanTokens = [];
+    foreach ($tokens as $t) {
+        if ($t === '' || strlen($t) <= 2) continue;
+        if (in_array($t, $Array_language_stopwords, true)) continue;
+        $cleanTokens[] = $t;
+    }
+
+    $n = count($cleanTokens);
+    if ($n === 0) {
+        return [];
+    }
+
+    // 3) Génération des n-grams + comptage
+    $ngrams = [];
+    for ($i = 0; $i < $n; $i++) {
+        for ($k = $minN; $k <= $maxN; $k++) {
+            if ($i + $k > $n) break;
+
+            $ngTokens = array_slice($cleanTokens, $i, $k);
+
+            // évite "5cms 5cms"
+            if (count(array_unique($ngTokens)) < count($ngTokens)) {
+                continue;
+            }
+
+            $ngram = implode(' ', $ngTokens);
+
+            if (!isset($ngrams[$ngram])) {
+                $ngrams[$ngram] = ['count' => 0, 'score' => 0];
+            }
+
+            $ngrams[$ngram]['count']++;
+            $ngrams[$ngram]['score'] = $ngrams[$ngram]['count'] * pow($k, 2);
+        }
+    }
+
+    // 4) Tri par score
+    uasort($ngrams, function ($a, $b) {
+        if ($a['score'] === $b['score']) return 0;
+        return ($a['score'] > $b['score']) ? -1 : 1;
+    });
+
+    // 5) Diversité : pas de mot réutilisé dans plusieurs n-grams
+    $selected = [];
+    $usedTokens = [];
+
+    foreach ($ngrams as $ngram => $info) {
+        if (count($selected) >= $topK) break;
+
+        $tokens = explode(' ', $ngram);
+
+        $hasOverlap = false;
+        foreach ($tokens as $t) {
+            if (isset($usedTokens[$t])) {
+                $hasOverlap = true;
+                break;
+            }
+        }
+        if ($hasOverlap) continue;
+
+        $selected[] = ucfirst($ngram);
+        foreach ($tokens as $t) {
+            $usedTokens[$t] = true;
+        }
+    }
+
+    // prepare the output
+    $shortNgrams = implode(" &#8226; ", $selected);
+
+    return $shortNgrams;
 }
 
 
@@ -525,7 +581,7 @@ function renderEbayCategoryDropdown(
 /* debug local log file */
 function log_local_write($debugLine){
     $debugLine = date('Y-m-d H:i:s') ." ". $debugLine.PHP_EOL;
-    file_put_contents('ebay_browse_debug.log', $debugLine, FILE_APPEND);
+    file_put_contents('/Applications/MAMP/htdocs/SH/scripts/crawler/schedulers/logs/ebay_browse_debug.log', $debugLine, FILE_APPEND);
 }
 
 ?>

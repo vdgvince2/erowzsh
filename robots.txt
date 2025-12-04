@@ -2,11 +2,13 @@ User-agent: *
 Disallow: /fallback.php
 Disallow: /data/
 Disallow: /scripts/
-Disallow: /sh-img/
 
 # agressives bots.
 User-agent: Yandex
 Crawl-delay: 1
+
+User-agent: Amazonbot
+Disallow: /
 
 User-agent: serpstatbot
 Disallow: /
@@ -127,10 +129,6 @@ User-agent: Cloudflare
 User-agent: ZoomBot
 User-agent: BrandVerity
 User-agent: SpiderLing
-User-agent: CloudFlare Always Online
-User-agent: CloudFlare AlwaysOnline
-User-agent: Cloudflare-Traffic-Manager
-User-agent: CloudFlare-AlwaysOnline
 User-agent: Buck
 User-agent: TigerBot
 User-agent: Cloudflare-AMP

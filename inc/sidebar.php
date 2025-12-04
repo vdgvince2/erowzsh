@@ -19,6 +19,7 @@ $ret_toDisplay = "";
                     foreach($array_advices as $advice => $filterKey){
                         // build the link and add the extra parameters.
                         $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null, $filterKey);
+                        $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_FILTERDESKTOP_", $AffiliateSearchLink);
 
                         // remove the condition if new
                         if($filterKey == "LH_ItemCondition") $AffiliateSearchLinkFilter = str_replace("&LH_ItemCondition=3000", "", $AffiliateSearchLink);
@@ -43,6 +44,7 @@ $ret_toDisplay = "";
         foreach($array_advices as $advice => $filterKey){
             // build the link and add the extra parameters.
             $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null, $filterKey);
+            $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_FILTERMOBILE_", $AffiliateSearchLink);
 
             // remove the condition if new
             if($filterKey == "LH_ItemCondition") $AffiliateSearchLinkFilter = str_replace("&LH_ItemCondition=3000", "", $AffiliateSearchLink);

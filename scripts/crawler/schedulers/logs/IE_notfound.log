@@ -1,69 +1,111 @@
 Country passed : ie
-KwId: 55168 | Country: IE | fcat
-Categorie from ebay: Adult Learning & University
+KwId: 60352 | Country: IE | g4v
+Categorie from ebay: Other Power Tools
+Categorie match : DIY Tools & Workshop Equipment (50)
+Import OK for keyword_id=60352. Inserted 48 ads.
+OK: 'g4v' (0/500) => keyword_id=60352; KW not found #10985 supprimé.
+KwId: 58526 | Country: IE | stat
+Categorie from ebay: Reptiles
+Categorie match : Reptiles (143)
+Import OK for keyword_id=58526. Inserted 48 ads.
+OK: 'stat' (1/500) => keyword_id=58526; KW not found #10986 supprimé.
+KwId: 60353 | Country: IE | paddle jacket
+Categorie from ebay: Clothing
+Categorie match : Clothing, Protective Gear & Merchandise (37)
+Import OK for keyword_id=60353. Inserted 48 ads.
+OK: 'paddle jacket' (2/500) => keyword_id=60353; KW not found #10987 supprimé.
+KwId: 60354 | Country: IE | t rex ride white swan
+Categorie from ebay: Vinyl Records
+Categorie match : Vinyl Records (179)
+Import OK for keyword_id=60354. Inserted 48 ads.
+OK: 't rex ride white swan' (3/500) => keyword_id=60354; KW not found #10988 supprimé.
+KwId: 60355 | Country: IE | kaleidoscope dress 16
+Categorie from ebay: Dresses
 Categorie match :  ()
-Import OK for keyword_id=55168. Inserted 48 ads.
-OK: 'fcat' (0/500) => keyword_id=55168; KW not found #9565 supprimé.
-KwId: 59710 | Country: IE | lpg injectors
-Categorie from ebay: Fuel Injectors
+Import OK for keyword_id=60355. Inserted 48 ads.
+OK: 'kaleidoscope dress 16' (4/500) => keyword_id=60355; KW not found #10989 supprimé.
+KwId: 60356 | Country: IE | cadbury purple bridesmaid dress 16
+Categorie from ebay: Dresses
 Categorie match :  ()
-Import OK for keyword_id=59710. Inserted 48 ads.
-OK: 'lpg injectors' (1/500) => keyword_id=59710; KW not found #9570 supprimé.
-KwId: 59711 | Country: IE | rifdet
-Skip: <= 5 products in JSON.
-OK: 'rifdet' (2/500) => keyword_id=59711; KW not found #9571 supprimé.
-KwId: 59712 | Country: IE | heater plug
-Categorie from ebay: Glow Plugs
+Import OK for keyword_id=60356. Inserted 48 ads.
+OK: 'cadbury purple bridesmaid dress 16' (5/500) => keyword_id=60356; KW not found #10990 supprimé.
+KwId: 60357 | Country: IE | xbox 360 power box
+Categorie from ebay: Cables & Adapters
+Categorie match : Computer Cables & Connectors (237)
+Import OK for keyword_id=60357. Inserted 48 ads.
+OK: 'xbox 360 power box' (6/500) => keyword_id=60357; KW not found #10992 supprimé.
+KwId: 60358 | Country: IE | karaoke cdg discs 2012
+Categorie from ebay: Karaoke CDGs & DVDs
+Categorie match : DVDs & Blu-rays (53)
+Import OK for keyword_id=60358. Inserted 47 ads.
+OK: 'karaoke cdg discs 2012' (7/500) => keyword_id=60358; KW not found #10994 supprimé.
+KwId: 60359 | Country: IE | o gauge abs
+Categorie from ebay: Other Parts & Accs
+Categorie match : ATV, Side-by-Side & UTV Parts & Accessories (13)
+Import OK for keyword_id=60359. Inserted 48 ads.
+OK: 'o gauge abs' (8/500) => keyword_id=60359; KW not found #10997 supprimé.
+KwId: 60360 | Country: IE | vespa px rear carrier
+Categorie from ebay: Other Motorcycle & Scooter Parts & Accessories
+Categorie match : ATV, Side-by-Side & UTV Parts & Accessories (13)
+Import OK for keyword_id=60360. Inserted 48 ads.
+OK: 'vespa px rear carrier' (9/500) => keyword_id=60360; KW not found #10998 supprimé.
+KwId: 60361 | Country: IE | comax
+Categorie from ebay: Radiators
 Categorie match :  ()
-Import OK for keyword_id=59712. Inserted 48 ads.
-OK: 'heater plug' (3/500) => keyword_id=59712; KW not found #9577 supprimé.
-KwId: 59713 | Country: IE | peavey bass bins
-Categorie from ebay: Wall Decals & Stickers
-Categorie match : Sports Stickers, Collections & Albums (390)
-Import OK for keyword_id=59713. Inserted 6 ads.
-OK: 'peavey bass bins' (4/500) => keyword_id=59713; KW not found #9580 supprimé.
-KwId: 59714 | Country: IE | nike liberty
-Categorie from ebay: Trainers
+Import OK for keyword_id=60361. Inserted 48 ads.
+OK: 'comax' (10/500) => keyword_id=60361; KW not found #10999 supprimé.
+KwId: 60362 | Country: IE | z20xer engine
+Categorie from ebay: Engines
 Categorie match :  ()
-Import OK for keyword_id=59714. Inserted 48 ads.
-OK: 'nike liberty' (5/500) => keyword_id=59714; KW not found #9584 supprimé.
-KwId: 59715 | Country: IE | tx1 taxi
-Categorie from ebay: Brake Disc Rotors
+Import OK for keyword_id=60362. Inserted 34 ads.
+OK: 'z20xer engine' (11/500) => keyword_id=60362; KW not found #11001 supprimé.
+KwId: 60363 | Country: IE | ufc undisputed 2009
+Categorie from ebay: Video Games
+Categorie match : Other Toys & Games (130)
+Import OK for keyword_id=60363. Inserted 48 ads.
+OK: 'ufc undisputed 2009' (12/500) => keyword_id=60363; KW not found #11004 supprimé.
+KwId: 60364 | Country: IE | stiff felt
+Categorie from ebay: Fabric
+Categorie match : Fabric (58)
+Import OK for keyword_id=60364. Inserted 48 ads.
+OK: 'stiff felt' (13/500) => keyword_id=60364; KW not found #11005 supprimé.
+KwId: 60365 | Country: IE | om flyer
+Categorie from ebay: Saddles
 Categorie match :  ()
-Import OK for keyword_id=59715. Inserted 48 ads.
-OK: 'tx1 taxi' (6/500) => keyword_id=59715; KW not found #9586 supprimé.
-KwId: 59716 | Country: IE | 3d
-Categorie from ebay: 3D Printer Consumables
+Import OK for keyword_id=60365. Inserted 17 ads.
+OK: 'om flyer' (14/500) => keyword_id=60365; KW not found #11006 supprimé.
+KwId: 60366 | Country: IE | d g shoes
+Categorie from ebay: Formal Shoes
+Categorie match : Clothes, Shoes & Accessories (36)
+Import OK for keyword_id=60366. Inserted 48 ads.
+OK: 'd g shoes' (15/500) => keyword_id=60366; KW not found #11007 supprimé.
+KwId: 60367 | Country: IE | nail file buffer
+Categorie from ebay: Manicure & Pedicure Tools & Kits
+Categorie match : DIY Tools & Workshop Equipment (50)
+Import OK for keyword_id=60367. Inserted 48 ads.
+OK: 'nail file buffer' (16/500) => keyword_id=60367; KW not found #11009 supprimé.
+KwId: 60368 | Country: IE | fz6 exhaust for sale
+Categorie from ebay: Exhaust System Kits
+Categorie match : Models & Kits (112)
+Import OK for keyword_id=60368. Inserted 48 ads.
+OK: 'fz6 exhaust for sale' (17/500) => keyword_id=60368; KW not found #11012 supprimé.
+KwId: 60369 | Country: IE | u2 japan
+Categorie from ebay: CDs
+Categorie match : CDs (34)
+Import OK for keyword_id=60369. Inserted 48 ads.
+OK: 'u2 japan' (18/500) => keyword_id=60369; KW not found #11014 supprimé.
+KwId: 60370 | Country: IE | cable modem router
+Categorie from ebay: DSL/Phone Cables (RJ-11)
+Categorie match : Mobile Phone Accessories (108)
+Import OK for keyword_id=60370. Inserted 48 ads.
+OK: 'cable modem router' (19/500) => keyword_id=60370; KW not found #11015 supprimé.
+KwId: 60371 | Country: IE | yale hsa6400
+Categorie from ebay: Alarm Systems
 Categorie match :  ()
-Import OK for keyword_id=59716. Inserted 48 ads.
-OK: '3d' (7/500) => keyword_id=59716; KW not found #9588 supprimé.
-KwId: 59717 | Country: IE | womens polo neck jumpers
-Categorie from ebay: Jumpers & Cardigans
+Import OK for keyword_id=60371. Inserted 36 ads.
+OK: 'yale hsa6400' (20/500) => keyword_id=60371; KW not found #11017 supprimé.
+KwId: 60372 | Country: IE | wadhams
+Categorie from ebay: Lures
 Categorie match :  ()
-Import OK for keyword_id=59717. Inserted 48 ads.
-OK: 'womens polo neck jumpers' (8/500) => keyword_id=59717; KW not found #9589 supprimé.
-KwId: 59718 | Country: IE | beneagles
-Categorie from ebay: Ornaments
-Categorie match :  ()
-Import OK for keyword_id=59718. Inserted 48 ads.
-OK: 'beneagles' (9/500) => keyword_id=59718; KW not found #9595 supprimé.
-KwId: 59719 | Country: IE | balconies
-Categorie from ebay: Railings
-Categorie match :  ()
-Import OK for keyword_id=59719. Inserted 48 ads.
-OK: 'balconies' (10/500) => keyword_id=59719; KW not found #9601 supprimé.
-KwId: 59720 | Country: IE | wallace sacks leather
-Categorie from ebay: Coats, Jackets & Waistcoats
-Categorie match :  ()
-Import OK for keyword_id=59720. Inserted 48 ads.
-OK: 'wallace sacks leather' (11/500) => keyword_id=59720; KW not found #9610 supprimé.
-KwId: 59721 | Country: IE | islamic silver
-Categorie from ebay: Islamic/Middle Eastern
-Categorie match :  ()
-Import OK for keyword_id=59721. Inserted 48 ads.
-OK: 'islamic silver' (12/500) => keyword_id=59721; KW not found #9614 supprimé.
-KwId: 59722 | Country: IE | plastic bowls
-Categorie from ebay: Party Tableware
-Categorie match : Decorative Cookware & Tableware (247)
-Import OK for keyword_id=59722. Inserted 48 ads.
-OK: 'plastic bowls' (13/500) => keyword_id=59722; KW not found #9625 supprimé.
+Import OK for keyword_id=60372. Inserted 48 ads.
+OK: 'wadhams' (21/500) => keyword_id=60372; KW not found #11018 supprimé.

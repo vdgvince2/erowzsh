@@ -5,6 +5,7 @@ require __DIR__ . '/inc/functions.php';
 
 $pageTitle = $WebsiteName;
 $additionnalMetaDesc = $label_hero_title;
+$noAds = true;
 
 // Sélectionner les mots-clés liés à des mots-clés "homepage=1"
 $sql = <<<SQL

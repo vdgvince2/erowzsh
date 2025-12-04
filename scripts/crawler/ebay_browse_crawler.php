@@ -115,6 +115,7 @@ function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 50, i
         'q'      => $q,
         'limit'  => max(1, min($limit, 200)), // eBay caps at 200
         'offset' => max(0, $offset),
+        'fieldgroups' => 'EXTENDED,MATCHING_ITEMS',
     ];
 
     // Optional filters
@@ -125,6 +126,8 @@ function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 50, i
     foreach (['category_ids','filter','sort'] as $k) {
         if (!empty($opts[$k])) $params[$k] = $opts[$k];
     }
+
+
 
     $url = EBAY_API_BASE . '/buy/browse/v1/item_summary/search?' . http_build_query($params);
 
@@ -160,11 +163,9 @@ function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 50, i
 
     // write in the log file for debug purpose
     if ($isLocal) {
-        echo "### writing in the log ###" . PHP_EOL;
-        $logFile = '/Applications/MAMP/htdocs/SH/scripts/crawler/schedulers/logs/api.log';        
         $jsonString = json_encode($json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        $line = date('Y-m-d H:i:s') . ' - ' . $jsonString . PHP_EOL;
-        file_put_contents($logFile, $line, FILE_APPEND | LOCK_EX);
+        log_local_write($jsonString);
+
     }
 
     return $json;
@@ -201,31 +202,7 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
     // Parse ebay data
     $items = $data['itemSummaries'] ?? [];
-
-
-    // Test ITEM SPECS
-    foreach ($items as $item) {
-        $itemId = $item['itemId'] ?? null;
-        // Aspects produit (item specifics côté produit)
-        $aspectGroups = $item['product']['aspectGroups'] ?? [];
-        $itemSpecifics = [];
-        foreach ($aspectGroups as $group) {
-            $groupName = $group['name'] ?? null;
-            $aspects   = $group['aspects'] ?? [];
-
-            foreach ($aspects as $aspect) {
-                $name   = $aspect['name']   ?? null;
-                $values = $aspect['values'] ?? [];
-
-                if ($name && !empty($values)) {
-                    // ex : Brand => ["Apple"]
-                    $itemSpecifics[$name] = $values;
-                    echo "Item spec : $name = $values".PHP_EOL;
-                }
-            }
-        }
-    }  
-    // EOF TEST ITEM SPECS  
+ 
 
     if (count($items) <= 5) {
         // Rien à faire si pas assez de produits
@@ -347,16 +324,19 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
         foreach ($items as $it) {
             
-            // Titre doit être complet
+            // title is mandatory + we cut to 30 to avoid duplicate content.
             if($it['title'] != null){
-                $title = $it['title'];
+                $title = truncate_no_cut($it['title'], $limit = 30);
             }else{
                 break;
             }
 
-            // TODO récupérer les itemSpecs 
+            // Extraire des ngrams depuis la description courte
             $description_itemspecs = "";
-
+            if(isset($it['shortDescription']) && $it['shortDescription'] != null){
+                $description_itemspecs = extract_top_ngrams($it['shortDescription'], 1, 3, 3);
+                $description_itemspecs = substr($description_itemspecs, 0, 511); // max size for sql.
+            }
 
             // Photo (image principale puis fallback sur thumbnail)
             $photo = $it['image']['imageUrl'] ?? null;

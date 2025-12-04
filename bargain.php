@@ -4,17 +4,13 @@
     BARGAIN PAGE
     COPY OF BAYCRAZY
 
-    TODO
-    - tout traduire
-    - inclure sur la homepage via un formulaire adéquat
-    
 ***************************/
 
-/* LOCAL HARDCODED  */
+/* LOCAL HARDCODED  
 $countryCode = 'US';
 $ebay_marketplace = 'EBAY_US';
 $priceCurrencySchema = 'USD';
-
+*/
 
 // Buffer
 ob_start();
@@ -311,7 +307,7 @@ if ($isAjax) {
         </aside>
 
         <!-- Results -->
-        <main class="lg:col-span-3">
+        <main class="lg:col-span-2">
             <div id="loading" class="hidden mb-4 text-blue-600 font-semibold">
                 <?=$label_bargain_loading;?>
             </div>            
