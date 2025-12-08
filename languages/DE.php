@@ -25,6 +25,7 @@ $label_addtocart = "In den Warenkorb";
 $label_viewdetails = "Details ansehen auf eBay";
 $label_related = "Ähnliche Suchanfragen";
 $label_affiliate = "Diese Website bietet Angebote im Zusammenhang mit einer bezahlten Partnerschaft an. Wenn du auf eine mit \"#sponsored\" gekennzeichnete Anzeige klickst, erhalten wir möglicherweise eine Verkaufsprovision. So können wir die Seite kostenlos halten und die Hosting-Kosten decken.";
+$label_bargain_topheader = "Tolle Angebote in meiner Nähe!";
 
 /* PRODUCT PAGE */
 $label_buy = "Kaufen";
@@ -122,6 +123,7 @@ $label_search_notfound = "Nicht gefunden (404)";
 $label_bargain_local = "Lokale Schnäppchen";
 $label_bargain_misspelled = "Falsch geschriebene Angebote";
 $label_bargain_lastminute = "Last-Minute-Auktionen";
+$label_bargain_standard = "klassische Forschung";
 $label_bargain_tagline = "Finden Sie tolle lokale Schnäppchen auf eBay basierend auf Ihrer Postleitzahl und Ihrem Suchbegriff.";
 $label_bargain_postcode = "Postleitzahl";
 $label_bargain_search = "Suchbegriff";

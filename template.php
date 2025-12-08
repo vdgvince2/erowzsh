@@ -30,17 +30,6 @@
                 <div class="bg-white rounded-lg shadow p-4 mb-4">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <h1 class="text-xl font-bold mb-2 md:mb-0"><?=ucfirst($ebaySearchKeyword);?></h1>                        
-                        <div class="flex items-center mb-2">
-                            <span class="text-sm text-gray-600"></span>
-                            <!--<form action="" method="">
-                            <select class="border border-gray-300 px-3 py-1 rounded text-sm mb-5">
-                                <option><?=$sortingArray[0];?></option>
-                                <option><?=$sortingArray[1];?></option>
-                                <option><?=$sortingArray[2];?></option>
-                                <option><?=$sortingArray[3];?></option>
-                            </select>
-                            </form>-->
-                        </div>
                     </div>
                     <h2 class="text-sm text-gray-500"><?=ucfirst($ebaySearchKeyword." ".$tagline);?></h2>
 
@@ -92,7 +81,7 @@
                         <div class="flex-shrink-0 w-24 h-24 bg-gray-50 flex items-center justify-center overflow-hidden">
                             <img src="<?=$rootDomain.$base;?>image.php?url=<?= base64_encode($prod['photo']) ?>" 
                                  alt="<?= htmlspecialchars($prod['title_original'] ?? 'Image produit', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" 
-                                 class="max-w-full max-h-full object-contain" fetchpriority="high">
+                                 class="max-w-full max-h-full object-contain" fetchpriority="high" width=128 height=128>
                             <?php /* <div class="top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded"><?= randomSticker();?></div> */?>
                         </div>
                         <div class="flex-1 flex flex-col gap-2">
@@ -110,13 +99,13 @@
                             <div class="items-center justify-between">
                                 <strong><?=$currency;?><?= htmlspecialchars($prod['price'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></strong>
                                 <p class="text-sm text-gray-600">
-                                    <?= html_entity_decode($prod['description_itemspecs'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>
+                                    <?php if($prod['description_itemspecs'] != null) echo html_entity_decode($prod['description_itemspecs'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>
                                     - <?=$label_freepostage;?> - <?=$label_condition;?>
                                 </p>
                             </div>
                             <div class="mt-4">
-                                <button class="w-full border border-bluecustom rounded-md bluecustom"><?=$label_addtocart;?></button>
-                                <button class="w-full bg-bluecustom text-white py-2 rounded-md mt-3"><?=$label_viewdetails;?></button>
+                                <button class="w-full border border-blue-500 text-blue-500 rounded-md"><?=$label_addtocart;?></button>
+                                <button class="w-full bg-blue-500 text-white py-2 rounded-md mt-3"><?=$label_viewdetails;?></button>
                                 <span class="text-xs text-gray-500">#sponsored</span>
                             </div>
                         </div>

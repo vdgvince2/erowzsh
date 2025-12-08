@@ -88,6 +88,10 @@ RewriteRule ^$ homepage.php [END,QSA]
 # Rediriger tout le dossier /r/Details/ vers la homepage (specifique Irelande)
 RewriteRule ^r/Details/.*$ / [R=301,L]
 
+# rediriger les search pages
+RewriteRule ^s/search$ bargain.php [R=301,L]
+RewriteRule ^search.php$ bargain.php [R=301,L]
+
 # 2) Pages statiques (hardcodées)
 RewriteRule ^s/cookies/?$                 page.php?slug=cookies                 [END,QSA,NC]
 RewriteRule ^s/help/?$                    page.php?slug=help                    [END,QSA,NC]

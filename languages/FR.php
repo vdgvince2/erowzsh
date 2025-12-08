@@ -25,7 +25,7 @@ $label_addtocart = "Ajouter au panier";
 $label_viewdetails = "Voir les détails sur eBay";
 $label_related = "Recherches associées";
 $label_affiliate = "Ce site propose des offres liées à un partenariat rémunéré. Quand vous cliquez sur une annonce étiquettée \"#sponsored\", nous sommes susceptibles de toucher une commission sur la vente. Cela nous permet de garder ce site gratuit et de payer l'hébergement de celui-ci.";
-
+$label_bargain_topheader = "Les bonnes affaires près de chez moi!";
 
 /* PRODUCT PAGE */
 $label_buy = "Acheter";
@@ -119,9 +119,10 @@ $label_search_notfound = "Page non trouvée (404)";
 
 
 // Bargain page
-$label_bargain_local = "Bonnes affaires locales";
+$label_bargain_local = "Près de chez moi";
 $label_bargain_misspelled = "Offres mal orthographiées";
 $label_bargain_lastminute = "Enchères de dernière minute";
+$label_bargain_standard = "Les bonnes affaires";
 $label_bargain_tagline = "Trouvez de super bonnes affaires locales sur eBay selon votre code postal et votre recherche.";
 $label_bargain_postcode = "Code postal";
 $label_bargain_search = "Terme de recherche";

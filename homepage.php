@@ -49,11 +49,14 @@ $categories = $stmt->fetchAll();
     <div class="rounded-2xl bg-gray-50 p-6 sm:p-10 shadow-sm">
       <h1 class="text-2xl sm:text-4xl font-bold tracking-tight"><?= htmlspecialchars($label_hero_title, ENT_QUOTES, 'UTF-8') ?></h1>
       <p class="mt-3 text-gray-600 max-w-2xl"><?= htmlspecialchars($label_hero_subtitle, ENT_QUOTES, 'UTF-8') ?></p>
-        <form role="search" aria-label="Site search" action="search.php" method="post">
+        <form role="search" aria-label="Site search" action="bargain.php#results" method="post">
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-            <div class=""><input type="text" name="keyword" placeholder="<?= htmlspecialchars($label_search_placeholder, ENT_QUOTES, 'UTF-8') ?>" class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10"></div>
             <div class="">
-                <button class="inline-flex items-center gap-2 rounded-xl bg-black px-5 py-3 text-white hover:bg-gray-800">
+              <input type="text" name="keyword_search" placeholder="<?= htmlspecialchars($label_search_placeholder, ENT_QUOTES, 'UTF-8') ?>" class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10">
+              <input type="hidden" name="mode" value="standard" />
+            </div>
+            <div class="">
+                <button class="inline-flex items-center gap-2 rounded-xl bg-blue-500 px-5 py-3 text-white hover:bg-gray-800">
                 <span><?= htmlspecialchars($label_search_button, ENT_QUOTES, 'UTF-8') ?></span>
                 </button>
             </div>
@@ -61,32 +64,6 @@ $categories = $stmt->fetchAll();
         </form>
       
     </div>
-  </section>
-
-  <section id="localbargain" class="py-8 sm:py-2 rounded-2xl bg-gray-50">
-
-  <div class="p-6 sm:p-10 shadow-sm">
-         
-          <h2 class="text-xl sm:text-2xl font-semibold"><?=$label_bargain_local;?></h2>
-          <p class="text-gray-600"><?=$label_bargain_tagline;?></p>
-         
-
-          <div class="mt-8 flex gap-3">
-              <a href="<?=$rootDomain.$base;?>bargain.php?mode=local" class="px-2 py-2 rounded-xl border flex">
-                  <span class="text-xl">📍</span>
-                  <span class="text-sm font-semibold"><?=$label_bargain_local;?></span>
-              </a>
-              <a href="<?=$rootDomain.$base;?>bargain.php?mode=misspelled" class="px-2 py-2 rounded-xl border flex">
-                  <span class="text-xl">A?</span>
-                  <span class="text-sm font-semibold"><?=$label_bargain_misspelled;?></span>
-              </a>
-              <a href="<?=$rootDomain.$base;?>bargain.php?mode=lastminute" class="px-2 py-2 rounded-xl border flex">
-                  <span class="text-xl">⏱</span>
-                  <span class="text-sm font-semibold"><?=$label_bargain_lastminute;?></span>
-              </a>
-          </div>
-      </div>
-
   </section>
 
   <!-- Popular Categories -->

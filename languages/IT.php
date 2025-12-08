@@ -26,6 +26,7 @@ $label_viewdetails = "Vedi dettagli su eBay";
 $label_related = "Ricerche correlate";
 $label_affiliate = "Questo sito propone offerte legate a una collaborazione retribuita. Quando clicchi su un annuncio etichettato \"#sponsored\", potremmo ricevere una commissione sulla vendita. Questo ci permette di mantenere il sito gratuito e di coprire i costi di hosting.";
 $array_advices  = ["nuovo" => "LH_ItemCondition", "usato" => "", "i meno cari" => "&_sop=2", "i più cari" => "&_sop=3", "i più venduti" => ""];
+$label_bargain_topheader = "Ottime offerte vicino a me!";
 
 /* CONTACT PAGE */
 $label_contact = "Contatto";
@@ -121,6 +122,7 @@ $label_search_notfound = "Non trovato (404)";
 $label_bargain_local = "Offerte locali";
 $label_bargain_misspelled = "Offerte con errore di ortografia";
 $label_bargain_lastminute = "Aste last minute";
+$label_bargain_standard = "Ricerca classica";
 $label_bargain_tagline = "Trova ottime offerte locali su eBay in base al tuo CAP e ai tuoi termini di ricerca.";
 $label_bargain_postcode = "CAP";
 $label_bargain_search = "Termine di ricerca";

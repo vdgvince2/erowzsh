@@ -27,6 +27,7 @@ $label_addtocart = "Add to cart";
 $label_viewdetails = "View details on eBay";
 $label_related = "Related searches";
 $label_affiliate = "This website features offers related to a paid partnership. When you click on an ad labeled \"#sponsored\", we may earn a commission from the sale. This helps us keep the site free and cover its hosting costs.";
+$label_bargain_topheader = "Great deals near me!";
 
 /* PRODUCT PAGE */
 $label_buy = "Buy";
@@ -119,7 +120,8 @@ $label_search_homepage = "homepage";
 $label_search_notfound = "Not found (404)";
 
 /* BARGAIN PAGE */
-$label_bargain_local = "Local bargains";
+$label_bargain_standard = "All Bargains";
+$label_bargain_local = "Local Bargains";
 $label_bargain_misspelled = "Misspelled deals";
 $label_bargain_lastminute = "Last minute auctions";
 $label_bargain_tagline = "Find great local bargains on eBay based on your postcode and search term.";

@@ -132,8 +132,8 @@ function ebay_browse_search(array $params, string $filter = null, ?string $autoC
         return null;
     }
 
-    /* DEBUG the EBAY CALL
-    log_local_write(sprintf(
+    // DEBUG the EBAY CALL
+    /*log_local_write(sprintf(
     "[%s] URL: %s\nHTTP: %s\ncurl_errno: %s\ncurl_error: %s\nraw_length: %s\nraw_preview: %s\n\n",
     date('Y-m-d H:i:s'),
     $url,
@@ -156,8 +156,8 @@ function ebay_browse_search(array $params, string $filter = null, ?string $autoC
     }
 
     // 🔍 LOG DEBUG
-    //log_local_write(" URL: " . $url . " | filter: " . $filter);
-    //if (!empty($data['warnings'])) log_local_write(print_r($data['warnings'], true));
+    log_local_write(" URL: " . $url . " | filter: " . $filter);
+    if (!empty($data['warnings'])) log_local_write(print_r($data['warnings'], true));
 
     return $data;
 }
@@ -498,7 +498,7 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
                             </div>
 
                             <div class="mt-2 w-full calltoaction">                                
-                                <button class="w-full bg-bluecustom text-white py-2 rounded-md mt-3"><?= htmlspecialchars($label_viewdetails, ENT_QUOTES); ?>
+                                <button class="w-full bg-blue-500 text-white py-2 rounded-md mt-3"><?= htmlspecialchars($label_viewdetails, ENT_QUOTES); ?>
                                 </button>
                             </div>
                         </div>

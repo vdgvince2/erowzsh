@@ -108,6 +108,42 @@
 
       <?php } ?> 
 
+
+      // mobile hamburger
+        // Toggle des icônes sur mobile
+        const toggleBtn = document.getElementById('mobileMenuToggle');
+        const mobileActions = document.getElementById('mobileActions');
+
+        toggleBtn.addEventListener('click', () => {
+            mobileActions.classList.toggle('hidden');
+        });      
+
+        const menu = document.getElementById('mainMenu');
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        const desktopToggle = document.getElementById('desktopMenuToggle');
+        const menuBackdrop = document.getElementById('menuBackdrop');
+        const menuClose = document.getElementById('menuClose');
+
+        function openMenu() {
+            menu.classList.remove('hidden');
+        }
+
+        function closeMenu() {
+            menu.classList.add('hidden');
+        }
+
+        [mobileToggle, desktopToggle].forEach(btn => {
+            if (!btn) return;
+            btn.addEventListener('click', openMenu);
+        });
+
+        if (menuBackdrop) {
+            menuBackdrop.addEventListener('click', closeMenu);
+        }
+        if (menuClose) {
+            menuClose.addEventListener('click', closeMenu);
+        }        
+
     </script>
 
     <?php

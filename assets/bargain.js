@@ -1,60 +1,60 @@
-document.addEventListener('DOMContentLoaded', function () {
+function fetchBargainResults() {
     const form = document.getElementById('bargain-form');
     const results = document.getElementById('results');
     const loading = document.getElementById('loading');
 
     if (!form || !results) return;
 
-    function fetchResults() {
-        const formData = new FormData(form);
-        formData.append('ajax', '1'); // pour déclencher le mode JSON côté PHP
+    const formData = new FormData(form);
+    formData.append('ajax', '1'); // pour déclencher le mode JSON côté PHP
 
-        loading.classList.remove('hidden');
-        results.style.opacity = '0.4';
+    loading && loading.classList.remove('hidden');
+    if (results) results.style.opacity = '0.4';
 
-        fetch('bargain.php', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data && data.html !== undefined) {
-                results.innerHTML = data.html;
-                initCountdowns();
-            } else {
-                results.innerHTML = '<div class="bg-red-100 text-red-700 px-4 py-3 rounded">Unexpected response from server.</div>';
-            }
-        })
-        .catch(err => {
-            console.error(err);
-            results.innerHTML = '<div class="bg-red-100 text-red-700 px-4 py-3 rounded">Error while loading deals.</div>';
-        })
-        .finally(() => {
-            loading.classList.add('hidden');
-            results.style.opacity = '1';
-        });
-    }
+    fetch('bargain.php', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data && data.html !== undefined) {
+            results.innerHTML = data.html;
+            initCountdowns();
+        } else {
+            results.innerHTML =
+                '<div class="bg-red-100 text-red-700 px-4 py-3 rounded">Unexpected response from server.</div>';
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        results.innerHTML =
+            '<div class="bg-red-100 text-red-700 px-4 py-3 rounded">Error while loading deals.</div>';
+    })
+    .finally(() => {
+        if (loading) loading.classList.add('hidden');
+        if (results) results.style.opacity = '1';
+    });
+}
 
-    // Soumission du formulaire en AJAX
+// ancien comportement : submit AJAX
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('bargain-form');
+    if (!form) return;
+
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        fetchResults();
+        fetchBargainResults();
     });
-
-    // Auto-refresh quand on change un filtre (optionnel mais pratique)
-    /*
-    form.querySelectorAll('input, select').forEach(function (el) {
-        el.addEventListener('change', function () {
-            // éviter de spammer si on tape dans le champ "search term"
-            if (el.name === 'q' || el.name === 'postcode') return;
-            fetchResults();
-        });
-    });
-    */
 });
+
+// optionnel, mais clair : fonction accessible en global
+window.fetchBargainResults = fetchBargainResults;
+
+
+
 
 /* compteur bid*/
 function startCountdown(el) {

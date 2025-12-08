@@ -14,9 +14,9 @@
      
     <?php } 
     
-    // Specific hotjar for UK
-    if($countryCode == "GB" && !$isLocal){
-        /*
+    // Specific hotjar for Bargain page
+    if(!$isLocal && $scriptName == "bargain.php"){
+        
         ?>
             <!-- Hotjar Tracking Code for SH -->
             <script>
@@ -30,7 +30,7 @@
                 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
             </script>        
         <?php
-        */
+        
     }
 
     // Analytics Tracker : simpleAnalytic or Umami    

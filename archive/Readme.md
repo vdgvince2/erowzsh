@@ -16,3 +16,6 @@
 2. lancer le script "bash /var/www/vhosts/for-sale.ie/deploy.sh"
 3. update SQL si nécessaire
 4. update htaccess si nécessaire
+
+# compilation Tailwind CSS
+npx tailwindcss -i /Applications/MAMP/htdocs/SH/archive/input.css -o /Applications/MAMP/htdocs/SH/assets/tailwind.css --minify

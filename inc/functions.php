@@ -123,17 +123,29 @@ function prettyNameFromSlug(string $slug): string {
 
 // inject CSS in the right page.
 function inline_css_for_page(): void {
+    global $isLocal;
+
     $script = basename($_SERVER['SCRIPT_NAME'] ?? '');
 
+    /*
     if ($script === 'template.php' or $script === 'bargain.php') {
-        echo inline_asset('assets/product.css', ['attrs' => ['id' => 'inline-css']]);
+        //echo inline_asset('assets/product.css', ['attrs' => ['id' => 'inline-css']]);
     } elseif ($script === 'homepage.php') {
         echo inline_asset('assets/homepage.css', ['attrs' => ['id' => 'inline-css']]);
     } else {
         echo inline_asset('assets/homepage.css', ['attrs' => ['id' => 'inline-css']]);      
     }
+    */
 
-    echo inline_asset('assets/global.css', ['attrs' => ['id' => 'inline-css']]);
+    // en local, on affiche la version non compilée.
+    if(!$isLocal){        
+        echo inline_asset('assets/tailwind.css', ['attrs' => ['id' => 'inline-css']])."\n";
+    }else{
+        echo '<script src="https://cdn.tailwindcss.com"></script>'."\n";
+    }
+
+    // show global for prod & local
+    echo inline_asset('assets/global.css', ['attrs' => ['id' => 'inline-css']])."\n";
 }
 
 /**
