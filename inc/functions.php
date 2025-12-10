@@ -55,16 +55,47 @@ function get_subdomain_prefix() {
         return $parts[0];
     }
 
-    // Domaine classique : monsite.com, www.monsite.com, api.monsite.com, etc.
-    if ($count <= 2) {
-        return false; // pas de sous-domaine
+    // Liste (non exhaustive) de TLD multi-part
+    // à adapter si tu as d'autres cas (com.au, co.nz, etc.)
+    $multiPartTlds = [
+        'co.uk',
+        'ac.uk',
+        'gov.uk',
+        'co.jp',
+        'com.au',
+        'com.br',
+        'co.nz',
+    ];
+
+    // Détermine si on est sur un TLD "multi-part"
+    $tldSuffix = ($count >= 2)
+        ? $parts[$count - 2] . '.' . $parts[$count - 1]
+        : '';
+
+    $minDomainParts = in_array($tldSuffix, $multiPartTlds, true) ? 3 : 2;
+
+    // Si on n'a pas plus de parties que le "domaine de base" → pas de sous-domaine
+    if ($count <= $minDomainParts) {
+        return false;
     }
 
-    // Ignore "www" comme faux sous-domaine
+    // Gestion de "www" comme faux sous-domaine
+    // Exemple :
+    // - www.for-sale.co.uk  (count=4, minDomainParts=3) → une seule partie avant le domaine = "www" → on ignore → false
+    // - www.api.for-sale.co.uk (count=5, minDomainParts=3) → deux parties avant le domaine = "www.api"
+    //   → on ignore "www" → sous-domaine = "api"
+    $subdomainPartsCount = $count - $minDomainParts;
+
     if ($parts[0] === 'www') {
-        return ($count > 3) ? $parts[1] : false;
+        if ($subdomainPartsCount === 1) {
+            // Il n’y a que "www" avant le domaine → on considère qu’il n’y a pas de sous-domaine
+            return false;
+        }
+        // Plus d’une partie avant le domaine → on prend la partie après "www"
+        return $parts[1];
     }
 
+    // Sinon, on prend simplement le premier préfixe
     return $parts[0];
 }
 

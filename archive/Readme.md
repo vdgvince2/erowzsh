@@ -12,7 +12,8 @@
 
 
 # déployer en production
-1. tout déployer via FTP, sauf : data, scripts, tenants, htaccess
+0. compiler le CSS avec NPX
+1. tout déployer via FTP, sauf : archive, data, tenants, htaccess
 2. lancer le script "bash /var/www/vhosts/for-sale.ie/deploy.sh"
 3. update SQL si nécessaire
 4. update htaccess si nécessaire

@@ -1,4 +1,5 @@
 <?php
+/*
 declare(strict_types=1);
 session_start();
 
@@ -80,7 +81,7 @@ if(!isset($countryCode)){
 require __DIR__ . '/../tenants/'.$countryCode.'.php'; 
 require __DIR__ . '/../languages/'.$mainLanguage.'.php'; 
 
-/* GESTION DES URLS */
+// URLS
 if(isset($_SERVER['REQUEST_URI'])){
     $URI = $_SERVER['REQUEST_URI']; 
     if (strpos($URI, $base) === 0) {
@@ -110,9 +111,7 @@ define('VISITED_SECRET', 'generate a 64 chars key'); // 64+ chars
 // nombre pair pour l'affiche cohérent. 
 $_EBAY_MAX_ADS = 48;
 
-/* 
-* Script pub
-**/
+// Pub
 
 // pour google shopping
 $googleadsenseHead = '<script async src="https://www.google.com/adsense/search/ads.js"></script>
@@ -122,6 +121,7 @@ arguments)},g[o][\'t\']=1*new Date})(window,\'_googCsa\');
 </script>';
     
 // Google adense désactivé pour améliorer l'expérience.
-$googleadsense_topBody = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0809996796910370" crossorigin="anonymous"></script>'; 
+$googleadsense_topBody = ''; //'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0809996796910370" crossorigin="anonymous"></script>'; 
 
 
+*/
