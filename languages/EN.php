@@ -1,7 +1,6 @@
 <?php
 
 // Translations
-$HeaderDropDown = array("All Categories", "Sporting Goods", "Fishing", "Outdoor Sports");
 $Header_Link_summary = "Summary";
 $Header_Link_watchlist = "Watchlist";
 $Header_Link_myaccount = "My Account";
@@ -58,7 +57,7 @@ $label_freepostage = "Free postage";
 $arraySticker = ["HOT", "NEW", "LOW STOCK", "2 LEFT"];
 $stopwords = ["used", "for sale", "for-sale"];
 $label_product_metadesc_generic = " : selection of the cheapest products, used or new. Easy and fast website.";
-$array_advices  = ["new" => "LH_ItemCondition", "used" => "", "cheapest" => "&_sop=2", "most expensive" => "&_sop=3", "best sellers" => ""];
+$array_advices  = ["new" => "conditionNew", "used" => "conditionUsed", "cheapest" => "&_sop=15", "most expensive" => "&_sop=16", "best sellers" => ""];
 $label_FAQ = "Frequently Asked Questions";
 
 $_TAIL = " used for sale"; // tail for the page title
@@ -95,7 +94,7 @@ $label_no_categories = "No categories found.";
 $label_top20_title = "Top 20 deals right now";
 $label_fallback_untitled = "Untitled";
 $label_international_title = "An International Network";
-$label_international_p1 = "Erowz is a global classifieds aggregator that collects listings from hundreds of marketplaces and local ad sites into one unified platform. It allows users to search for second-hand items, cars, real estate, jobs, and more across multiple sources simultaneously. Instead of visiting each classifieds site separately, Erowz centralizes the data for faster and more efficient browsing. The platform continuously crawls and updates listings to ensure freshness and accuracy. Users can filter results by location, price, category, and keywords to find exactly what they’re looking for. Each listing links directly to the original source, ensuring transparency and trust. Erowz uses intelligent algorithms to remove duplicates and standardize data across diverse websites. The platform supports multiple languages and countries, adapting to local markets worldwide. It’s designed for both end users and businesses seeking data-driven insights from the classifieds ecosystem. In short, Erowz makes discovering second-hand opportunities on the web faster, smarter, and simpler.";
+$label_international_p1 = "Erowz is a global classifieds aggregator that collects listings from hundreds of marketplaces and local ad sites into one unified platform. Check the best bargains at <a href='https://www.baycrazy.net'>BayCrazy.net</a> !! It allows users to search for second-hand items, cars, real estate, jobs, and more across multiple sources simultaneously. Instead of visiting each classifieds site separately, Erowz centralizes the data for faster and more efficient browsing. The platform continuously crawls and updates listings to ensure freshness and accuracy. Users can filter results by location, price, category, and keywords to find exactly what they’re looking for. Each listing links directly to the original source, ensuring transparency and trust. Erowz uses intelligent algorithms to remove duplicates and standardize data across diverse websites. The platform supports multiple languages and countries, adapting to local markets worldwide. It’s designed for both end users and businesses seeking data-driven insights from the classifieds ecosystem. In short, Erowz makes discovering second-hand opportunities on the web faster, smarter, and simpler.";
 $label_country_france = "France";
 $label_country_italy = "Italy";
 $label_country_germany = "Germany";

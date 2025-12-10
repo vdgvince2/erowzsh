@@ -1,5 +1,89 @@
 Country passed : it
-KwId: 435868 | Country: IT | coperchio telaio
-Categorie from ebay: Altro materiali bricolage, fai da te
+KwId: 438425 | Country: IT | pricesorologio uomo louis
+Skip: <= 5 products in JSON.
+OK: 'pricesorologio uomo louis' (0/500) => keyword_id=438425; KW not found #18443 supprimé.
+KwId: 438426 | Country: IT | lml star deluxe
+Categorie from ebay: Pastiglie freno
+Categorie match :  ()
+Import OK for keyword_id=438426. Inserted 48 ads.
+OK: 'lml star deluxe' (1/500) => keyword_id=438426; KW not found #18444 supprimé.
+KwId: 32095 | Country: IT | cardinal
+Categorie from ebay: Reel Parts & Repair
+Categorie match :  ()
+Import OK for keyword_id=32095. Inserted 48 ads.
+OK: 'cardinal' (2/500) => keyword_id=32095; KW not found #18445 supprimé.
+KwId: 138096 | Country: IT | banchi scuola
+Categorie from ebay: Tavoli, scrivanie e scrittoi
+Categorie match :  ()
+Import OK for keyword_id=138096. Inserted 48 ads.
+OK: 'banchi scuola' (3/500) => keyword_id=138096; KW not found #18446 supprimé.
+KwId: 423183 | Country: IT | fcat
+Categorie from ebay: Keyboards & Keypads
+Categorie match :  ()
+Import OK for keyword_id=423183. Inserted 48 ads.
+OK: 'fcat' (4/500) => keyword_id=423183; KW not found #18447 supprimé.
+KwId: 438427 | Country: IT | sony batterie
+Categorie from ebay: Batteries
+Categorie match :  ()
+Import OK for keyword_id=438427. Inserted 48 ads.
+OK: 'sony batterie' (5/500) => keyword_id=438427; KW not found #18448 supprimé.
+KwId: 438428 | Country: IT | antica farmacia lotto
+Categorie from ebay: Altro cristallo e vetro
 Categorie match : Altro arte e antiquariato (12)
-Error: extract_top_ngrams(): Return value must be of type string, array returned
+Import OK for keyword_id=438428. Inserted 48 ads.
+OK: 'antica farmacia lotto' (6/500) => keyword_id=438428; KW not found #18449 supprimé.
+KwId: 438429 | Country: IT | smalto pen
+Categorie from ebay: Altro orologi e gioielli
+Categorie match : Altro arte e antiquariato (12)
+Import OK for keyword_id=438429. Inserted 48 ads.
+OK: 'smalto pen' (7/500) => keyword_id=438429; KW not found #18450 supprimé.
+KwId: 438430 | Country: IT | ammortizzatore di sterzo minimoto
+Skip: <= 5 products in JSON.
+OK: 'ammortizzatore di sterzo minimoto' (8/500) => keyword_id=438430; KW not found #18451 supprimé.
+KwId: 438431 | Country: IT | wp admin
+Skip: <= 5 products in JSON.
+OK: 'wp admin' (9/500) => keyword_id=438431; KW not found #18452 supprimé.
+KwId: 438432 | Country: IT | yorkshire terrier nero
+Categorie from ebay: Felpe
+Categorie match :  ()
+Import OK for keyword_id=438432. Inserted 48 ads.
+OK: 'yorkshire terrier nero' (10/500) => keyword_id=438432; KW not found #18453 supprimé.
+KwId: 438433 | Country: IT | sigma 18 250 macro canon
+Categorie from ebay: Obiettivi
+Categorie match : Obiettivi e filtri (354)
+Import OK for keyword_id=438433. Inserted 35 ads.
+OK: 'sigma 18 250 macro canon' (11/500) => keyword_id=438433; KW not found #18455 supprimé.
+KwId: 438434 | Country: IT | saltro cat
+Skip: <= 5 products in JSON.
+OK: 'saltro cat' (12/500) => keyword_id=438434; KW not found #18456 supprimé.
+KwId: 438435 | Country: IT | pricescarrelli trasporto merci
+Skip: <= 5 products in JSON.
+OK: 'pricescarrelli trasporto merci' (13/500) => keyword_id=438435; KW not found #18457 supprimé.
+KwId: 438436 | Country: IT | sacco piumino nanna
+Categorie from ebay: Sacchi nanna
+Categorie match : Nanna (350)
+Import OK for keyword_id=438436. Inserted 48 ads.
+OK: 'sacco piumino nanna' (14/500) => keyword_id=438436; KW not found #18458 supprimé.
+KwId: 435454 | Country: IT | giochi nintendo dsi usati
+Categorie from ebay: Console
+Categorie match : Console (70)
+Import OK for keyword_id=435454. Inserted 48 ads.
+OK: 'giochi nintendo dsi usati' (15/500) => keyword_id=435454; KW not found #18460 supprimé.
+KwId: 438437 | Country: IT | motore 500
+Categorie from ebay: Sollevatori
+Categorie match :  ()
+Import OK for keyword_id=438437. Inserted 48 ads.
+OK: 'motore 500' (16/500) => keyword_id=438437; KW not found #18461 supprimé.
+KwId: 438438 | Country: IT | sega a tazza
+Categorie from ebay: Punte per trapani
+Categorie match : Accessori per uccelli e animali selvatici (7)
+Import OK for keyword_id=438438. Inserted 48 ads.
+OK: 'sega a tazza' (17/500) => keyword_id=438438; KW not found #18462 supprimé.
+KwId: 438439 | Country: IT | libro disco
+Categorie from ebay: CD
+Categorie match :  ()
+Import OK for keyword_id=438439. Inserted 48 ads.
+OK: 'libro disco' (18/500) => keyword_id=438439; KW not found #18463 supprimé.
+KwId: 438440 | Country: IT | pricescollana oro 750
+Skip: <= 5 products in JSON.
+OK: 'pricescollana oro 750' (19/500) => keyword_id=438440; KW not found #18464 supprimé.

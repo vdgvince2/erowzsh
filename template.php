@@ -1,6 +1,4 @@
 <?php
-    require __DIR__ . '/inc/config.php'; 
-    require __DIR__ . '/inc/functions.php'; 
     require __DIR__ . '/inc/product-category.php'; 
 ?>
 <!DOCTYPE html>
@@ -58,7 +56,13 @@
                             $label = $kw['keyword_name'];
                             $rawHref = $kw['keywordURL'];
                             
-                            $href = htmlspecialchars($rootDomain.$base.$rawHref ?: '#', ENT_QUOTES, 'UTF-8');
+                            // SPECIAL LINK for subdomains
+                            if($kw['source']=="subdomain"){
+                                $href = normalizeRootDomain($rawHref, $rootDomain, $SERVER_Protocol, $base);                                
+                            }elseif($kw['source']=="maindomain"){
+                                $href = htmlspecialchars($rootDomain.$base.$rawHref ?: '#', ENT_QUOTES, 'UTF-8');
+                            }
+                            
                             $links[] = "<a href=\"{$href}\">{$label}</a>";
                         }
 
@@ -75,9 +79,13 @@
                 <!-- Product Grid -->
                 <section id="results" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 
-                 <?php foreach ($products as $prod) : ?>
+                <?php foreach ($products as $prod) : 
+                // Prepare eBay link Tracker for both : categories & products
+                    $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null);
+                    $AffiliateSearchLink  = base64_encode($AffiliateSearchLink);
+                ?>
                 <!-- Product Card 1 -->                            
-                   <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300 clickable-product cursor-pointer" data-url="<?= base64_encode($AffiliateSearchLink) ?>">
+                   <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300 clickable-product cursor-pointer" data-url="<?= $AffiliateSearchLink; ?>">
                         <div class="flex-shrink-0 w-24 h-24 bg-gray-50 flex items-center justify-center overflow-hidden">
                             <img src="<?=$rootDomain.$base;?>image.php?url=<?= base64_encode($prod['photo']) ?>" 
                                  alt="<?= htmlspecialchars($prod['title_original'] ?? 'Image produit', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" 
@@ -120,7 +128,7 @@
                 // Add the pagination in the custom ID.
                 $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_PAGINATION_", $AffiliateSearchLink);
                 ?> 
-            <div class="w-full items-center justify-center flex mt-8 items-center clickable-product cursor-pointer" data-url="<?= base64_encode($AffiliateSearchLink) ?>">
+            <div class="w-full items-center justify-center flex mt-8 items-center clickable-product cursor-pointer" data-url="<?= $AffiliateSearchLink; ?>">
                 <nav class="w-full items-center justify-center flex items-center space-x-1">
                     <?php
                     $i = 0; $imax = 7;
@@ -143,25 +151,6 @@
             </div>              
         </div>
     </div>
-
-    <!-- email subscription -->
-    <?php 
-    /* 1/12/2025 : temporary deactivation : less than 1 subscribe per day. SHould be replaced by a getsitecontrol.
-    <section class="mt-8 mb-5"> 
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col md:flex-row md:items-center md:justify-between">
-             <div class="mb-4 md:mb-0 md:pr-4"> 
-                <h2 class="text-lg font-bold mb-1"><?=$label_subscription_H2." ".$ebaySearchKeyword;?></h2> 
-                <p class="text-sm text-gray-600"> <?=$label_subscription_explainer;?></p> 
-            </div> 
-                <form action="<?=$rootDomain.$base;?>subscribe.php" method="post" class="w-full md:w-auto flex flex-col md:flex-row md:items-center"> 
-                    <input type="text" name="website" autocomplete="off" style="display:none">
-                    <input type="hidden" name="alert_keyword" value="<?php if(isset($ebaySearchKeyword)) echo $ebaySearchKeyword;?>"> 
-                    <input type="email" name="email" required placeholder="<?=$label_subscription_email;?>" class="w-full border border-gray-300 px-4 py-2 rounded-md mb-2 md:mb-0 md:mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500" >
-                    <button type="submit" class="w-full md:w-auto px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700 transition duration-300" > <?=$label_subscription_button;?> </button> 
-                </form> 
-        </div>
-    </section>
-    */ ?>
     
     <section class="mt-8 mb-5" id="makemoney"> 
     <?php

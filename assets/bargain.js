@@ -11,7 +11,7 @@ function fetchBargainResults() {
     loading && loading.classList.remove('hidden');
     if (results) results.style.opacity = '0.4';
 
-    fetch('bargain.php', {
+    fetch('bargain', {
         method: 'POST',
         body: formData,
         headers: {
@@ -108,7 +108,7 @@ function initCountdowns() {
     });
 }
 
-// 🔁 init au chargement initial
+//  init au chargement initial
 document.addEventListener('DOMContentLoaded', function () {
     initCountdowns();
 });

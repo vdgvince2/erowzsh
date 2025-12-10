@@ -18,7 +18,7 @@ inline_css_for_page();
         <circle cx="12" cy="11" r="2.5" />
       </svg>
 
-      <a href="<?=$rootDomain.$base;?>bargain.php" class="inline-flex items-center gap-2 text-xl font-medium focus:outline-none">
+      <a href="<?=$rootDomain.$base;?>s/bargain" class="inline-flex items-center gap-2 text-xl font-medium focus:outline-none">
         <?= $label_bargain_topheader;?>
       </a>
 
@@ -36,12 +36,13 @@ inline_css_for_page();
       </div>
 
       <!-- Center : search desktop -->
-      <form class="hidden md:flex flex-1 mx-4" action="<?=$rootDomain.$base;?>bargain.php#results" method="post">
+      <form class="hidden md:flex flex-1 mx-4" action="<?=$rootDomain.$base;?>s/bargain#results" method="post">
         <div class="flex w-full bg-gray-50 rounded-full shadow-sm overflow-hidden">
           <input type="hidden" name="mode" value="standard" />
           <input
             type="text"
             placeholder="ipad, smartphone, ..."
+            data-hj-allow
             class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none"
             name="keyword_search"
           />
@@ -108,10 +109,10 @@ inline_css_for_page();
     </div>
 
     <!-- Mobile search -->
-    <form class="mt-3 md:hidden" action="<?=$rootDomain.$base;?>bargain.php#results" method="post">
+    <form class="mt-3 md:hidden" action="<?=$rootDomain.$base;?>s/bargain#results" method="post">
       <div class="flex w-full bg-gray-50 rounded-full shadow-sm overflow-hidden">
         <input type="hidden" name="mode" value="standard" />
-        <input type="text" name="keyword_search" placeholder="ipad, smartphone, ..."
+        <input type="text" name="keyword_search" placeholder="ipad, smartphone, ..." data-hj-allow 
                class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none" />
         <button class="flex items-center justify-center px-5 bg-blue-500 text-white">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
@@ -176,16 +177,16 @@ inline_css_for_page();
         <a href="<?=$rootDomain.$base;?>" class="px-4 py-3 hover:bg-gray-50">
           <?=$breadcrumb_home;?>
         </a>
-        <a href="<?=$rootDomain.$base;?>bargain.php?mode=standard" class="px-4 py-3 hover:bg-gray-50">
+        <a href="<?=$rootDomain.$base;?>s/bargain?mode=standard" class="px-4 py-3 hover:bg-gray-50">
           <?=$label_bargain_search;?>
         </a>                                
-        <a href="<?=$rootDomain.$base;?>bargain.php?mode=local" class="px-4 py-3 hover:bg-gray-50">
+        <a href="<?=$rootDomain.$base;?>s/bargain?mode=local" class="px-4 py-3 hover:bg-gray-50">
           <?=$label_bargain_local;?>
         </a>
-        <a href="<?=$rootDomain.$base;?>bargain.php?mode=misspelled" class="px-4 py-3 hover:bg-gray-50">
+        <a href="<?=$rootDomain.$base;?>s/bargain?mode=misspelled" class="px-4 py-3 hover:bg-gray-50">
           <?=$label_bargain_misspelled;?>
         </a>
-        <a href="<?=$rootDomain.$base;?>bargain.php?mode=lastminute" class="px-4 py-3 hover:bg-gray-50">
+        <a href="<?=$rootDomain.$base;?>s/bargain?mode=lastminute" class="px-4 py-3 hover:bg-gray-50">
           <?=$label_bargain_lastminute;?>
         </a>                        
         <a href="https://www.facebook.com/profile.php?id=61584598651411" class="px-4 py-3 hover:bg-gray-50">

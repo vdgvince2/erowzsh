@@ -2,16 +2,13 @@
 // don't display ads for this page
 $noAds = true;
 
-require __DIR__ . '/inc/config.php'; 
-require __DIR__ . '/inc/functions.php'; 
-
 // Sécurité de base
 header('X-Content-Type-Options: nosniff');
 header('X-Frame-Options: SAMEORIGIN');
 header('Referrer-Policy: no-referrer-when-downgrade');
 
 // 1) Récup & normalisation du paramètre
-$raw = $_GET['slug'] ?? '';
+$raw = $pageSlug ?? '';
 $slug = trim(strtolower($raw), "/ \t\n\r\0\x0B");
 
 // 2) Validation stricte : lettres, chiffres, tirets et éventuellement un seul slash (ex: home/categoriesindex)

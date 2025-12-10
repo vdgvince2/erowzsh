@@ -7,9 +7,7 @@ RewriteBase /SH/
 #RewriteCond %{HTTP_HOST} !^$ 
 #RewriteRule ^ %{REQUEST_SCHEME}://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# Ne pas réécrire 
-RewriteRule ^scripts/ - [L]
-RewriteRule ^monitoring/ - [L]
+
 
 # --- Expires & Cache-Control
 <IfModule mod_expires.c>
@@ -81,55 +79,15 @@ FileETag None
   Header unset ETag
 </IfModule>
 
+# 0) Homepage du dossier SH → pager.php
+RewriteRule ^$ pager.php [QSA,L]
 
-# 1) Homepage (doit être AVANT le garde -f/-d)
-RewriteRule ^$ homepage.php [END,QSA]
-
-# Rediriger tout le dossier /r/Details/ vers la homepage (specifique Irelande)
-RewriteRule ^r/Details/.*$ / [R=301,L]
-
-# rediriger les search pages
-RewriteRule ^s/search$ bargain.php [R=301,L]
-RewriteRule ^search.php$ bargain.php [R=301,L]
-
-# 2) Pages statiques (hardcodées)
-RewriteRule ^s/cookies/?$                 page.php?slug=cookies                 [END,QSA,NC]
-RewriteRule ^s/help/?$                    page.php?slug=help                    [END,QSA,NC]
-RewriteRule ^s/contact/?$                 contact.php                           [END,QSA,NC]
-RewriteRule ^s/cart/?$                    cart.php                              [END,QSA,NC]
-RewriteRule ^s/privacy/?$                 page.php?slug=privacy                 [END,QSA,NC]
-RewriteRule ^s/press/?$                   page.php?slug=press                   [END,QSA,NC]
-RewriteRule ^s/about/?$                   page.php?slug=about                   [END,QSA,NC]
-RewriteRule ^s/home/categoriesindex/?$    page.php?slug=home/categoriesindex    [END,QSA,NC]
-
-RewriteRule ^s/registration/?$            page.php?slug=registration            [END,QSA,NC]
-RewriteRule ^s/money-back/?$              page.php?slug=money-back-guarantee    [END,QSA,NC]
-RewriteRule ^s/money-back-guarantee/?$    page.php?slug=money-back-guarantee    [END,QSA,NC]
-RewriteRule ^s/bidding-and-buying-help/?$ page.php?slug=bidding-and-buying-help [END,QSA,NC]
-RewriteRule ^s/stores/?$                  page.php?slug=stores                  [END,QSA,NC]
-RewriteRule ^s/start-selling/?$           page.php?slug=start-selling           [END,QSA,NC]
-RewriteRule ^s/learn-to-sell/?$           page.php?slug=learn-to-sell           [END,QSA,NC]
-RewriteRule ^s/business-sellers/?$        page.php?slug=business-sellers        [END,QSA,NC]
-RewriteRule ^s/seller-centre/?$           page.php?slug=seller-centre           [END,QSA,NC]
-RewriteRule ^s/developers/?$              page.php?slug=developers              [END,QSA,NC]
-RewriteRule ^s/security-centre/?$         page.php?slug=security-centre         [END,QSA,NC]
-RewriteRule ^s/site-map/?$                page.php?slug=site-map                [END,QSA,NC]
-RewriteRule ^s/official-time/?$           page.php?slug=official-time           [END,QSA,NC]
-RewriteRule ^s/myaccount/?$               page.php?slug=myaccount               [END,QSA,NC]
-RewriteRule ^s/watchlist/?$               page.php?slug=watchlist               [END,QSA,NC]
-
-# 3) Catégories (1 à 3 niveaux)
-RewriteRule ^s/([^/]+)/?$                             template.php?categ=1&level1=$1                      [END,QSA]
-RewriteRule ^s/([^/]+)/([^/]+)/?$                     template.php?categ=1&level1=$1&level2=$2            [END,QSA]
-RewriteRule ^s/([^/]+)/([^/]+)/([^/]+)/?$             template.php?categ=1&level1=$1&level2=$2&level3=$3  [END,QSA]
-
-# 4) Mots-clés
-RewriteRule ^([a-z0-9\-]+)/?$                         template.php?keyword=$1                              [END,QSA]
-
-# 5) Laisser passer les fichiers/dossiers réels (après nos réécritures virtuelles)
+# 1) Laisser passer les fichiers / dossiers réels
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# 6) Fallback global : tout le reste → 404/redirect map gérée dans fallback.php
-RewriteRule ^.+$ fallback.php [L,QSA]
+# 2) Tout le reste va vers pager.php
+#   - REQUEST_URI reste dispo en PHP
+#   - On passe aussi la partie chemin dans ?path=
+RewriteRule ^(.*)$ pager.php?path=$1 [QSA,L]

@@ -404,7 +404,7 @@ function map_browse_to_products(array $data, ?int $keywordId = null): array
 /* DISPLAY THE BARGAIN FROM EBAY */
 function render_bargain_results($postcode, $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, $mode) {
 
-global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $label_bargain_calculating, $label_bargain_endson, $countryCode;
+global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $label_bargain_calculating, $label_bargain_endson, $label_bargain_standard, $countryCode;
 
     ?>
     <?php if ($errorMsg): ?>
@@ -412,7 +412,7 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
             <?= htmlspecialchars($errorMsg, ENT_QUOTES); ?>
         </div>
     <?php else: ?>
-        <!-- Product Grid -->
+        <!-- Product Grid -->           
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <?php foreach ($products as $prod) : ?>
             <!-- Product Card 1 -->                            

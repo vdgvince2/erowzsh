@@ -1,48 +1,1097 @@
 Country passed : fr
 Crawling of 500 starting
-*** Start crawling : 2025-12-04 15:00:01 | MAX KW : 500 | Country : FR
-KwId: 168031 | Country: FR | il2 sturmovik
-Import OK for keyword_id=168031. Inserted 48 ads.
-KwId: 115746 | Country: FR | honda ft 500 ascot pignons demarreur
+*** Start crawling : 2025-12-09 05:00:01 | MAX KW : 500 | Country : FR
+KwId: 19332 | Country: FR | sneakers serafini
+Import OK for keyword_id=19332. Inserted 9 ads.
+KwId: 185649 | Country: FR | tableau broderie diamants
+Import OK for keyword_id=185649. Inserted 48 ads.
+KwId: 104989 | Country: FR | fauteuil confortable
+Import OK for keyword_id=104989. Inserted 48 ads.
+KwId: 53150 | Country: FR | velo vtt 26
+Import OK for keyword_id=53150. Inserted 48 ads.
+KwId: 58120 | Country: FR | pack office 2007
 Skip: <= 5 products in JSON.
-Import OK for keyword_id=115746. Inserted 0 ads.
-KwId: 19548 | Country: FR | walbrzych
-Import OK for keyword_id=19548. Inserted 43 ads.
-KwId: 187406 | Country: FR | espadrille enfant
-Import OK for keyword_id=187406. Inserted 48 ads.
-KwId: 199638 | Country: FR | multilingue playstation 5
-Import OK for keyword_id=199638. Inserted 48 ads.
-KwId: 127757 | Country: FR | gazette armes 1
-Import OK for keyword_id=127757. Inserted 48 ads.
-KwId: 36553 | Country: FR | cocotte minute 8 litres
-Import OK for keyword_id=36553. Inserted 48 ads.
-KwId: 34550 | Country: FR | manoir hante scooby doo
+Import OK for keyword_id=58120. Inserted 2 ads.
+KwId: 173933 | Country: FR | bureaux metal verre
+Import OK for keyword_id=173933. Inserted 48 ads.
+KwId: 18940 | Country: FR | jante 400 xr
+Import OK for keyword_id=18940. Inserted 9 ads.
+KwId: 83385 | Country: FR | service fumeur
+Import OK for keyword_id=83385. Inserted 48 ads.
+KwId: 79985 | Country: FR | casque bmw
+Import OK for keyword_id=79985. Inserted 48 ads.
+KwId: 150335 | Country: FR | ft277
+Import OK for keyword_id=150335. Inserted 23 ads.
+KwId: 23324 | Country: FR | chapeau panama homme
+Import OK for keyword_id=23324. Inserted 48 ads.
+KwId: 34079 | Country: FR | barbie voiture cabriolet
+Import OK for keyword_id=34079. Inserted 23 ads.
+KwId: 62641 | Country: FR | pendule horloges anciennes
+Import OK for keyword_id=62641. Inserted 48 ads.
+KwId: 102856 | Country: FR | kit reparation leve vitre xsara
+Import OK for keyword_id=102856. Inserted 48 ads.
+KwId: 20820 | Country: FR | playmobil 3212
+Import OK for keyword_id=20820. Inserted 45 ads.
+KwId: 119372 | Country: FR | change adulte
+Import OK for keyword_id=119372. Inserted 22 ads.
+KwId: 88040 | Country: FR | montre 18 eme
+Import OK for keyword_id=88040. Inserted 48 ads.
+KwId: 166058 | Country: FR | elegance tupperware
+Import OK for keyword_id=166058. Inserted 34 ads.
+KwId: 143884 | Country: FR | assiette louis 15
+Import OK for keyword_id=143884. Inserted 6 ads.
+KwId: 35513 | Country: FR | papier argentique
+Import OK for keyword_id=35513. Inserted 48 ads.
+KwId: 174529 | Country: FR | parc filet
+Import OK for keyword_id=174529. Inserted 48 ads.
+KwId: 34634 | Country: FR | us navy jacket
+Import OK for keyword_id=34634. Inserted 48 ads.
+KwId: 6626 | Country: FR | tasse ww1
+Import OK for keyword_id=6626. Inserted 26 ads.
+KwId: 145272 | Country: FR | double dragon advance
+Import OK for keyword_id=145272. Inserted 12 ads.
+KwId: 118192 | Country: FR | trogen ikea
 Skip: <= 5 products in JSON.
-Import OK for keyword_id=34550. Inserted 4 ads.
-KwId: 91267 | Country: FR | pompe circulation
-Import OK for keyword_id=91267. Inserted 48 ads.
-KwId: 118125 | Country: FR | dpmr
-Import OK for keyword_id=118125. Inserted 11 ads.
-KwId: 76705 | Country: FR | phildar modeles layette
-Import OK for keyword_id=76705. Inserted 12 ads.
-KwId: 153317 | Country: FR | es1
-Import OK for keyword_id=153317. Inserted 48 ads.
-KwId: 12640 | Country: FR | presscontrol
-Import OK for keyword_id=12640. Inserted 48 ads.
-KwId: 179131 | Country: FR | suzuki alto 2012
-Import OK for keyword_id=179131. Inserted 48 ads.
-KwId: 99303 | Country: FR | vtt scott
-Import OK for keyword_id=99303. Inserted 48 ads.
-KwId: 59828 | Country: FR | circuit train bois dinosaure
+Import OK for keyword_id=118192. Inserted 0 ads.
+KwId: 109036 | Country: FR | canne erotique
+Import OK for keyword_id=109036. Inserted 11 ads.
+KwId: 138400 | Country: FR | poire poudre cuir
+Import OK for keyword_id=138400. Inserted 28 ads.
+KwId: 199761 | Country: FR | obj m42 58 2
 Skip: <= 5 products in JSON.
-Import OK for keyword_id=59828. Inserted 1 ads.
-KwId: 56567 | Country: FR | tente jamet
-Import OK for keyword_id=56567. Inserted 38 ads.
-KwId: 184558 | Country: FR | 8 dvd films francais
-Import OK for keyword_id=184558. Inserted 48 ads.
-KwId: 19259 | Country: FR | chevrolet blazer k5
-Import OK for keyword_id=19259. Inserted 48 ads.
-KwId: 142899 | Country: FR | couverts a entremet argent massif
-Import OK for keyword_id=142899. Inserted 48 ads.
-KwId: 9935 | Country: FR | anti brouillard 309
-Error: extract_top_ngrams(): Return value must be of type string, array returned
+Import OK for keyword_id=199761. Inserted 3 ads.
+KwId: 140471 | Country: FR | silencieux bmw e31
+Import OK for keyword_id=140471. Inserted 48 ads.
+KwId: 2540 | Country: FR | bidon energol
+Import OK for keyword_id=2540. Inserted 48 ads.
+KwId: 66510 | Country: FR | sonorette
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=66510. Inserted 4 ads.
+KwId: 86119 | Country: FR | okuma distance
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=86119. Inserted 5 ads.
+KwId: 108613 | Country: FR | r1900
+Import OK for keyword_id=108613. Inserted 48 ads.
+KwId: 176310 | Country: FR | iphone 11 pro max 64 go gris
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=176310. Inserted 5 ads.
+KwId: 147846 | Country: FR | plaque g10
+Import OK for keyword_id=147846. Inserted 48 ads.
+KwId: 156434 | Country: FR | velo demi course
+Import OK for keyword_id=156434. Inserted 39 ads.
+KwId: 23435 | Country: FR | radio retro
+Import OK for keyword_id=23435. Inserted 48 ads.
+KwId: 65419 | Country: FR | gmp 1 12
+Import OK for keyword_id=65419. Inserted 48 ads.
+KwId: 34163 | Country: FR | revue technique automobile scenic
+Import OK for keyword_id=34163. Inserted 48 ads.
+KwId: 183755 | Country: FR | documents anciens
+Import OK for keyword_id=183755. Inserted 48 ads.
+KwId: 47397 | Country: FR | street triple pot
+Import OK for keyword_id=47397. Inserted 48 ads.
+KwId: 95100 | Country: FR | medaille indochine
+Import OK for keyword_id=95100. Inserted 48 ads.
+KwId: 165637 | Country: FR | pieces lampe jielde jielde
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=165637. Inserted 4 ads.
+KwId: 39374 | Country: FR | carrousel miniature
+Import OK for keyword_id=39374. Inserted 9 ads.
+KwId: 123830 | Country: FR | robert fernier
+Import OK for keyword_id=123830. Inserted 24 ads.
+KwId: 20424 | Country: FR | chapeau ecossais
+Import OK for keyword_id=20424. Inserted 48 ads.
+KwId: 28521 | Country: FR | benne cerealiere
+Import OK for keyword_id=28521. Inserted 8 ads.
+KwId: 100665 | Country: FR | amortisseur bilstein
+Import OK for keyword_id=100665. Inserted 48 ads.
+KwId: 144822 | Country: FR | cloueur spit 1000
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=144822. Inserted 2 ads.
+KwId: 89562 | Country: FR | mini baffle
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=89562. Inserted 5 ads.
+KwId: 192227 | Country: FR | benelli 125 adiva
+Import OK for keyword_id=192227. Inserted 48 ads.
+KwId: 164683 | Country: FR | boite lettres poste boite poste
+Import OK for keyword_id=164683. Inserted 48 ads.
+KwId: 120383 | Country: FR | enceinte esoter focus time
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=120383. Inserted 0 ads.
+KwId: 49184 | Country: FR | degauchisseuse combine
+Import OK for keyword_id=49184. Inserted 6 ads.
+KwId: 187271 | Country: FR | outillages jardin
+Import OK for keyword_id=187271. Inserted 38 ads.
+KwId: 104723 | Country: FR | saladier nevers
+Import OK for keyword_id=104723. Inserted 48 ads.
+KwId: 165850 | Country: FR | soudage goujon nelson trw ncd 60
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=165850. Inserted 0 ads.
+KwId: 13376 | Country: FR | poupee porcelaine automate musicale
+Import OK for keyword_id=13376. Inserted 22 ads.
+KwId: 42460 | Country: FR | skateboard plastique
+Import OK for keyword_id=42460. Inserted 48 ads.
+KwId: 79246 | Country: FR | ecusson tissus militaire
+Import OK for keyword_id=79246. Inserted 48 ads.
+KwId: 63106 | Country: FR | etole fushia
+Import OK for keyword_id=63106. Inserted 18 ads.
+KwId: 133284 | Country: FR | jbl eon 515
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=133284. Inserted 0 ads.
+KwId: 24219 | Country: FR | ford anglia dinky toys
+Import OK for keyword_id=24219. Inserted 21 ads.
+KwId: 12408 | Country: FR | io2
+Import OK for keyword_id=12408. Inserted 48 ads.
+KwId: 26798 | Country: FR | seb cuiseur vitasaveur
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=26798. Inserted 3 ads.
+KwId: 143985 | Country: FR | barre jumelage bebe confort confort
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=143985. Inserted 0 ads.
+KwId: 137666 | Country: FR | lactina
+Import OK for keyword_id=137666. Inserted 31 ads.
+KwId: 12029 | Country: FR | enceintes dinghy
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=12029. Inserted 3 ads.
+KwId: 187939 | Country: FR | vr casque ps4
+Import OK for keyword_id=187939. Inserted 48 ads.
+KwId: 153553 | Country: FR | norev pompiers renault
+Import OK for keyword_id=153553. Inserted 48 ads.
+KwId: 134159 | Country: FR | azan clock
+Import OK for keyword_id=134159. Inserted 9 ads.
+KwId: 38680 | Country: FR | casio reveil
+Import OK for keyword_id=38680. Inserted 48 ads.
+KwId: 185567 | Country: FR | tracteur deutz dx 3 90
+Import OK for keyword_id=185567. Inserted 26 ads.
+KwId: 60197 | Country: FR | tapis laine vintage
+Import OK for keyword_id=60197. Inserted 48 ads.
+KwId: 174752 | Country: FR | clic clac banquette
+Import OK for keyword_id=174752. Inserted 20 ads.
+KwId: 122897 | Country: FR | automate siemens s7
+Import OK for keyword_id=122897. Inserted 48 ads.
+KwId: 169888 | Country: FR | 2 tables blanches
+Import OK for keyword_id=169888. Inserted 48 ads.
+KwId: 4033 | Country: FR | rehausse palette
+Import OK for keyword_id=4033. Inserted 22 ads.
+KwId: 160552 | Country: FR | cendrier art deco metal
+Import OK for keyword_id=160552. Inserted 48 ads.
+KwId: 64831 | Country: FR | horloge faience
+Import OK for keyword_id=64831. Inserted 48 ads.
+KwId: 81745 | Country: FR | pointe danse repetto
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=81745. Inserted 1 ads.
+KwId: 115605 | Country: FR | arcopal oiseau
+Import OK for keyword_id=115605. Inserted 16 ads.
+KwId: 122304 | Country: FR | marzelle
+Import OK for keyword_id=122304. Inserted 48 ads.
+KwId: 177205 | Country: FR | nemo bipper
+Import OK for keyword_id=177205. Inserted 48 ads.
+KwId: 126243 | Country: FR | renaud amoureux paname
+Import OK for keyword_id=126243. Inserted 48 ads.
+KwId: 168127 | Country: FR | amortisseur twingo
+Import OK for keyword_id=168127. Inserted 48 ads.
+KwId: 54915 | Country: FR | chaise escabeau
+Import OK for keyword_id=54915. Inserted 48 ads.
+KwId: 123088 | Country: FR | datalogic
+Import OK for keyword_id=123088. Inserted 48 ads.
+KwId: 64453 | Country: FR | bureau ecolier 1950
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=64453. Inserted 4 ads.
+KwId: 135705 | Country: FR | repose pieds ancien
+Import OK for keyword_id=135705. Inserted 48 ads.
+KwId: 198788 | Country: FR | tiny love mobile
+Import OK for keyword_id=198788. Inserted 8 ads.
+KwId: 45295 | Country: FR | mascarade
+Import OK for keyword_id=45295. Inserted 48 ads.
+KwId: 120853 | Country: FR | poele bois bruno
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=120853. Inserted 0 ads.
+KwId: 33339 | Country: FR | outils wolf
+Import OK for keyword_id=33339. Inserted 48 ads.
+KwId: 144030 | Country: FR | baionnettes armes
+Import OK for keyword_id=144030. Inserted 48 ads.
+KwId: 50450 | Country: FR | nursery poupee
+Import OK for keyword_id=50450. Inserted 47 ads.
+KwId: 163326 | Country: FR | dvd navigation map toyota
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=163326. Inserted 0 ads.
+KwId: 37197 | Country: FR | culasse fjr 1300
+Import OK for keyword_id=37197. Inserted 48 ads.
+KwId: 176297 | Country: FR | tome 2 manga one
+Import OK for keyword_id=176297. Inserted 48 ads.
+KwId: 118394 | Country: FR | perle tahiti cuir
+Import OK for keyword_id=118394. Inserted 12 ads.
+KwId: 97617 | Country: FR | marqueterie
+Import OK for keyword_id=97617. Inserted 48 ads.
+KwId: 155733 | Country: FR | sugden a
+Import OK for keyword_id=155733. Inserted 17 ads.
+KwId: 102670 | Country: FR | couteau enduire
+Import OK for keyword_id=102670. Inserted 48 ads.
+KwId: 199468 | Country: FR | warriors limited edition
+Import OK for keyword_id=199468. Inserted 48 ads.
+KwId: 33464 | Country: FR | pyrogene ancien
+Import OK for keyword_id=33464. Inserted 48 ads.
+KwId: 183857 | Country: FR | ligier 2010
+Import OK for keyword_id=183857. Inserted 48 ads.
+KwId: 72335 | Country: FR | carenage mini quad
+Import OK for keyword_id=72335. Inserted 12 ads.
+KwId: 181170 | Country: FR | livre francoise dolto
+Import OK for keyword_id=181170. Inserted 48 ads.
+KwId: 49269 | Country: FR | mini beamer
+Import OK for keyword_id=49269. Inserted 31 ads.
+KwId: 50989 | Country: FR | forme cintreuse mingori
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=50989. Inserted 0 ads.
+KwId: 54661 | Country: FR | logo bmw carbon 60 mm
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=54661. Inserted 0 ads.
+KwId: 86184 | Country: FR | medaille operation
+Import OK for keyword_id=86184. Inserted 48 ads.
+KwId: 1941 | Country: FR | algeco chantier
+Import OK for keyword_id=1941. Inserted 11 ads.
+KwId: 112284 | Country: FR | lego star wars 7259
+Import OK for keyword_id=112284. Inserted 48 ads.
+KwId: 87262 | Country: FR | peradon
+Import OK for keyword_id=87262. Inserted 48 ads.
+KwId: 196503 | Country: FR | cristal signe baccarat
+Import OK for keyword_id=196503. Inserted 48 ads.
+KwId: 151965 | Country: FR | vitrine a poser
+Import OK for keyword_id=151965. Inserted 48 ads.
+KwId: 104263 | Country: FR | altaya
+Import OK for keyword_id=104263. Inserted 48 ads.
+KwId: 25573 | Country: FR | coffret dvd quatrieme dimension
+Import OK for keyword_id=25573. Inserted 26 ads.
+KwId: 48071 | Country: FR | rossignol alias
+Import OK for keyword_id=48071. Inserted 17 ads.
+KwId: 137137 | Country: FR | sovam camion
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=137137. Inserted 2 ads.
+KwId: 42038 | Country: FR | hirondelles mural
+Import OK for keyword_id=42038. Inserted 48 ads.
+KwId: 63415 | Country: FR | zenith defy
+Import OK for keyword_id=63415. Inserted 48 ads.
+KwId: 114277 | Country: FR | chaises pliantes cannee
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=114277. Inserted 0 ads.
+KwId: 143968 | Country: FR | banjo 6
+Import OK for keyword_id=143968. Inserted 48 ads.
+KwId: 96890 | Country: FR | pipe tabac
+Import OK for keyword_id=96890. Inserted 48 ads.
+KwId: 14562 | Country: FR | perruque miku hatsune
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=14562. Inserted 2 ads.
+KwId: 44503 | Country: FR | tonnelle aluminium
+Import OK for keyword_id=44503. Inserted 48 ads.
+KwId: 131605 | Country: FR | landau ancienne
+Import OK for keyword_id=131605. Inserted 48 ads.
+KwId: 118835 | Country: FR | chapeau paille femme
+Import OK for keyword_id=118835. Inserted 48 ads.
+KwId: 21458 | Country: FR | chevre poitevine
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=21458. Inserted 2 ads.
+KwId: 93583 | Country: FR | filtre aquarium sunsun
+Import OK for keyword_id=93583. Inserted 48 ads.
+KwId: 180240 | Country: FR | assiette fleurie
+Import OK for keyword_id=180240. Inserted 48 ads.
+KwId: 8180 | Country: FR | maillot mercier
+Import OK for keyword_id=8180. Inserted 20 ads.
+KwId: 118470 | Country: FR | pieces monnaie argent
+Import OK for keyword_id=118470. Inserted 48 ads.
+KwId: 199333 | Country: FR | monster ultra hd
+Import OK for keyword_id=199333. Inserted 40 ads.
+KwId: 24843 | Country: FR | collection paquets cigarettes
+Import OK for keyword_id=24843. Inserted 48 ads.
+KwId: 97068 | Country: FR | toshiba transistor
+Import OK for keyword_id=97068. Inserted 48 ads.
+KwId: 192454 | Country: FR | argent sterling blanc
+Import OK for keyword_id=192454. Inserted 48 ads.
+KwId: 18820 | Country: FR | bustes marvel bowen
+Import OK for keyword_id=18820. Inserted 38 ads.
+KwId: 64919 | Country: FR | adidas adicolor
+Import OK for keyword_id=64919. Inserted 48 ads.
+KwId: 5132 | Country: FR | sarreguemines rouen
+Import OK for keyword_id=5132. Inserted 48 ads.
+KwId: 178778 | Country: FR | valise malette
+Import OK for keyword_id=178778. Inserted 48 ads.
+KwId: 82223 | Country: FR | numark n4
+Import OK for keyword_id=82223. Inserted 10 ads.
+KwId: 27082 | Country: FR | alechinsky
+Import OK for keyword_id=27082. Inserted 48 ads.
+KwId: 184966 | Country: FR | chargeur microsoft surface
+Import OK for keyword_id=184966. Inserted 48 ads.
+KwId: 68330 | Country: FR | marc held
+Import OK for keyword_id=68330. Inserted 33 ads.
+KwId: 62650 | Country: FR | perceuse enfant
+Import OK for keyword_id=62650. Inserted 34 ads.
+KwId: 195321 | Country: FR | 3d ancien chateau
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=195321. Inserted 3 ads.
+KwId: 63148 | Country: FR | bucci
+Import OK for keyword_id=63148. Inserted 48 ads.
+KwId: 40567 | Country: FR | villeroy summerday
+Import OK for keyword_id=40567. Inserted 48 ads.
+KwId: 133053 | Country: FR | blouson moto furygan
+Import OK for keyword_id=133053. Inserted 48 ads.
+KwId: 130616 | Country: FR | guide routard italie nord
+Import OK for keyword_id=130616. Inserted 48 ads.
+KwId: 92789 | Country: FR | power box
+Import OK for keyword_id=92789. Inserted 48 ads.
+KwId: 25538 | Country: FR | barette memoire corsair
+Import OK for keyword_id=25538. Inserted 48 ads.
+KwId: 81296 | Country: FR | chaises rustiques
+Import OK for keyword_id=81296. Inserted 48 ads.
+KwId: 3522 | Country: FR | benchmade griptilian
+Import OK for keyword_id=3522. Inserted 6 ads.
+KwId: 92790 | Country: FR | pompe whirlpool
+Import OK for keyword_id=92790. Inserted 48 ads.
+KwId: 99914 | Country: FR | bureau secretaire ikea
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=99914. Inserted 1 ads.
+KwId: 81854 | Country: FR | cle plip telecommande mercedes
+Import OK for keyword_id=81854. Inserted 43 ads.
+KwId: 100654 | Country: FR | pare soleil gauche
+Import OK for keyword_id=100654. Inserted 48 ads.
+KwId: 92878 | Country: FR | side car cross ancien
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=92878. Inserted 2 ads.
+KwId: 169661 | Country: FR | coffret a dessin
+Import OK for keyword_id=169661. Inserted 48 ads.
+KwId: 81040 | Country: FR | tableau bois relief
+Import OK for keyword_id=81040. Inserted 48 ads.
+KwId: 186956 | Country: FR | majorette 1 piece
+Import OK for keyword_id=186956. Inserted 48 ads.
+KwId: 135419 | Country: FR | carrosserie jouef
+Import OK for keyword_id=135419. Inserted 48 ads.
+KwId: 133929 | Country: FR | armoire 1890
+Import OK for keyword_id=133929. Inserted 19 ads.
+KwId: 175401 | Country: FR | platine feux citroen jumper
+Import OK for keyword_id=175401. Inserted 48 ads.
+KwId: 115369 | Country: FR | emp2
+Import OK for keyword_id=115369. Inserted 48 ads.
+KwId: 67697 | Country: FR | pot suzuki gt 550
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=67697. Inserted 4 ads.
+KwId: 174254 | Country: FR | coffrets geo
+Import OK for keyword_id=174254. Inserted 18 ads.
+KwId: 42685 | Country: FR | dodane
+Import OK for keyword_id=42685. Inserted 48 ads.
+KwId: 82654 | Country: FR | autocollant audi sport
+Import OK for keyword_id=82654. Inserted 48 ads.
+KwId: 99267 | Country: FR | phare moto led
+Import OK for keyword_id=99267. Inserted 48 ads.
+KwId: 110689 | Country: FR | kenwood ts 440s
+Import OK for keyword_id=110689. Inserted 13 ads.
+KwId: 33564 | Country: FR | carport bois
+Import OK for keyword_id=33564. Inserted 17 ads.
+KwId: 140531 | Country: FR | creative inspire t5900
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=140531. Inserted 0 ads.
+KwId: 22589 | Country: FR | velo sunn chrome
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=22589. Inserted 1 ads.
+KwId: 85417 | Country: FR | tableau ancien soie
+Import OK for keyword_id=85417. Inserted 48 ads.
+KwId: 167816 | Country: FR | truck simulator
+Import OK for keyword_id=167816. Inserted 48 ads.
+KwId: 39914 | Country: FR | poubelle canette
+Import OK for keyword_id=39914. Inserted 48 ads.
+KwId: 18075 | Country: FR | assimil roumain
+Import OK for keyword_id=18075. Inserted 6 ads.
+KwId: 152140 | Country: FR | transfo train miniature
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=152140. Inserted 2 ads.
+KwId: 17649 | Country: FR | avion corsair tetes brulees
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=17649. Inserted 2 ads.
+KwId: 46069 | Country: FR | fauteuil scandinave annees 60
+Import OK for keyword_id=46069. Inserted 7 ads.
+KwId: 131546 | Country: FR | helicoptere align
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=131546. Inserted 0 ads.
+KwId: 26936 | Country: FR | sulfateuse agricole
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=26936. Inserted 2 ads.
+KwId: 174037 | Country: FR | console 2ds rouge
+Import OK for keyword_id=174037. Inserted 48 ads.
+KwId: 99645 | Country: FR | porte cle opel corsa
+Import OK for keyword_id=99645. Inserted 48 ads.
+KwId: 165281 | Country: FR | chaussette neige autosocks
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=165281. Inserted 0 ads.
+KwId: 15770 | Country: FR | chu teh chun
+Import OK for keyword_id=15770. Inserted 37 ads.
+KwId: 147592 | Country: FR | parfum viktor rolf
+Import OK for keyword_id=147592. Inserted 48 ads.
+KwId: 98987 | Country: FR | poussette perego
+Import OK for keyword_id=98987. Inserted 48 ads.
+KwId: 109545 | Country: FR | phare velo radios
+Import OK for keyword_id=109545. Inserted 33 ads.
+KwId: 91571 | Country: FR | olympus is10
+Import OK for keyword_id=91571. Inserted 14 ads.
+KwId: 76675 | Country: FR | club libertin
+Import OK for keyword_id=76675. Inserted 48 ads.
+KwId: 18498 | Country: FR | pompe piscine 1 cv
+Import OK for keyword_id=18498. Inserted 48 ads.
+KwId: 3996 | Country: FR | vectrex overlay
+Import OK for keyword_id=3996. Inserted 9 ads.
+KwId: 92859 | Country: FR | armoire odda
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=92859. Inserted 2 ads.
+KwId: 161367 | Country: FR | gymnastique materiel
+Import OK for keyword_id=161367. Inserted 37 ads.
+KwId: 148588 | Country: FR | scooter peugeot collection
+Import OK for keyword_id=148588. Inserted 22 ads.
+KwId: 152457 | Country: FR | linhai 550
+Import OK for keyword_id=152457. Inserted 48 ads.
+KwId: 71408 | Country: FR | grendizer soucoupe
+Import OK for keyword_id=71408. Inserted 30 ads.
+KwId: 125480 | Country: FR | perceuse colonne startools
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=125480. Inserted 0 ads.
+KwId: 74928 | Country: FR | chargeur ctek
+Import OK for keyword_id=74928. Inserted 48 ads.
+KwId: 37865 | Country: FR | p99
+Import OK for keyword_id=37865. Inserted 48 ads.
+KwId: 173405 | Country: FR | nappe verte
+Import OK for keyword_id=173405. Inserted 48 ads.
+KwId: 124605 | Country: FR | tasses sarreguemine lancaster
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=124605. Inserted 2 ads.
+KwId: 180048 | Country: FR | livres poche broches
+Import OK for keyword_id=180048. Inserted 48 ads.
+KwId: 28473 | Country: FR | groupe electrogene ohv 6500
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=28473. Inserted 2 ads.
+KwId: 147899 | Country: FR | pmc 05 pro
+Import OK for keyword_id=147899. Inserted 16 ads.
+KwId: 57654 | Country: FR | fraise defonceuse
+Import OK for keyword_id=57654. Inserted 48 ads.
+KwId: 147803 | Country: FR | pippa
+Import OK for keyword_id=147803. Inserted 48 ads.
+KwId: 165606 | Country: FR | tupperware oui c est possible
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=165606. Inserted 3 ads.
+KwId: 185822 | Country: FR | table coulissante
+Import OK for keyword_id=185822. Inserted 48 ads.
+KwId: 178128 | Country: FR | jeux rallye pc colin mcrae
+Import OK for keyword_id=178128. Inserted 48 ads.
+KwId: 104286 | Country: FR | bash
+Import OK for keyword_id=104286. Inserted 48 ads.
+KwId: 1385 | Country: FR | catalyseur niva
+Import OK for keyword_id=1385. Inserted 36 ads.
+KwId: 191592 | Country: FR | boitier servitude moteur
+Import OK for keyword_id=191592. Inserted 48 ads.
+KwId: 36241 | Country: FR | feux arriere moto chopper
+Import OK for keyword_id=36241. Inserted 48 ads.
+KwId: 94369 | Country: FR | pique aiguilles
+Import OK for keyword_id=94369. Inserted 48 ads.
+KwId: 107943 | Country: FR | dieda
+Import OK for keyword_id=107943. Inserted 17 ads.
+KwId: 142977 | Country: FR | jauge a huile nissan
+Import OK for keyword_id=142977. Inserted 48 ads.
+KwId: 159039 | Country: FR | livre recettes flavor wave turbo oven
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=159039. Inserted 0 ads.
+KwId: 83828 | Country: FR | south winners
+Import OK for keyword_id=83828. Inserted 21 ads.
+KwId: 77541 | Country: FR | montre mp
+Import OK for keyword_id=77541. Inserted 48 ads.
+KwId: 37389 | Country: FR | phonographe jouet
+Import OK for keyword_id=37389. Inserted 23 ads.
+KwId: 107293 | Country: FR | bemer pro set
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=107293. Inserted 1 ads.
+KwId: 76589 | Country: FR | pese acide
+Import OK for keyword_id=76589. Inserted 26 ads.
+KwId: 158972 | Country: FR | tables salon cinna tables cinna
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=158972. Inserted 0 ads.
+KwId: 104950 | Country: FR | figurines chat
+Import OK for keyword_id=104950. Inserted 48 ads.
+KwId: 97806 | Country: FR | fer chainage
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=97806. Inserted 0 ads.
+KwId: 185372 | Country: FR | journal d noob guerrier
+Import OK for keyword_id=185372. Inserted 27 ads.
+KwId: 94213 | Country: FR | carburateur dellorto 15
+Import OK for keyword_id=94213. Inserted 48 ads.
+KwId: 200288 | Country: FR | 4k hd dual
+Import OK for keyword_id=200288. Inserted 48 ads.
+KwId: 135305 | Country: FR | lamborghini urraco
+Import OK for keyword_id=135305. Inserted 48 ads.
+KwId: 103052 | Country: FR | ozie boo
+Import OK for keyword_id=103052. Inserted 48 ads.
+KwId: 70078 | Country: FR | chauffe eau 12v
+Import OK for keyword_id=70078. Inserted 48 ads.
+KwId: 159611 | Country: FR | chaudiere vapeur chaudiere
+Import OK for keyword_id=159611. Inserted 48 ads.
+KwId: 112945 | Country: FR | coffre toit top box coffre
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=112945. Inserted 0 ads.
+KwId: 149444 | Country: FR | velo course pinarello velo course
+Import OK for keyword_id=149444. Inserted 16 ads.
+KwId: 197748 | Country: FR | amplificateur hifi yamaha
+Import OK for keyword_id=197748. Inserted 48 ads.
+KwId: 135993 | Country: FR | voiture 2eme classe
+Import OK for keyword_id=135993. Inserted 48 ads.
+KwId: 141322 | Country: FR | bmw iphone snap
+Import OK for keyword_id=141322. Inserted 7 ads.
+KwId: 141011 | Country: FR | breitling superocean steelfish
+Import OK for keyword_id=141011. Inserted 17 ads.
+KwId: 40235 | Country: FR | accessoire robot petrin
+Import OK for keyword_id=40235. Inserted 16 ads.
+KwId: 158953 | Country: FR | karaoke enfant lexibook
+Import OK for keyword_id=158953. Inserted 15 ads.
+KwId: 26384 | Country: FR | berchet train
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=26384. Inserted 0 ads.
+KwId: 130672 | Country: FR | desserte esthetique
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=130672. Inserted 2 ads.
+KwId: 123686 | Country: FR | fer jura
+Import OK for keyword_id=123686. Inserted 48 ads.
+KwId: 145421 | Country: FR | embouts impact facom
+Import OK for keyword_id=145421. Inserted 11 ads.
+KwId: 24605 | Country: FR | suzuki samourai
+Import OK for keyword_id=24605. Inserted 48 ads.
+KwId: 60055 | Country: FR | embout echappement inox
+Import OK for keyword_id=60055. Inserted 48 ads.
+KwId: 58142 | Country: FR | protection ceinture securite
+Import OK for keyword_id=58142. Inserted 48 ads.
+KwId: 150951 | Country: FR | porte clef ds
+Import OK for keyword_id=150951. Inserted 48 ads.
+KwId: 1564 | Country: FR | kyosho inferno tr15
+Import OK for keyword_id=1564. Inserted 14 ads.
+KwId: 80941 | Country: FR | nappe vichy
+Import OK for keyword_id=80941. Inserted 48 ads.
+KwId: 98636 | Country: FR | plane ancienne
+Import OK for keyword_id=98636. Inserted 48 ads.
+KwId: 110764 | Country: FR | roland fantom x
+Import OK for keyword_id=110764. Inserted 43 ads.
+KwId: 156076 | Country: FR | fer a souder electrique
+Import OK for keyword_id=156076. Inserted 48 ads.
+KwId: 47150 | Country: FR | moulin loups georgette
+Import OK for keyword_id=47150. Inserted 34 ads.
+KwId: 43618 | Country: FR | mocassins repetto
+Import OK for keyword_id=43618. Inserted 8 ads.
+KwId: 166153 | Country: FR | support globe art deco
+Import OK for keyword_id=166153. Inserted 20 ads.
+KwId: 38978 | Country: FR | accordeon diatonique bois
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=38978. Inserted 5 ads.
+KwId: 27580 | Country: FR | narguile
+Import OK for keyword_id=27580. Inserted 48 ads.
+KwId: 63357 | Country: FR | autoradio gps kenwood
+Import OK for keyword_id=63357. Inserted 7 ads.
+KwId: 128290 | Country: FR | bois chiffons meuble tele
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=128290. Inserted 1 ads.
+KwId: 194980 | Country: FR | vintage hommes veritable
+Import OK for keyword_id=194980. Inserted 48 ads.
+KwId: 192427 | Country: FR | ecu pompe agregat
+Import OK for keyword_id=192427. Inserted 48 ads.
+KwId: 138540 | Country: FR | bryston 3b
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=138540. Inserted 1 ads.
+KwId: 139998 | Country: FR | siku control 6721
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=139998. Inserted 0 ads.
+KwId: 116678 | Country: FR | vase murano annees
+Import OK for keyword_id=116678. Inserted 48 ads.
+KwId: 114098 | Country: FR | simeo pf
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=114098. Inserted 1 ads.
+KwId: 22683 | Country: FR | mandrin tour horloger
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=22683. Inserted 2 ads.
+KwId: 24528 | Country: FR | poster motocross
+Import OK for keyword_id=24528. Inserted 25 ads.
+KwId: 127300 | Country: FR | doufeu creuset
+Import OK for keyword_id=127300. Inserted 25 ads.
+KwId: 28529 | Country: FR | bogey antoine
+Import OK for keyword_id=28529. Inserted 6 ads.
+KwId: 61428 | Country: FR | ecl82
+Import OK for keyword_id=61428. Inserted 47 ads.
+KwId: 130931 | Country: FR | l epatant
+Import OK for keyword_id=130931. Inserted 48 ads.
+KwId: 79025 | Country: FR | stabilisation arc
+Import OK for keyword_id=79025. Inserted 7 ads.
+KwId: 192313 | Country: FR | iv berlina 5p
+Import OK for keyword_id=192313. Inserted 48 ads.
+KwId: 194012 | Country: FR | kpm berlin porcelaine
+Import OK for keyword_id=194012. Inserted 48 ads.
+KwId: 22536 | Country: FR | tangara
+Import OK for keyword_id=22536. Inserted 48 ads.
+KwId: 141620 | Country: FR | cire sculpture
+Import OK for keyword_id=141620. Inserted 48 ads.
+KwId: 78529 | Country: FR | phare bandit
+Import OK for keyword_id=78529. Inserted 48 ads.
+KwId: 96059 | Country: FR | pompier uniforme
+Import OK for keyword_id=96059. Inserted 48 ads.
+KwId: 5437 | Country: FR | poilu piou piou
+Import OK for keyword_id=5437. Inserted 27 ads.
+KwId: 9694 | Country: FR | cocotte fonte doufeu
+Import OK for keyword_id=9694. Inserted 32 ads.
+KwId: 19372 | Country: FR | trepied gitzo carbone
+Import OK for keyword_id=19372. Inserted 21 ads.
+KwId: 147746 | Country: FR | pillivuyt limoges
+Import OK for keyword_id=147746. Inserted 48 ads.
+KwId: 100146 | Country: FR | figurine looney tunes warner
+Import OK for keyword_id=100146. Inserted 48 ads.
+KwId: 187305 | Country: FR | plateau oriental cuivre
+Import OK for keyword_id=187305. Inserted 48 ads.
+KwId: 53781 | Country: FR | ecusson sport coudre
+Import OK for keyword_id=53781. Inserted 48 ads.
+KwId: 100385 | Country: FR | serie wilson
+Import OK for keyword_id=100385. Inserted 48 ads.
+KwId: 195550 | Country: FR | reversible impermeable coupe vent
+Import OK for keyword_id=195550. Inserted 35 ads.
+KwId: 73232 | Country: FR | maillot fdj
+Import OK for keyword_id=73232. Inserted 48 ads.
+KwId: 75899 | Country: FR | sac tennis wilson
+Import OK for keyword_id=75899. Inserted 48 ads.
+KwId: 132218 | Country: FR | dynavox vr70
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=132218. Inserted 4 ads.
+KwId: 89666 | Country: FR | gasoil peugeot
+Import OK for keyword_id=89666. Inserted 48 ads.
+KwId: 187303 | Country: FR | heroes saison 1
+Import OK for keyword_id=187303. Inserted 48 ads.
+KwId: 24744 | Country: FR | chaines michelin automatic
+Import OK for keyword_id=24744. Inserted 31 ads.
+KwId: 138306 | Country: FR | yamaha clp 880
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=138306. Inserted 1 ads.
+KwId: 182965 | Country: FR | pneus 195 65r15 h
+Import OK for keyword_id=182965. Inserted 48 ads.
+KwId: 136785 | Country: FR | materiel viticole
+Import OK for keyword_id=136785. Inserted 27 ads.
+KwId: 179815 | Country: FR | jeu nintendo 3ds yo kai watch
+Import OK for keyword_id=179815. Inserted 48 ads.
+KwId: 84556 | Country: FR | kia besta
+Import OK for keyword_id=84556. Inserted 48 ads.
+KwId: 183001 | Country: FR | decouverte corps humain
+Import OK for keyword_id=183001. Inserted 48 ads.
+KwId: 138263 | Country: FR | carre blanc doudou
+Import OK for keyword_id=138263. Inserted 48 ads.
+KwId: 133778 | Country: FR | tableau arabe
+Import OK for keyword_id=133778. Inserted 48 ads.
+KwId: 179726 | Country: FR | mercedes w210 e320cdi
+Import OK for keyword_id=179726. Inserted 48 ads.
+KwId: 109607 | Country: FR | canne peche shimano
+Import OK for keyword_id=109607. Inserted 48 ads.
+KwId: 113946 | Country: FR | travail poilu
+Import OK for keyword_id=113946. Inserted 48 ads.
+KwId: 145643 | Country: FR | feux berlingo
+Import OK for keyword_id=145643. Inserted 48 ads.
+KwId: 82687 | Country: FR | boucheron
+Import OK for keyword_id=82687. Inserted 48 ads.
+KwId: 28406 | Country: FR | kit deco dirt
+Import OK for keyword_id=28406. Inserted 14 ads.
+KwId: 193516 | Country: FR | 2x xeon 8 core
+Import OK for keyword_id=193516. Inserted 48 ads.
+KwId: 179958 | Country: FR | livres fromages
+Import OK for keyword_id=179958. Inserted 48 ads.
+KwId: 200441 | Country: FR | adapter cable 9 pin
+Import OK for keyword_id=200441. Inserted 48 ads.
+KwId: 15201 | Country: FR | chocolat menier recette
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=15201. Inserted 1 ads.
+KwId: 17962 | Country: FR | megatouch
+Import OK for keyword_id=17962. Inserted 36 ads.
+KwId: 170427 | Country: FR | livre histoires sorcieres
+Import OK for keyword_id=170427. Inserted 48 ads.
+KwId: 68462 | Country: FR | miroir hollywood
+Import OK for keyword_id=68462. Inserted 48 ads.
+KwId: 196607 | Country: FR | signe baccarat modele
+Import OK for keyword_id=196607. Inserted 48 ads.
+KwId: 118158 | Country: FR | leirsund ikea
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=118158. Inserted 0 ads.
+KwId: 13427 | Country: FR | michel laude etain
+Import OK for keyword_id=13427. Inserted 27 ads.
+KwId: 78132 | Country: FR | star wars gentle giant animated
+Import OK for keyword_id=78132. Inserted 33 ads.
+KwId: 143074 | Country: FR | jupe a frange indienne
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=143074. Inserted 0 ads.
+KwId: 38408 | Country: FR | sissy petticoat
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=38408. Inserted 0 ads.
+KwId: 194882 | Country: FR | portable msi gp72
+Import OK for keyword_id=194882. Inserted 48 ads.
+KwId: 48589 | Country: FR | vintage pedal cars
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=48589. Inserted 4 ads.
+KwId: 82273 | Country: FR | planchettes
+Import OK for keyword_id=82273. Inserted 48 ads.
+KwId: 131291 | Country: FR | clio norev 517503
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=131291. Inserted 0 ads.
+KwId: 27946 | Country: FR | maquette char tigre
+Import OK for keyword_id=27946. Inserted 48 ads.
+KwId: 4743 | Country: FR | etriers western
+Import OK for keyword_id=4743. Inserted 48 ads.
+KwId: 161702 | Country: FR | album pleiade jules verne
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=161702. Inserted 5 ads.
+KwId: 122482 | Country: FR | teckel poil ras
+Import OK for keyword_id=122482. Inserted 39 ads.
+KwId: 179249 | Country: FR | divers objet
+Import OK for keyword_id=179249. Inserted 48 ads.
+KwId: 164054 | Country: FR | canne peche bambou peche
+Import OK for keyword_id=164054. Inserted 48 ads.
+KwId: 119849 | Country: FR | recepteur jeti duplex
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=119849. Inserted 0 ads.
+KwId: 63633 | Country: FR | armoire rangement jardin
+Import OK for keyword_id=63633. Inserted 48 ads.
+KwId: 20402 | Country: FR | cryx
+Import OK for keyword_id=20402. Inserted 48 ads.
+KwId: 141042 | Country: FR | mini pelle kubota pelle
+Import OK for keyword_id=141042. Inserted 48 ads.
+KwId: 1960 | Country: FR | moyeux arriere scrambler
+Import OK for keyword_id=1960. Inserted 15 ads.
+KwId: 92430 | Country: FR | vermona
+Import OK for keyword_id=92430. Inserted 25 ads.
+KwId: 102227 | Country: FR | cotelac
+Import OK for keyword_id=102227. Inserted 48 ads.
+KwId: 140806 | Country: FR | coffret fdc 1986
+Import OK for keyword_id=140806. Inserted 48 ads.
+KwId: 137431 | Country: FR | briquet myon argent
+Import OK for keyword_id=137431. Inserted 39 ads.
+KwId: 117948 | Country: FR | abstrakt ikea rouge
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=117948. Inserted 0 ads.
+KwId: 68312 | Country: FR | porcelaine barbeau
+Import OK for keyword_id=68312. Inserted 48 ads.
+KwId: 184132 | Country: FR | collection rene chateau
+Import OK for keyword_id=184132. Inserted 48 ads.
+KwId: 196079 | Country: FR | fleur rouge art
+Import OK for keyword_id=196079. Inserted 48 ads.
+KwId: 109759 | Country: FR | ginette
+Import OK for keyword_id=109759. Inserted 48 ads.
+KwId: 174638 | Country: FR | jantes montees
+Import OK for keyword_id=174638. Inserted 48 ads.
+KwId: 162329 | Country: FR | pieces lustre
+Import OK for keyword_id=162329. Inserted 48 ads.
+KwId: 143685 | Country: FR | alesometre alesometre
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=143685. Inserted 5 ads.
+KwId: 88777 | Country: FR | tabouret elephant
+Import OK for keyword_id=88777. Inserted 43 ads.
+KwId: 102919 | Country: FR | tuner philips
+Import OK for keyword_id=102919. Inserted 48 ads.
+KwId: 24466 | Country: FR | honda 50cc motorcycle
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=24466. Inserted 4 ads.
+KwId: 22454 | Country: FR | camping gaz lantern
+Import OK for keyword_id=22454. Inserted 48 ads.
+KwId: 4937 | Country: FR | fermentation cuve
+Import OK for keyword_id=4937. Inserted 38 ads.
+KwId: 194282 | Country: FR | cartouche noir pg
+Import OK for keyword_id=194282. Inserted 48 ads.
+KwId: 94163 | Country: FR | escarpin fleuri
+Import OK for keyword_id=94163. Inserted 48 ads.
+KwId: 148526 | Country: FR | samsung ue55c9000
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=148526. Inserted 1 ads.
+KwId: 186234 | Country: FR | salut copains 33 tours
+Import OK for keyword_id=186234. Inserted 48 ads.
+KwId: 62138 | Country: FR | phase lune montres lune
+Import OK for keyword_id=62138. Inserted 48 ads.
+KwId: 35595 | Country: FR | chocolaterie hello kitty
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=35595. Inserted 0 ads.
+KwId: 90087 | Country: FR | costume traditionnel
+Import OK for keyword_id=90087. Inserted 48 ads.
+KwId: 8813 | Country: FR | cop copine pantalon gravier
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=8813. Inserted 0 ads.
+KwId: 87779 | Country: FR | bureau danois
+Import OK for keyword_id=87779. Inserted 25 ads.
+KwId: 49576 | Country: FR | table salon onyx
+Import OK for keyword_id=49576. Inserted 13 ads.
+KwId: 8717 | Country: FR | havana noche
+Import OK for keyword_id=8717. Inserted 7 ads.
+KwId: 41808 | Country: FR | pese bebe mecanique
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=41808. Inserted 4 ads.
+KwId: 163482 | Country: FR | caniche verre
+Import OK for keyword_id=163482. Inserted 48 ads.
+KwId: 146551 | Country: FR | kenwood tm 241
+Import OK for keyword_id=146551. Inserted 20 ads.
+KwId: 196661 | Country: FR | of america medaille
+Import OK for keyword_id=196661. Inserted 48 ads.
+KwId: 130631 | Country: FR | ralenti 405
+Import OK for keyword_id=130631. Inserted 48 ads.
+KwId: 69842 | Country: FR | vtt raven
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=69842. Inserted 2 ads.
+KwId: 72640 | Country: FR | fiat coupe
+Import OK for keyword_id=72640. Inserted 48 ads.
+KwId: 140142 | Country: FR | iran argent
+Import OK for keyword_id=140142. Inserted 44 ads.
+KwId: 38879 | Country: FR | aurelie nemours
+Import OK for keyword_id=38879. Inserted 46 ads.
+KwId: 80970 | Country: FR | 307 hdi 110
+Import OK for keyword_id=80970. Inserted 48 ads.
+KwId: 52572 | Country: FR | cavaletti robe
+Import OK for keyword_id=52572. Inserted 48 ads.
+KwId: 175138 | Country: FR | combinaison bebe garcon
+Import OK for keyword_id=175138. Inserted 48 ads.
+KwId: 96288 | Country: FR | pelle chenilles
+Import OK for keyword_id=96288. Inserted 48 ads.
+KwId: 42842 | Country: FR | kit reparation leve vitres saxo
+Import OK for keyword_id=42842. Inserted 19 ads.
+KwId: 109988 | Country: FR | couteaux anciens collection
+Import OK for keyword_id=109988. Inserted 48 ads.
+KwId: 179905 | Country: FR | miroir elephants
+Import OK for keyword_id=179905. Inserted 12 ads.
+KwId: 72864 | Country: FR | rosace platre
+Import OK for keyword_id=72864. Inserted 48 ads.
+KwId: 140422 | Country: FR | canasta
+Import OK for keyword_id=140422. Inserted 48 ads.
+KwId: 46783 | Country: FR | tableaux bretons
+Import OK for keyword_id=46783. Inserted 48 ads.
+KwId: 125152 | Country: FR | cloture panneau soude
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=125152. Inserted 1 ads.
+KwId: 42180 | Country: FR | xj 900 carenage
+Import OK for keyword_id=42180. Inserted 48 ads.
+KwId: 185375 | Country: FR | moteur clark
+Import OK for keyword_id=185375. Inserted 48 ads.
+KwId: 49069 | Country: FR | pieces 306 hdi
+Import OK for keyword_id=49069. Inserted 10 ads.
+KwId: 195020 | Country: FR | lecteur cd bluetooth
+Import OK for keyword_id=195020. Inserted 48 ads.
+KwId: 176289 | Country: FR | promo livres
+Import OK for keyword_id=176289. Inserted 48 ads.
+KwId: 184222 | Country: FR | lion fonte
+Import OK for keyword_id=184222. Inserted 48 ads.
+KwId: 143624 | Country: FR | acer h9500bd
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=143624. Inserted 1 ads.
+KwId: 77901 | Country: FR | escalier meunier
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=77901. Inserted 3 ads.
+KwId: 148347 | Country: FR | reveil vintage reveil
+Import OK for keyword_id=148347. Inserted 48 ads.
+KwId: 20816 | Country: FR | aspiration aldes
+Import OK for keyword_id=20816. Inserted 34 ads.
+KwId: 13537 | Country: FR | dinky 1406
+Import OK for keyword_id=13537. Inserted 14 ads.
+KwId: 113642 | Country: FR | robot spykee
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=113642. Inserted 1 ads.
+KwId: 62904 | Country: FR | miroir ancien peint
+Import OK for keyword_id=62904. Inserted 48 ads.
+KwId: 184349 | Country: FR | deco peintre
+Import OK for keyword_id=184349. Inserted 48 ads.
+KwId: 67580 | Country: FR | g skill
+Import OK for keyword_id=67580. Inserted 48 ads.
+KwId: 140946 | Country: FR | coq sportif sneakers
+Import OK for keyword_id=140946. Inserted 32 ads.
+KwId: 102584 | Country: FR | zodiac futura fr
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=102584. Inserted 0 ads.
+KwId: 93324 | Country: FR | feux convoi ho
+Import OK for keyword_id=93324. Inserted 48 ads.
+KwId: 138536 | Country: FR | ratelier foin
+Import OK for keyword_id=138536. Inserted 48 ads.
+KwId: 167622 | Country: FR | ride paiste
+Import OK for keyword_id=167622. Inserted 48 ads.
+KwId: 36736 | Country: FR | scrapbooking azza
+Import OK for keyword_id=36736. Inserted 35 ads.
+KwId: 19961 | Country: FR | centrale vapeur sgr k122
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=19961. Inserted 0 ads.
+KwId: 72026 | Country: FR | adaptateur reseau ps2
+Import OK for keyword_id=72026. Inserted 26 ads.
+KwId: 60439 | Country: FR | asterix pilote
+Import OK for keyword_id=60439. Inserted 48 ads.
+KwId: 181289 | Country: FR | chaise enfant a bascule
+Import OK for keyword_id=181289. Inserted 48 ads.
+KwId: 30432 | Country: FR | siege cotoons smoby
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=30432. Inserted 0 ads.
+KwId: 180833 | Country: FR | vetements foot
+Import OK for keyword_id=180833. Inserted 48 ads.
+KwId: 102250 | Country: FR | aiguiere
+Import OK for keyword_id=102250. Inserted 48 ads.
+KwId: 166384 | Country: FR | playmobil station service
+Import OK for keyword_id=166384. Inserted 48 ads.
+KwId: 85165 | Country: FR | bapteme bonbonniere
+Import OK for keyword_id=85165. Inserted 48 ads.
+KwId: 20403 | Country: FR | cannondale raven
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=20403. Inserted 3 ads.
+KwId: 54778 | Country: FR | lustre saint louis
+Import OK for keyword_id=54778. Inserted 32 ads.
+KwId: 186368 | Country: FR | prise legrand niloe
+Import OK for keyword_id=186368. Inserted 48 ads.
+KwId: 175522 | Country: FR | basket montante femme
+Import OK for keyword_id=175522. Inserted 48 ads.
+KwId: 15115 | Country: FR | ikks robe pull
+Import OK for keyword_id=15115. Inserted 17 ads.
+KwId: 128585 | Country: FR | cible bar
+Import OK for keyword_id=128585. Inserted 12 ads.
+KwId: 5653 | Country: FR | tenture tibet
+Import OK for keyword_id=5653. Inserted 17 ads.
+KwId: 86380 | Country: FR | voile opale
+Import OK for keyword_id=86380. Inserted 17 ads.
+KwId: 22361 | Country: FR | body aubade
+Import OK for keyword_id=22361. Inserted 21 ads.
+KwId: 58246 | Country: FR | plaque emaillee texaco
+Import OK for keyword_id=58246. Inserted 47 ads.
+KwId: 119598 | Country: FR | gi joe action man
+Import OK for keyword_id=119598. Inserted 48 ads.
+KwId: 110982 | Country: FR | camping car integral bva
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=110982. Inserted 0 ads.
+KwId: 14532 | Country: FR | evolis 80
+Import OK for keyword_id=14532. Inserted 48 ads.
+KwId: 33850 | Country: FR | cours cned asca
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=33850. Inserted 0 ads.
+KwId: 80421 | Country: FR | gilbert valentin
+Import OK for keyword_id=80421. Inserted 23 ads.
+KwId: 90501 | Country: FR | tapis sol bmw e93
+Import OK for keyword_id=90501. Inserted 48 ads.
+KwId: 112955 | Country: FR | oakley five
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=112955. Inserted 5 ads.
+KwId: 198701 | Country: FR | lumiere led blanc
+Import OK for keyword_id=198701. Inserted 48 ads.
+KwId: 56038 | Country: FR | mobylette motobecane
+Import OK for keyword_id=56038. Inserted 48 ads.
+KwId: 44338 | Country: FR | oeuvres marcel pagnol
+Import OK for keyword_id=44338. Inserted 48 ads.
+KwId: 94062 | Country: FR | noeud cadre
+Import OK for keyword_id=94062. Inserted 48 ads.
+KwId: 151379 | Country: FR | veste cuir celio
+Import OK for keyword_id=151379. Inserted 15 ads.
+KwId: 132859 | Country: FR | slip eminence
+Import OK for keyword_id=132859. Inserted 48 ads.
+KwId: 127467 | Country: FR | materiel coiffure casque
+Import OK for keyword_id=127467. Inserted 38 ads.
+KwId: 112804 | Country: FR | dictator
+Import OK for keyword_id=112804. Inserted 48 ads.
+KwId: 125304 | Country: FR | pendule oeil boeuf ancien boeuf
+Import OK for keyword_id=125304. Inserted 23 ads.
+KwId: 129969 | Country: FR | cognac carafe
+Import OK for keyword_id=129969. Inserted 48 ads.
+KwId: 115981 | Country: FR | arcteryx
+Import OK for keyword_id=115981. Inserted 48 ads.
+KwId: 35300 | Country: FR | musicman sub
+Import OK for keyword_id=35300. Inserted 48 ads.
+KwId: 126666 | Country: FR | editions bastion
+Import OK for keyword_id=126666. Inserted 48 ads.
+KwId: 50298 | Country: FR | attrape reve rose
+Import OK for keyword_id=50298. Inserted 48 ads.
+KwId: 52188 | Country: FR | fender bassman
+Import OK for keyword_id=52188. Inserted 48 ads.
+KwId: 52663 | Country: FR | metier tisser bois metier bois
+Import OK for keyword_id=52663. Inserted 48 ads.
+KwId: 39135 | Country: FR | rebillage
+Import OK for keyword_id=39135. Inserted 48 ads.
+KwId: 187108 | Country: FR | vinyl edith piaf
+Import OK for keyword_id=187108. Inserted 48 ads.
+KwId: 131395 | Country: FR | menagere christofle argent
+Import OK for keyword_id=131395. Inserted 48 ads.
+KwId: 187974 | Country: FR | tsum tsum squishy
+Import OK for keyword_id=187974. Inserted 6 ads.
+KwId: 127400 | Country: FR | distributeur cacahuetes ancien
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=127400. Inserted 1 ads.
+KwId: 136169 | Country: FR | enceinte kef 101
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=136169. Inserted 0 ads.
+KwId: 105725 | Country: FR | routeur 4g
+Import OK for keyword_id=105725. Inserted 48 ads.
+KwId: 112623 | Country: FR | microscope wild heerbrugg
+Import OK for keyword_id=112623. Inserted 48 ads.
+KwId: 76841 | Country: FR | chauffe biberon beaba
+Import OK for keyword_id=76841. Inserted 27 ads.
+KwId: 69967 | Country: FR | aspen habitat
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=69967. Inserted 0 ads.
+KwId: 134655 | Country: FR | bmx 12
+Import OK for keyword_id=134655. Inserted 48 ads.
+KwId: 114905 | Country: FR | playmobil tipi
+Import OK for keyword_id=114905. Inserted 48 ads.
+KwId: 29805 | Country: FR | accessoire piscine tubulaire intex
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=29805. Inserted 1 ads.
+KwId: 152274 | Country: FR | thorens 127
+Import OK for keyword_id=152274. Inserted 10 ads.
+KwId: 25218 | Country: FR | firewall zyxel
+Import OK for keyword_id=25218. Inserted 48 ads.
+KwId: 164322 | Country: FR | partylite baies
+Import OK for keyword_id=164322. Inserted 6 ads.
+KwId: 26058 | Country: FR | velo rtb
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=26058. Inserted 3 ads.
+KwId: 87933 | Country: FR | body cuir
+Import OK for keyword_id=87933. Inserted 48 ads.
+KwId: 156142 | Country: FR | clement schlumberger
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=156142. Inserted 1 ads.
+KwId: 186256 | Country: FR | dispositif anti ronflements
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=186256. Inserted 2 ads.
+KwId: 56068 | Country: FR | renault agriculture
+Import OK for keyword_id=56068. Inserted 48 ads.
+KwId: 193076 | Country: FR | kit deco stickers
+Import OK for keyword_id=193076. Inserted 48 ads.
+KwId: 82354 | Country: FR | gres metenier
+Import OK for keyword_id=82354. Inserted 48 ads.
+KwId: 114698 | Country: FR | lcd led
+Import OK for keyword_id=114698. Inserted 48 ads.
+KwId: 110051 | Country: FR | tunique medieval
+Import OK for keyword_id=110051. Inserted 48 ads.
+KwId: 119911 | Country: FR | tissu winnie the pooh
+Import OK for keyword_id=119911. Inserted 23 ads.
+KwId: 135364 | Country: FR | faience bleue
+Import OK for keyword_id=135364. Inserted 48 ads.
+KwId: 45411 | Country: FR | lelit
+Import OK for keyword_id=45411. Inserted 48 ads.
+KwId: 89647 | Country: FR | gens voyage
+Import OK for keyword_id=89647. Inserted 48 ads.
+KwId: 182456 | Country: FR | embrayage tkr
+Import OK for keyword_id=182456. Inserted 48 ads.
+KwId: 187968 | Country: FR | coffret bu espagne
+Import OK for keyword_id=187968. Inserted 48 ads.
+KwId: 67828 | Country: FR | rotonde
+Import OK for keyword_id=67828. Inserted 48 ads.
+KwId: 139214 | Country: FR | cirque playmobil caravane
+Import OK for keyword_id=139214. Inserted 9 ads.
+KwId: 177116 | Country: FR | refrigerateur samsung blanc
+Import OK for keyword_id=177116. Inserted 48 ads.
+KwId: 193554 | Country: FR | coton king couette
+Import OK for keyword_id=193554. Inserted 48 ads.
+KwId: 143175 | Country: FR | voiture a pedales flash mac queen
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=143175. Inserted 0 ads.
+KwId: 82302 | Country: FR | poupee africaine
+Import OK for keyword_id=82302. Inserted 48 ads.
+KwId: 164922 | Country: FR | derriere porte trousse toilette
+Import OK for keyword_id=164922. Inserted 10 ads.
+KwId: 5451 | Country: FR | salad chef
+Import OK for keyword_id=5451. Inserted 12 ads.
+KwId: 95690 | Country: FR | crochet d art
+Import OK for keyword_id=95690. Inserted 48 ads.
+KwId: 56535 | Country: FR | coussin ralph lauren home
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=56535. Inserted 0 ads.
+KwId: 193584 | Country: FR | zip pull leger
+Import OK for keyword_id=193584. Inserted 48 ads.
+KwId: 75717 | Country: FR | caisse enregistreuse casio
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=75717. Inserted 2 ads.
+KwId: 188797 | Country: FR | tambour freins renault
+Import OK for keyword_id=188797. Inserted 48 ads.
+KwId: 153786 | Country: FR | eplucheuse a pomme
+Import OK for keyword_id=153786. Inserted 44 ads.
+KwId: 118986 | Country: FR | radiateur salle bain
+Import OK for keyword_id=118986. Inserted 48 ads.
+*** End of crawl for FR (keywords: 500) | 2025-12-09 05:07:03

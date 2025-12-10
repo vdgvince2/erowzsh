@@ -1,45 +1,2251 @@
 Country passed : de
-KwId: 258334 | Country: DE | skleidung fur damenflops silber schuhe schwarz
-Skip: <= 5 products in JSON.
-OK: 'skleidung fur damenflops silber schuhe schwarz' (0/500) => keyword_id=258334; KW not found #39982 supprimé.
-KwId: 258335 | Country: DE | finkid kuu
-Skip: <= 5 products in JSON.
-OK: 'finkid kuu' (1/500) => keyword_id=258335; KW not found #39983 supprimé.
-KwId: 258336 | Country: DE | spopularm99
-Skip: <= 5 products in JSON.
-OK: 'spopularm99' (2/500) => keyword_id=258336; KW not found #39984 supprimé.
-KwId: 258337 | Country: DE | filterkartuschen maxtra
-Categorie from ebay: Wasserfilter-Kartuschen
+KwId: 260297 | Country: DE | dove bodylotion
+Categorie from ebay: Tagespflege
 Categorie match :  ()
-Import OK for keyword_id=258337. Inserted 48 ads.
-OK: 'filterkartuschen maxtra' (3/500) => keyword_id=258337; KW not found #39985 supprimé.
-KwId: 258338 | Country: DE | marantz 8b
-Categorie from ebay: Verstärker
+Import OK for keyword_id=260297. Inserted 48 ads.
+OK: 'dove bodylotion' (0/500) => keyword_id=260297; KW not found #42447 supprimé.
+KwId: 260298 | Country: DE | holz kessel
+Categorie from ebay: Brenner & Kessel
 Categorie match :  ()
-Import OK for keyword_id=258338. Inserted 10 ads.
-OK: 'marantz 8b' (4/500) => keyword_id=258338; KW not found #39986 supprimé.
-KwId: 258339 | Country: DE | heizolpumpe schrag
-Categorie from ebay: Steuerungen
-Categorie match :  ()
-Import OK for keyword_id=258339. Inserted 6 ads.
-OK: 'heizolpumpe schrag' (5/500) => keyword_id=258339; KW not found #39987 supprimé.
-KwId: 258340 | Country: DE | fwinterhalter 302
+Import OK for keyword_id=260298. Inserted 48 ads.
+OK: 'holz kessel' (1/500) => keyword_id=260298; KW not found #42448 supprimé.
+KwId: 260299 | Country: DE | ubergardine schlaufen
 Skip: <= 5 products in JSON.
-OK: 'fwinterhalter 302' (6/500) => keyword_id=258340; KW not found #39989 supprimé.
-KwId: 258341 | Country: DE | costa del sol
+OK: 'ubergardine schlaufen' (2/500) => keyword_id=260299; KW not found #42449 supprimé.
+KwId: 260300 | Country: DE | a4 motorabdeckung
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260300. Inserted 48 ads.
+OK: 'a4 motorabdeckung' (3/500) => keyword_id=260300; KW not found #42450 supprimé.
+KwId: 260301 | Country: DE | race segel
+Categorie from ebay: Rigg, Mast & Segel
+Categorie match :  ()
+Import OK for keyword_id=260301. Inserted 48 ads.
+OK: 'race segel' (4/500) => keyword_id=260301; KW not found #42451 supprimé.
+KwId: 260302 | Country: DE | camion 1 43
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260302. Inserted 48 ads.
+OK: 'camion 1 43' (5/500) => keyword_id=260302; KW not found #42452 supprimé.
+KwId: 260303 | Country: DE | diesel leder
+Categorie from ebay: Gürtel
+Categorie match :  ()
+Import OK for keyword_id=260303. Inserted 48 ads.
+OK: 'diesel leder' (6/500) => keyword_id=260303; KW not found #42453 supprimé.
+KwId: 260304 | Country: DE | dirndl kette
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260304. Inserted 48 ads.
+OK: 'dirndl kette' (7/500) => keyword_id=260304; KW not found #42454 supprimé.
+KwId: 260305 | Country: DE | alte rom
 Categorie from ebay: Bücher
 Categorie match : Antiquarische Bücher (5)
-Import OK for keyword_id=258341. Inserted 48 ads.
-OK: 'costa del sol' (7/500) => keyword_id=258341; KW not found #39990 supprimé.
-KwId: 258342 | Country: DE | grodner schnitzereien
+Import OK for keyword_id=260305. Inserted 48 ads.
+OK: 'alte rom' (8/500) => keyword_id=260305; KW not found #42455 supprimé.
+KwId: 260306 | Country: DE | b se racing
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260306. Inserted 48 ads.
+OK: 'b se racing' (9/500) => keyword_id=260306; KW not found #42456 supprimé.
+KwId: 260307 | Country: DE | sheimwerken bauen renovierenfur sachs motorsage dolmar
 Skip: <= 5 products in JSON.
-OK: 'grodner schnitzereien' (8/500) => keyword_id=258342; KW not found #39991 supprimé.
-KwId: 258343 | Country: DE | mtb sattel fizik
-Categorie from ebay: Sättel
+OK: 'sheimwerken bauen renovierenfur sachs motorsage dolmar' (10/500) => keyword_id=260307; KW not found #42457 supprimé.
+KwId: 260308 | Country: DE | bmw e36 fensterheber motor
+Categorie from ebay: Fensterheber & -motoren
+Categorie match : Automation, Antriebe & Motoren (198)
+Import OK for keyword_id=260308. Inserted 48 ads.
+OK: 'bmw e36 fensterheber motor' (11/500) => keyword_id=260308; KW not found #42459 supprimé.
+KwId: 260309 | Country: DE | e38 e39 spiegelglas
+Categorie from ebay: Spiegelglas
 Categorie match :  ()
-Import OK for keyword_id=258343. Inserted 48 ads.
-OK: 'mtb sattel fizik' (9/500) => keyword_id=258343; KW not found #39992 supprimé.
-KwId: 258344 | Country: DE | t px722
-Categorie from ebay: Schnurgebundene Telefone
+Import OK for keyword_id=260309. Inserted 48 ads.
+OK: 'e38 e39 spiegelglas' (12/500) => keyword_id=260309; KW not found #42460 supprimé.
+KwId: 260310 | Country: DE | sschmuck uhrensilber ring pierre lang hallo verkaufe
+Skip: <= 5 products in JSON.
+OK: 'sschmuck uhrensilber ring pierre lang hallo verkaufe' (13/500) => keyword_id=260310; KW not found #42461 supprimé.
+KwId: 260311 | Country: DE | w123 zundkabel
+Categorie from ebay: Zündkabel & Zündspulenstecker
 Categorie match :  ()
-Error: extract_top_ngrams(): Return value must be of type string, array returned
+Import OK for keyword_id=260311. Inserted 48 ads.
+OK: 'w123 zundkabel' (14/500) => keyword_id=260311; KW not found #42462 supprimé.
+KwId: 260312 | Country: DE | u ei uberraschung
+Categorie from ebay: Schokoware
+Categorie match :  ()
+Import OK for keyword_id=260312. Inserted 48 ads.
+OK: 'u ei uberraschung' (15/500) => keyword_id=260312; KW not found #42463 supprimé.
+KwId: 260313 | Country: DE | nacht leuchtend
+Categorie from ebay: Wandtattoos & Wandbilder
+Categorie match :  ()
+Import OK for keyword_id=260313. Inserted 48 ads.
+OK: 'nacht leuchtend' (16/500) => keyword_id=260313; KW not found #42464 supprimé.
+KwId: 260314 | Country: DE | u eier sammlung
+Categorie from ebay: Aus dem Ü-Ei
+Categorie match :  ()
+Import OK for keyword_id=260314. Inserted 48 ads.
+OK: 'u eier sammlung' (17/500) => keyword_id=260314; KW not found #42465 supprimé.
+KwId: 260315 | Country: DE | smobel wohnencluster 658subcluster 3654
+Skip: <= 5 products in JSON.
+OK: 'smobel wohnencluster 658subcluster 3654' (18/500) => keyword_id=260315; KW not found #42466 supprimé.
+KwId: 260316 | Country: DE | ansaugtrichter
+Categorie from ebay: Luftfilter
+Categorie match :  ()
+Import OK for keyword_id=260316. Inserted 48 ads.
+OK: 'ansaugtrichter' (19/500) => keyword_id=260316; KW not found #42468 supprimé.
+KwId: 260317 | Country: DE | q5 sto f fanger
+Categorie from ebay: Stoßstangen & -verstärker
+Categorie match :  ()
+Import OK for keyword_id=260317. Inserted 48 ads.
+OK: 'q5 sto f fanger' (20/500) => keyword_id=260317; KW not found #42470 supprimé.
+KwId: 260318 | Country: DE | waeco ms 700
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260318. Inserted 35 ads.
+OK: 'waeco ms 700' (21/500) => keyword_id=260318; KW not found #42471 supprimé.
+KwId: 260319 | Country: DE | malpalette
+Categorie from ebay: Paletten
+Categorie match :  ()
+Import OK for keyword_id=260319. Inserted 48 ads.
+OK: 'malpalette' (22/500) => keyword_id=260319; KW not found #42472 supprimé.
+KwId: 260320 | Country: DE | renault komplettrader gebraucht kaufen
+Skip: <= 5 products in JSON.
+OK: 'renault komplettrader gebraucht kaufen' (23/500) => keyword_id=260320; KW not found #42473 supprimé.
+KwId: 260321 | Country: DE | eibe tisch
+Categorie from ebay: Tische
+Categorie match :  ()
+Import OK for keyword_id=260321. Inserted 48 ads.
+OK: 'eibe tisch' (24/500) => keyword_id=260321; KW not found #42474 supprimé.
+KwId: 260322 | Country: DE | pailletten lila
+Categorie from ebay: Perlen, Schmucksteine &-kugeln
+Categorie match :  ()
+Import OK for keyword_id=260322. Inserted 48 ads.
+OK: 'pailletten lila' (25/500) => keyword_id=260322; KW not found #42477 supprimé.
+KwId: 260323 | Country: DE | figuren uhr
+Categorie from ebay: Tisch-, Kamin- & Reiseuhren
+Categorie match :  ()
+Import OK for keyword_id=260323. Inserted 48 ads.
+OK: 'figuren uhr' (26/500) => keyword_id=260323; KW not found #42478 supprimé.
+KwId: 260324 | Country: DE | f1r4
+Categorie from ebay: Sonstiges Automations Equipment
+Categorie match : DJ-Equipment (232)
+Import OK for keyword_id=260324. Inserted 35 ads.
+OK: 'f1r4' (27/500) => keyword_id=260324; KW not found #42479 supprimé.
+KwId: 260325 | Country: DE | gel nagelmodellage
+Categorie from ebay: Gel-Lacke
+Categorie match :  ()
+Import OK for keyword_id=260325. Inserted 48 ads.
+OK: 'gel nagelmodellage' (28/500) => keyword_id=260325; KW not found #42480 supprimé.
+KwId: 260326 | Country: DE | tennis world
+Categorie from ebay: PC- & Videospiele
+Categorie match : PC- & Videospiele (126)
+Import OK for keyword_id=260326. Inserted 48 ads.
+OK: 'tennis world' (29/500) => keyword_id=260326; KW not found #42481 supprimé.
+KwId: 260327 | Country: DE | spopulare4
+Skip: <= 5 products in JSON.
+OK: 'spopulare4' (30/500) => keyword_id=260327; KW not found #42482 supprimé.
+KwId: 260328 | Country: DE | sheimwerker 1
+Skip: <= 5 products in JSON.
+OK: 'sheimwerker 1' (31/500) => keyword_id=260328; KW not found #42483 supprimé.
+KwId: 260329 | Country: DE | stockach
+Categorie from ebay: Fotokunst
+Categorie match :  ()
+Import OK for keyword_id=260329. Inserted 48 ads.
+OK: 'stockach' (32/500) => keyword_id=260329; KW not found #42484 supprimé.
+KwId: 260330 | Country: DE | puppenhausmobel
+Categorie from ebay: Doll's Houses & Room Boxes
+Categorie match :  ()
+Import OK for keyword_id=260330. Inserted 48 ads.
+OK: 'puppenhausmobel' (33/500) => keyword_id=260330; KW not found #42485 supprimé.
+KwId: 260331 | Country: DE | i legend steelbook
+Categorie from ebay: DVDs & Blu-rays
+Categorie match : DVDs & Blu-rays (39)
+Import OK for keyword_id=260331. Inserted 48 ads.
+OK: 'i legend steelbook' (34/500) => keyword_id=260331; KW not found #42486 supprimé.
+KwId: 260332 | Country: DE | sheimwerken bauen renovierenfur pfosten artikel welle
+Skip: <= 5 products in JSON.
+OK: 'sheimwerken bauen renovierenfur pfosten artikel welle' (35/500) => keyword_id=260332; KW not found #42487 supprimé.
+KwId: 260333 | Country: DE | santiquitaten kunstfur bmw r75 wehrmacht rahmen rahmen
+Skip: <= 5 products in JSON.
+OK: 'santiquitaten kunstfur bmw r75 wehrmacht rahmen rahmen' (36/500) => keyword_id=260333; KW not found #42488 supprimé.
+KwId: 260334 | Country: DE | spopulard24
+Skip: <= 5 products in JSON.
+OK: 'spopulard24' (37/500) => keyword_id=260334; KW not found #42489 supprimé.
+KwId: 260335 | Country: DE | ibanez tube screamer ts 808 1980
+Skip: <= 5 products in JSON.
+OK: 'ibanez tube screamer ts 808 1980' (38/500) => keyword_id=260335; KW not found #42490 supprimé.
+KwId: 260336 | Country: DE | playmobil dachbodenfund
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260336. Inserted 14 ads.
+OK: 'playmobil dachbodenfund' (39/500) => keyword_id=260336; KW not found #42495 supprimé.
+KwId: 260337 | Country: DE | buffalo plateau
+Categorie from ebay: Sneaker
+Categorie match :  ()
+Import OK for keyword_id=260337. Inserted 48 ads.
+OK: 'buffalo plateau' (40/500) => keyword_id=260337; KW not found #42496 supprimé.
+KwId: 260338 | Country: DE | sigma dp1 merrill
+Categorie from ebay: Digitalkameras
+Categorie match : Digitalkameras (38)
+Import OK for keyword_id=260338. Inserted 31 ads.
+OK: 'sigma dp1 merrill' (41/500) => keyword_id=260338; KW not found #42497 supprimé.
+KwId: 260339 | Country: DE | x fi xtreme gamer
+Categorie from ebay: Interne Soundkarten
+Categorie match :  ()
+Import OK for keyword_id=260339. Inserted 9 ads.
+OK: 'x fi xtreme gamer' (42/500) => keyword_id=260339; KW not found #42498 supprimé.
+KwId: 260340 | Country: DE | sbucher zeitschriftenperry rhodan tibor piccolo fix foxi
+Skip: <= 5 products in JSON.
+OK: 'sbucher zeitschriftenperry rhodan tibor piccolo fix foxi' (43/500) => keyword_id=260340; KW not found #42499 supprimé.
+KwId: 260341 | Country: DE | d r 8000
+Categorie from ebay: Lampen & LED-Leuchten
+Categorie match :  ()
+Import OK for keyword_id=260341. Inserted 48 ads.
+OK: 'd r 8000' (44/500) => keyword_id=260341; KW not found #42500 supprimé.
+KwId: 260342 | Country: DE | moderna
+Categorie from ebay: Steckdosen & Buchsen
+Categorie match :  ()
+Import OK for keyword_id=260342. Inserted 48 ads.
+OK: 'moderna' (45/500) => keyword_id=260342; KW not found #42501 supprimé.
+KwId: 260343 | Country: DE | thorhammer holz
+Categorie from ebay: Wandbehänge
+Categorie match : Wandbehänge (170)
+Import OK for keyword_id=260343. Inserted 48 ads.
+OK: 'thorhammer holz' (46/500) => keyword_id=260343; KW not found #42503 supprimé.
+KwId: 260344 | Country: DE | ssonstigesfilm neu dvd vhs
+Skip: <= 5 products in JSON.
+OK: 'ssonstigesfilm neu dvd vhs' (47/500) => keyword_id=260344; KW not found #42504 supprimé.
+KwId: 260345 | Country: DE | spopularg23
+Skip: <= 5 products in JSON.
+OK: 'spopularg23' (48/500) => keyword_id=260345; KW not found #42505 supprimé.
+KwId: 260346 | Country: DE | sschmuck uhrenpierre lang sterling silber edelstein heilstein
+Skip: <= 5 products in JSON.
+OK: 'sschmuck uhrenpierre lang sterling silber edelstein heilstein' (49/500) => keyword_id=260346; KW not found #42506 supprimé.
+KwId: 260347 | Country: DE | spopularl38
+Skip: <= 5 products in JSON.
+OK: 'spopularl38' (50/500) => keyword_id=260347; KW not found #42507 supprimé.
+KwId: 260348 | Country: DE | zumba shirt m
+Categorie from ebay: Sporttops
+Categorie match :  ()
+Import OK for keyword_id=260348. Inserted 48 ads.
+OK: 'zumba shirt m' (51/500) => keyword_id=260348; KW not found #42508 supprimé.
+KwId: 260349 | Country: DE | z3 sommerreifen
+Categorie from ebay: Kompletträder
+Categorie match :  ()
+Import OK for keyword_id=260349. Inserted 48 ads.
+OK: 'z3 sommerreifen' (52/500) => keyword_id=260349; KW not found #42509 supprimé.
+KwId: 260350 | Country: DE | la7w reflexsilber metallic
+Categorie from ebay: Spraydosen
+Categorie match :  ()
+Import OK for keyword_id=260350. Inserted 48 ads.
+OK: 'la7w reflexsilber metallic' (53/500) => keyword_id=260350; KW not found #42510 supprimé.
+KwId: 260351 | Country: DE | motorrad bekleidung
+Categorie from ebay: Nierengurte
+Categorie match :  ()
+Import OK for keyword_id=260351. Inserted 48 ads.
+OK: 'motorrad bekleidung' (54/500) => keyword_id=260351; KW not found #42511 supprimé.
+KwId: 260352 | Country: DE | d7000 gehause
+Categorie from ebay: Digitalkameras
+Categorie match : Digitalkameras (38)
+Import OK for keyword_id=260352. Inserted 48 ads.
+OK: 'd7000 gehause' (55/500) => keyword_id=260352; KW not found #42513 supprimé.
+KwId: 260353 | Country: DE | canada goose
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260353. Inserted 48 ads.
+OK: 'canada goose' (56/500) => keyword_id=260353; KW not found #42514 supprimé.
+KwId: 260354 | Country: DE | aluminium liegestuhl
+Categorie from ebay: Stühle
+Categorie match :  ()
+Import OK for keyword_id=260354. Inserted 48 ads.
+OK: 'aluminium liegestuhl' (57/500) => keyword_id=260354; KW not found #42515 supprimé.
+KwId: 260355 | Country: DE | 1 ore
+Categorie from ebay: Schweden
+Categorie match :  ()
+Import OK for keyword_id=260355. Inserted 48 ads.
+OK: '1 ore' (58/500) => keyword_id=260355; KW not found #42516 supprimé.
+KwId: 260356 | Country: DE | schutz 400v
+Categorie from ebay: Stromverteiler & Baulicht
+Categorie match :  ()
+Import OK for keyword_id=260356. Inserted 48 ads.
+OK: 'schutz 400v' (59/500) => keyword_id=260356; KW not found #42517 supprimé.
+KwId: 260357 | Country: DE | smodellbau basteln handarbeitclub spur diesellok konvolut
+Skip: <= 5 products in JSON.
+OK: 'smodellbau basteln handarbeitclub spur diesellok konvolut' (60/500) => keyword_id=260357; KW not found #42518 supprimé.
+KwId: 260358 | Country: DE | rado herren gebraucht kaufen
+Skip: <= 5 products in JSON.
+OK: 'rado herren gebraucht kaufen' (61/500) => keyword_id=260358; KW not found #42519 supprimé.
+KwId: 260359 | Country: DE | h m kleidchen
+Categorie from ebay: Kleider
+Categorie match :  ()
+Import OK for keyword_id=260359. Inserted 48 ads.
+OK: 'h m kleidchen' (62/500) => keyword_id=260359; KW not found #42520 supprimé.
+KwId: 260360 | Country: DE | sgartenbing vergaser briggs stratton passend fur
+Skip: <= 5 products in JSON.
+OK: 'sgartenbing vergaser briggs stratton passend fur' (63/500) => keyword_id=260360; KW not found #42521 supprimé.
+KwId: 260361 | Country: DE | m35 helmet
+Categorie from ebay: Helme & Kopfbedeckungen
+Categorie match :  ()
+Import OK for keyword_id=260361. Inserted 48 ads.
+OK: 'm35 helmet' (64/500) => keyword_id=260361; KW not found #42522 supprimé.
+KwId: 260362 | Country: DE | leder fu ball
+Categorie from ebay: Leggings
+Categorie match :  ()
+Import OK for keyword_id=260362. Inserted 22 ads.
+OK: 'leder fu ball' (65/500) => keyword_id=260362; KW not found #42523 supprimé.
+KwId: 260363 | Country: DE | b154ew
+Categorie from ebay: Notebook-Displays/LCD-Displays
+Categorie match : Notebook- & Desktop-Zubehör (120)
+Import OK for keyword_id=260363. Inserted 48 ads.
+OK: 'b154ew' (66/500) => keyword_id=260363; KW not found #42525 supprimé.
+KwId: 260364 | Country: DE | samsung objektiv 60
+Categorie from ebay: Objektive
+Categorie match : Objektive & Filter (360)
+Import OK for keyword_id=260364. Inserted 29 ads.
+OK: 'samsung objektiv 60' (67/500) => keyword_id=260364; KW not found #42526 supprimé.
+KwId: 260365 | Country: DE | bund paare
+Categorie from ebay: BRD 1948-1954
+Categorie match :  ()
+Import OK for keyword_id=260365. Inserted 48 ads.
+OK: 'bund paare' (68/500) => keyword_id=260365; KW not found #42527 supprimé.
+KwId: 260366 | Country: DE | y 3 honja
+Categorie from ebay: Sneaker
+Categorie match :  ()
+Import OK for keyword_id=260366. Inserted 14 ads.
+OK: 'y 3 honja' (69/500) => keyword_id=260366; KW not found #42528 supprimé.
+KwId: 260367 | Country: DE | spopularp5
+Skip: <= 5 products in JSON.
+OK: 'spopularp5' (70/500) => keyword_id=260367; KW not found #42529 supprimé.
+KwId: 260368 | Country: DE | fglanz radlerhose
+Skip: <= 5 products in JSON.
+OK: 'fglanz radlerhose' (71/500) => keyword_id=260368; KW not found #42530 supprimé.
+KwId: 260369 | Country: DE | s eco 2
+Categorie from ebay: Rollstühle
+Categorie match :  ()
+Import OK for keyword_id=260369. Inserted 48 ads.
+OK: 's eco 2' (72/500) => keyword_id=260369; KW not found #42531 supprimé.
+KwId: 260370 | Country: DE | h m seidenbluse
+Categorie from ebay: Blusen, Tops & Shirts
+Categorie match :  ()
+Import OK for keyword_id=260370. Inserted 48 ads.
+OK: 'h m seidenbluse' (73/500) => keyword_id=260370; KW not found #42532 supprimé.
+KwId: 260371 | Country: DE | kinder bettwasche disney
+Categorie from ebay: Bettwäsche
+Categorie match :  ()
+Import OK for keyword_id=260371. Inserted 48 ads.
+OK: 'kinder bettwasche disney' (74/500) => keyword_id=260371; KW not found #42534 supprimé.
+KwId: 260372 | Country: DE | sport kappe
+Categorie from ebay: Hüte & Mützen
+Categorie match :  ()
+Import OK for keyword_id=260372. Inserted 48 ads.
+OK: 'sport kappe' (75/500) => keyword_id=260372; KW not found #42535 supprimé.
+KwId: 260373 | Country: DE | aquascutum
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260373. Inserted 48 ads.
+OK: 'aquascutum' (76/500) => keyword_id=260373; KW not found #42536 supprimé.
+KwId: 260374 | Country: DE | w rfel
+Categorie from ebay: Aufkleber & Embleme
+Categorie match :  ()
+Import OK for keyword_id=260374. Inserted 48 ads.
+OK: 'w rfel' (77/500) => keyword_id=260374; KW not found #42537 supprimé.
+KwId: 260375 | Country: DE | maisto ferrari
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260375. Inserted 48 ads.
+OK: 'maisto ferrari' (78/500) => keyword_id=260375; KW not found #42538 supprimé.
+KwId: 260376 | Country: DE | baby lenkrad
+Categorie from ebay: Sonstiges Spielzeug
+Categorie match : Spielzeug (152)
+Import OK for keyword_id=260376. Inserted 48 ads.
+OK: 'baby lenkrad' (79/500) => keyword_id=260376; KW not found #42539 supprimé.
+KwId: 260377 | Country: DE | spopularf40
+Skip: <= 5 products in JSON.
+OK: 'spopularf40' (80/500) => keyword_id=260377; KW not found #42540 supprimé.
+KwId: 260378 | Country: DE | scomputer zubehorsiemens amilo lifebook fujitsu
+Skip: <= 5 products in JSON.
+OK: 'scomputer zubehorsiemens amilo lifebook fujitsu' (81/500) => keyword_id=260378; KW not found #42541 supprimé.
+KwId: 260379 | Country: DE | anhanger fur armband silber
+Categorie from ebay: Armbänder & Charm-Anhänger
+Categorie match : Pkw-Anhänger (582)
+Import OK for keyword_id=260379. Inserted 48 ads.
+OK: 'anhanger fur armband silber' (82/500) => keyword_id=260379; KW not found #42543 supprimé.
+KwId: 260380 | Country: DE | 1 zip
+Categorie from ebay: Pullover & Strick
+Categorie match :  ()
+Import OK for keyword_id=260380. Inserted 48 ads.
+OK: '1 zip' (83/500) => keyword_id=260380; KW not found #42544 supprimé.
+KwId: 260381 | Country: DE | t a standlautsprecher
+Categorie from ebay: Lautsprecher & Subwoofer
+Categorie match :  ()
+Import OK for keyword_id=260381. Inserted 48 ads.
+OK: 't a standlautsprecher' (84/500) => keyword_id=260381; KW not found #42545 supprimé.
+KwId: 260382 | Country: DE | v tech paket
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260382. Inserted 48 ads.
+OK: 'v tech paket' (85/500) => keyword_id=260382; KW not found #42546 supprimé.
+KwId: 260383 | Country: DE | bmw motorrad teilekatalog
+Categorie from ebay: Prospekte
+Categorie match :  ()
+Import OK for keyword_id=260383. Inserted 48 ads.
+OK: 'bmw motorrad teilekatalog' (86/500) => keyword_id=260383; KW not found #42547 supprimé.
+KwId: 260384 | Country: DE | t mobile micro
+Categorie from ebay: Kabel & Adapter
+Categorie match : Kabel & Steckverbinder (301)
+Import OK for keyword_id=260384. Inserted 48 ads.
+OK: 't mobile micro' (87/500) => keyword_id=260384; KW not found #42548 supprimé.
+KwId: 260385 | Country: DE | sfanartikel sammeln seltenesguter zustand siehe fotos gut erhalten
+Skip: <= 5 products in JSON.
+OK: 'sfanartikel sammeln seltenesguter zustand siehe fotos gut erhalten' (88/500) => keyword_id=260385; KW not found #42549 supprimé.
+KwId: 260386 | Country: DE | p9600
+Categorie from ebay: CPUs/Prozessoren
+Categorie match :  ()
+Import OK for keyword_id=260386. Inserted 48 ads.
+OK: 'p9600' (89/500) => keyword_id=260386; KW not found #42550 supprimé.
+KwId: 260387 | Country: DE | ba15s
+Categorie from ebay: Lampen & LED-Leuchten
+Categorie match :  ()
+Import OK for keyword_id=260387. Inserted 48 ads.
+OK: 'ba15s' (90/500) => keyword_id=260387; KW not found #42551 supprimé.
+KwId: 260388 | Country: DE | spopulart47
+Skip: <= 5 products in JSON.
+OK: 'spopulart47' (91/500) => keyword_id=260388; KW not found #42552 supprimé.
+KwId: 260389 | Country: DE | quad reifen
+Categorie from ebay: Reifen
+Categorie match :  ()
+Import OK for keyword_id=260389. Inserted 48 ads.
+OK: 'quad reifen' (92/500) => keyword_id=260389; KW not found #42553 supprimé.
+KwId: 260390 | Country: DE | spopular 4
+Skip: <= 5 products in JSON.
+OK: 'spopular 4' (93/500) => keyword_id=260390; KW not found #42554 supprimé.
+KwId: 260391 | Country: DE | skleidung fur baby kindadidas trainingsanzug fur madchen jacke hose
+Skip: <= 5 products in JSON.
+OK: 'skleidung fur baby kindadidas trainingsanzug fur madchen jacke hose' (94/500) => keyword_id=260391; KW not found #42555 supprimé.
+KwId: 260392 | Country: DE | original hp toner cb540a
+Categorie from ebay: Tonerkassetten
+Categorie match :  ()
+Import OK for keyword_id=260392. Inserted 48 ads.
+OK: 'original hp toner cb540a' (95/500) => keyword_id=260392; KW not found #42556 supprimé.
+KwId: 260393 | Country: DE | pumps tasche
+Categorie from ebay: Pumps
+Categorie match :  ()
+Import OK for keyword_id=260393. Inserted 48 ads.
+OK: 'pumps tasche' (96/500) => keyword_id=260393; KW not found #42557 supprimé.
+KwId: 260394 | Country: DE | w124 abdeckung
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260394. Inserted 48 ads.
+OK: 'w124 abdeckung' (97/500) => keyword_id=260394; KW not found #42558 supprimé.
+KwId: 260395 | Country: DE | spopularp52
+Skip: <= 5 products in JSON.
+OK: 'spopularp52' (98/500) => keyword_id=260395; KW not found #42559 supprimé.
+KwId: 260396 | Country: DE | sspielen spielzeugchina roller fur takt hallo verkaufe
+Skip: <= 5 products in JSON.
+OK: 'sspielen spielzeugchina roller fur takt hallo verkaufe' (99/500) => keyword_id=260396; KW not found #42560 supprimé.
+KwId: 260397 | Country: DE | duschkabinen glas
+Categorie from ebay: Duschabtrennungen & -kabinen
+Categorie match :  ()
+Import OK for keyword_id=260397. Inserted 48 ads.
+OK: 'duschkabinen glas' (100/500) => keyword_id=260397; KW not found #42561 supprimé.
+KwId: 260398 | Country: DE | i pad 3 cover
+Categorie from ebay: Taschen & Hüllen
+Categorie match : Originalverpackungen & -hüllen (122)
+Import OK for keyword_id=260398. Inserted 48 ads.
+OK: 'i pad 3 cover' (101/500) => keyword_id=260398; KW not found #42562 supprimé.
+KwId: 260399 | Country: DE | x5355
+Categorie from ebay: Server-CPUs/-Prozessoren
+Categorie match : Firmennetzwerke & Server (257)
+Import OK for keyword_id=260399. Inserted 48 ads.
+OK: 'x5355' (102/500) => keyword_id=260399; KW not found #42563 supprimé.
+KwId: 260400 | Country: DE | objektiv 400
+Categorie from ebay: Objektive
+Categorie match : Objektive & Filter (360)
+Import OK for keyword_id=260400. Inserted 48 ads.
+OK: 'objektiv 400' (103/500) => keyword_id=260400; KW not found #42564 supprimé.
+KwId: 260401 | Country: DE | 12 1 zoll
+Categorie from ebay: PC Notebooks & Netbooks
+Categorie match : Notebooks & Netbooks (358)
+Import OK for keyword_id=260401. Inserted 48 ads.
+OK: '12 1 zoll' (104/500) => keyword_id=260401; KW not found #42565 supprimé.
+KwId: 260402 | Country: DE | h m business kleid
+Categorie from ebay: Kleider
+Categorie match :  ()
+Import OK for keyword_id=260402. Inserted 48 ads.
+OK: 'h m business kleid' (105/500) => keyword_id=260402; KW not found #42566 supprimé.
+KwId: 260403 | Country: DE | e 39 kotflugel links
+Categorie from ebay: Kotflügel Vorn
+Categorie match :  ()
+Import OK for keyword_id=260403. Inserted 48 ads.
+OK: 'e 39 kotflugel links' (106/500) => keyword_id=260403; KW not found #42567 supprimé.
+KwId: 260404 | Country: DE | azzaro oh la la
+Categorie from ebay: Ab 1960
+Categorie match :  ()
+Import OK for keyword_id=260404. Inserted 41 ads.
+OK: 'azzaro oh la la' (107/500) => keyword_id=260404; KW not found #42568 supprimé.
+KwId: 260405 | Country: DE | sspielen spielzeugfur traktor kinder traktoren
+Skip: <= 5 products in JSON.
+OK: 'sspielen spielzeugfur traktor kinder traktoren' (108/500) => keyword_id=260405; KW not found #42569 supprimé.
+KwId: 260406 | Country: DE | gurtelriemen
+Skip: <= 5 products in JSON.
+OK: 'gurtelriemen' (109/500) => keyword_id=260406; KW not found #42570 supprimé.
+KwId: 260407 | Country: DE | blazer herren
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260407. Inserted 48 ads.
+OK: 'blazer herren' (110/500) => keyword_id=260407; KW not found #42571 supprimé.
+KwId: 260408 | Country: DE | wii u
+Categorie from ebay: Konsolen
+Categorie match : Konsolen (87)
+Import OK for keyword_id=260408. Inserted 48 ads.
+OK: 'wii u' (111/500) => keyword_id=260408; KW not found #42572 supprimé.
+KwId: 260409 | Country: DE | bhryfxhuyvos1eng4dsvnfyx2x7rpdadzqf1c1khwkf6f7pkl8lzomz1l5rd1tzssxhzclmwsg1hijaz95lapaqt7rctxhtsjgpgaxog bomflz7jpywno2rt5atid8coqllddyyj2drzhwojr8p6kmngy35bvt4r24lo1aytcy
+Skip: <= 5 products in JSON.
+OK: 'bhryfxhuyvos1eng4dsvnfyx2x7rpdadzqf1c1khwkf6f7pkl8lzomz1l5rd1tzssxhzclmwsg1hijaz95lapaqt7rctxhtsjgpgaxog bomflz7jpywno2rt5atid8coqllddyyj2drzhwojr8p6kmngy35bvt4r24lo1aytcy' (112/500) => keyword_id=260409; KW not found #42577 supprimé.
+KwId: 260410 | Country: DE | smusikdekoration interieurmemorabiliatrading cardssammelkartenspiele tcgsweitere sammelgebieteserien lizenzprodukte
+Skip: <= 5 products in JSON.
+OK: 'smusikdekoration interieurmemorabiliatrading cardssammelkartenspiele tcgsweitere sammelgebieteserien lizenzprodukte' (113/500) => keyword_id=260410; KW not found #42578 supprimé.
+KwId: 260411 | Country: DE | spopularc3
+Skip: <= 5 products in JSON.
+OK: 'spopularc3' (114/500) => keyword_id=260411; KW not found #42579 supprimé.
+KwId: 260412 | Country: DE | mac dmx
+Categorie from ebay: Effektmaschinen
+Categorie match :  ()
+Import OK for keyword_id=260412. Inserted 32 ads.
+OK: 'mac dmx' (115/500) => keyword_id=260412; KW not found #42580 supprimé.
+KwId: 260413 | Country: DE | gemini cdj
+Categorie from ebay: DJ Decks/Turntables
+Categorie match :  ()
+Import OK for keyword_id=260413. Inserted 13 ads.
+OK: 'gemini cdj' (116/500) => keyword_id=260413; KW not found #42581 supprimé.
+KwId: 260414 | Country: DE | u2 promo
+Categorie from ebay: Vinili
+Categorie match :  ()
+Import OK for keyword_id=260414. Inserted 48 ads.
+OK: 'u2 promo' (117/500) => keyword_id=260414; KW not found #42582 supprimé.
+KwId: 260415 | Country: DE | seilwinde anh ngerkupplung
+Skip: <= 5 products in JSON.
+OK: 'seilwinde anh ngerkupplung' (118/500) => keyword_id=260415; KW not found #42583 supprimé.
+KwId: 260416 | Country: DE | yamaha e drums
+Categorie from ebay: Drumsets
+Categorie match :  ()
+Import OK for keyword_id=260416. Inserted 48 ads.
+OK: 'yamaha e drums' (119/500) => keyword_id=260416; KW not found #42584 supprimé.
+KwId: 260417 | Country: DE | rallye dakar
+Categorie from ebay: Aufkleber & Embleme
+Categorie match :  ()
+Import OK for keyword_id=260417. Inserted 48 ads.
+OK: 'rallye dakar' (120/500) => keyword_id=260417; KW not found #42585 supprimé.
+KwId: 260418 | Country: DE | vodafone webby
+Skip: <= 5 products in JSON.
+OK: 'vodafone webby' (121/500) => keyword_id=260418; KW not found #42586 supprimé.
+KwId: 260419 | Country: DE | pricesdisney hercules
+Skip: <= 5 products in JSON.
+OK: 'pricesdisney hercules' (122/500) => keyword_id=260419; KW not found #42587 supprimé.
+KwId: 260420 | Country: DE | uberdachung bauen
+Categorie from ebay: Markisen & Terrassenüberdachungen
+Categorie match :  ()
+Import OK for keyword_id=260420. Inserted 48 ads.
+OK: 'uberdachung bauen' (123/500) => keyword_id=260420; KW not found #42588 supprimé.
+KwId: 260421 | Country: DE | raccoon pelz
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260421. Inserted 48 ads.
+OK: 'raccoon pelz' (124/500) => keyword_id=260421; KW not found #42589 supprimé.
+KwId: 260422 | Country: DE | pricesalte stiefel
+Skip: <= 5 products in JSON.
+OK: 'pricesalte stiefel' (125/500) => keyword_id=260422; KW not found #42590 supprimé.
+KwId: 260423 | Country: DE | wiking bp
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260423. Inserted 48 ads.
+OK: 'wiking bp' (126/500) => keyword_id=260423; KW not found #42591 supprimé.
+KwId: 260424 | Country: DE | gorgoroth shirt
+Categorie from ebay: T-Shirts
+Categorie match :  ()
+Import OK for keyword_id=260424. Inserted 48 ads.
+OK: 'gorgoroth shirt' (127/500) => keyword_id=260424; KW not found #42592 supprimé.
+KwId: 260425 | Country: DE | o p i nagellack
+Categorie from ebay: Nagellacke & Speziallacke
+Categorie match :  ()
+Import OK for keyword_id=260425. Inserted 48 ads.
+OK: 'o p i nagellack' (128/500) => keyword_id=260425; KW not found #42594 supprimé.
+KwId: 260426 | Country: DE | radzierblenden 15 vw touran
+Categorie from ebay: Radkappen & Stahlfelgenringe
+Categorie match :  ()
+Import OK for keyword_id=260426. Inserted 48 ads.
+OK: 'radzierblenden 15 vw touran' (129/500) => keyword_id=260426; KW not found #42595 supprimé.
+KwId: 260427 | Country: DE | sfanartikel sammeln seltenesvfb stuttgart arminia bielefeld hamburg freezers
+Skip: <= 5 products in JSON.
+OK: 'sfanartikel sammeln seltenesvfb stuttgart arminia bielefeld hamburg freezers' (130/500) => keyword_id=260427; KW not found #42596 supprimé.
+KwId: 260428 | Country: DE | spiegel 120
+Categorie from ebay: Badezimmerspiegel
+Categorie match :  ()
+Import OK for keyword_id=260428. Inserted 48 ads.
+OK: 'spiegel 120' (131/500) => keyword_id=260428; KW not found #42597 supprimé.
+KwId: 260429 | Country: DE | trachtenmode xxl
+Categorie from ebay: Hemden
+Categorie match :  ()
+Import OK for keyword_id=260429. Inserted 48 ads.
+OK: 'trachtenmode xxl' (132/500) => keyword_id=260429; KW not found #42598 supprimé.
+KwId: 260430 | Country: DE | baby baskenmutze
+Skip: <= 5 products in JSON.
+OK: 'baby baskenmutze' (133/500) => keyword_id=260430; KW not found #42599 supprimé.
+KwId: 260431 | Country: DE | saccessoiresfur iphone kindle damen
+Skip: <= 5 products in JSON.
+OK: 'saccessoiresfur iphone kindle damen' (134/500) => keyword_id=260431; KW not found #42600 supprimé.
+KwId: 260432 | Country: DE | dfb retro
+Categorie from ebay: Nationalmannschaften
+Categorie match :  ()
+Import OK for keyword_id=260432. Inserted 48 ads.
+OK: 'dfb retro' (135/500) => keyword_id=260432; KW not found #42605 supprimé.
+KwId: 260433 | Country: DE | automatischer rasenmaher
+Categorie from ebay: Rasenmäher
+Categorie match : Rasenmäher, Ersatzteile & Zubehör (134)
+Import OK for keyword_id=260433. Inserted 48 ads.
+OK: 'automatischer rasenmaher' (136/500) => keyword_id=260433; KW not found #42606 supprimé.
+KwId: 260434 | Country: DE | usb schmuck
+Categorie from ebay: USB-Sticks
+Categorie match :  ()
+Import OK for keyword_id=260434. Inserted 48 ads.
+OK: 'usb schmuck' (137/500) => keyword_id=260434; KW not found #42608 supprimé.
+KwId: 260435 | Country: DE | besteck 18 8
+Categorie from ebay: Besteck-Einzelteile
+Categorie match :  ()
+Import OK for keyword_id=260435. Inserted 48 ads.
+OK: 'besteck 18 8' (138/500) => keyword_id=260435; KW not found #42609 supprimé.
+KwId: 260436 | Country: DE | saccessoiresportemonnaie geldborse geldbeutel brieftasche
+Skip: <= 5 products in JSON.
+OK: 'saccessoiresportemonnaie geldborse geldbeutel brieftasche' (139/500) => keyword_id=260436; KW not found #42610 supprimé.
+KwId: 260437 | Country: DE | croix
+Categorie from ebay: Rum
+Categorie match :  ()
+Import OK for keyword_id=260437. Inserted 48 ads.
+OK: 'croix' (140/500) => keyword_id=260437; KW not found #42611 supprimé.
+KwId: 260438 | Country: DE | golf 6 carbon
+Categorie from ebay: Lenkräder & Hupenknöpfe
+Categorie match :  ()
+Import OK for keyword_id=260438. Inserted 48 ads.
+OK: 'golf 6 carbon' (141/500) => keyword_id=260438; KW not found #42613 supprimé.
+KwId: 260439 | Country: DE | kaffeetasse jumbo
+Categorie from ebay: Kaffeetassen & -becher
+Categorie match :  ()
+Import OK for keyword_id=260439. Inserted 48 ads.
+OK: 'kaffeetasse jumbo' (142/500) => keyword_id=260439; KW not found #42614 supprimé.
+KwId: 260440 | Country: DE | hemd blumen
+Categorie from ebay: Freizeithemden & Shirts
+Categorie match :  ()
+Import OK for keyword_id=260440. Inserted 48 ads.
+OK: 'hemd blumen' (143/500) => keyword_id=260440; KW not found #42616 supprimé.
+KwId: 260441 | Country: DE | red bull energy drink
+Categorie from ebay: Energy & Fitness Drinks
+Categorie match : Fitness & Jogging (259)
+Import OK for keyword_id=260441. Inserted 48 ads.
+OK: 'red bull energy drink' (144/500) => keyword_id=260441; KW not found #42617 supprimé.
+KwId: 260442 | Country: DE | spopularp73
+Skip: <= 5 products in JSON.
+OK: 'spopularp73' (145/500) => keyword_id=260442; KW not found #42618 supprimé.
+KwId: 260443 | Country: DE | spopularl65
+Skip: <= 5 products in JSON.
+OK: 'spopularl65' (146/500) => keyword_id=260443; KW not found #42619 supprimé.
+KwId: 260444 | Country: DE | my little pony zubehor
+Categorie from ebay: Figuren
+Categorie match : Action-Figuren & Zubehör (180)
+Import OK for keyword_id=260444. Inserted 48 ads.
+OK: 'my little pony zubehor' (147/500) => keyword_id=260444; KW not found #42621 supprimé.
+KwId: 260445 | Country: DE | sgartenfur rasenmaher bastler briggs
+Skip: <= 5 products in JSON.
+OK: 'sgartenfur rasenmaher bastler briggs' (148/500) => keyword_id=260445; KW not found #42622 supprimé.
+KwId: 260446 | Country: DE | spopularb62
+Skip: <= 5 products in JSON.
+OK: 'spopularb62' (149/500) => keyword_id=260446; KW not found #42623 supprimé.
+KwId: 260447 | Country: DE | spopularl62
+Skip: <= 5 products in JSON.
+OK: 'spopularl62' (150/500) => keyword_id=260447; KW not found #42624 supprimé.
+KwId: 260448 | Country: DE | schulterstucke bundeswehr
+Categorie from ebay: Uniformen & Effekten
+Categorie match :  ()
+Import OK for keyword_id=260448. Inserted 48 ads.
+OK: 'schulterstucke bundeswehr' (151/500) => keyword_id=260448; KW not found #42625 supprimé.
+KwId: 260449 | Country: DE | spopulark22
+Skip: <= 5 products in JSON.
+OK: 'spopulark22' (152/500) => keyword_id=260449; KW not found #42626 supprimé.
+KwId: 260450 | Country: DE | dune dvd
+Categorie from ebay: DVDs & Blu-rays
+Categorie match : DVDs & Blu-rays (39)
+Import OK for keyword_id=260450. Inserted 48 ads.
+OK: 'dune dvd' (153/500) => keyword_id=260450; KW not found #42627 supprimé.
+KwId: 260451 | Country: DE | zabaione hose
+Categorie from ebay: Hosen
+Categorie match :  ()
+Import OK for keyword_id=260451. Inserted 48 ads.
+OK: 'zabaione hose' (154/500) => keyword_id=260451; KW not found #42628 supprimé.
+KwId: 260452 | Country: DE | pricespna 465
+Skip: <= 5 products in JSON.
+OK: 'pricespna 465' (155/500) => keyword_id=260452; KW not found #42629 supprimé.
+KwId: 260453 | Country: DE | michael jackson thriller
+Categorie from ebay: CDs
+Categorie match : CDs (29)
+Import OK for keyword_id=260453. Inserted 48 ads.
+OK: 'michael jackson thriller' (156/500) => keyword_id=260453; KW not found #42630 supprimé.
+KwId: 260454 | Country: DE | spopular 10
+Skip: <= 5 products in JSON.
+OK: 'spopular 10' (157/500) => keyword_id=260454; KW not found #42631 supprimé.
+KwId: 260455 | Country: DE | phillipines
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260455. Inserted 26 ads.
+OK: 'phillipines' (158/500) => keyword_id=260455; KW not found #42632 supprimé.
+KwId: 260456 | Country: DE | ford focus ii stossstange
+Categorie from ebay: Stoßstangen & -verstärker
+Categorie match :  ()
+Import OK for keyword_id=260456. Inserted 48 ads.
+OK: 'ford focus ii stossstange' (159/500) => keyword_id=260456; KW not found #42633 supprimé.
+KwId: 260457 | Country: DE | t rex japan
+Categorie from ebay: CDs
+Categorie match : CDs (29)
+Import OK for keyword_id=260457. Inserted 48 ads.
+OK: 't rex japan' (160/500) => keyword_id=260457; KW not found #42634 supprimé.
+KwId: 260458 | Country: DE | spopulart39
+Skip: <= 5 products in JSON.
+OK: 'spopulart39' (161/500) => keyword_id=260458; KW not found #42635 supprimé.
+KwId: 260459 | Country: DE | emaille rot
+Categorie from ebay: Koch- & Suppentöpfe
+Categorie match :  ()
+Import OK for keyword_id=260459. Inserted 48 ads.
+OK: 'emaille rot' (162/500) => keyword_id=260459; KW not found #42636 supprimé.
+KwId: 260460 | Country: DE | sspielekonsolensony playstation nintendo switch xbox one
+Skip: <= 5 products in JSON.
+OK: 'sspielekonsolensony playstation nintendo switch xbox one' (163/500) => keyword_id=260460; KW not found #42638 supprimé.
+KwId: 260461 | Country: DE | spopulard65
+Skip: <= 5 products in JSON.
+OK: 'spopulard65' (164/500) => keyword_id=260461; KW not found #42639 supprimé.
+KwId: 260462 | Country: DE | lenkerklemmen
+Categorie from ebay: Lenkererhöhungen, Klemmen & Halterungen
+Categorie match :  ()
+Import OK for keyword_id=260462. Inserted 48 ads.
+OK: 'lenkerklemmen' (165/500) => keyword_id=260462; KW not found #42640 supprimé.
+KwId: 239052 | Country: DE | arnold strassenbahn
+Categorie from ebay: Lokomotiven
+Categorie match :  ()
+Import OK for keyword_id=239052. Inserted 38 ads.
+OK: 'arnold strassenbahn' (166/500) => keyword_id=239052; KW not found #42641 supprimé.
+KwId: 260463 | Country: DE | sattelstutze kerze
+Categorie from ebay: Sattelstützen
+Categorie match :  ()
+Import OK for keyword_id=260463. Inserted 48 ads.
+OK: 'sattelstutze kerze' (167/500) => keyword_id=260463; KW not found #42642 supprimé.
+KwId: 260464 | Country: DE | dvd mp3 radio
+Categorie from ebay: Autoradios
+Categorie match :  ()
+Import OK for keyword_id=260464. Inserted 48 ads.
+OK: 'dvd mp3 radio' (168/500) => keyword_id=260464; KW not found #42643 supprimé.
+KwId: 260465 | Country: DE | disney tasche
+Categorie from ebay: Damentaschen
+Categorie match :  ()
+Import OK for keyword_id=260465. Inserted 48 ads.
+OK: 'disney tasche' (169/500) => keyword_id=260465; KW not found #42644 supprimé.
+KwId: 260466 | Country: DE | obituary shirt
+Categorie from ebay: Sweatshirts & Kapuzenpullis
+Categorie match :  ()
+Import OK for keyword_id=260466. Inserted 48 ads.
+OK: 'obituary shirt' (170/500) => keyword_id=260466; KW not found #42645 supprimé.
+KwId: 260467 | Country: DE | smobel wohnencluster 1232subcluster 5879
+Skip: <= 5 products in JSON.
+OK: 'smobel wohnencluster 1232subcluster 5879' (171/500) => keyword_id=260467; KW not found #42646 supprimé.
+KwId: 260468 | Country: DE | vw t5 ruckfahrkamera
+Categorie from ebay: Einparkkameras
+Categorie match :  ()
+Import OK for keyword_id=260468. Inserted 48 ads.
+OK: 'vw t5 ruckfahrkamera' (172/500) => keyword_id=260468; KW not found #42647 supprimé.
+KwId: 260469 | Country: DE | wasseruhr geeicht
+Categorie from ebay: Zähler
+Categorie match :  ()
+Import OK for keyword_id=260469. Inserted 48 ads.
+OK: 'wasseruhr geeicht' (173/500) => keyword_id=260469; KW not found #42648 supprimé.
+KwId: 260470 | Country: DE | renault 4cv
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260470. Inserted 48 ads.
+OK: 'renault 4cv' (174/500) => keyword_id=260470; KW not found #42649 supprimé.
+KwId: 260471 | Country: DE | jack payne
+Categorie from ebay: Schellackplatten
+Categorie match :  ()
+Import OK for keyword_id=260471. Inserted 48 ads.
+OK: 'jack payne' (175/500) => keyword_id=260471; KW not found #42650 supprimé.
+KwId: 260472 | Country: DE | stihl economy plus jacke
+Skip: <= 5 products in JSON.
+OK: 'stihl economy plus jacke' (176/500) => keyword_id=260472; KW not found #42651 supprimé.
+KwId: 260473 | Country: DE | shaushaltsgeratecluster 927subcluster 5286
+Skip: <= 5 products in JSON.
+OK: 'shaushaltsgeratecluster 927subcluster 5286' (177/500) => keyword_id=260473; KW not found #42653 supprimé.
+KwId: 260474 | Country: DE | f3r8
+Categorie from ebay: Wimperntusche
+Categorie match :  ()
+Import OK for keyword_id=260474. Inserted 10 ads.
+OK: 'f3r8' (178/500) => keyword_id=260474; KW not found #42654 supprimé.
+KwId: 260475 | Country: DE | antike truhe
+Categorie from ebay: Truhen & Kisten
+Categorie match :  ()
+Import OK for keyword_id=260475. Inserted 48 ads.
+OK: 'antike truhe' (179/500) => keyword_id=260475; KW not found #42655 supprimé.
+KwId: 260476 | Country: DE | shaushaltsgerate reinigungsmitteltasse cupola espresso espressotasse
+Skip: <= 5 products in JSON.
+OK: 'shaushaltsgerate reinigungsmitteltasse cupola espresso espressotasse' (180/500) => keyword_id=260476; KW not found #42656 supprimé.
+KwId: 260477 | Country: DE | bayern medaille
+Categorie from ebay: Jagd- & Schützenmedaillen
+Categorie match : Jagd & Fischen (299)
+Import OK for keyword_id=260477. Inserted 48 ads.
+OK: 'bayern medaille' (181/500) => keyword_id=260477; KW not found #42657 supprimé.
+KwId: 260478 | Country: DE | sspielekonsolenhunter ultimate generations world
+Skip: <= 5 products in JSON.
+OK: 'sspielekonsolenhunter ultimate generations world' (182/500) => keyword_id=260478; KW not found #42658 supprimé.
+KwId: 260479 | Country: DE | behind
+Categorie from ebay: Bücher
+Categorie match : Antiquarische Bücher (5)
+Import OK for keyword_id=260479. Inserted 48 ads.
+OK: 'behind' (183/500) => keyword_id=260479; KW not found #42659 supprimé.
+KwId: 260480 | Country: DE | fur renault megane
+Categorie from ebay: Fußmatten, Teppiche & Laderaumwannen
+Categorie match : Teppiche & Flachgewebe (160)
+Import OK for keyword_id=260480. Inserted 48 ads.
+OK: 'fur renault megane' (184/500) => keyword_id=260480; KW not found #42660 supprimé.
+KwId: 260481 | Country: DE | pa 3e
+Categorie from ebay: Notebook-Netzteile/-Ladegeräte
+Categorie match : Notebook- & Desktop-Zubehör (120)
+Import OK for keyword_id=260481. Inserted 48 ads.
+OK: 'pa 3e' (185/500) => keyword_id=260481; KW not found #42661 supprimé.
+KwId: 260482 | Country: DE | pablo neruda gedichte spanisch deutsch
+Categorie from ebay: Bücher
+Categorie match : Antiquarische Bücher (5)
+Import OK for keyword_id=260482. Inserted 48 ads.
+OK: 'pablo neruda gedichte spanisch deutsch' (186/500) => keyword_id=260482; KW not found #42662 supprimé.
+KwId: 260483 | Country: DE | fabia armlehne
+Categorie from ebay: Weitere Sitzteile
+Categorie match : Weitere Formate (171)
+Import OK for keyword_id=260483. Inserted 48 ads.
+OK: 'fabia armlehne' (187/500) => keyword_id=260483; KW not found #42663 supprimé.
+KwId: 260484 | Country: DE | modellbahnanlage
+Categorie from ebay: Güterwagen
+Categorie match :  ()
+Import OK for keyword_id=260484. Inserted 48 ads.
+OK: 'modellbahnanlage' (188/500) => keyword_id=260484; KW not found #42664 supprimé.
+KwId: 260485 | Country: DE | zopo zp980
+Categorie from ebay: Handys & Smartphones
+Categorie match : Handys & Kommunikation (65)
+Import OK for keyword_id=260485. Inserted 14 ads.
+OK: 'zopo zp980' (189/500) => keyword_id=260485; KW not found #42665 supprimé.
+KwId: 260486 | Country: DE | erf getriebe
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260486. Inserted 48 ads.
+OK: 'erf getriebe' (190/500) => keyword_id=260486; KW not found #42666 supprimé.
+KwId: 260487 | Country: DE | taylor parfum
+Categorie from ebay: Damen
+Categorie match : Damen (32)
+Import OK for keyword_id=260487. Inserted 48 ads.
+OK: 'taylor parfum' (191/500) => keyword_id=260487; KW not found #42667 supprimé.
+KwId: 260488 | Country: DE | zehentrenner dunkelblau 37
+Categorie from ebay: Sandalen
+Categorie match :  ()
+Import OK for keyword_id=260488. Inserted 48 ads.
+OK: 'zehentrenner dunkelblau 37' (192/500) => keyword_id=260488; KW not found #42668 supprimé.
+KwId: 260489 | Country: DE | s max xenon
+Categorie from ebay: Lampen & LED-Leuchten
+Categorie match :  ()
+Import OK for keyword_id=260489. Inserted 48 ads.
+OK: 's max xenon' (193/500) => keyword_id=260489; KW not found #42669 supprimé.
+KwId: 260490 | Country: DE | sspielekonsolensony playstation ps2 spiel gran turismo
+Skip: <= 5 products in JSON.
+OK: 'sspielekonsolensony playstation ps2 spiel gran turismo' (194/500) => keyword_id=260490; KW not found #42670 supprimé.
+KwId: 260491 | Country: DE | h ft jeans
+Categorie from ebay: Jeans
+Categorie match :  ()
+Import OK for keyword_id=260491. Inserted 38 ads.
+OK: 'h ft jeans' (195/500) => keyword_id=260491; KW not found #42671 supprimé.
+KwId: 260492 | Country: DE | mac donald
+Categorie from ebay: Tassen & Untertassen
+Categorie match :  ()
+Import OK for keyword_id=260492. Inserted 48 ads.
+OK: 'mac donald' (196/500) => keyword_id=260492; KW not found #42672 supprimé.
+KwId: 260493 | Country: DE | waeco ms 402
+Categorie from ebay: Klimakompressoren & Kupplungen
+Categorie match :  ()
+Import OK for keyword_id=260493. Inserted 25 ads.
+OK: 'waeco ms 402' (197/500) => keyword_id=260493; KW not found #42673 supprimé.
+KwId: 260494 | Country: DE | sfanartikel sammeln seltenesdeutsches reich fahne flagge deutsche post
+Skip: <= 5 products in JSON.
+OK: 'sfanartikel sammeln seltenesdeutsches reich fahne flagge deutsche post' (198/500) => keyword_id=260494; KW not found #42674 supprimé.
+KwId: 260495 | Country: DE | zahnb rste
+Categorie from ebay: Ersatzbürsten
+Categorie match :  ()
+Import OK for keyword_id=260495. Inserted 48 ads.
+OK: 'zahnb rste' (199/500) => keyword_id=260495; KW not found #42675 supprimé.
+KwId: 260496 | Country: DE | e34 525i touring
+Categorie from ebay: Leitungen, Schläuche & Rohre
+Categorie match :  ()
+Import OK for keyword_id=260496. Inserted 48 ads.
+OK: 'e34 525i touring' (200/500) => keyword_id=260496; KW not found #42676 supprimé.
+KwId: 260497 | Country: DE | spopularw57
+Skip: <= 5 products in JSON.
+OK: 'spopularw57' (201/500) => keyword_id=260497; KW not found #42677 supprimé.
+KwId: 260498 | Country: DE | o2 blue samsung
+Categorie from ebay: Handys & Smartphones
+Categorie match : Handys & Kommunikation (65)
+Import OK for keyword_id=260498. Inserted 48 ads.
+OK: 'o2 blue samsung' (202/500) => keyword_id=260498; KW not found #42679 supprimé.
+KwId: 260499 | Country: DE | bier zapfhahn
+Categorie from ebay: Zapfhähne
+Categorie match :  ()
+Import OK for keyword_id=260499. Inserted 48 ads.
+OK: 'bier zapfhahn' (203/500) => keyword_id=260499; KW not found #42680 supprimé.
+KwId: 260500 | Country: DE | shaustierbedarfreptilienv ogelfische aquarien
+Skip: <= 5 products in JSON.
+OK: 'shaustierbedarfreptilienv ogelfische aquarien' (204/500) => keyword_id=260500; KW not found #42681 supprimé.
+KwId: 260501 | Country: DE | spopularb19
+Skip: <= 5 products in JSON.
+OK: 'spopularb19' (205/500) => keyword_id=260501; KW not found #42682 supprimé.
+KwId: 260502 | Country: DE | p21s power gel
+Categorie from ebay: Reifen- & Räderreinigung
+Categorie match :  ()
+Import OK for keyword_id=260502. Inserted 48 ads.
+OK: 'p21s power gel' (206/500) => keyword_id=260502; KW not found #42683 supprimé.
+KwId: 260503 | Country: DE | spopulara31
+Skip: <= 5 products in JSON.
+OK: 'spopulara31' (207/500) => keyword_id=260503; KW not found #42684 supprimé.
+KwId: 260504 | Country: DE | skleidung fur herrenoriginal bundeswehr feldbluse flecktarn herren jacke
+Skip: <= 5 products in JSON.
+OK: 'skleidung fur herrenoriginal bundeswehr feldbluse flecktarn herren jacke' (208/500) => keyword_id=260504; KW not found #42685 supprimé.
+KwId: 260505 | Country: DE | spopularp86
+Skip: <= 5 products in JSON.
+OK: 'spopularp86' (209/500) => keyword_id=260505; KW not found #42686 supprimé.
+KwId: 260506 | Country: DE | adidas galaxy
+Categorie from ebay: Herrenschuhe
+Categorie match :  ()
+Import OK for keyword_id=260506. Inserted 48 ads.
+OK: 'adidas galaxy' (210/500) => keyword_id=260506; KW not found #42687 supprimé.
+KwId: 260507 | Country: DE | audi a4 b5 lufter
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260507. Inserted 48 ads.
+OK: 'audi a4 b5 lufter' (211/500) => keyword_id=260507; KW not found #42688 supprimé.
+KwId: 260508 | Country: DE | e34 innenausstattung
+Categorie from ebay: Armlehnen
+Categorie match :  ()
+Import OK for keyword_id=260508. Inserted 48 ads.
+OK: 'e34 innenausstattung' (212/500) => keyword_id=260508; KW not found #42689 supprimé.
+KwId: 260509 | Country: DE | 038103373f
+Categorie from ebay: Zylinderköpfe
+Categorie match :  ()
+Import OK for keyword_id=260509. Inserted 9 ads.
+OK: '038103373f' (213/500) => keyword_id=260509; KW not found #42690 supprimé.
+KwId: 260510 | Country: DE | smart fortwo getriebe
+Categorie from ebay: Automatikgetriebe
+Categorie match :  ()
+Import OK for keyword_id=260510. Inserted 48 ads.
+OK: 'smart fortwo getriebe' (214/500) => keyword_id=260510; KW not found #42691 supprimé.
+KwId: 260511 | Country: DE | mustang schuhe weiss
+Categorie from ebay: Sneaker
+Categorie match :  ()
+Import OK for keyword_id=260511. Inserted 48 ads.
+OK: 'mustang schuhe weiss' (215/500) => keyword_id=260511; KW not found #42692 supprimé.
+KwId: 260512 | Country: DE | kaseigel
+Skip: <= 5 products in JSON.
+OK: 'kaseigel' (216/500) => keyword_id=260512; KW not found #42694 supprimé.
+KwId: 260513 | Country: DE | torwarttrikot oliver kahn
+Categorie from ebay: Original, zertifiziert
+Categorie match :  ()
+Import OK for keyword_id=260513. Inserted 17 ads.
+OK: 'torwarttrikot oliver kahn' (217/500) => keyword_id=260513; KW not found #42695 supprimé.
+KwId: 260514 | Country: DE | packbandabroller
+Categorie from ebay: Packbandspender
+Categorie match :  ()
+Import OK for keyword_id=260514. Inserted 48 ads.
+OK: 'packbandabroller' (218/500) => keyword_id=260514; KW not found #42696 supprimé.
+KwId: 260515 | Country: DE | puma
+Categorie from ebay: Unterwäsche
+Categorie match :  ()
+Import OK for keyword_id=260515. Inserted 48 ads.
+OK: 'puma' (219/500) => keyword_id=260515; KW not found #42697 supprimé.
+KwId: 260516 | Country: DE | buhnenmolton
+Skip: <= 5 products in JSON.
+OK: 'buhnenmolton' (220/500) => keyword_id=260516; KW not found #42698 supprimé.
+KwId: 260517 | Country: DE | folklore kleid
+Categorie from ebay: Kleider
+Categorie match :  ()
+Import OK for keyword_id=260517. Inserted 48 ads.
+OK: 'folklore kleid' (221/500) => keyword_id=260517; KW not found #42699 supprimé.
+KwId: 260518 | Country: DE | badeanzug neon
+Categorie from ebay: Bademode
+Categorie match :  ()
+Import OK for keyword_id=260518. Inserted 48 ads.
+OK: 'badeanzug neon' (222/500) => keyword_id=260518; KW not found #42700 supprimé.
+KwId: 260519 | Country: DE | mazda 6 schaltknauf
+Categorie from ebay: Schaltknäufe
+Categorie match :  ()
+Import OK for keyword_id=260519. Inserted 48 ads.
+OK: 'mazda 6 schaltknauf' (223/500) => keyword_id=260519; KW not found #42701 supprimé.
+KwId: 260520 | Country: DE | 2 sitzer ledercouch
+Categorie from ebay: Sofas & Sessel
+Categorie match :  ()
+Import OK for keyword_id=260520. Inserted 48 ads.
+OK: '2 sitzer ledercouch' (224/500) => keyword_id=260520; KW not found #42702 supprimé.
+KwId: 260521 | Country: DE | hansgrohe focus e
+Categorie from ebay: Badewannenarmaturen & Thermostate
+Categorie match :  ()
+Import OK for keyword_id=260521. Inserted 48 ads.
+OK: 'hansgrohe focus e' (225/500) => keyword_id=260521; KW not found #42703 supprimé.
+KwId: 260522 | Country: DE | radabdeckung
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260522. Inserted 48 ads.
+OK: 'radabdeckung' (226/500) => keyword_id=260522; KW not found #42708 supprimé.
+KwId: 260523 | Country: DE | shaushaltsgerate reinigungsmittelretro kuhlschrank russell hobbs mechanische personenwaage
+Skip: <= 5 products in JSON.
+OK: 'shaushaltsgerate reinigungsmittelretro kuhlschrank russell hobbs mechanische personenwaage' (227/500) => keyword_id=260523; KW not found #42709 supprimé.
+KwId: 260524 | Country: DE | jack daniels dose
+Categorie from ebay: Jack Daniels
+Categorie match :  ()
+Import OK for keyword_id=260524. Inserted 48 ads.
+OK: 'jack daniels dose' (228/500) => keyword_id=260524; KW not found #42710 supprimé.
+KwId: 114969 | Country: DE | loom stuhle
+Categorie from ebay: Sofas & Sessel
+Categorie match :  ()
+Import OK for keyword_id=114969. Inserted 48 ads.
+OK: 'loom stuhle' (229/500) => keyword_id=114969; KW not found #42711 supprimé.
+KwId: 260525 | Country: DE | eames lounge chair vitra
+Categorie from ebay: Sofas & Sessel
+Categorie match :  ()
+Import OK for keyword_id=260525. Inserted 37 ads.
+OK: 'eames lounge chair vitra' (230/500) => keyword_id=260525; KW not found #42712 supprimé.
+KwId: 260526 | Country: DE | disney micky epic
+Categorie from ebay: PC- & Videospiele
+Categorie match : PC- & Videospiele (126)
+Import OK for keyword_id=260526. Inserted 48 ads.
+OK: 'disney micky epic' (231/500) => keyword_id=260526; KW not found #42713 supprimé.
+KwId: 260527 | Country: DE | sr 50 kotflugel
+Categorie from ebay: Spritzschutze
+Categorie match :  ()
+Import OK for keyword_id=260527. Inserted 48 ads.
+OK: 'sr 50 kotflugel' (232/500) => keyword_id=260527; KW not found #42714 supprimé.
+KwId: 260528 | Country: DE | einspritzdusen audi 100
+Categorie from ebay: Einspritzdüsen
+Categorie match :  ()
+Import OK for keyword_id=260528. Inserted 48 ads.
+OK: 'einspritzdusen audi 100' (233/500) => keyword_id=260528; KW not found #42715 supprimé.
+KwId: 260529 | Country: DE | f3d drucker
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260529. Inserted 25 ads.
+OK: 'f3d drucker' (234/500) => keyword_id=260529; KW not found #42716 supprimé.
+KwId: 260530 | Country: DE | santiquitaten kunstsimson s50 rahmen rahmenlaufringen original ddr
+Skip: <= 5 products in JSON.
+OK: 'santiquitaten kunstsimson s50 rahmen rahmenlaufringen original ddr' (235/500) => keyword_id=260530; KW not found #42717 supprimé.
+KwId: 260531 | Country: DE | spopulars109
+Skip: <= 5 products in JSON.
+OK: 'spopulars109' (236/500) => keyword_id=260531; KW not found #42718 supprimé.
+KwId: 260532 | Country: DE | gartendeko skulpturen
+Categorie from ebay: Gartenfiguren & Verzierungen
+Categorie match :  ()
+Import OK for keyword_id=260532. Inserted 48 ads.
+OK: 'gartendeko skulpturen' (237/500) => keyword_id=260532; KW not found #42719 supprimé.
+KwId: 260533 | Country: DE | rohde sandalen
+Categorie from ebay: Sandalen
+Categorie match :  ()
+Import OK for keyword_id=260533. Inserted 48 ads.
+OK: 'rohde sandalen' (238/500) => keyword_id=260533; KW not found #42720 supprimé.
+KwId: 260534 | Country: DE | autogramm
+Categorie from ebay: Original, zertifiziert
+Categorie match :  ()
+Import OK for keyword_id=260534. Inserted 48 ads.
+OK: 'autogramm' (239/500) => keyword_id=260534; KW not found #42721 supprimé.
+KwId: 260535 | Country: DE | jacke 42
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260535. Inserted 48 ads.
+OK: 'jacke 42' (240/500) => keyword_id=260535; KW not found #42722 supprimé.
+KwId: 260536 | Country: DE | calibra turbo
+Categorie from ebay: Ölpumpen & Teile
+Categorie match : Handy-Komponenten & -Teile (63)
+Import OK for keyword_id=260536. Inserted 48 ads.
+OK: 'calibra turbo' (241/500) => keyword_id=260536; KW not found #42723 supprimé.
+KwId: 260537 | Country: DE | twilight box
+Categorie from ebay: Aufkleber & Sticker
+Categorie match :  ()
+Import OK for keyword_id=260537. Inserted 48 ads.
+OK: 'twilight box' (242/500) => keyword_id=260537; KW not found #42724 supprimé.
+KwId: 260538 | Country: DE | shandy telefon navigationfur nokia handy altere
+Skip: <= 5 products in JSON.
+OK: 'shandy telefon navigationfur nokia handy altere' (243/500) => keyword_id=260538; KW not found #42725 supprimé.
+KwId: 260539 | Country: DE | mp 7 5
+Categorie from ebay: Handys & Smartphones
+Categorie match : Handys & Kommunikation (65)
+Import OK for keyword_id=260539. Inserted 48 ads.
+OK: 'mp 7 5' (244/500) => keyword_id=260539; KW not found #42726 supprimé.
+KwId: 260540 | Country: DE | wm 2014 brasilien sticker
+Categorie from ebay: Einzelsticker
+Categorie match :  ()
+Import OK for keyword_id=260540. Inserted 48 ads.
+OK: 'wm 2014 brasilien sticker' (245/500) => keyword_id=260540; KW not found #42727 supprimé.
+KwId: 260541 | Country: DE | spopularg52
+Skip: <= 5 products in JSON.
+OK: 'spopularg52' (246/500) => keyword_id=260541; KW not found #42728 supprimé.
+KwId: 260542 | Country: DE | spopularw43
+Skip: <= 5 products in JSON.
+OK: 'spopularw43' (247/500) => keyword_id=260542; KW not found #42729 supprimé.
+KwId: 260543 | Country: DE | hunde liegekissen
+Categorie from ebay: Betten
+Categorie match :  ()
+Import OK for keyword_id=260543. Inserted 48 ads.
+OK: 'hunde liegekissen' (248/500) => keyword_id=260543; KW not found #42730 supprimé.
+KwId: 260544 | Country: DE | carson nitro
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260544. Inserted 48 ads.
+OK: 'carson nitro' (249/500) => keyword_id=260544; KW not found #42731 supprimé.
+KwId: 260545 | Country: DE | wandtattoo bremen
+Categorie from ebay: Wandtattoos & Wandbilder
+Categorie match :  ()
+Import OK for keyword_id=260545. Inserted 48 ads.
+OK: 'wandtattoo bremen' (250/500) => keyword_id=260545; KW not found #42732 supprimé.
+KwId: 260546 | Country: DE | 70er jahre kostum herren
+Categorie from ebay: Perücken & Bärte
+Categorie match :  ()
+Import OK for keyword_id=260546. Inserted 48 ads.
+OK: '70er jahre kostum herren' (251/500) => keyword_id=260546; KW not found #42733 supprimé.
+KwId: 260547 | Country: DE | akkordeon balg
+Categorie from ebay: Akkordeons
+Categorie match :  ()
+Import OK for keyword_id=260547. Inserted 48 ads.
+OK: 'akkordeon balg' (252/500) => keyword_id=260547; KW not found #42734 supprimé.
+KwId: 260548 | Country: DE | h m slips
+Categorie from ebay: Slips, Strings & Panties
+Categorie match :  ()
+Import OK for keyword_id=260548. Inserted 48 ads.
+OK: 'h m slips' (253/500) => keyword_id=260548; KW not found #42735 supprimé.
+KwId: 260549 | Country: DE | s factory
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260549. Inserted 48 ads.
+OK: 's factory' (254/500) => keyword_id=260549; KW not found #42736 supprimé.
+KwId: 260550 | Country: DE | spopularf30
+Skip: <= 5 products in JSON.
+OK: 'spopularf30' (255/500) => keyword_id=260550; KW not found #42737 supprimé.
+KwId: 260551 | Country: DE | k fee kaffeemaschine
+Categorie from ebay: Kaffeepad- & Kapselmaschinen
+Categorie match :  ()
+Import OK for keyword_id=260551. Inserted 48 ads.
+OK: 'k fee kaffeemaschine' (256/500) => keyword_id=260551; KW not found #42738 supprimé.
+KwId: 260552 | Country: DE | spopulard40
+Skip: <= 5 products in JSON.
+OK: 'spopulard40' (257/500) => keyword_id=260552; KW not found #42740 supprimé.
+KwId: 260553 | Country: DE | u ei borse
+Categorie from ebay: Maxi-Ei
+Categorie match :  ()
+Import OK for keyword_id=260553. Inserted 36 ads.
+OK: 'u ei borse' (258/500) => keyword_id=260553; KW not found #42741 supprimé.
+KwId: 260554 | Country: DE | cabochon 8mm
+Categorie from ebay: Cabochons
+Categorie match :  ()
+Import OK for keyword_id=260554. Inserted 48 ads.
+OK: 'cabochon 8mm' (259/500) => keyword_id=260554; KW not found #42742 supprimé.
+KwId: 260555 | Country: DE | motorrad nummernschild
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260555. Inserted 48 ads.
+OK: 'motorrad nummernschild' (260/500) => keyword_id=260555; KW not found #42743 supprimé.
+KwId: 260556 | Country: DE | spopularl29
+Skip: <= 5 products in JSON.
+OK: 'spopularl29' (261/500) => keyword_id=260556; KW not found #42744 supprimé.
+KwId: 260557 | Country: DE | muriels hochzeit
+Categorie from ebay: DVDs & Blu-rays
+Categorie match : DVDs & Blu-rays (39)
+Import OK for keyword_id=260557. Inserted 48 ads.
+OK: 'muriels hochzeit' (262/500) => keyword_id=260557; KW not found #42745 supprimé.
+KwId: 260558 | Country: DE | a3 8l quattro
+Categorie from ebay: Fußmatten, Teppiche & Laderaumwannen
+Categorie match : Teppiche & Flachgewebe (160)
+Import OK for keyword_id=260558. Inserted 48 ads.
+OK: 'a3 8l quattro' (263/500) => keyword_id=260558; KW not found #42746 supprimé.
+KwId: 260559 | Country: DE | s oliver jeans tube herren
+Categorie from ebay: Jeans
+Categorie match :  ()
+Import OK for keyword_id=260559. Inserted 48 ads.
+OK: 's oliver jeans tube herren' (264/500) => keyword_id=260559; KW not found #42747 supprimé.
+KwId: 260560 | Country: DE | sbucher zeitschriftencomics marvel spiderman exklusiv
+Skip: <= 5 products in JSON.
+OK: 'sbucher zeitschriftencomics marvel spiderman exklusiv' (265/500) => keyword_id=260560; KW not found #42748 supprimé.
+KwId: 260561 | Country: DE | lgb massstab
+Categorie from ebay: Figuren
+Categorie match : Action-Figuren & Zubehör (180)
+Import OK for keyword_id=260561. Inserted 48 ads.
+OK: 'lgb massstab' (266/500) => keyword_id=260561; KW not found #42749 supprimé.
+KwId: 260562 | Country: DE | la coka nostra
+Categorie from ebay: CDs
+Categorie match : CDs (29)
+Import OK for keyword_id=260562. Inserted 48 ads.
+OK: 'la coka nostra' (267/500) => keyword_id=260562; KW not found #42750 supprimé.
+KwId: 260563 | Country: DE | spopularm31
+Skip: <= 5 products in JSON.
+OK: 'spopularm31' (268/500) => keyword_id=260563; KW not found #42752 supprimé.
+KwId: 260564 | Country: DE | qs pullover
+Categorie from ebay: Pullover & Strick
+Categorie match :  ()
+Import OK for keyword_id=260564. Inserted 48 ads.
+OK: 'qs pullover' (269/500) => keyword_id=260564; KW not found #42753 supprimé.
+KwId: 260565 | Country: DE | w124 coupe tur
+Categorie from ebay: Türen & Türenbleche
+Categorie match : Fenster, Türen & Treppen (254)
+Import OK for keyword_id=260565. Inserted 48 ads.
+OK: 'w124 coupe tur' (270/500) => keyword_id=260565; KW not found #42754 supprimé.
+KwId: 260566 | Country: DE | ssonstigesfur simson awo aprilia
+Skip: <= 5 products in JSON.
+OK: 'ssonstigesfur simson awo aprilia' (271/500) => keyword_id=260566; KW not found #42755 supprimé.
+KwId: 260567 | Country: DE | spopularm66
+Skip: <= 5 products in JSON.
+OK: 'spopularm66' (272/500) => keyword_id=260567; KW not found #42756 supprimé.
+KwId: 260568 | Country: DE | m sportsitze
+Categorie from ebay: Sitze
+Categorie match :  ()
+Import OK for keyword_id=260568. Inserted 48 ads.
+OK: 'm sportsitze' (273/500) => keyword_id=260568; KW not found #42757 supprimé.
+KwId: 260569 | Country: DE | heatvape
+Skip: <= 5 products in JSON.
+OK: 'heatvape' (274/500) => keyword_id=260569; KW not found #42758 supprimé.
+KwId: 260570 | Country: DE | uaccountregister
+Categorie from ebay: Automobilia
+Categorie match :  ()
+Import OK for keyword_id=260570. Inserted 7 ads.
+OK: 'uaccountregister' (275/500) => keyword_id=260570; KW not found #42759 supprimé.
+KwId: 260571 | Country: DE | h gl schuhe
+Categorie from ebay: Pumps
+Categorie match :  ()
+Import OK for keyword_id=260571. Inserted 48 ads.
+OK: 'h gl schuhe' (276/500) => keyword_id=260571; KW not found #42762 supprimé.
+KwId: 260572 | Country: DE | kinderarmbanduhr madchen
+Categorie from ebay: Armbanduhren
+Categorie match :  ()
+Import OK for keyword_id=260572. Inserted 48 ads.
+OK: 'kinderarmbanduhr madchen' (277/500) => keyword_id=260572; KW not found #42763 supprimé.
+KwId: 260573 | Country: DE | yamaha 5 ps
+Categorie from ebay: Außenbordmotoren
+Categorie match :  ()
+Import OK for keyword_id=260573. Inserted 48 ads.
+OK: 'yamaha 5 ps' (278/500) => keyword_id=260573; KW not found #42767 supprimé.
+KwId: 260574 | Country: DE | nummer 32 haidrache
+Categorie from ebay: TCG Sammlungen & Lots
+Categorie match :  ()
+Import OK for keyword_id=260574. Inserted 48 ads.
+OK: 'nummer 32 haidrache' (279/500) => keyword_id=260574; KW not found #42768 supprimé.
+KwId: 260575 | Country: DE | yagi antennen b970b
+Skip: <= 5 products in JSON.
+OK: 'yagi antennen b970b' (280/500) => keyword_id=260575; KW not found #42769 supprimé.
+KwId: 260576 | Country: DE | versace red jeans eau de toilette
+Categorie from ebay: Damen
+Categorie match : Damen (32)
+Import OK for keyword_id=260576. Inserted 48 ads.
+OK: 'versace red jeans eau de toilette' (281/500) => keyword_id=260576; KW not found #42770 supprimé.
+KwId: 260577 | Country: DE | lederhose jagd
+Categorie from ebay: Bekleidung
+Categorie match :  ()
+Import OK for keyword_id=260577. Inserted 48 ads.
+OK: 'lederhose jagd' (282/500) => keyword_id=260577; KW not found #42771 supprimé.
+KwId: 260578 | Country: DE | zara camouflage
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260578. Inserted 48 ads.
+OK: 'zara camouflage' (283/500) => keyword_id=260578; KW not found #42772 supprimé.
+KwId: 260579 | Country: DE | radlauf
+Categorie from ebay: Seitenwände & Kotflügel Hinten
+Categorie match :  ()
+Import OK for keyword_id=260579. Inserted 48 ads.
+OK: 'radlauf' (284/500) => keyword_id=260579; KW not found #42773 supprimé.
+KwId: 260580 | Country: DE | e glide
+Categorie from ebay: Blinker
+Categorie match :  ()
+Import OK for keyword_id=260580. Inserted 48 ads.
+OK: 'e glide' (285/500) => keyword_id=260580; KW not found #42774 supprimé.
+KwId: 260581 | Country: DE | verlag junge welt
+Categorie from ebay: Kinder- & Jugendliteratur
+Categorie match : Kinder (81)
+Import OK for keyword_id=260581. Inserted 48 ads.
+OK: 'verlag junge welt' (286/500) => keyword_id=260581; KW not found #42775 supprimé.
+KwId: 260582 | Country: DE | spopulare19
+Skip: <= 5 products in JSON.
+OK: 'spopulare19' (287/500) => keyword_id=260582; KW not found #42776 supprimé.
+KwId: 260583 | Country: DE | scomputer zubehordrucker canon scanner patronen
+Skip: <= 5 products in JSON.
+OK: 'scomputer zubehordrucker canon scanner patronen' (288/500) => keyword_id=260583; KW not found #42781 supprimé.
+KwId: 260584 | Country: DE | afrika design
+Categorie from ebay: Bücher
+Categorie match : Antiquarische Bücher (5)
+Import OK for keyword_id=260584. Inserted 48 ads.
+OK: 'afrika design' (289/500) => keyword_id=260584; KW not found #42783 supprimé.
+KwId: 69473 | Country: DE | schluter schlepper
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=69473. Inserted 48 ads.
+OK: 'schluter schlepper' (290/500) => keyword_id=69473; KW not found #42784 supprimé.
+KwId: 260585 | Country: DE | pricescomic posters
+Skip: <= 5 products in JSON.
+OK: 'pricescomic posters' (291/500) => keyword_id=260585; KW not found #42785 supprimé.
+KwId: 260586 | Country: DE | vw passat wechsler
+Categorie from ebay: CD & DVD Wechsler
+Categorie match : DVD, Blu-ray & Heimkino (236)
+Import OK for keyword_id=260586. Inserted 48 ads.
+OK: 'vw passat wechsler' (292/500) => keyword_id=260586; KW not found #42786 supprimé.
+KwId: 260587 | Country: DE | give away hochzeit
+Categorie from ebay: Gastgeschenke
+Categorie match :  ()
+Import OK for keyword_id=260587. Inserted 48 ads.
+OK: 'give away hochzeit' (293/500) => keyword_id=260587; KW not found #42787 supprimé.
+KwId: 260588 | Country: DE | fahrradreifen
+Categorie from ebay: Reifen
+Categorie match :  ()
+Import OK for keyword_id=260588. Inserted 48 ads.
+OK: 'fahrradreifen' (294/500) => keyword_id=260588; KW not found #42788 supprimé.
+KwId: 260589 | Country: DE | faschingsschminke
+Categorie from ebay: Schminke & Bühnen-Make-Up
+Categorie match : Make-up (329)
+Import OK for keyword_id=260589. Inserted 48 ads.
+OK: 'faschingsschminke' (295/500) => keyword_id=260589; KW not found #42790 supprimé.
+KwId: 205619 | Country: DE | fertig gardinen vorhange
+Categorie from ebay: Gardinen & Vorhänge
+Categorie match : Rollos, Gardinen & Vorhänge (385)
+Import OK for keyword_id=205619. Inserted 48 ads.
+OK: 'fertig gardinen vorhange' (296/500) => keyword_id=205619; KW not found #42791 supprimé.
+KwId: 260590 | Country: DE | konigskette gold herren
+Categorie from ebay: Halsketten & Anhänger
+Categorie match : Pkw-Anhänger (582)
+Import OK for keyword_id=260590. Inserted 48 ads.
+OK: 'konigskette gold herren' (297/500) => keyword_id=260590; KW not found #42792 supprimé.
+KwId: 260591 | Country: DE | volkswagen v6 0 3 touareg tdi
+Categorie from ebay: Katalysatoren
+Categorie match :  ()
+Import OK for keyword_id=260591. Inserted 48 ads.
+OK: 'volkswagen v6 0 3 touareg tdi' (298/500) => keyword_id=260591; KW not found #42793 supprimé.
+KwId: 260592 | Country: DE | boote ruderboot gebrauchte
+Categorie from ebay: Boote
+Categorie match :  ()
+Import OK for keyword_id=260592. Inserted 48 ads.
+OK: 'boote ruderboot gebrauchte' (299/500) => keyword_id=260592; KW not found #42794 supprimé.
+KwId: 260593 | Country: DE | priceseos 5d mark iii
+Skip: <= 5 products in JSON.
+OK: 'priceseos 5d mark iii' (300/500) => keyword_id=260593; KW not found #42795 supprimé.
+KwId: 260594 | Country: DE | skleidung fur damenfur kinder damen sommer
+Skip: <= 5 products in JSON.
+OK: 'skleidung fur damenfur kinder damen sommer' (301/500) => keyword_id=260594; KW not found #42796 supprimé.
+KwId: 260595 | Country: DE | pailletten top heine
+Categorie from ebay: Blusen, Tops & Shirts
+Categorie match :  ()
+Import OK for keyword_id=260595. Inserted 43 ads.
+OK: 'pailletten top heine' (302/500) => keyword_id=260595; KW not found #42797 supprimé.
+KwId: 260596 | Country: DE | kleiner kobold
+Categorie from ebay: Ausstechformen
+Categorie match :  ()
+Import OK for keyword_id=260596. Inserted 48 ads.
+OK: 'kleiner kobold' (303/500) => keyword_id=260596; KW not found #42798 supprimé.
+KwId: 260597 | Country: DE | stoff fahrzeuge
+Categorie from ebay: Stoffe
+Categorie match : Stoffe (154)
+Import OK for keyword_id=260597. Inserted 48 ads.
+OK: 'stoff fahrzeuge' (304/500) => keyword_id=260597; KW not found #42799 supprimé.
+KwId: 260598 | Country: DE | mini
+Categorie from ebay: PC Desktops & All-in-Ones
+Categorie match : Desktops & All-in-One-PCs (228)
+Import OK for keyword_id=260598. Inserted 48 ads.
+OK: 'mini' (305/500) => keyword_id=260598; KW not found #42800 supprimé.
+KwId: 260599 | Country: DE | diorama zubehor 1 32
+Categorie from ebay: Landschaftsbau
+Categorie match : Garten- & Landschaftsbau (266)
+Import OK for keyword_id=260599. Inserted 48 ads.
+OK: 'diorama zubehor 1 32' (306/500) => keyword_id=260599; KW not found #42801 supprimé.
+KwId: 260600 | Country: DE | regensensor vw
+Categorie from ebay: Weitere Scheibenwischerteile
+Categorie match : Weitere Formate (171)
+Import OK for keyword_id=260600. Inserted 48 ads.
+OK: 'regensensor vw' (307/500) => keyword_id=260600; KW not found #42802 supprimé.
+KwId: 244105 | Country: DE | gartenzaun weiss
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=244105. Inserted 48 ads.
+OK: 'gartenzaun weiss' (308/500) => keyword_id=244105; KW not found #42803 supprimé.
+KwId: 260601 | Country: DE | 1 2 objektiv
+Categorie from ebay: Objektive
+Categorie match : Objektive & Filter (360)
+Import OK for keyword_id=260601. Inserted 48 ads.
+OK: '1 2 objektiv' (309/500) => keyword_id=260601; KW not found #42805 supprimé.
+KwId: 260602 | Country: DE | shandy telefon navigationfur iphone nokia samsung
+Skip: <= 5 products in JSON.
+OK: 'shandy telefon navigationfur iphone nokia samsung' (310/500) => keyword_id=260602; KW not found #42806 supprimé.
+KwId: 260603 | Country: DE | speedmaster ax 270
+Skip: <= 5 products in JSON.
+OK: 'speedmaster ax 270' (311/500) => keyword_id=260603; KW not found #42807 supprimé.
+KwId: 260604 | Country: DE | porsche 911 tuning
+Categorie from ebay: Carrera Evolution
+Categorie match :  ()
+Import OK for keyword_id=260604. Inserted 48 ads.
+OK: 'porsche 911 tuning' (312/500) => keyword_id=260604; KW not found #42808 supprimé.
+KwId: 260605 | Country: DE | u2 horizon
+Categorie from ebay: CDs
+Categorie match : CDs (29)
+Import OK for keyword_id=260605. Inserted 48 ads.
+OK: 'u2 horizon' (313/500) => keyword_id=260605; KW not found #42809 supprimé.
+KwId: 260606 | Country: DE | objektive fur nikon
+Categorie from ebay: Objektive
+Categorie match : Objektive & Filter (360)
+Import OK for keyword_id=260606. Inserted 48 ads.
+OK: 'objektive fur nikon' (314/500) => keyword_id=260606; KW not found #42810 supprimé.
+KwId: 260607 | Country: DE | spopulara18
+Skip: <= 5 products in JSON.
+OK: 'spopulara18' (315/500) => keyword_id=260607; KW not found #42811 supprimé.
+KwId: 260608 | Country: DE | ubergangsjacke gr 68
+Categorie from ebay: Outerwear
+Categorie match :  ()
+Import OK for keyword_id=260608. Inserted 48 ads.
+OK: 'ubergangsjacke gr 68' (316/500) => keyword_id=260608; KW not found #42814 supprimé.
+KwId: 260609 | Country: DE | jako stiefel
+Categorie from ebay: Schuhe für Jungen
+Categorie match : Spielzeug für draußen (408)
+Import OK for keyword_id=260609. Inserted 48 ads.
+OK: 'jako stiefel' (317/500) => keyword_id=260609; KW not found #42815 supprimé.
+KwId: 260610 | Country: DE | a bay
+Categorie from ebay: Startpackungen & Zugsets
+Categorie match :  ()
+Import OK for keyword_id=260610. Inserted 48 ads.
+OK: 'a bay' (318/500) => keyword_id=260610; KW not found #42816 supprimé.
+KwId: 260611 | Country: DE | golf serviceheft
+Categorie from ebay: Service & Scheckhefte
+Categorie match :  ()
+Import OK for keyword_id=260611. Inserted 48 ads.
+OK: 'golf serviceheft' (319/500) => keyword_id=260611; KW not found #42817 supprimé.
+KwId: 260612 | Country: DE | shimano 970
+Categorie from ebay: Schalthebel
+Categorie match :  ()
+Import OK for keyword_id=260612. Inserted 48 ads.
+OK: 'shimano 970' (320/500) => keyword_id=260612; KW not found #42818 supprimé.
+KwId: 260613 | Country: DE | land rover gebrauchte
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260613. Inserted 48 ads.
+OK: 'land rover gebrauchte' (321/500) => keyword_id=260613; KW not found #42819 supprimé.
+KwId: 260614 | Country: DE | akkordeon hohner concerto
+Categorie from ebay: Akkordeons
+Categorie match :  ()
+Import OK for keyword_id=260614. Inserted 48 ads.
+OK: 'akkordeon hohner concerto' (322/500) => keyword_id=260614; KW not found #42820 supprimé.
+KwId: 260615 | Country: DE | dellen ausbeulen
+Categorie from ebay: Ausbeulreparatur
+Categorie match :  ()
+Import OK for keyword_id=260615. Inserted 48 ads.
+OK: 'dellen ausbeulen' (323/500) => keyword_id=260615; KW not found #42821 supprimé.
+KwId: 260616 | Country: DE | edelstein roter korund
+Categorie from ebay: Lose Edelsteine
+Categorie match : Lose Diamanten & Edelsteine (328)
+Import OK for keyword_id=260616. Inserted 48 ads.
+OK: 'edelstein roter korund' (324/500) => keyword_id=260616; KW not found #42822 supprimé.
+KwId: 260617 | Country: DE | dj lichtanlage
+Categorie from ebay: Licht-Effekte
+Categorie match : Bühnenbeleuchtung & -effekte (218)
+Import OK for keyword_id=260617. Inserted 48 ads.
+OK: 'dj lichtanlage' (325/500) => keyword_id=260617; KW not found #42823 supprimé.
+KwId: 260618 | Country: DE | reisenthel carrybag
+Categorie from ebay: Körbe
+Categorie match :  ()
+Import OK for keyword_id=260618. Inserted 48 ads.
+OK: 'reisenthel carrybag' (326/500) => keyword_id=260618; KW not found #42824 supprimé.
+KwId: 260619 | Country: DE | playmobil wiege
+Categorie from ebay: Puppenhaus
+Categorie match :  ()
+Import OK for keyword_id=260619. Inserted 48 ads.
+OK: 'playmobil wiege' (327/500) => keyword_id=260619; KW not found #42825 supprimé.
+KwId: 260620 | Country: DE | regal 20 cm
+Categorie from ebay: Regale & Aufbewahrung
+Categorie match :  ()
+Import OK for keyword_id=260620. Inserted 48 ads.
+OK: 'regal 20 cm' (328/500) => keyword_id=260620; KW not found #42826 supprimé.
+KwId: 260621 | Country: DE | sschmuck uhrenherren uhr fur kinder sammlerstuck orig
+Skip: <= 5 products in JSON.
+OK: 'sschmuck uhrenherren uhr fur kinder sammlerstuck orig' (329/500) => keyword_id=260621; KW not found #42827 supprimé.
+KwId: 260622 | Country: DE | rollcontainer weiss
+Categorie from ebay: Rollcontainer & -wagen
+Categorie match :  ()
+Import OK for keyword_id=260622. Inserted 48 ads.
+OK: 'rollcontainer weiss' (330/500) => keyword_id=260622; KW not found #42828 supprimé.
+KwId: 260623 | Country: DE | audi a6 c4 v6
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260623. Inserted 48 ads.
+OK: 'audi a6 c4 v6' (331/500) => keyword_id=260623; KW not found #42829 supprimé.
+KwId: 260624 | Country: DE | spopularm77
+Skip: <= 5 products in JSON.
+OK: 'spopularm77' (332/500) => keyword_id=260624; KW not found #42830 supprimé.
+KwId: 260625 | Country: DE | damen armband braun
+Categorie from ebay: Armbänder & Charm-Anhänger
+Categorie match : Pkw-Anhänger (582)
+Import OK for keyword_id=260625. Inserted 48 ads.
+OK: 'damen armband braun' (333/500) => keyword_id=260625; KW not found #42831 supprimé.
+KwId: 260626 | Country: DE | skijacke herren 50
+Categorie from ebay: Mäntel, Jacken & Westen
+Categorie match :  ()
+Import OK for keyword_id=260626. Inserted 48 ads.
+OK: 'skijacke herren 50' (334/500) => keyword_id=260626; KW not found #42832 supprimé.
+KwId: 260627 | Country: DE | c10 trucks
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260627. Inserted 48 ads.
+OK: 'c10 trucks' (335/500) => keyword_id=260627; KW not found #42833 supprimé.
+KwId: 260628 | Country: DE | spopularb30
+Skip: <= 5 products in JSON.
+OK: 'spopularb30' (336/500) => keyword_id=260628; KW not found #42834 supprimé.
+KwId: 260629 | Country: DE | nike deuce
+Categorie from ebay: Sneaker
+Categorie match :  ()
+Import OK for keyword_id=260629. Inserted 48 ads.
+OK: 'nike deuce' (337/500) => keyword_id=260629; KW not found #42836 supprimé.
+KwId: 260630 | Country: DE | waschbecken klein
+Categorie from ebay: Waschbecken
+Categorie match :  ()
+Import OK for keyword_id=260630. Inserted 48 ads.
+OK: 'waschbecken klein' (338/500) => keyword_id=260630; KW not found #42837 supprimé.
+KwId: 260631 | Country: DE | autoradio 70er jahre
+Categorie from ebay: Auto-Hi-Fi-Raritäten
+Categorie match : Auto & Motorrad (8)
+Import OK for keyword_id=260631. Inserted 48 ads.
+OK: 'autoradio 70er jahre' (339/500) => keyword_id=260631; KW not found #42838 supprimé.
+KwId: 260632 | Country: DE | priceseagle vector
+Skip: <= 5 products in JSON.
+OK: 'priceseagle vector' (340/500) => keyword_id=260632; KW not found #42839 supprimé.
+KwId: 260633 | Country: DE | herpa lufthansa
+Categorie from ebay: Flugzeuge & Raumschiffe
+Categorie match :  ()
+Import OK for keyword_id=260633. Inserted 48 ads.
+OK: 'herpa lufthansa' (341/500) => keyword_id=260633; KW not found #42840 supprimé.
+KwId: 260634 | Country: DE | skleidung fur baby kindsweatshirt pullover kapuzenpullover hoodie fruit loom
+Skip: <= 5 products in JSON.
+OK: 'skleidung fur baby kindsweatshirt pullover kapuzenpullover hoodie fruit loom' (342/500) => keyword_id=260634; KW not found #42841 supprimé.
+KwId: 260635 | Country: DE | golf 3 felgen
+Categorie from ebay: Felgen
+Categorie match :  ()
+Import OK for keyword_id=260635. Inserted 48 ads.
+OK: 'golf 3 felgen' (343/500) => keyword_id=260635; KW not found #42842 supprimé.
+KwId: 193181 | Country: DE | radiallufter
+Categorie from ebay: HLKK-Lüfter & -Gebläse
+Categorie match : HLKK-Technik (286)
+Import OK for keyword_id=193181. Inserted 48 ads.
+OK: 'radiallufter' (344/500) => keyword_id=193181; KW not found #42844 supprimé.
+KwId: 260636 | Country: DE | gardinen stoff voile
+Categorie from ebay: Gardinen & Vorhänge
+Categorie match : Rollos, Gardinen & Vorhänge (385)
+Import OK for keyword_id=260636. Inserted 48 ads.
+OK: 'gardinen stoff voile' (345/500) => keyword_id=260636; KW not found #42845 supprimé.
+KwId: 260637 | Country: DE | audi a8 tieferlegung
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260637. Inserted 48 ads.
+OK: 'audi a8 tieferlegung' (346/500) => keyword_id=260637; KW not found #42846 supprimé.
+KwId: 260638 | Country: DE | ssport sportbekleidungfur kinder helm nolan
+Skip: <= 5 products in JSON.
+OK: 'ssport sportbekleidungfur kinder helm nolan' (347/500) => keyword_id=260638; KW not found #42847 supprimé.
+KwId: 260639 | Country: DE | chips jack daniels
+Categorie from ebay: Jack Daniels
+Categorie match :  ()
+Import OK for keyword_id=260639. Inserted 47 ads.
+OK: 'chips jack daniels' (348/500) => keyword_id=260639; KW not found #42848 supprimé.
+KwId: 260640 | Country: DE | radtrikot xxl
+Categorie from ebay: Tops, T-Shirts & Trikots
+Categorie match :  ()
+Import OK for keyword_id=260640. Inserted 48 ads.
+OK: 'radtrikot xxl' (349/500) => keyword_id=260640; KW not found #42849 supprimé.
+KwId: 260641 | Country: DE | druckwasserpumpe 12v
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260641. Inserted 48 ads.
+OK: 'druckwasserpumpe 12v' (350/500) => keyword_id=260641; KW not found #42850 supprimé.
+KwId: 260642 | Country: DE | mittelalter deko
+Categorie from ebay: Ausrüstung & Zubehör
+Categorie match : Audio-Media-Zubehör (7)
+Import OK for keyword_id=260642. Inserted 48 ads.
+OK: 'mittelalter deko' (351/500) => keyword_id=260642; KW not found #42852 supprimé.
+KwId: 260643 | Country: DE | stichsaege aeg
+Categorie from ebay: Stichsägen
+Categorie match :  ()
+Import OK for keyword_id=260643. Inserted 48 ads.
+OK: 'stichsaege aeg' (352/500) => keyword_id=260643; KW not found #42853 supprimé.
+KwId: 260644 | Country: DE | smobel wohnencluster 1231subcluster 5875
+Skip: <= 5 products in JSON.
+OK: 'smobel wohnencluster 1231subcluster 5875' (353/500) => keyword_id=260644; KW not found #42854 supprimé.
+KwId: 260645 | Country: DE | nicki stoff schwarz
+Categorie from ebay: Stoffe
+Categorie match : Stoffe (154)
+Import OK for keyword_id=260645. Inserted 48 ads.
+OK: 'nicki stoff schwarz' (354/500) => keyword_id=260645; KW not found #42855 supprimé.
+KwId: 260646 | Country: DE | aufsitzmaher motor
+Categorie from ebay: Rasenmäher-Zubehör
+Categorie match : Audio-Media-Zubehör (7)
+Import OK for keyword_id=260646. Inserted 48 ads.
+OK: 'aufsitzmaher motor' (355/500) => keyword_id=260646; KW not found #42856 supprimé.
+KwId: 260647 | Country: DE | spopularh63
+Skip: <= 5 products in JSON.
+OK: 'spopularh63' (356/500) => keyword_id=260647; KW not found #42858 supprimé.
+KwId: 260648 | Country: DE | spopulars91
+Skip: <= 5 products in JSON.
+OK: 'spopulars91' (357/500) => keyword_id=260648; KW not found #42859 supprimé.
+KwId: 260649 | Country: DE | ibiza formentera
+Categorie from ebay: Bücher
+Categorie match : Antiquarische Bücher (5)
+Import OK for keyword_id=260649. Inserted 48 ads.
+OK: 'ibiza formentera' (358/500) => keyword_id=260649; KW not found #42860 supprimé.
+KwId: 260650 | Country: DE | bedienungsanleitung kia
+Categorie from ebay: Bedienungsanleitungen
+Categorie match :  ()
+Import OK for keyword_id=260650. Inserted 48 ads.
+OK: 'bedienungsanleitung kia' (359/500) => keyword_id=260650; KW not found #42861 supprimé.
+KwId: 260651 | Country: DE | spopularo28
+Skip: <= 5 products in JSON.
+OK: 'spopularo28' (360/500) => keyword_id=260651; KW not found #42862 supprimé.
+KwId: 260652 | Country: DE | dekoschilder
+Categorie from ebay: Schilder & Tafeln
+Categorie match :  ()
+Import OK for keyword_id=260652. Inserted 48 ads.
+OK: 'dekoschilder' (361/500) => keyword_id=260652; KW not found #42863 supprimé.
+KwId: 260653 | Country: DE | sspielen spielzeugfisher price little people mattel fisherprice
+Skip: <= 5 products in JSON.
+OK: 'sspielen spielzeugfisher price little people mattel fisherprice' (362/500) => keyword_id=260653; KW not found #42864 supprimé.
+KwId: 260654 | Country: DE | modeka jacke
+Categorie from ebay: Motorradjacken
+Categorie match :  ()
+Import OK for keyword_id=260654. Inserted 48 ads.
+OK: 'modeka jacke' (363/500) => keyword_id=260654; KW not found #42865 supprimé.
+KwId: 260655 | Country: DE | figurformer bauch
+Categorie from ebay: Unterwäsche
+Categorie match :  ()
+Import OK for keyword_id=260655. Inserted 48 ads.
+OK: 'figurformer bauch' (364/500) => keyword_id=260655; KW not found #42866 supprimé.
+KwId: 260656 | Country: DE | marklin eisenbahn katalog
+Categorie from ebay: Kataloge
+Categorie match : Kataloge (79)
+Import OK for keyword_id=260656. Inserted 48 ads.
+OK: 'marklin eisenbahn katalog' (365/500) => keyword_id=260656; KW not found #42867 supprimé.
+KwId: 260657 | Country: DE | x30
+Categorie from ebay: Kreissägeblätter
+Categorie match :  ()
+Import OK for keyword_id=260657. Inserted 48 ads.
+OK: 'x30' (366/500) => keyword_id=260657; KW not found #42868 supprimé.
+KwId: 260658 | Country: DE | parkett schleifmaschine
+Categorie from ebay: Schleifmaschinen
+Categorie match :  ()
+Import OK for keyword_id=260658. Inserted 48 ads.
+OK: 'parkett schleifmaschine' (367/500) => keyword_id=260658; KW not found #42869 supprimé.
+KwId: 260659 | Country: DE | bbs e30
+Categorie from ebay: Felgen
+Categorie match :  ()
+Import OK for keyword_id=260659. Inserted 48 ads.
+OK: 'bbs e30' (368/500) => keyword_id=260659; KW not found #42870 supprimé.
+KwId: 260660 | Country: DE | dior addict 100 ml
+Categorie from ebay: Damen
+Categorie match : Damen (32)
+Import OK for keyword_id=260660. Inserted 48 ads.
+OK: 'dior addict 100 ml' (369/500) => keyword_id=260660; KW not found #42871 supprimé.
+KwId: 260661 | Country: DE | the legend of dragon
+Categorie from ebay: Damen
+Categorie match : Damen (32)
+Import OK for keyword_id=260661. Inserted 48 ads.
+OK: 'the legend of dragon' (370/500) => keyword_id=260661; KW not found #42872 supprimé.
+KwId: 260662 | Country: DE | heizung therme vaillant
+Categorie from ebay: Brenner & Kessel
+Categorie match :  ()
+Import OK for keyword_id=260662. Inserted 48 ads.
+OK: 'heizung therme vaillant' (371/500) => keyword_id=260662; KW not found #42873 supprimé.
+KwId: 260663 | Country: DE | kinderwagen mit kiddyboard
+Categorie from ebay: Kiddy Boards
+Categorie match :  ()
+Import OK for keyword_id=260663. Inserted 48 ads.
+OK: 'kinderwagen mit kiddyboard' (372/500) => keyword_id=260663; KW not found #42874 supprimé.
+KwId: 260664 | Country: DE | haare schneiden haarschneidemaschine
+Categorie from ebay: Haar- & Bartschneidegeräte
+Categorie match :  ()
+Import OK for keyword_id=260664. Inserted 48 ads.
+OK: 'haare schneiden haarschneidemaschine' (373/500) => keyword_id=260664; KW not found #42875 supprimé.
+KwId: 205100 | Country: DE | pt cruiser ruckleuchte
+Categorie from ebay: Rück- & Bremsleuchten
+Categorie match :  ()
+Import OK for keyword_id=205100. Inserted 48 ads.
+OK: 'pt cruiser ruckleuchte' (374/500) => keyword_id=205100; KW not found #42876 supprimé.
+KwId: 260665 | Country: DE | tischfrase elektra beckum
+Skip: <= 5 products in JSON.
+OK: 'tischfrase elektra beckum' (375/500) => keyword_id=260665; KW not found #42877 supprimé.
+KwId: 260666 | Country: DE | tisch mit bank
+Categorie from ebay: Tische & Stehtische
+Categorie match :  ()
+Import OK for keyword_id=260666. Inserted 48 ads.
+OK: 'tisch mit bank' (376/500) => keyword_id=260666; KW not found #42878 supprimé.
+KwId: 260667 | Country: DE | saphir
+Categorie from ebay: Nagelpflegeinstrumente, Sets & Zubehör
+Categorie match : Audio-Media-Zubehör (7)
+Import OK for keyword_id=260667. Inserted 48 ads.
+OK: 'saphir' (377/500) => keyword_id=260667; KW not found #42879 supprimé.
+KwId: 260668 | Country: DE | priceskasack wei
+Skip: <= 5 products in JSON.
+OK: 'priceskasack wei' (378/500) => keyword_id=260668; KW not found #42880 supprimé.
+KwId: 260669 | Country: DE | zara man jacke
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260669. Inserted 48 ads.
+OK: 'zara man jacke' (379/500) => keyword_id=260669; KW not found #42881 supprimé.
+KwId: 260670 | Country: DE | scomputer zubehorfur medion aldi bastler
+Skip: <= 5 products in JSON.
+OK: 'scomputer zubehorfur medion aldi bastler' (380/500) => keyword_id=260670; KW not found #42882 supprimé.
+KwId: 260671 | Country: DE | unterwasche paket damen
+Categorie from ebay: BHs & BH-Sets
+Categorie match : Pakete & Sets (123)
+Import OK for keyword_id=260671. Inserted 48 ads.
+OK: 'unterwasche paket damen' (381/500) => keyword_id=260671; KW not found #42883 supprimé.
+KwId: 260672 | Country: DE | konvolut metall
+Categorie from ebay: Sammlungen
+Categorie match :  ()
+Import OK for keyword_id=260672. Inserted 48 ads.
+OK: 'konvolut metall' (382/500) => keyword_id=260672; KW not found #42884 supprimé.
+KwId: 260673 | Country: DE | audi rs2 innenausstattung
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260673. Inserted 48 ads.
+OK: 'audi rs2 innenausstattung' (383/500) => keyword_id=260673; KW not found #42885 supprimé.
+KwId: 260674 | Country: DE | storck mountainbike
+Categorie from ebay: Fahrradrahmen
+Categorie match :  ()
+Import OK for keyword_id=260674. Inserted 48 ads.
+OK: 'storck mountainbike' (384/500) => keyword_id=260674; KW not found #42886 supprimé.
+KwId: 260675 | Country: DE | golf bags
+Categorie from ebay: Golftaschen
+Categorie match :  ()
+Import OK for keyword_id=260675. Inserted 48 ads.
+OK: 'golf bags' (385/500) => keyword_id=260675; KW not found #42887 supprimé.
+KwId: 260676 | Country: DE | ibm thinkpad festplatte
+Categorie from ebay: PC Notebooks & Netbooks
+Categorie match : Notebooks & Netbooks (358)
+Import OK for keyword_id=260676. Inserted 48 ads.
+OK: 'ibm thinkpad festplatte' (386/500) => keyword_id=260676; KW not found #42888 supprimé.
+KwId: 234176 | Country: DE | mazda 2 fussmatten
+Categorie from ebay: Fußmatten, Teppiche & Laderaumwannen
+Categorie match : Teppiche & Flachgewebe (160)
+Import OK for keyword_id=234176. Inserted 48 ads.
+OK: 'mazda 2 fussmatten' (387/500) => keyword_id=234176; KW not found #42889 supprimé.
+KwId: 260677 | Country: DE | pac arcade
+Categorie from ebay: PC- & Videospiele
+Categorie match : PC- & Videospiele (126)
+Import OK for keyword_id=260677. Inserted 48 ads.
+OK: 'pac arcade' (388/500) => keyword_id=260677; KW not found #42890 supprimé.
+KwId: 260678 | Country: DE | maid dress
+Categorie from ebay: Unisex-Kostüme
+Categorie match :  ()
+Import OK for keyword_id=260678. Inserted 48 ads.
+OK: 'maid dress' (389/500) => keyword_id=260678; KW not found #42891 supprimé.
+KwId: 260679 | Country: DE | skleidung fur baby kindtoff togs guter zustand fur madchen
+Skip: <= 5 products in JSON.
+OK: 'skleidung fur baby kindtoff togs guter zustand fur madchen' (390/500) => keyword_id=260679; KW not found #42893 supprimé.
+KwId: 260680 | Country: DE | einhand armatur
+Categorie from ebay: Waschbecken-Armaturen
+Categorie match :  ()
+Import OK for keyword_id=260680. Inserted 48 ads.
+OK: 'einhand armatur' (391/500) => keyword_id=260680; KW not found #42895 supprimé.
+KwId: 260681 | Country: DE | motorradhelm neon
+Categorie from ebay: Motorrad- & Motorsporthelme
+Categorie match : Auto & Motorrad (8)
+Import OK for keyword_id=260681. Inserted 48 ads.
+OK: 'motorradhelm neon' (392/500) => keyword_id=260681; KW not found #42896 supprimé.
+KwId: 260682 | Country: DE | smodellbau basteln handarbeitfur modellbau bastler flugmodelle
+Skip: <= 5 products in JSON.
+OK: 'smodellbau basteln handarbeitfur modellbau bastler flugmodelle' (393/500) => keyword_id=260682; KW not found #42897 supprimé.
+KwId: 260683 | Country: DE | lada gelandewagen
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260683. Inserted 48 ads.
+OK: 'lada gelandewagen' (394/500) => keyword_id=260683; KW not found #42898 supprimé.
+KwId: 260684 | Country: DE | gmt chronograph
+Categorie from ebay: Armbanduhren
+Categorie match :  ()
+Import OK for keyword_id=260684. Inserted 48 ads.
+OK: 'gmt chronograph' (395/500) => keyword_id=260684; KW not found #42899 supprimé.
+KwId: 260685 | Country: DE | stokke neu
+Categorie from ebay: Sitzverkleinerer
+Categorie match :  ()
+Import OK for keyword_id=260685. Inserted 48 ads.
+OK: 'stokke neu' (396/500) => keyword_id=260685; KW not found #42900 supprimé.
+KwId: 260686 | Country: DE | fleischmann spur
+Categorie from ebay: Güterwagen
+Categorie match :  ()
+Import OK for keyword_id=260686. Inserted 48 ads.
+OK: 'fleischmann spur' (397/500) => keyword_id=260686; KW not found #42901 supprimé.
+KwId: 260687 | Country: DE | mercedes 240
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260687. Inserted 48 ads.
+OK: 'mercedes 240' (398/500) => keyword_id=260687; KW not found #42902 supprimé.
+KwId: 260688 | Country: DE | vw passat servo
+Categorie from ebay: Servopumpen
+Categorie match :  ()
+Import OK for keyword_id=260688. Inserted 48 ads.
+OK: 'vw passat servo' (399/500) => keyword_id=260688; KW not found #42903 supprimé.
+KwId: 260689 | Country: DE | voile querbehang
+Categorie from ebay: Gardinen & Vorhänge
+Categorie match : Rollos, Gardinen & Vorhänge (385)
+Import OK for keyword_id=260689. Inserted 48 ads.
+OK: 'voile querbehang' (400/500) => keyword_id=260689; KW not found #42904 supprimé.
+KwId: 260690 | Country: DE | kleinbus
+Categorie from ebay: Halb- & Ganzgaragen
+Categorie match :  ()
+Import OK for keyword_id=260690. Inserted 48 ads.
+OK: 'kleinbus' (401/500) => keyword_id=260690; KW not found #42905 supprimé.
+KwId: 260691 | Country: DE | bmw 1100 s
+Categorie from ebay: Kotflügel
+Categorie match :  ()
+Import OK for keyword_id=260691. Inserted 48 ads.
+OK: 'bmw 1100 s' (402/500) => keyword_id=260691; KW not found #42906 supprimé.
+KwId: 260692 | Country: DE | andechs
+Categorie from ebay: Topografie-Karten
+Categorie match :  ()
+Import OK for keyword_id=260692. Inserted 48 ads.
+OK: 'andechs' (403/500) => keyword_id=260692; KW not found #42907 supprimé.
+KwId: 260693 | Country: DE | kinderwagen hauck malibu
+Skip: <= 5 products in JSON.
+OK: 'kinderwagen hauck malibu' (404/500) => keyword_id=260693; KW not found #42908 supprimé.
+KwId: 260694 | Country: DE | mueller bandage
+Categorie from ebay: Verbände & Pflaster
+Categorie match :  ()
+Import OK for keyword_id=260694. Inserted 48 ads.
+OK: 'mueller bandage' (405/500) => keyword_id=260694; KW not found #42909 supprimé.
+KwId: 260695 | Country: DE | barbie kette
+Categorie from ebay: Kleidung & Accessoires
+Categorie match : Kleidung & Accessoires (83)
+Import OK for keyword_id=260695. Inserted 48 ads.
+OK: 'barbie kette' (406/500) => keyword_id=260695; KW not found #42910 supprimé.
+KwId: 260696 | Country: DE | lenksaule clio
+Categorie from ebay: Lenksäulen
+Categorie match :  ()
+Import OK for keyword_id=260696. Inserted 48 ads.
+OK: 'lenksaule clio' (407/500) => keyword_id=260696; KW not found #42911 supprimé.
+KwId: 260697 | Country: DE | mini tischkicker tischfussball
+Categorie from ebay: Tische
+Categorie match :  ()
+Import OK for keyword_id=260697. Inserted 48 ads.
+OK: 'mini tischkicker tischfussball' (408/500) => keyword_id=260697; KW not found #42912 supprimé.
+KwId: 260698 | Country: DE | kuchensockel
+Skip: <= 5 products in JSON.
+OK: 'kuchensockel' (409/500) => keyword_id=260698; KW not found #42913 supprimé.
+KwId: 260699 | Country: DE | leinwand bambus
+Categorie from ebay: Bilder & Drucke
+Categorie match : Fotografische Bilder (262)
+Import OK for keyword_id=260699. Inserted 48 ads.
+OK: 'leinwand bambus' (410/500) => keyword_id=260699; KW not found #42914 supprimé.
+KwId: 260700 | Country: DE | audi a4 b5 heckspoiler
+Categorie from ebay: Heckspoiler & -flügel
+Categorie match :  ()
+Import OK for keyword_id=260700. Inserted 48 ads.
+OK: 'audi a4 b5 heckspoiler' (411/500) => keyword_id=260700; KW not found #42915 supprimé.
+KwId: 260701 | Country: DE | mercedes ml lederausstattung
+Categorie from ebay: Sitze
+Categorie match :  ()
+Import OK for keyword_id=260701. Inserted 48 ads.
+OK: 'mercedes ml lederausstattung' (412/500) => keyword_id=260701; KW not found #42916 supprimé.
+KwId: 260702 | Country: DE | airbrush opel
+Categorie from ebay: Zeitschriften
+Categorie match : Bücher & Zeitschriften (25)
+Import OK for keyword_id=260702. Inserted 8 ads.
+OK: 'airbrush opel' (413/500) => keyword_id=260702; KW not found #42917 supprimé.
+KwId: 260703 | Country: DE | bulgari crystalline
+Categorie from ebay: Damen
+Categorie match : Damen (32)
+Import OK for keyword_id=260703. Inserted 22 ads.
+OK: 'bulgari crystalline' (414/500) => keyword_id=260703; KW not found #42918 supprimé.
+KwId: 260704 | Country: DE | stiermarktset eskadron schabracke bestehend
+Skip: <= 5 products in JSON.
+OK: 'stiermarktset eskadron schabracke bestehend' (415/500) => keyword_id=260704; KW not found #42919 supprimé.
+KwId: 260705 | Country: DE | pa verst
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260705. Inserted 11 ads.
+OK: 'pa verst' (416/500) => keyword_id=260705; KW not found #42920 supprimé.
+KwId: 260706 | Country: DE | r1 schwarz
+Categorie from ebay: Rück- & Bremsleuchten
+Categorie match :  ()
+Import OK for keyword_id=260706. Inserted 48 ads.
+OK: 'r1 schwarz' (417/500) => keyword_id=260706; KW not found #42921 supprimé.
+KwId: 260707 | Country: DE | dachshund
+Categorie from ebay: Bücher
+Categorie match : Antiquarische Bücher (5)
+Import OK for keyword_id=260707. Inserted 48 ads.
+OK: 'dachshund' (418/500) => keyword_id=260707; KW not found #42922 supprimé.
+KwId: 260708 | Country: DE | shaushaltsgeratecluster 1214subcluster 5780
+Skip: <= 5 products in JSON.
+OK: 'shaushaltsgeratecluster 1214subcluster 5780' (419/500) => keyword_id=260708; KW not found #42923 supprimé.
+KwId: 260709 | Country: DE | t connection
+Categorie from ebay: Schallplatten
+Categorie match : Schallplatten (140)
+Import OK for keyword_id=260709. Inserted 48 ads.
+OK: 't connection' (420/500) => keyword_id=260709; KW not found #42924 supprimé.
+KwId: 260710 | Country: DE | star galaxy
+Categorie from ebay: Boden- & Wandfliesen
+Categorie match : Pflanzenpflege, Boden & Zubehör (367)
+Import OK for keyword_id=260710. Inserted 48 ads.
+OK: 'star galaxy' (421/500) => keyword_id=260710; KW not found #42925 supprimé.
+KwId: 260711 | Country: DE | w123 antriebswelle
+Categorie from ebay: Antriebswellen
+Categorie match :  ()
+Import OK for keyword_id=260711. Inserted 48 ads.
+OK: 'w123 antriebswelle' (422/500) => keyword_id=260711; KW not found #42926 supprimé.
+KwId: 260712 | Country: DE | sspielen spielzeuglego friends star wars neu ovp
+Skip: <= 5 products in JSON.
+OK: 'sspielen spielzeuglego friends star wars neu ovp' (423/500) => keyword_id=260712; KW not found #42927 supprimé.
+KwId: 260713 | Country: DE | scomputer zubehorakku fur laptop compaq hewlett packard
+Skip: <= 5 products in JSON.
+OK: 'scomputer zubehorakku fur laptop compaq hewlett packard' (424/500) => keyword_id=260713; KW not found #42928 supprimé.
+KwId: 260714 | Country: DE | box kiste
+Categorie from ebay: Kleinteilemagazine & Stapelboxen
+Categorie match :  ()
+Import OK for keyword_id=260714. Inserted 48 ads.
+OK: 'box kiste' (425/500) => keyword_id=260714; KW not found #42929 supprimé.
+KwId: 260715 | Country: DE | canada wolf
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260715. Inserted 48 ads.
+OK: 'canada wolf' (426/500) => keyword_id=260715; KW not found #42930 supprimé.
+KwId: 260716 | Country: DE | w 111
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260716. Inserted 48 ads.
+OK: 'w 111' (427/500) => keyword_id=260716; KW not found #42931 supprimé.
+KwId: 260717 | Country: DE | partylite windlicht gross
+Categorie from ebay: Kerzenständer & Teelichthalter
+Categorie match :  ()
+Import OK for keyword_id=260717. Inserted 48 ads.
+OK: 'partylite windlicht gross' (428/500) => keyword_id=260717; KW not found #42932 supprimé.
+KwId: 260718 | Country: DE | t plus 2
+Categorie from ebay: Schrauben
+Categorie match :  ()
+Import OK for keyword_id=260718. Inserted 48 ads.
+OK: 't plus 2' (429/500) => keyword_id=260718; KW not found #42933 supprimé.
+KwId: 260719 | Country: DE | d link switch
+Categorie from ebay: Netzwerk-Switches
+Categorie match : Computer, Tablets & Netzwerk (30)
+Import OK for keyword_id=260719. Inserted 48 ads.
+OK: 'd link switch' (430/500) => keyword_id=260719; KW not found #42934 supprimé.
+KwId: 260720 | Country: DE | terry goodkind
+Categorie from ebay: Bücher
+Categorie match : Antiquarische Bücher (5)
+Import OK for keyword_id=260720. Inserted 48 ads.
+OK: 'terry goodkind' (431/500) => keyword_id=260720; KW not found #42935 supprimé.
+KwId: 260721 | Country: DE | spopularv3
+Skip: <= 5 products in JSON.
+OK: 'spopularv3' (432/500) => keyword_id=260721; KW not found #42936 supprimé.
+KwId: 260722 | Country: DE | u buddie
+Categorie from ebay: Ty Beanie Babys Retired
+Categorie match : Babys (199)
+Import OK for keyword_id=260722. Inserted 20 ads.
+OK: 'u buddie' (433/500) => keyword_id=260722; KW not found #42937 supprimé.
+KwId: 260723 | Country: DE | spopulars193
+Skip: <= 5 products in JSON.
+OK: 'spopulars193' (434/500) => keyword_id=260723; KW not found #42938 supprimé.
+KwId: 260724 | Country: DE | heinz bauer grosse 58
+Skip: <= 5 products in JSON.
+OK: 'heinz bauer grosse 58' (435/500) => keyword_id=260724; KW not found #42940 supprimé.
+KwId: 260725 | Country: DE | bmw e30
+Categorie from ebay: Frontscheinwerfer
+Categorie match :  ()
+Import OK for keyword_id=260725. Inserted 48 ads.
+OK: 'bmw e30' (436/500) => keyword_id=260725; KW not found #42941 supprimé.
+KwId: 260726 | Country: DE | tagesdecke handarbeit
+Categorie from ebay: Bettüberwürfe & Tagesdecken
+Categorie match :  ()
+Import OK for keyword_id=260726. Inserted 48 ads.
+OK: 'tagesdecke handarbeit' (437/500) => keyword_id=260726; KW not found #42943 supprimé.
+KwId: 260727 | Country: DE | opel vectra b innenausstattung
+Categorie from ebay: Fußmatten, Teppiche & Laderaumwannen
+Categorie match : Teppiche & Flachgewebe (160)
+Import OK for keyword_id=260727. Inserted 48 ads.
+OK: 'opel vectra b innenausstattung' (438/500) => keyword_id=260727; KW not found #42944 supprimé.
+KwId: 260728 | Country: DE | akku schleifmaschine
+Categorie from ebay: Winkelschleifer
+Categorie match :  ()
+Import OK for keyword_id=260728. Inserted 48 ads.
+OK: 'akku schleifmaschine' (439/500) => keyword_id=260728; KW not found #42945 supprimé.
+KwId: 260729 | Country: DE | mercedes w211 scheinwerfer
+Categorie from ebay: Frontscheinwerfer
+Categorie match :  ()
+Import OK for keyword_id=260729. Inserted 48 ads.
+OK: 'mercedes w211 scheinwerfer' (440/500) => keyword_id=260729; KW not found #42946 supprimé.
+KwId: 260730 | Country: DE | alter briefkasten
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260730. Inserted 48 ads.
+OK: 'alter briefkasten' (441/500) => keyword_id=260730; KW not found #42947 supprimé.
+KwId: 206546 | Country: DE | gemuse obst entsafter
+Categorie from ebay: Entsafter & Saftpressen
+Categorie match :  ()
+Import OK for keyword_id=206546. Inserted 48 ads.
+OK: 'gemuse obst entsafter' (442/500) => keyword_id=206546; KW not found #42948 supprimé.
+KwId: 260731 | Country: DE | bmw e46 radiomodul
+Categorie from ebay: Sonstige Dienstleistungen
+Categorie match : Dienstleistungen (36)
+Import OK for keyword_id=260731. Inserted 48 ads.
+OK: 'bmw e46 radiomodul' (443/500) => keyword_id=260731; KW not found #42949 supprimé.
+KwId: 260732 | Country: DE | focus fernbedienung
+Categorie from ebay: Autoschlüssel & Fernbedienungen
+Categorie match :  ()
+Import OK for keyword_id=260732. Inserted 48 ads.
+OK: 'focus fernbedienung' (444/500) => keyword_id=260732; KW not found #42950 supprimé.
+KwId: 260733 | Country: DE | karten bastelset
+Categorie from ebay: Karten & Einladungen
+Categorie match :  ()
+Import OK for keyword_id=260733. Inserted 48 ads.
+OK: 'karten bastelset' (445/500) => keyword_id=260733; KW not found #42951 supprimé.
+KwId: 260734 | Country: DE | karl who
+Categorie from ebay: Damentaschen
+Categorie match :  ()
+Import OK for keyword_id=260734. Inserted 48 ads.
+OK: 'karl who' (446/500) => keyword_id=260734; KW not found #42952 supprimé.
+KwId: 260735 | Country: DE | zorro kostum
+Categorie from ebay: Jungenkostüme
+Categorie match :  ()
+Import OK for keyword_id=260735. Inserted 48 ads.
+OK: 'zorro kostum' (447/500) => keyword_id=260735; KW not found #42953 supprimé.
+KwId: 260736 | Country: DE | bose adapter
+Categorie from ebay: Kabel & Kabelbäume
+Categorie match : Kabel & Steckverbinder (301)
+Import OK for keyword_id=260736. Inserted 48 ads.
+OK: 'bose adapter' (448/500) => keyword_id=260736; KW not found #42954 supprimé.
+KwId: 260737 | Country: DE | kickers offenbach tickets
+Categorie from ebay: Eintrittskarten
+Categorie match :  ()
+Import OK for keyword_id=260737. Inserted 48 ads.
+OK: 'kickers offenbach tickets' (449/500) => keyword_id=260737; KW not found #42955 supprimé.
+KwId: 260738 | Country: DE | puig scheibe
+Categorie from ebay: Windschilder
+Categorie match :  ()
+Import OK for keyword_id=260738. Inserted 48 ads.
+OK: 'puig scheibe' (450/500) => keyword_id=260738; KW not found #42956 supprimé.
+KwId: 260739 | Country: DE | atomic abfahrtsski
+Categorie from ebay: Skistöcke
+Categorie match :  ()
+Import OK for keyword_id=260739. Inserted 48 ads.
+OK: 'atomic abfahrtsski' (451/500) => keyword_id=260739; KW not found #42957 supprimé.
+KwId: 260740 | Country: DE | esprit biker boots
+Categorie from ebay: Stiefel & Stiefeletten
+Categorie match :  ()
+Import OK for keyword_id=260740. Inserted 14 ads.
+OK: 'esprit biker boots' (452/500) => keyword_id=260740; KW not found #42958 supprimé.
+KwId: 260741 | Country: DE | 6 platzteller
+Categorie from ebay: Teller & Schalen
+Categorie match :  ()
+Import OK for keyword_id=260741. Inserted 48 ads.
+OK: '6 platzteller' (453/500) => keyword_id=260741; KW not found #42959 supprimé.
+KwId: 260742 | Country: DE | pricesbraun rasierer serie 5
+Skip: <= 5 products in JSON.
+OK: 'pricesbraun rasierer serie 5' (454/500) => keyword_id=260742; KW not found #42960 supprimé.
+KwId: 260743 | Country: DE | aigner schmuck
+Categorie from ebay: Make-up Taschen & Koffer
+Categorie match : Koffer, Taschen & Accessoires (319)
+Import OK for keyword_id=260743. Inserted 26 ads.
+OK: 'aigner schmuck' (455/500) => keyword_id=260743; KW not found #42961 supprimé.
+KwId: 260744 | Country: DE | scomputer zubehoradapter fur stecker kabel
+Skip: <= 5 products in JSON.
+OK: 'scomputer zubehoradapter fur stecker kabel' (456/500) => keyword_id=260744; KW not found #42962 supprimé.
+KwId: 260745 | Country: DE | ferngesteuerte autos monstertruck
+Categorie from ebay: Ferngesteuertes
+Categorie match :  ()
+Import OK for keyword_id=260745. Inserted 48 ads.
+OK: 'ferngesteuerte autos monstertruck' (457/500) => keyword_id=260745; KW not found #42964 supprimé.
+KwId: 260746 | Country: DE | quetsch ball
+Categorie from ebay: Antistressbälle
+Categorie match :  ()
+Import OK for keyword_id=260746. Inserted 48 ads.
+OK: 'quetsch ball' (458/500) => keyword_id=260746; KW not found #42965 supprimé.
+KwId: 260747 | Country: DE | vw t5 seitenverkleidung
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260747. Inserted 48 ads.
+OK: 'vw t5 seitenverkleidung' (459/500) => keyword_id=260747; KW not found #42966 supprimé.
+KwId: 260748 | Country: DE | ford focus 1 blinker
+Categorie from ebay: Blinkleuchten
+Categorie match :  ()
+Import OK for keyword_id=260748. Inserted 48 ads.
+OK: 'ford focus 1 blinker' (460/500) => keyword_id=260748; KW not found #42968 supprimé.
+KwId: 260749 | Country: DE | wasserglaser
+Categorie from ebay: Gläser & Glaswaren
+Categorie match :  ()
+Import OK for keyword_id=260749. Inserted 48 ads.
+OK: 'wasserglaser' (461/500) => keyword_id=260749; KW not found #42969 supprimé.
+KwId: 260750 | Country: DE | scrapbooking baby
+Categorie from ebay: Scrapbooking & Karten
+Categorie match : Scrapbooking & Papierbasteln (143)
+Import OK for keyword_id=260750. Inserted 48 ads.
+OK: 'scrapbooking baby' (462/500) => keyword_id=260750; KW not found #42970 supprimé.
+KwId: 260751 | Country: DE | blumentopf porzellan
+Categorie from ebay: Blumentöpfe & Vasen
+Categorie match :  ()
+Import OK for keyword_id=260751. Inserted 48 ads.
+OK: 'blumentopf porzellan' (463/500) => keyword_id=260751; KW not found #42971 supprimé.
+KwId: 260752 | Country: DE | caron parfum
+Categorie from ebay: Herren
+Categorie match : Herren (72)
+Import OK for keyword_id=260752. Inserted 48 ads.
+OK: 'caron parfum' (464/500) => keyword_id=260752; KW not found #42972 supprimé.
+KwId: 260753 | Country: DE | ibm tasche
+Categorie from ebay: Notebook-Koffer & -Taschen
+Categorie match : Notebook- & Desktop-Zubehör (120)
+Import OK for keyword_id=260753. Inserted 48 ads.
+OK: 'ibm tasche' (465/500) => keyword_id=260753; KW not found #42973 supprimé.
+KwId: 260754 | Country: DE | coole hoodies
+Categorie from ebay: Sport-Kapuzenpullover & -Sweatshirts
+Categorie match : Sport (153)
+Import OK for keyword_id=260754. Inserted 48 ads.
+OK: 'coole hoodies' (466/500) => keyword_id=260754; KW not found #42975 supprimé.
+KwId: 260755 | Country: DE | hartenberger maxi compact
+Skip: <= 5 products in JSON.
+OK: 'hartenberger maxi compact' (467/500) => keyword_id=260755; KW not found #42976 supprimé.
+KwId: 260756 | Country: DE | hange peters
+Categorie from ebay: Originale
+Categorie match :  ()
+Import OK for keyword_id=260756. Inserted 48 ads.
+OK: 'hange peters' (468/500) => keyword_id=260756; KW not found #42977 supprimé.
+KwId: 260757 | Country: DE | monogram schal
+Categorie from ebay: Schals & Tücher
+Categorie match :  ()
+Import OK for keyword_id=260757. Inserted 48 ads.
+OK: 'monogram schal' (469/500) => keyword_id=260757; KW not found #42978 supprimé.
+KwId: 260758 | Country: DE | puppe 100cm
+Categorie from ebay: Puppen & -Spielsets
+Categorie match : Puppen & Zubehör (131)
+Import OK for keyword_id=260758. Inserted 48 ads.
+OK: 'puppe 100cm' (470/500) => keyword_id=260758; KW not found #42979 supprimé.
+KwId: 260759 | Country: DE | gilde
+Categorie from ebay: Figuren, Skulpturen & Statuen
+Categorie match : Action-Figuren & Zubehör (180)
+Import OK for keyword_id=260759. Inserted 48 ads.
+OK: 'gilde' (471/500) => keyword_id=260759; KW not found #42980 supprimé.
+KwId: 202099 | Country: DE | gartenmobel metall wei
+Categorie from ebay: Loungemöbel & Sitzgruppen
+Categorie match :  ()
+Import OK for keyword_id=202099. Inserted 48 ads.
+OK: 'gartenmobel metall wei' (472/500) => keyword_id=202099; KW not found #42981 supprimé.
+KwId: 260760 | Country: DE | lack langarm
+Categorie from ebay: Overalls
+Categorie match :  ()
+Import OK for keyword_id=260760. Inserted 48 ads.
+OK: 'lack langarm' (473/500) => keyword_id=260760; KW not found #42982 supprimé.
+KwId: 260761 | Country: DE | alfa romeo 916
+Categorie from ebay: Sonstige
+Categorie match : Sonstige (147)
+Import OK for keyword_id=260761. Inserted 48 ads.
+OK: 'alfa romeo 916' (474/500) => keyword_id=260761; KW not found #42983 supprimé.
+KwId: 260762 | Country: DE | reifen karre
+Categorie from ebay: Sack- & Fasskarre
+Categorie match :  ()
+Import OK for keyword_id=260762. Inserted 48 ads.
+OK: 'reifen karre' (475/500) => keyword_id=260762; KW not found #42984 supprimé.
+KwId: 260763 | Country: DE | kleid zara
+Categorie from ebay: Kleider
+Categorie match :  ()
+Import OK for keyword_id=260763. Inserted 48 ads.
+OK: 'kleid zara' (476/500) => keyword_id=260763; KW not found #42985 supprimé.
+KwId: 260764 | Country: DE | sticker stars
+Categorie from ebay: Sticker & -bögen
+Categorie match :  ()
+Import OK for keyword_id=260764. Inserted 48 ads.
+OK: 'sticker stars' (477/500) => keyword_id=260764; KW not found #42986 supprimé.
+KwId: 260765 | Country: DE | bosch tda
+Categorie from ebay: Getreidemühlen & -flocker
+Categorie match :  ()
+Import OK for keyword_id=260765. Inserted 48 ads.
+OK: 'bosch tda' (478/500) => keyword_id=260765; KW not found #42987 supprimé.
+KwId: 260766 | Country: DE | euroalbum
+Categorie from ebay: Alben
+Categorie match :  ()
+Import OK for keyword_id=260766. Inserted 48 ads.
+OK: 'euroalbum' (479/500) => keyword_id=260766; KW not found #42988 supprimé.
+KwId: 260767 | Country: DE | bubble bobble
+Categorie from ebay: PC- & Videospiele
+Categorie match : PC- & Videospiele (126)
+Import OK for keyword_id=260767. Inserted 48 ads.
+OK: 'bubble bobble' (480/500) => keyword_id=260767; KW not found #42989 supprimé.
+KwId: 260768 | Country: DE | man koffer
+Categorie from ebay: Autos, LKW & Busse
+Categorie match :  ()
+Import OK for keyword_id=260768. Inserted 48 ads.
+OK: 'man koffer' (481/500) => keyword_id=260768; KW not found #42990 supprimé.
+KwId: 260769 | Country: DE | gewurzregal shabby gebraucht kaufen
+Skip: <= 5 products in JSON.
+OK: 'gewurzregal shabby gebraucht kaufen' (482/500) => keyword_id=260769; KW not found #42991 supprimé.
+KwId: 260770 | Country: DE | sfanartikel sammeln seltenescoca cola fur sammler alte blechdose
+Skip: <= 5 products in JSON.
+OK: 'sfanartikel sammeln seltenescoca cola fur sammler alte blechdose' (483/500) => keyword_id=260770; KW not found #42992 supprimé.
+KwId: 260771 | Country: DE | sautoteile zubehorfur alufelgen hyundai bmw
+Skip: <= 5 products in JSON.
+OK: 'sautoteile zubehorfur alufelgen hyundai bmw' (484/500) => keyword_id=260771; KW not found #42993 supprimé.
+KwId: 260772 | Country: DE | wellensteyn damen l
+Categorie from ebay: Jacken, Mäntel & Westen
+Categorie match :  ()
+Import OK for keyword_id=260772. Inserted 48 ads.
+OK: 'wellensteyn damen l' (485/500) => keyword_id=260772; KW not found #42994 supprimé.
+KwId: 260773 | Country: DE | classic vibe
+Categorie from ebay: E-Gitarren
+Categorie match : Gitarren & Bässe (58)
+Import OK for keyword_id=260773. Inserted 48 ads.
+OK: 'classic vibe' (486/500) => keyword_id=260773; KW not found #42995 supprimé.
+KwId: 260774 | Country: DE | mini autoteile
+Categorie from ebay: Inspektionspakete & -kits
+Categorie match :  ()
+Import OK for keyword_id=260774. Inserted 48 ads.
+OK: 'mini autoteile' (487/500) => keyword_id=260774; KW not found #42996 supprimé.
+KwId: 260775 | Country: DE | ssonstigeselektromotor drehstrommotor drehstrom welle elektro motor
+Skip: <= 5 products in JSON.
+OK: 'ssonstigeselektromotor drehstrommotor drehstrom welle elektro motor' (488/500) => keyword_id=260775; KW not found #42997 supprimé.
+KwId: 260776 | Country: DE | holzpuzzle tiere
+Categorie from ebay: Setzpuzzle
+Categorie match :  ()
+Import OK for keyword_id=260776. Inserted 48 ads.
+OK: 'holzpuzzle tiere' (489/500) => keyword_id=260776; KW not found #42998 supprimé.
+KwId: 260777 | Country: DE | aigner schuhe
+Categorie from ebay: Sneaker
+Categorie match :  ()
+Import OK for keyword_id=260777. Inserted 48 ads.
+OK: 'aigner schuhe' (490/500) => keyword_id=260777; KW not found #42999 supprimé.
+KwId: 260778 | Country: DE | niedrig sideboard
+Categorie from ebay: Regale & Aufbewahrung
+Categorie match :  ()
+Import OK for keyword_id=260778. Inserted 27 ads.
+OK: 'niedrig sideboard' (491/500) => keyword_id=260778; KW not found #43000 supprimé.
+KwId: 260779 | Country: DE | smobel wohnencluster 1387
+Skip: <= 5 products in JSON.
+OK: 'smobel wohnencluster 1387' (492/500) => keyword_id=260779; KW not found #43001 supprimé.
+KwId: 260780 | Country: DE | la bamba
+Categorie from ebay: DVDs & Blu-rays
+Categorie match : DVDs & Blu-rays (39)
+Import OK for keyword_id=260780. Inserted 48 ads.
+OK: 'la bamba' (493/500) => keyword_id=260780; KW not found #43002 supprimé.
+KwId: 260781 | Country: DE | shirt grosse grossen
+Categorie from ebay: T-Shirts
+Categorie match :  ()
+Import OK for keyword_id=260781. Inserted 48 ads.
+OK: 'shirt grosse grossen' (494/500) => keyword_id=260781; KW not found #43003 supprimé.
+KwId: 260782 | Country: DE | badezimmer spiegelschrank
+Categorie from ebay: Schränke & Wandschränke
+Categorie match :  ()
+Import OK for keyword_id=260782. Inserted 48 ads.
+OK: 'badezimmer spiegelschrank' (495/500) => keyword_id=260782; KW not found #43004 supprimé.
+KwId: 260783 | Country: DE | 12v 17ah
+Categorie from ebay: Batterien
+Categorie match :  ()
+Import OK for keyword_id=260783. Inserted 48 ads.
+OK: '12v 17ah' (496/500) => keyword_id=260783; KW not found #43005 supprimé.
+KwId: 260784 | Country: DE | holzbett 180x200
+Categorie from ebay: Betten & Bettgestelle
+Categorie match :  ()
+Import OK for keyword_id=260784. Inserted 48 ads.
+OK: 'holzbett 180x200' (497/500) => keyword_id=260784; KW not found #43006 supprimé.
+KwId: 260785 | Country: DE | formano wei
+Categorie from ebay: Figuren, Skulpturen & Statuen
+Categorie match : Action-Figuren & Zubehör (180)
+Import OK for keyword_id=260785. Inserted 48 ads.
+OK: 'formano wei' (498/500) => keyword_id=260785; KW not found #43007 supprimé.
+KwId: 260786 | Country: DE | ssport sportbekleidungski bindung fischer atomic
+Skip: <= 5 products in JSON.
+OK: 'ssport sportbekleidungski bindung fischer atomic' (499/500) => keyword_id=260786; KW not found #43008 supprimé.

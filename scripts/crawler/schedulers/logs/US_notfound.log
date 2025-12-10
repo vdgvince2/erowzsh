@@ -1,124 +1,254 @@
 Country passed : forsale
-KwId: 394273 | Country: US | 10 dinner plates
-Categorie from ebay: Plates
+KwId: 397719 | Country: US | heidelberg offset
+Categorie from ebay: Parts, Feeders & Attachments
+Categorie match : Cell Phone & Smartphone Parts (34)
+Import OK for keyword_id=397719. Inserted 48 ads.
+OK: 'heidelberg offset' (0/500) => keyword_id=397719; KW not found #96914 supprimé.
+KwId: 397720 | Country: US | spopulark6
+Skip: <= 5 products in JSON.
+OK: 'spopulark6' (1/500) => keyword_id=397720; KW not found #96915 supprimé.
+KwId: 397721 | Country: US | damascus sword
+Categorie from ebay: Custom & Handmade
 Categorie match :  ()
-Import OK for keyword_id=394273. Inserted 48 ads.
-OK: '10 dinner plates' (0/500) => keyword_id=394273; KW not found #91908 supprimé.
+Import OK for keyword_id=397721. Inserted 48 ads.
+OK: 'damascus sword' (2/500) => keyword_id=397721; KW not found #96916 supprimé.
+KwId: 380063 | Country: US | stat
+Categorie from ebay: Kits & Bags
+Categorie match : Models & Kits (316)
+Import OK for keyword_id=380063. Inserted 48 ads.
+OK: 'stat' (3/500) => keyword_id=380063; KW not found #96917 supprimé.
 KwId: 374466 | Country: US | fcat
 Categorie from ebay: Network Cards
 Categorie match : Credit, Charge Cards (47)
 Import OK for keyword_id=374466. Inserted 48 ads.
-OK: 'fcat' (1/500) => keyword_id=374466; KW not found #91909 supprimé.
-KwId: 394274 | Country: US | xbox one
-Categorie from ebay: Video Game Consoles
-Categorie match : Game Used Memorabilia (64)
-Import OK for keyword_id=394274. Inserted 48 ads.
-OK: 'xbox one' (2/500) => keyword_id=394274; KW not found #91910 supprimé.
-KwId: 394275 | Country: US | yamaha parts
-Categorie from ebay: Other Motorcycle & Scooter Parts & Accessories
-Categorie match : Audio Media Accessories (13)
-Import OK for keyword_id=394275. Inserted 48 ads.
-OK: 'yamaha parts' (3/500) => keyword_id=394275; KW not found #91911 supprimé.
-KwId: 394276 | Country: US | ecraft cutter
-Categorie from ebay: Other Crafts
-Categorie match : Crafts (46)
-Import OK for keyword_id=394276. Inserted 48 ads.
-OK: 'ecraft cutter' (4/500) => keyword_id=394276; KW not found #91913 supprimé.
-KwId: 394277 | Country: US | d r barton
-Categorie from ebay: Chisels
-Categorie match :  ()
-Import OK for keyword_id=394277. Inserted 48 ads.
-OK: 'd r barton' (5/500) => keyword_id=394277; KW not found #91914 supprimé.
-KwId: 394278 | Country: US | fabric spray paint
-Categorie from ebay: Fabric Paints & Markers
-Categorie match : Fabric (59)
-Import OK for keyword_id=394278. Inserted 48 ads.
-OK: 'fabric spray paint' (6/500) => keyword_id=394278; KW not found #91915 supprimé.
-KwId: 394279 | Country: US | classic flexible flyer sled
-Categorie from ebay: Sleds & Snow Tubes
-Categorie match :  ()
-Import OK for keyword_id=394279. Inserted 48 ads.
-OK: 'classic flexible flyer sled' (7/500) => keyword_id=394279; KW not found #91917 supprimé.
-KwId: 394280 | Country: US | transmission
-Categorie from ebay: Automatic Transmission
-Categorie match :  ()
-Import OK for keyword_id=394280. Inserted 48 ads.
-OK: 'transmission' (8/500) => keyword_id=394280; KW not found #91918 supprimé.
-KwId: 394281 | Country: US | faux leather storage ottoman
-Categorie from ebay: Ottomans, Footstools & Poufs
-Categorie match :  ()
-Import OK for keyword_id=394281. Inserted 48 ads.
-OK: 'faux leather storage ottoman' (9/500) => keyword_id=394281; KW not found #91920 supprimé.
-KwId: 377032 | Country: US | birch wall shelf used
-Categorie from ebay: Bookcases & Shelving
-Categorie match :  ()
-Import OK for keyword_id=377032. Inserted 48 ads.
-OK: 'birch wall shelf used' (10/500) => keyword_id=377032; KW not found #91921 supprimé.
-KwId: 394282 | Country: US | zanerobe
-Categorie from ebay: Pants
-Categorie match :  ()
-Import OK for keyword_id=394282. Inserted 48 ads.
-OK: 'zanerobe' (11/500) => keyword_id=394282; KW not found #91924 supprimé.
-KwId: 394283 | Country: US | stuffed bear taxidermy
-Categorie from ebay: Other Stuffed Animals
+OK: 'fcat' (4/500) => keyword_id=374466; KW not found #96918 supprimé.
+KwId: 397722 | Country: US | pa personalized plate
+Categorie from ebay: Other US License Plates
 Categorie match : Every Other Thing (56)
-Import OK for keyword_id=394283. Inserted 38 ads.
-OK: 'stuffed bear taxidermy' (12/500) => keyword_id=394283; KW not found #91925 supprimé.
-KwId: 394284 | Country: US | aleister crowley books
-Categorie from ebay: Antiquarian & Collectable
-Categorie match : Antiquarian & Collectible (3)
-Import OK for keyword_id=394284. Inserted 48 ads.
-OK: 'aleister crowley books' (13/500) => keyword_id=394284; KW not found #91926 supprimé.
-KwId: 394285 | Country: US | rattan furniture set used
-Categorie from ebay: Sofas, Armchairs & Couches
+Import OK for keyword_id=397722. Inserted 48 ads.
+OK: 'pa personalized plate' (5/500) => keyword_id=397722; KW not found #96919 supprimé.
+KwId: 397723 | Country: US | caddx
+Categorie from ebay: Quadcopters & Multicopters
 Categorie match :  ()
-Import OK for keyword_id=394285. Inserted 48 ads.
-OK: 'rattan furniture set used' (14/500) => keyword_id=394285; KW not found #91927 supprimé.
-KwId: 394286 | Country: US | labrador retriever pup
-Categorie from ebay: Labrador Retriever
+Import OK for keyword_id=397723. Inserted 48 ads.
+OK: 'caddx' (6/500) => keyword_id=397723; KW not found #96920 supprimé.
+KwId: 397724 | Country: US | john deere 27d
+Categorie from ebay: Buckets
 Categorie match :  ()
-Import OK for keyword_id=394286. Inserted 48 ads.
-OK: 'labrador retriever pup' (15/500) => keyword_id=394286; KW not found #91928 supprimé.
-KwId: 394287 | Country: US | bmw z3 interior
-Categorie from ebay: Trim
+Import OK for keyword_id=397724. Inserted 48 ads.
+OK: 'john deere 27d' (7/500) => keyword_id=397724; KW not found #96921 supprimé.
+KwId: 397725 | Country: US | 5 pool table
+Categorie from ebay: Other Indoor Games
+Categorie match : Every Other Thing (56)
+Import OK for keyword_id=397725. Inserted 48 ads.
+OK: '5 pool table' (8/500) => keyword_id=397725; KW not found #96922 supprimé.
+KwId: 397726 | Country: US | ffull body duck decoys
+Skip: <= 5 products in JSON.
+OK: 'ffull body duck decoys' (9/500) => keyword_id=397726; KW not found #96923 supprimé.
+KwId: 397727 | Country: US | quilt batting
+Categorie from ebay: Quilt Batting
 Categorie match :  ()
-Import OK for keyword_id=394287. Inserted 48 ads.
-OK: 'bmw z3 interior' (16/500) => keyword_id=394287; KW not found #91929 supprimé.
-KwId: 394288 | Country: US | chelsea and violet
+Import OK for keyword_id=397727. Inserted 48 ads.
+OK: 'quilt batting' (10/500) => keyword_id=397727; KW not found #96924 supprimé.
+KwId: 397728 | Country: US | 2007 honda shadow vlx 600
+Categorie from ebay: Carburetors
+Categorie match :  ()
+Import OK for keyword_id=397728. Inserted 48 ads.
+OK: '2007 honda shadow vlx 600' (11/500) => keyword_id=397728; KW not found #96927 supprimé.
+KwId: 397729 | Country: US | ucla hoodie
+Categorie from ebay: College-NCAA
+Categorie match :  ()
+Import OK for keyword_id=397729. Inserted 48 ads.
+OK: 'ucla hoodie' (12/500) => keyword_id=397729; KW not found #96929 supprimé.
+KwId: 397730 | Country: US | 1997 ford explorer
+Categorie from ebay: Headlight Assemblies
+Categorie match :  ()
+Import OK for keyword_id=397730. Inserted 48 ads.
+OK: '1997 ford explorer' (13/500) => keyword_id=397730; KW not found #96930 supprimé.
+KwId: 397731 | Country: US | radio watch
+Categorie from ebay: Wristwatches
+Categorie match :  ()
+Import OK for keyword_id=397731. Inserted 48 ads.
+OK: 'radio watch' (14/500) => keyword_id=397731; KW not found #96931 supprimé.
+KwId: 397732 | Country: US | sweater irish set
+Categorie from ebay: Sweaters
+Categorie match :  ()
+Import OK for keyword_id=397732. Inserted 48 ads.
+OK: 'sweater irish set' (15/500) => keyword_id=397732; KW not found #96932 supprimé.
+KwId: 397733 | Country: US | classics tour
+Categorie from ebay: Control Arms, Ball Joints & Assemblies
+Categorie match : Radio Control & Control Line (357)
+Import OK for keyword_id=397733. Inserted 48 ads.
+OK: 'classics tour' (16/500) => keyword_id=397733; KW not found #96934 supprimé.
+KwId: 397734 | Country: US | specialized shoes
+Categorie from ebay: Men's Cycling Shoes
+Categorie match : Clothing, Shoes & Accessories (38)
+Import OK for keyword_id=397734. Inserted 48 ads.
+OK: 'specialized shoes' (17/500) => keyword_id=397734; KW not found #96935 supprimé.
+KwId: 397735 | Country: US | xbox elite
+Categorie from ebay: Controllers & Attachments
+Categorie match : Heavy Equipment, Parts & Attachments (270)
+Import OK for keyword_id=397735. Inserted 48 ads.
+OK: 'xbox elite' (18/500) => keyword_id=397735; KW not found #96936 supprimé.
+KwId: 397736 | Country: US | aladdin blu ray
+Categorie from ebay: DVDs & Blu-ray Discs
+Categorie match : DVDs & Blu-ray Discs (52)
+Import OK for keyword_id=397736. Inserted 48 ads.
+OK: 'aladdin blu ray' (19/500) => keyword_id=397736; KW not found #96937 supprimé.
+KwId: 381640 | Country: US | american standard toilet seat used
+Categorie from ebay: Toilet Seats
+Categorie match : Car Safety Seats (210)
+Import OK for keyword_id=381640. Inserted 48 ads.
+OK: 'american standard toilet seat used' (20/500) => keyword_id=381640; KW not found #96938 supprimé.
+KwId: 397737 | Country: US | oakley radar path
+Categorie from ebay: Sunglasses
+Categorie match :  ()
+Import OK for keyword_id=397737. Inserted 48 ads.
+OK: 'oakley radar path' (21/500) => keyword_id=397737; KW not found #96939 supprimé.
+KwId: 397738 | Country: US | dog blanket
+Categorie from ebay: Blankets
+Categorie match :  ()
+Import OK for keyword_id=397738. Inserted 48 ads.
+OK: 'dog blanket' (22/500) => keyword_id=397738; KW not found #96940 supprimé.
+KwId: 397739 | Country: US | wade boggs
+Categorie from ebay: Trading Card Singles
+Categorie match : Sports Trading Cards (141)
+Import OK for keyword_id=397739. Inserted 48 ads.
+OK: 'wade boggs' (23/500) => keyword_id=397739; KW not found #96941 supprimé.
+KwId: 397740 | Country: US | 2002 acura rsx
+Categorie from ebay: Radiators
+Categorie match :  ()
+Import OK for keyword_id=397740. Inserted 48 ads.
+OK: '2002 acura rsx' (24/500) => keyword_id=397740; KW not found #96942 supprimé.
+KwId: 397741 | Country: US | sunglasses display retail
+Categorie from ebay: Eyeglass Cases & Storage
+Categorie match : Drives, Storage & Blank Media (51)
+Import OK for keyword_id=397741. Inserted 48 ads.
+OK: 'sunglasses display retail' (25/500) => keyword_id=397741; KW not found #96943 supprimé.
+KwId: 397742 | Country: US | wp includestext
+Skip: <= 5 products in JSON.
+OK: 'wp includestext' (26/500) => keyword_id=397742; KW not found #96944 supprimé.
+KwId: 397743 | Country: US | wp includestextdiff
+Skip: <= 5 products in JSON.
+OK: 'wp includestextdiff' (27/500) => keyword_id=397743; KW not found #96945 supprimé.
+KwId: 397744 | Country: US | wp includesblock bindings
+Skip: <= 5 products in JSON.
+OK: 'wp includesblock bindings' (28/500) => keyword_id=397744; KW not found #96946 supprimé.
+KwId: 397745 | Country: US | wp includesblock patterns
+Skip: <= 5 products in JSON.
+OK: 'wp includesblock patterns' (29/500) => keyword_id=397745; KW not found #96947 supprimé.
+KwId: 397746 | Country: US | wp includesblock supports
+Skip: <= 5 products in JSON.
+OK: 'wp includesblock supports' (30/500) => keyword_id=397746; KW not found #96948 supprimé.
+KwId: 397747 | Country: US | 1957 chevy 3100
+Categorie from ebay: Carburetors
+Categorie match :  ()
+Import OK for keyword_id=397747. Inserted 48 ads.
+OK: '1957 chevy 3100' (31/500) => keyword_id=397747; KW not found #96949 supprimé.
+KwId: 397748 | Country: US | wp includesblockscode
+Skip: <= 5 products in JSON.
+OK: 'wp includesblockscode' (32/500) => keyword_id=397748; KW not found #96950 supprimé.
+KwId: 397749 | Country: US | wp includesblocksfile
+Skip: <= 5 products in JSON.
+OK: 'wp includesblocksfile' (33/500) => keyword_id=397749; KW not found #96951 supprimé.
+KwId: 397750 | Country: US | wp includesblockspost author name
+Skip: <= 5 products in JSON.
+OK: 'wp includesblockspost author name' (34/500) => keyword_id=397750; KW not found #96952 supprimé.
+KwId: 397751 | Country: US | wp includescertificates
+Skip: <= 5 products in JSON.
+OK: 'wp includescertificates' (35/500) => keyword_id=397751; KW not found #96953 supprimé.
+KwId: 397752 | Country: US | wp includesjs
+Skip: <= 5 products in JSON.
+OK: 'wp includesjs' (36/500) => keyword_id=397752; KW not found #96954 supprimé.
+KwId: 397753 | Country: US | wp includesjsdist
+Skip: <= 5 products in JSON.
+OK: 'wp includesjsdist' (37/500) => keyword_id=397753; KW not found #96955 supprimé.
+KwId: 397754 | Country: US | wp includesjsdistdevelopment
+Skip: <= 5 products in JSON.
+OK: 'wp includesjsdistdevelopment' (38/500) => keyword_id=397754; KW not found #96956 supprimé.
+KwId: 397755 | Country: US | wp includesrest api
+Skip: <= 5 products in JSON.
+OK: 'wp includesrest api' (39/500) => keyword_id=397755; KW not found #96957 supprimé.
+KwId: 397756 | Country: US | wp includesrest apifields
+Skip: <= 5 products in JSON.
+OK: 'wp includesrest apifields' (40/500) => keyword_id=397756; KW not found #96958 supprimé.
+KwId: 397757 | Country: US | wp includessitemaps
+Skip: <= 5 products in JSON.
+OK: 'wp includessitemaps' (41/500) => keyword_id=397757; KW not found #96959 supprimé.
+KwId: 384341 | Country: US | dance tutus used
 Categorie from ebay: Dresses
 Categorie match :  ()
-Import OK for keyword_id=394288. Inserted 48 ads.
-OK: 'chelsea and violet' (17/500) => keyword_id=394288; KW not found #91930 supprimé.
-KwId: 394289 | Country: US | road golf carts
-Categorie from ebay: Rechargeable Batteries
-Categorie match : Multipurpose Batteries & Power (320)
-Import OK for keyword_id=394289. Inserted 48 ads.
-OK: 'road golf carts' (18/500) => keyword_id=394289; KW not found #91932 supprimé.
-KwId: 394290 | Country: US | scontactus
-Skip: <= 5 products in JSON.
-OK: 'scontactus' (19/500) => keyword_id=394290; KW not found #91933 supprimé.
-KwId: 394291 | Country: US | lilian jackson
-Categorie from ebay: Books
-Categorie match : Books (21)
-Import OK for keyword_id=394291. Inserted 48 ads.
-OK: 'lilian jackson' (20/500) => keyword_id=394291; KW not found #91935 supprimé.
-KwId: 394292 | Country: US | aberc
-Categorie from ebay: Books
-Categorie match : Books (21)
-Import OK for keyword_id=394292. Inserted 46 ads.
-OK: 'aberc' (21/500) => keyword_id=394292; KW not found #91936 supprimé.
-KwId: 394293 | Country: US | perseus
-Categorie from ebay: Action Figures
-Categorie match : Action Figures & Accessories (173)
-Import OK for keyword_id=394293. Inserted 48 ads.
-OK: 'perseus' (22/500) => keyword_id=394293; KW not found #91937 supprimé.
-KwId: 394294 | Country: US | vacuum gauge
-Categorie from ebay: Individual Gauges
+Import OK for keyword_id=384341. Inserted 48 ads.
+OK: 'dance tutus used' (42/500) => keyword_id=384341; KW not found #96960 supprimé.
+KwId: 397758 | Country: US | radio business
+Categorie from ebay: Walkie Talkies, Two-Way Radios
 Categorie match :  ()
-Import OK for keyword_id=394294. Inserted 48 ads.
-OK: 'vacuum gauge' (23/500) => keyword_id=394294; KW not found #91938 supprimé.
-KwId: 394295 | Country: US | i love love moschino
-Categorie from ebay: Women's Fragrances
-Categorie match : Fragrances (257)
-Import OK for keyword_id=394295. Inserted 48 ads.
-OK: 'i love love moschino' (24/500) => keyword_id=394295; KW not found #91939 supprimé.
+Import OK for keyword_id=397758. Inserted 48 ads.
+OK: 'radio business' (43/500) => keyword_id=397758; KW not found #96961 supprimé.
+KwId: 397759 | Country: US | table coral
+Categorie from ebay: Coral
+Categorie match :  ()
+Import OK for keyword_id=397759. Inserted 48 ads.
+OK: 'table coral' (44/500) => keyword_id=397759; KW not found #96963 supprimé.
+KwId: 389616 | Country: US | manchester united kit used
+Categorie from ebay: Soccer-International Clubs
+Categorie match :  ()
+Import OK for keyword_id=389616. Inserted 48 ads.
+OK: 'manchester united kit used' (45/500) => keyword_id=389616; KW not found #96964 supprimé.
+KwId: 397760 | Country: US | harley davidson coasters
+Categorie from ebay: Other Harley Collectibles
+Categorie match : Collectibles (42)
+Import OK for keyword_id=397760. Inserted 48 ads.
+OK: 'harley davidson coasters' (46/500) => keyword_id=397760; KW not found #96965 supprimé.
+KwId: 389319 | Country: US | fice cream dipping freezer
+Categorie from ebay: Commercial Ice Cream Freezers
+Categorie match :  ()
+Import OK for keyword_id=389319. Inserted 10 ads.
+OK: 'fice cream dipping freezer' (47/500) => keyword_id=389319; KW not found #96966 supprimé.
+KwId: 397761 | Country: US | spopularl36
+Skip: <= 5 products in JSON.
+OK: 'spopularl36' (48/500) => keyword_id=397761; KW not found #96967 supprimé.
+KwId: 397762 | Country: US | nabi kids tablet
+Categorie from ebay: Tablets & eBook Readers
+Categorie match : Computers/Tablets & Networking (43)
+Import OK for keyword_id=397762. Inserted 48 ads.
+OK: 'nabi kids tablet' (49/500) => keyword_id=397762; KW not found #96970 supprimé.
+KwId: 397763 | Country: US | spopulars76
+Skip: <= 5 products in JSON.
+OK: 'spopulars76' (50/500) => keyword_id=397763; KW not found #96971 supprimé.
+KwId: 397764 | Country: US | blogarticleare kids extinct in the wild
+Skip: <= 5 products in JSON.
+OK: 'blogarticleare kids extinct in the wild' (51/500) => keyword_id=397764; KW not found #96972 supprimé.
+KwId: 397765 | Country: US | jack loom
+Categorie from ebay: Other Business & Industrial
+Categorie match : Business & Industrial (23)
+Import OK for keyword_id=397765. Inserted 48 ads.
+OK: 'jack loom' (52/500) => keyword_id=397765; KW not found #96973 supprimé.
+KwId: 397766 | Country: US | muhammad ali poster
+Categorie from ebay: Art Posters
+Categorie match : Art (6)
+Import OK for keyword_id=397766. Inserted 48 ads.
+OK: 'muhammad ali poster' (53/500) => keyword_id=397766; KW not found #96974 supprimé.
+KwId: 397767 | Country: US | boxing autographs steiner
+Categorie from ebay: Gloves
+Categorie match :  ()
+Import OK for keyword_id=397767. Inserted 48 ads.
+OK: 'boxing autographs steiner' (54/500) => keyword_id=397767; KW not found #96979 supprimé.
+KwId: 397768 | Country: US | boxing poster
+Categorie from ebay: Art Posters
+Categorie match : Art (6)
+Import OK for keyword_id=397768. Inserted 48 ads.
+OK: 'boxing poster' (55/500) => keyword_id=397768; KW not found #96984 supprimé.
+KwId: 397769 | Country: US | spopular 37
+Skip: <= 5 products in JSON.
+OK: 'spopular 37' (56/500) => keyword_id=397769; KW not found #96989 supprimé.
+KwId: 397770 | Country: US | xbox skins
+Categorie from ebay: Faceplates, Decals & Stickers
+Categorie match : Non-Sport Stickers, Collections & Albums (325)
+Import OK for keyword_id=397770. Inserted 48 ads.
+OK: 'xbox skins' (57/500) => keyword_id=397770; KW not found #96990 supprimé.
+KwId: 397771 | Country: US | peanuts musical
+Categorie from ebay: Ornaments
+Categorie match :  ()
+Import OK for keyword_id=397771. Inserted 48 ads.
+OK: 'peanuts musical' (58/500) => keyword_id=397771; KW not found #96991 supprimé.

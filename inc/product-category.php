@@ -180,7 +180,7 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
         // Load the keywords of the deep category level
         // Prepare the internal linking.
         $relatedKeywords = [];
-        $sqlKw = " SELECT * FROM keywords where main_category = :catid LIMIT 40";
+        $sqlKw = " SELECT id, keyword_name, keywordURL, 'maindomain' as source FROM keywords where main_category = :catid LIMIT 40";
         $stmt2 = $pdo->prepare($sqlKw);
         $stmt2->execute([':catid' => $catIDforKeyword]);
         $relatedKeywords = $stmt2->fetchAll();
@@ -196,49 +196,77 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     
     **************/
 
-    // Remove stopwords for backward compatibility.
-    $stmt = $pdo->prepare("SELECT id, keyword_name, main_category, last_visited 
-                            FROM keywords 
-                            WHERE keywordURL = :addr 
-                            LIMIT 1");
+    /* MANAGE THE KEYWORDS FOR SUBDOMAIN AND STANDARD DOMAIN */    
+    if ($subDomain !== false) {
+       $SQL_keywords = "SELECT id, keyword_name, null as main_category, null as last_visited 
+                         FROM subdomain_keywords 
+                         WHERE subdomain = :addr 
+                         LIMIT 1";
+        $URI = $subDomain;
+    }else{        
+        $SQL_keywords = "SELECT id, keyword_name, main_category, last_visited 
+                         FROM keywords 
+                         WHERE keywordURL = :addr 
+                         LIMIT 1";
+    }  
+    $stmt = $pdo->prepare($SQL_keywords);                          
     $stmt->execute([':addr' => remove_stopwords($URI, $stopwords, '')]);
     $rowKeyword = $stmt->fetch();
-    
+
     // 404 if no results
     if (!$rowKeyword){ $errorInfo = $label_nokwfound; include('fallback.php'); exit; }
 
-    // title tag for SEO
+    // META tag for SEO
     $pageTitle = $rowKeyword['keyword_name'] ?? 'Produits';
     $pageTitle = $pageTitle.$_TAIL. " | $WebsiteName";
     $additionnalMetaDesc = $label_product_metadesc_generic;
     $ebaySearchKeyword = $rowKeyword['keyword_name'];
     
-    // Get all the products
-    $sql = "SELECT * FROM ads 
-            WHERE keyword_id = :id 
-                AND photo is not null
-            LIMIT ".$_EBAY_MAX_ADS;
-    $stmt = $pdo->prepare($sql);
+    // Get all the ADS for the keyword
+    if ($subDomain !== false) {
+        $SQL_ads = "SELECT * FROM subdomain_ads 
+                    WHERE keyword_id = :id 
+                        AND photo is not null
+                    LIMIT ".$_EBAY_MAX_ADS;
+    }else{
+        $SQL_ads = "SELECT * FROM ads 
+                    WHERE keyword_id = :id 
+                        AND photo is not null
+                    LIMIT ".$_EBAY_MAX_ADS;
+    }
+    
+    $stmt = $pdo->prepare($SQL_ads);
     $stmt->bindValue(':id', (int)$rowKeyword['id'], PDO::PARAM_INT);
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC); 
     
     
-    // Prepare the internal linking.
+    // INTERNAL LINKING
     $relatedKeywords = [];
-    $sqlKw = "SELECT * FROM keywords where main_category = :catid and id > :kwid LIMIT 40";
-    $stmt2 = $pdo->prepare($sqlKw);
-    $stmt2->execute([':catid' => $rowKeyword['main_category'], ':kwid' => $rowKeyword['id']]);
+    if ($subDomain !== false) {
+        // subdomain > get all keywords from the same sub-domain
+        $SQL_related = "SELECT id, keyword_name, subdomain as keywordURL, 'subdomain' as source FROM subdomain_keywords where id > :kwid LIMIT 40";
+        $stmt2 = $pdo->prepare($SQL_related);
+        $stmt2->execute([':kwid' => $rowKeyword['id']]);
+    }else{
+        // main domain > get all keywords from the same category
+        $SQL_related = "SELECT id, keyword_name, keywordURL, 'maindomain' as source FROM keywords where main_category = :catid and id > :kwid LIMIT 40";
+        $stmt2 = $pdo->prepare($SQL_related);
+        $stmt2->execute([':catid' => $rowKeyword['main_category'], ':kwid' => $rowKeyword['id']]);
+    }
     $relatedKeywords = $stmt2->fetchAll();
 
-    // Category Name, URL for breadcrumb
-    $stmt = $pdo->prepare("SELECT * FROM categories WHERE id = :catid LIMIT 1");
-    $stmt->execute([':catid' => $rowKeyword['main_category']]);
-    $rowCategory = $stmt->fetch();
-    $breadcrumbLink = "<a href='".$rootDomain.$base."s".$rowCategory['slug_path']."'>".$rowCategory['name']."</a>";
+    // BUILD THE BREADCRUMB
+    $breadcrumbLink = "";
+    if($rowKeyword['main_category'] != null){
+        $stmt = $pdo->prepare("SELECT * FROM categories WHERE id = :catid LIMIT 1");
+        $stmt->execute([':catid' => $rowKeyword['main_category']]);
+        $rowCategory = $stmt->fetch();
+        $breadcrumbLink = "<a href='".$rootDomain.$base."s".$rowCategory['slug_path']."'>".$rowCategory['name']."</a>";
+    }
 
 
-    // debug if no products found
+    // DEBUG if no products found
     if (!$products) {   http_response_code(404);   echo "Aucune donnée produits : " . htmlspecialchars($URI, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');   exit; }
 
 
@@ -257,10 +285,6 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     $ContentArray = get_content($pdo, $keywordId, 'product');
 }
 
-
-// Prepare eBay link Tracker for both : categories & products
-$AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null);
-
 $googleadsense_body = '<div id="afscontainer1"></div>
     <div id="relatedsearches1"></div>
     <script type="text/javascript" charset="utf-8">
@@ -270,7 +294,7 @@ $googleadsense_body = '<div id="afscontainer1"></div>
                 "query": "'.$ebaySearchKeyword.'",
                 "styleId": "4384181929",
                 "adsafe": "low",
-                "resultsPageBaseUrl": "https://www.for-sale.ie",
+                "resultsPageBaseUrl": "'.$rootDomain.'",
                 "resultsPageQueryParam": "query"
             };
 

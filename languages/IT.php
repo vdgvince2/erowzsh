@@ -1,6 +1,5 @@
 <?php
 // Translations
-$HeaderDropDown = array("Tutte le categorie", "Articoli sportivi", "Pesca", "Sport all'aperto");
 $Header_Link_summary = "Riepilogo";
 $Header_Link_watchlist = "Osservati";
 $Header_Link_myaccount = "Account";
@@ -25,7 +24,7 @@ $label_addtocart = "Aggiungi al carrello";
 $label_viewdetails = "Vedi dettagli su eBay";
 $label_related = "Ricerche correlate";
 $label_affiliate = "Questo sito propone offerte legate a una collaborazione retribuita. Quando clicchi su un annuncio etichettato \"#sponsored\", potremmo ricevere una commissione sulla vendita. Questo ci permette di mantenere il sito gratuito e di coprire i costi di hosting.";
-$array_advices  = ["nuovo" => "LH_ItemCondition", "usato" => "", "i meno cari" => "&_sop=2", "i più cari" => "&_sop=3", "i più venduti" => ""];
+$array_advices  = ["nuovo" => "conditionNew", "usato" => "conditionUsed", "i meno cari" => "&_sop=15", "i più cari" => "&_sop=16", "i più venduti" => ""];
 $label_bargain_topheader = "Ottime offerte vicino a me!";
 
 /* CONTACT PAGE */

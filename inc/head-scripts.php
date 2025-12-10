@@ -15,8 +15,7 @@
     <?php } 
     
     // Specific hotjar for Bargain page
-    if(!$isLocal && $scriptName == "bargain.php"){
-        
+    if(!$isLocal && $scriptName == "bargain.php"){        
         ?>
             <!-- Hotjar Tracking Code for SH -->
             <script>

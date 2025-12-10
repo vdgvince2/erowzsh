@@ -24,12 +24,10 @@ ob_start();
 // don't display ads for this page
 $noAds = true;
 
-require __DIR__ . '/inc/config.php'; 
-require __DIR__ . '/inc/functions.php'; 
 require __DIR__ . '/scripts/crawler/ebay_browse_crawler.php'; 
 require __DIR__ . '/inc/functions-bargain.php'; 
 
-$pageTitle = $label_bargain_standard." - BayCrazy";
+$pageTitle = $label_bargain_standard;
 
 // Marketplace 
 $EBAY_MARKETPLACE_ID = $ebay_marketplace;
@@ -153,7 +151,7 @@ if ($isAjax) {
 <body>
 <?php require __DIR__ . '/inc/header.php'; ?>
 
-<script src="assets/bargain.js"></script>
+<script src="<?=$rootDomain.$base;?>assets/bargain.js?v=<?=date('Ymd');?>"></script>
 <?php if (!empty($keywordSearch)) : ?>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -236,11 +234,11 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
     <!-- Main content: Form + Results -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
 
         <!-- Sidebar: filters -->
         <aside class="bg-white rounded-xl shadow lg:col-span-1">
-            <form id="bargain-form" method="post" action="bargain.php" class="space-y-4">
+            <form id="bargain-form" method="post" action="<?=$rootDomain.$base;?>s/bargain" class="space-y-4">
                 <input type="hidden" name="mode" value="<?php echo htmlspecialchars($mode, ENT_QUOTES); ?>">
 
                 <div class="px-4 py-2">
@@ -249,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         name="postcode" 
                         value="<?php echo htmlspecialchars($postcode, ENT_QUOTES); ?>" 
                         class="w-full border rounded px-3 py-2"
+                        data-hj-allow
                         <?php echo ($mode === 'local') ? 'required' : ''; ?>
                     /></label>
                 </div>
@@ -361,12 +360,33 @@ document.addEventListener('DOMContentLoaded', function () {
             <div id="loading" class="hidden mb-4 text-blue-500 font-semibold">
                 <?=$label_bargain_loading;?>
             </div>            
-            <div id="results">
+            <div id="results">                  
                 <?php render_bargain_results($postcode, $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, $mode); ?>
             </div>
         </main>
     </div>
 </div>
+
+    <!-- email subscription -->
+    <?php 
+    /* 1/12/2025 : temporary deactivation : less than 1 subscribe per day. SHould be replaced by a getsitecontrol. */ 
+    if(isset($searchTerm)){
+    ?>
+    <section class="mt-8 mb-5"> 
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col md:flex-row md:items-center md:justify-between">
+             <div class="mb-4 md:mb-0 md:pr-4"> 
+                <h2 class="text-lg font-bold mb-1"><?=$label_subscription_H2." ".$searchTerm;?></h2> 
+                <p class="text-sm text-gray-600"> <?=$label_subscription_explainer;?></p> 
+            </div> 
+                <form action="<?=$rootDomain.$base;?>subscribe.php" method="post" class="w-full md:w-auto flex flex-col md:flex-row md:items-center"> 
+                    <input type="text" name="website" autocomplete="off" style="display:none">
+                    <input type="hidden" name="alert_keyword" value="<?php if(isset($searchTerm)) echo $searchTerm;?>"> 
+                    <input type="email" name="email" required placeholder="<?=$label_subscription_email;?>" class="w-full border border-gray-300 px-4 py-2 rounded-md mb-2 md:mb-0 md:mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500" >
+                    <button type="submit" class="w-full md:w-auto px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700 transition duration-300" > <?=$label_subscription_button;?> </button> 
+                </form> 
+        </div>
+    </section>
+    <?php } ?>
 
     <?php require __DIR__ . '/inc/footer.php'; ?>
 

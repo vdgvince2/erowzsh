@@ -1,5 +1,113 @@
 Country passed : uk
-KwId: 284582 | Country: GB | go pro camera
-Categorie from ebay: Camcorders
-Categorie match : Camcorders (29)
-Error: extract_top_ngrams(): Return value must be of type string, array returned
+KwId: 262352 | Country: GB | stat
+Categorie from ebay: Reptiles
+Categorie match : Reptiles (174)
+Import OK for keyword_id=262352. Inserted 48 ads.
+OK: 'stat' (0/500) => keyword_id=262352; KW not found #57885 supprimé.
+KwId: 23234 | Country: GB | juvenile ballroom dress
+Categorie from ebay: Children's Dancewear
+Categorie match : Children's Crafts (42)
+Import OK for keyword_id=23234. Inserted 45 ads.
+OK: 'juvenile ballroom dress' (1/500) => keyword_id=23234; KW not found #57886 supprimé.
+KwId: 287182 | Country: GB | r crumb
+Categorie from ebay: Comics & Graphic Novels
+Categorie match : Books, Comics & Magazines (25)
+Import OK for keyword_id=287182. Inserted 48 ads.
+OK: 'r crumb' (2/500) => keyword_id=287182; KW not found #57887 supprimé.
+KwId: 287183 | Country: GB | fujitsu siemens esprimo
+Categorie from ebay: PC Desktops & All-in-Ones
+Categorie match : Desktops & All-in-Ones (301)
+Import OK for keyword_id=287183. Inserted 48 ads.
+OK: 'fujitsu siemens esprimo' (3/500) => keyword_id=287183; KW not found #57888 supprimé.
+KwId: 287184 | Country: GB | jack vance
+Categorie from ebay: Books
+Categorie match : Audio Books (15)
+Import OK for keyword_id=287184. Inserted 48 ads.
+OK: 'jack vance' (4/500) => keyword_id=287184; KW not found #57901 supprimé.
+KwId: 287185 | Country: GB | babolat tennis balls
+Categorie from ebay: Balls
+Categorie match :  ()
+Import OK for keyword_id=287185. Inserted 48 ads.
+OK: 'babolat tennis balls' (5/500) => keyword_id=287185; KW not found #57902 supprimé.
+KwId: 287186 | Country: GB | spopulard36
+Skip: <= 5 products in JSON.
+OK: 'spopulard36' (6/500) => keyword_id=287186; KW not found #57909 supprimé.
+KwId: 287187 | Country: GB | v4073
+Categorie from ebay: Standard Water Heaters
+Categorie match : Ponds & Water Features (167)
+Import OK for keyword_id=287187. Inserted 48 ads.
+OK: 'v4073' (7/500) => keyword_id=287187; KW not found #57910 supprimé.
+KwId: 287188 | Country: GB | ftaylormade rescue
+Skip: <= 5 products in JSON.
+OK: 'ftaylormade rescue' (8/500) => keyword_id=287188; KW not found #57911 supprimé.
+KwId: 287189 | Country: GB | hoya plants
+Categorie from ebay: Plants & Seedlings
+Categorie match : Plants, Seeds & Bulbs (425)
+Import OK for keyword_id=287189. Inserted 48 ads.
+OK: 'hoya plants' (9/500) => keyword_id=287189; KW not found #57912 supprimé.
+KwId: 261542 | Country: GB | fcat
+Categorie from ebay: Adult Learning & University
+Categorie match :  ()
+Import OK for keyword_id=261542. Inserted 48 ads.
+OK: 'fcat' (10/500) => keyword_id=261542; KW not found #57915 supprimé.
+KwId: 287190 | Country: GB | mr strong t shirt
+Categorie from ebay: T-Shirts
+Categorie match : Football Shirts (77)
+Import OK for keyword_id=287190. Inserted 19 ads.
+OK: 'mr strong t shirt' (11/500) => keyword_id=287190; KW not found #57918 supprimé.
+KwId: 287191 | Country: GB | samsung lcd remote
+Categorie from ebay: Remote Controls
+Categorie match : Industrial Automation & Motion Controls (356)
+Import OK for keyword_id=287191. Inserted 48 ads.
+OK: 'samsung lcd remote' (12/500) => keyword_id=287191; KW not found #57921 supprimé.
+KwId: 283437 | Country: GB | i o plate for sale
+Categorie from ebay: Cherished Numbers
+Categorie match :  ()
+Import OK for keyword_id=283437. Inserted 48 ads.
+OK: 'i o plate for sale' (13/500) => keyword_id=283437; KW not found #57922 supprimé.
+KwId: 287192 | Country: GB | pacific star medal
+Categorie from ebay: Medals/ Ribbons
+Categorie match : Historical Medals/Medallions (348)
+Import OK for keyword_id=287192. Inserted 48 ads.
+OK: 'pacific star medal' (14/500) => keyword_id=287192; KW not found #57923 supprimé.
+KwId: 287193 | Country: GB | paco rabanne lady million
+Categorie from ebay: Women's Fragrances
+Categorie match : Fragrances (333)
+Import OK for keyword_id=287193. Inserted 48 ads.
+OK: 'paco rabanne lady million' (15/500) => keyword_id=287193; KW not found #57926 supprimé.
+KwId: 287194 | Country: GB | spopularx1
+Skip: <= 5 products in JSON.
+OK: 'spopularx1' (16/500) => keyword_id=287194; KW not found #57927 supprimé.
+KwId: 287195 | Country: GB | jack chain
+Categorie from ebay: Workshop Equipment Accessories
+Categorie match : ATV, Side-by-Side & UTV Parts & Accessories (14)
+Import OK for keyword_id=287195. Inserted 48 ads.
+OK: 'jack chain' (17/500) => keyword_id=287195; KW not found #57930 supprimé.
+KwId: 287196 | Country: GB | floyd patterson
+Categorie from ebay: Autographs
+Categorie match : Autographs (240)
+Import OK for keyword_id=287196. Inserted 48 ads.
+OK: 'floyd patterson' (18/500) => keyword_id=287196; KW not found #57933 supprimé.
+KwId: 287197 | Country: GB | a4 ivory card
+Categorie from ebay: Cardstock
+Categorie match :  ()
+Import OK for keyword_id=287197. Inserted 48 ads.
+OK: 'a4 ivory card' (19/500) => keyword_id=287197; KW not found #57940 supprimé.
+KwId: 287198 | Country: GB | a team book
+Categorie from ebay: Sticker Albums & Books
+Categorie match : Audio Books (15)
+Import OK for keyword_id=287198. Inserted 48 ads.
+OK: 'a team book' (20/500) => keyword_id=287198; KW not found #57945 supprimé.
+KwId: 287199 | Country: GB | japanese chisel
+Categorie from ebay: Chisels & Gouges
+Categorie match :  ()
+Import OK for keyword_id=287199. Inserted 48 ads.
+OK: 'japanese chisel' (21/500) => keyword_id=287199; KW not found #57946 supprimé.
+KwId: 287200 | Country: GB | entertainment stand
+Categorie from ebay: TV Stands & Entertainment Units
+Categorie match : Motorcycle Maintenance, Stands & Towing (131)
+Import OK for keyword_id=287200. Inserted 48 ads.
+OK: 'entertainment stand' (22/500) => keyword_id=287200; KW not found #57949 supprimé.
+KwId: 287201 | Country: GB | spopularc77
+Skip: <= 5 products in JSON.
+OK: 'spopularc77' (23/500) => keyword_id=287201; KW not found #57950 supprimé.

@@ -1,50 +1,1067 @@
 Country passed : it
 Crawling of 500 starting
-*** Start crawling : 2025-12-04 16:02:09 | MAX KW : 500 | Country : IT
-KwId: 60068 | Country: IT | nespresso u
-Import OK for keyword_id=60068. Inserted 48 ads.
-KwId: 251751 | Country: IT | paramani ktm 1290
-Import OK for keyword_id=251751. Inserted 48 ads.
-KwId: 207327 | Country: IT | alta tensione gioco
-Import OK for keyword_id=207327. Inserted 48 ads.
-KwId: 20991 | Country: IT | el34 mullard
-Import OK for keyword_id=20991. Inserted 48 ads.
-KwId: 190482 | Country: IT | sciarpe ultras salerno
-Import OK for keyword_id=190482. Inserted 12 ads.
-KwId: 13809 | Country: IT | manubrio custom
-Import OK for keyword_id=13809. Inserted 48 ads.
-KwId: 209583 | Country: IT | giochi anni 60
-Import OK for keyword_id=209583. Inserted 48 ads.
-KwId: 22354 | Country: IT | clemente tafuri
-Import OK for keyword_id=22354. Inserted 48 ads.
-KwId: 57564 | Country: IT | bracciolo audi a3
-Import OK for keyword_id=57564. Inserted 48 ads.
-KwId: 211227 | Country: IT | warhammer fantasy esercito
-Import OK for keyword_id=211227. Inserted 48 ads.
-KwId: 35805 | Country: IT | motul 800
-Import OK for keyword_id=35805. Inserted 48 ads.
-KwId: 263957 | Country: IT | occhiali stenopeici negozio torino
+*** Start crawling : 2025-12-09 06:16:33 | MAX KW : 500 | Country : IT
+KwId: 265882 | Country: IT | tino maturazione
 Skip: <= 5 products in JSON.
-Import OK for keyword_id=263957. Inserted 0 ads.
-KwId: 80441 | Country: IT | rolex explorer ii
-Import OK for keyword_id=80441. Inserted 48 ads.
-KwId: 168603 | Country: IT | caldaia pellet nordica hp 30
+Import OK for keyword_id=265882. Inserted 5 ads.
+KwId: 386897 | Country: IT | armadio artigianale rovere
+Import OK for keyword_id=386897. Inserted 48 ads.
+KwId: 54052 | Country: IT | multiland
+Import OK for keyword_id=54052. Inserted 33 ads.
+KwId: 393658 | Country: IT | ghd curve
+Import OK for keyword_id=393658. Inserted 48 ads.
+KwId: 324119 | Country: IT | pattini slitte
+Import OK for keyword_id=324119. Inserted 48 ads.
+KwId: 9853 | Country: IT | pannelli solari fotovoltaico
+Import OK for keyword_id=9853. Inserted 48 ads.
+KwId: 99216 | Country: IT | casco anni 50
+Import OK for keyword_id=99216. Inserted 48 ads.
+KwId: 381668 | Country: IT | armadio cameretta completa
+Import OK for keyword_id=381668. Inserted 48 ads.
+KwId: 47825 | Country: IT | extension coda castano
+Import OK for keyword_id=47825. Inserted 48 ads.
+KwId: 371191 | Country: IT | lotto calciatori panini album
+Import OK for keyword_id=371191. Inserted 48 ads.
+KwId: 359692 | Country: IT | energizing colours
+Import OK for keyword_id=359692. Inserted 48 ads.
+KwId: 374315 | Country: IT | spinning gomme
+Import OK for keyword_id=374315. Inserted 48 ads.
+KwId: 85048 | Country: IT | private magazine
+Import OK for keyword_id=85048. Inserted 48 ads.
+KwId: 201416 | Country: IT | kawasaki zx10r 2011
+Import OK for keyword_id=201416. Inserted 48 ads.
+KwId: 374264 | Country: IT | bianco similpelle divano
+Import OK for keyword_id=374264. Inserted 48 ads.
+KwId: 284033 | Country: IT | vasi plastica diametro 30
+Import OK for keyword_id=284033. Inserted 48 ads.
+KwId: 381574 | Country: IT | 3 sel 300 mercedes 6
+Import OK for keyword_id=381574. Inserted 48 ads.
+KwId: 302227 | Country: IT | paglia vienna tonni pronti
 Skip: <= 5 products in JSON.
-Import OK for keyword_id=168603. Inserted 0 ads.
-KwId: 43942 | Country: IT | jeans dondup uomo
-Import OK for keyword_id=43942. Inserted 48 ads.
-KwId: 260683 | Country: IT | pattini rotelle fly
-Import OK for keyword_id=260683. Inserted 48 ads.
-KwId: 65325 | Country: IT | dorso digitale hasselblad
-Import OK for keyword_id=65325. Inserted 48 ads.
-KwId: 233259 | Country: IT | decolte n 43
-Import OK for keyword_id=233259. Inserted 27 ads.
-KwId: 421341 | Country: IT | gymnasmata esercizi fatti
+Import OK for keyword_id=302227. Inserted 0 ads.
+KwId: 376204 | Country: IT | maino adesivo
+Import OK for keyword_id=376204. Inserted 48 ads.
+KwId: 260618 | Country: IT | vigili fuoco torcia
+Import OK for keyword_id=260618. Inserted 48 ads.
+KwId: 408523 | Country: IT | capsule vertuo compatibili
+Import OK for keyword_id=408523. Inserted 23 ads.
+KwId: 347097 | Country: IT | quadro veneziano
+Import OK for keyword_id=347097. Inserted 48 ads.
+KwId: 158864 | Country: IT | gold note
+Import OK for keyword_id=158864. Inserted 48 ads.
+KwId: 407556 | Country: IT | astuccio harry potter primark
 Skip: <= 5 products in JSON.
-Import OK for keyword_id=421341. Inserted 0 ads.
-KwId: 93208 | Country: IT | cilindro polini vespa
-Import OK for keyword_id=93208. Inserted 48 ads.
-KwId: 18594 | Country: IT | rotel rb
-Import OK for keyword_id=18594. Inserted 48 ads.
-KwId: 195879 | Country: IT | aprilia sr 50 ditech cilindro
-Error: extract_top_ngrams(): Return value must be of type string, array returned
+Import OK for keyword_id=407556. Inserted 0 ads.
+KwId: 320034 | Country: IT | viti ghiaccio
+Import OK for keyword_id=320034. Inserted 44 ads.
+KwId: 307911 | Country: IT | renault 19 16v motore
+Import OK for keyword_id=307911. Inserted 48 ads.
+KwId: 309106 | Country: IT | gazebo tensostruttura
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=309106. Inserted 0 ads.
+KwId: 400498 | Country: IT | scarpe kill bill
+Import OK for keyword_id=400498. Inserted 48 ads.
+KwId: 322498 | Country: IT | dainese d air
+Import OK for keyword_id=322498. Inserted 48 ads.
+KwId: 45157 | Country: IT | datch
+Import OK for keyword_id=45157. Inserted 48 ads.
+KwId: 35561 | Country: IT | 5 franchi argento 1969
+Import OK for keyword_id=35561. Inserted 48 ads.
+KwId: 312912 | Country: IT | gomme cerchi 17 mercedes
+Import OK for keyword_id=312912. Inserted 48 ads.
+KwId: 83250 | Country: IT | valigia coltelli
+Import OK for keyword_id=83250. Inserted 48 ads.
+KwId: 241383 | Country: IT | boxster fari
+Import OK for keyword_id=241383. Inserted 48 ads.
+KwId: 225136 | Country: IT | mannarese
+Import OK for keyword_id=225136. Inserted 10 ads.
+KwId: 125287 | Country: IT | moser bici corsa
+Import OK for keyword_id=125287. Inserted 48 ads.
+KwId: 299031 | Country: IT | paramani tdm 850
+Import OK for keyword_id=299031. Inserted 28 ads.
+KwId: 104788 | Country: IT | lavatrice carica alto miele
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=104788. Inserted 2 ads.
+KwId: 81165 | Country: IT | scampolo stoffa tessuto
+Import OK for keyword_id=81165. Inserted 48 ads.
+KwId: 386747 | Country: IT | automatica antenna
+Import OK for keyword_id=386747. Inserted 48 ads.
+KwId: 315630 | Country: IT | mini trapano batteria
+Import OK for keyword_id=315630. Inserted 48 ads.
+KwId: 290419 | Country: IT | tegole coppi dipinti
+Import OK for keyword_id=290419. Inserted 48 ads.
+KwId: 353081 | Country: IT | porta posta legno
+Import OK for keyword_id=353081. Inserted 48 ads.
+KwId: 393190 | Country: IT | organizer cassetti
+Import OK for keyword_id=393190. Inserted 48 ads.
+KwId: 211185 | Country: IT | acquaterrario tartarughe
+Import OK for keyword_id=211185. Inserted 48 ads.
+KwId: 97518 | Country: IT | stoffe tende
+Import OK for keyword_id=97518. Inserted 48 ads.
+KwId: 22163 | Country: IT | marmitek
+Import OK for keyword_id=22163. Inserted 48 ads.
+KwId: 391354 | Country: IT | decorazioni unghie
+Import OK for keyword_id=391354. Inserted 48 ads.
+KwId: 226669 | Country: IT | caggiati
+Import OK for keyword_id=226669. Inserted 48 ads.
+KwId: 47828 | Country: IT | accessori bici vintage
+Import OK for keyword_id=47828. Inserted 48 ads.
+KwId: 677 | Country: IT | stepper professionale
+Import OK for keyword_id=677. Inserted 48 ads.
+KwId: 188333 | Country: IT | motori elettrici 24 volt
+Import OK for keyword_id=188333. Inserted 48 ads.
+KwId: 21527 | Country: IT | pompa travaso liquidi
+Import OK for keyword_id=21527. Inserted 48 ads.
+KwId: 351518 | Country: IT | bmw 320 91 n 47
+Import OK for keyword_id=351518. Inserted 48 ads.
+KwId: 313653 | Country: IT | vecchia macchina cucire singer
+Import OK for keyword_id=313653. Inserted 48 ads.
+KwId: 133097 | Country: IT | barca spinning
+Import OK for keyword_id=133097. Inserted 48 ads.
+KwId: 414089 | Country: IT | nutrifii vinali recensioni
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=414089. Inserted 0 ads.
+KwId: 92867 | Country: IT | camicia nara
+Import OK for keyword_id=92867. Inserted 48 ads.
+KwId: 199330 | Country: IT | kettler xl
+Import OK for keyword_id=199330. Inserted 10 ads.
+KwId: 140756 | Country: IT | davide nido
+Import OK for keyword_id=140756. Inserted 33 ads.
+KwId: 200837 | Country: IT | kef r300
+Import OK for keyword_id=200837. Inserted 48 ads.
+KwId: 363528 | Country: IT | pipa lord
+Import OK for keyword_id=363528. Inserted 48 ads.
+KwId: 30382 | Country: IT | registratore audio digitale
+Import OK for keyword_id=30382. Inserted 48 ads.
+KwId: 293097 | Country: IT | guanti militari oakley
+Import OK for keyword_id=293097. Inserted 10 ads.
+KwId: 335835 | Country: IT | edizioni l orbicolare
+Import OK for keyword_id=335835. Inserted 34 ads.
+KwId: 304689 | Country: IT | tapis roulant turner atlanta 900 motore
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=304689. Inserted 0 ads.
+KwId: 71938 | Country: IT | connettore rca
+Import OK for keyword_id=71938. Inserted 48 ads.
+KwId: 326761 | Country: IT | cucina luna
+Import OK for keyword_id=326761. Inserted 48 ads.
+KwId: 332512 | Country: IT | best thriller
+Import OK for keyword_id=332512. Inserted 48 ads.
+KwId: 221187 | Country: IT | pilozzo esterno
+Import OK for keyword_id=221187. Inserted 48 ads.
+KwId: 32082 | Country: IT | stampante getto inchiostro
+Import OK for keyword_id=32082. Inserted 48 ads.
+KwId: 403293 | Country: IT | nana manga completo
+Import OK for keyword_id=403293. Inserted 48 ads.
+KwId: 7351 | Country: IT | letto peluche
+Import OK for keyword_id=7351. Inserted 48 ads.
+KwId: 396404 | Country: IT | ricetrasmettitori per radioamatori
+Import OK for keyword_id=396404. Inserted 19 ads.
+KwId: 93034 | Country: IT | asus vivotab
+Import OK for keyword_id=93034. Inserted 48 ads.
+KwId: 91567 | Country: IT | fixed bike
+Import OK for keyword_id=91567. Inserted 48 ads.
+KwId: 409976 | Country: IT | contextos literarios esercizi svolti
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=409976. Inserted 0 ads.
+KwId: 200884 | Country: IT | fiat allis fl4m
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=200884. Inserted 1 ads.
+KwId: 187937 | Country: IT | rumak
+Import OK for keyword_id=187937. Inserted 47 ads.
+KwId: 76079 | Country: IT | magnat
+Import OK for keyword_id=76079. Inserted 48 ads.
+KwId: 58669 | Country: IT | polaris rzr
+Import OK for keyword_id=58669. Inserted 48 ads.
+KwId: 133063 | Country: IT | naska loris
+Import OK for keyword_id=133063. Inserted 44 ads.
+KwId: 264538 | Country: IT | sensori parcheggio bmw e83
+Import OK for keyword_id=264538. Inserted 48 ads.
+KwId: 41618 | Country: IT | sistema allarme
+Import OK for keyword_id=41618. Inserted 48 ads.
+KwId: 173199 | Country: IT | tappeto elastico bambini
+Import OK for keyword_id=173199. Inserted 48 ads.
+KwId: 244481 | Country: IT | francesco gonzaga serigrafie
+Import OK for keyword_id=244481. Inserted 48 ads.
+KwId: 346973 | Country: IT | boxer bagno bambino
+Import OK for keyword_id=346973. Inserted 48 ads.
+KwId: 397302 | Country: IT | gettone telefonico 7608
+Import OK for keyword_id=397302. Inserted 48 ads.
+KwId: 175846 | Country: IT | yamaha rd 350 parafango
+Import OK for keyword_id=175846. Inserted 48 ads.
+KwId: 418552 | Country: IT | sanremo 2018 midi
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=418552. Inserted 0 ads.
+KwId: 228582 | Country: IT | trek superfly carbonio
+Import OK for keyword_id=228582. Inserted 29 ads.
+KwId: 232587 | Country: IT | yamaha r1 07 08 scarico leovince
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=232587. Inserted 0 ads.
+KwId: 401245 | Country: IT | vasetti yogurtiera girmi
+Import OK for keyword_id=401245. Inserted 14 ads.
+KwId: 319242 | Country: IT | slitta hard disk hp
+Import OK for keyword_id=319242. Inserted 48 ads.
+KwId: 117316 | Country: IT | ruote carbonio strada
+Import OK for keyword_id=117316. Inserted 45 ads.
+KwId: 135498 | Country: IT | toyota corolla verso
+Import OK for keyword_id=135498. Inserted 48 ads.
+KwId: 293559 | Country: IT | eleaf mini istick 10 w
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=293559. Inserted 0 ads.
+KwId: 209036 | Country: IT | omega speedmaster racing
+Import OK for keyword_id=209036. Inserted 48 ads.
+KwId: 81680 | Country: IT | stampo pandoro
+Import OK for keyword_id=81680. Inserted 48 ads.
+KwId: 173106 | Country: IT | vespa 125 primavera torino
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=173106. Inserted 3 ads.
+KwId: 200568 | Country: IT | pentax mz s
+Import OK for keyword_id=200568. Inserted 48 ads.
+KwId: 411010 | Country: IT | bandiera giallo verde
+Import OK for keyword_id=411010. Inserted 48 ads.
+KwId: 34549 | Country: IT | seiko sumo
+Import OK for keyword_id=34549. Inserted 48 ads.
+KwId: 169527 | Country: IT | caldaia leblanc
+Import OK for keyword_id=169527. Inserted 48 ads.
+KwId: 168584 | Country: IT | lindhaus linda
+Import OK for keyword_id=168584. Inserted 7 ads.
+KwId: 60964 | Country: IT | pentolone inox
+Import OK for keyword_id=60964. Inserted 48 ads.
+KwId: 337635 | Country: IT | calibra 16v 1992
+Import OK for keyword_id=337635. Inserted 48 ads.
+KwId: 233791 | Country: IT | contax carl zeiss 85 1 4
+Import OK for keyword_id=233791. Inserted 48 ads.
+KwId: 339259 | Country: IT | router netgear wireless
+Import OK for keyword_id=339259. Inserted 48 ads.
+KwId: 285586 | Country: IT | affettatrice volano berkel b100
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=285586. Inserted 0 ads.
+KwId: 194870 | Country: IT | pavimento laminato ciliegio
+Import OK for keyword_id=194870. Inserted 48 ads.
+KwId: 229139 | Country: IT | box lamiera zincata cagliari
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=229139. Inserted 0 ads.
+KwId: 125045 | Country: IT | reggiseni dim
+Import OK for keyword_id=125045. Inserted 48 ads.
+KwId: 164175 | Country: IT | yaesu ft 250
+Import OK for keyword_id=164175. Inserted 48 ads.
+KwId: 188649 | Country: IT | kawasaki er6n radiatore
+Import OK for keyword_id=188649. Inserted 48 ads.
+KwId: 284717 | Country: IT | albero trasmissione anteriore jeep
+Import OK for keyword_id=284717. Inserted 48 ads.
+KwId: 218907 | Country: IT | stemma fregio logo fiat anteriore
+Import OK for keyword_id=218907. Inserted 48 ads.
+KwId: 259127 | Country: IT | deck raggio utopia
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=259127. Inserted 0 ads.
+KwId: 41250 | Country: IT | stampante samsung laser
+Import OK for keyword_id=41250. Inserted 48 ads.
+KwId: 405427 | Country: IT | borsa marsupio zara
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=405427. Inserted 4 ads.
+KwId: 153658 | Country: IT | specchietti auto epoca
+Import OK for keyword_id=153658. Inserted 48 ads.
+KwId: 191971 | Country: IT | contrappesi ducati monster
+Import OK for keyword_id=191971. Inserted 48 ads.
+KwId: 99996 | Country: IT | hubsan x4
+Import OK for keyword_id=99996. Inserted 48 ads.
+KwId: 39398 | Country: IT | volkswagen fari
+Import OK for keyword_id=39398. Inserted 48 ads.
+KwId: 156734 | Country: IT | carrara marmo
+Import OK for keyword_id=156734. Inserted 48 ads.
+KwId: 36369 | Country: IT | mobili ferrara
+Import OK for keyword_id=36369. Inserted 48 ads.
+KwId: 86808 | Country: IT | garmin nuvi 3490
+Import OK for keyword_id=86808. Inserted 48 ads.
+KwId: 59157 | Country: IT | maison du monde
+Import OK for keyword_id=59157. Inserted 48 ads.
+KwId: 65560 | Country: IT | technogym excite top
+Import OK for keyword_id=65560. Inserted 7 ads.
+KwId: 413247 | Country: IT | ultimo biglietti napoli
+Import OK for keyword_id=413247. Inserted 22 ads.
+KwId: 362046 | Country: IT | panda 3a 2016 fiat serie
+Import OK for keyword_id=362046. Inserted 48 ads.
+KwId: 312113 | Country: IT | laminato porte interne
+Import OK for keyword_id=312113. Inserted 48 ads.
+KwId: 357296 | Country: IT | 12 9 ipad pro
+Import OK for keyword_id=357296. Inserted 48 ads.
+KwId: 37437 | Country: IT | aquascooter comer
+Import OK for keyword_id=37437. Inserted 8 ads.
+KwId: 288389 | Country: IT | kymco xciting carena
+Import OK for keyword_id=288389. Inserted 48 ads.
+KwId: 56153 | Country: IT | thun baita
+Import OK for keyword_id=56153. Inserted 15 ads.
+KwId: 130224 | Country: IT | beatles let it be
+Import OK for keyword_id=130224. Inserted 48 ads.
+KwId: 396276 | Country: IT | 50 lire piccole 1992
+Import OK for keyword_id=396276. Inserted 48 ads.
+KwId: 227068 | Country: IT | gazebo pieghevole alluminio 3x4 5
+Import OK for keyword_id=227068. Inserted 7 ads.
+KwId: 121690 | Country: IT | lifepo4
+Import OK for keyword_id=121690. Inserted 48 ads.
+KwId: 169948 | Country: IT | renault twingo rs
+Import OK for keyword_id=169948. Inserted 48 ads.
+KwId: 373285 | Country: IT | case charging wireless
+Import OK for keyword_id=373285. Inserted 48 ads.
+KwId: 30172 | Country: IT | polar cs400
+Import OK for keyword_id=30172. Inserted 18 ads.
+KwId: 111638 | Country: IT | audiosystem amplificatore
+Import OK for keyword_id=111638. Inserted 48 ads.
+KwId: 300661 | Country: IT | tenda cristallo
+Import OK for keyword_id=300661. Inserted 48 ads.
+KwId: 350979 | Country: IT | stufa ad aria
+Import OK for keyword_id=350979. Inserted 48 ads.
+KwId: 3921 | Country: IT | terminali scarichi harley
+Import OK for keyword_id=3921. Inserted 48 ads.
+KwId: 47465 | Country: IT | selle italia lady
+Import OK for keyword_id=47465. Inserted 48 ads.
+KwId: 24886 | Country: IT | stivali gomma bambini
+Import OK for keyword_id=24886. Inserted 48 ads.
+KwId: 73212 | Country: IT | folletto pulilux 515
+Import OK for keyword_id=73212. Inserted 48 ads.
+KwId: 273158 | Country: IT | mercury super america trim
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=273158. Inserted 0 ads.
+KwId: 271475 | Country: IT | red bull ktm adesivi
+Import OK for keyword_id=271475. Inserted 16 ads.
+KwId: 377495 | Country: IT | djm pioneer s9 mixer dj
+Import OK for keyword_id=377495. Inserted 48 ads.
+KwId: 205501 | Country: IT | rekord coupe
+Import OK for keyword_id=205501. Inserted 48 ads.
+KwId: 387248 | Country: IT | bambola figlia
+Import OK for keyword_id=387248. Inserted 48 ads.
+KwId: 242717 | Country: IT | spoiler sedici
+Import OK for keyword_id=242717. Inserted 48 ads.
+KwId: 77811 | Country: IT | onda ok baby
+Import OK for keyword_id=77811. Inserted 48 ads.
+KwId: 382494 | Country: IT | gpl cruze 8 1 chevrolet
+Import OK for keyword_id=382494. Inserted 48 ads.
+KwId: 104064 | Country: IT | mira calcio
+Import OK for keyword_id=104064. Inserted 48 ads.
+KwId: 208420 | Country: IT | pianale cappelliera fiat 600
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=208420. Inserted 2 ads.
+KwId: 72376 | Country: IT | essenza just
+Import OK for keyword_id=72376. Inserted 48 ads.
+KwId: 145526 | Country: IT | muscadet
+Import OK for keyword_id=145526. Inserted 48 ads.
+KwId: 20787 | Country: IT | sachs hercules
+Import OK for keyword_id=20787. Inserted 48 ads.
+KwId: 309335 | Country: IT | amplificatore chitarra acustica vox
+Import OK for keyword_id=309335. Inserted 48 ads.
+KwId: 237571 | Country: IT | pegic 300
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=237571. Inserted 4 ads.
+KwId: 154979 | Country: IT | alpine crossover
+Import OK for keyword_id=154979. Inserted 48 ads.
+KwId: 269996 | Country: IT | ford focus 2008 fari
+Import OK for keyword_id=269996. Inserted 48 ads.
+KwId: 378889 | Country: IT | xl taglia giacca cotone
+Import OK for keyword_id=378889. Inserted 48 ads.
+KwId: 404503 | Country: IT | diario della comix 2017
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=404503. Inserted 0 ads.
+KwId: 264294 | Country: IT | kit rialzo panda posteriore
+Import OK for keyword_id=264294. Inserted 48 ads.
+KwId: 81640 | Country: IT | spremiagrumi automatico
+Import OK for keyword_id=81640. Inserted 48 ads.
+KwId: 298248 | Country: IT | fuoribordo 30 cv 4 tempi yamaha
+Import OK for keyword_id=298248. Inserted 48 ads.
+KwId: 83727 | Country: IT | vernice bituminosa
+Import OK for keyword_id=83727. Inserted 48 ads.
+KwId: 170228 | Country: IT | kawasaki z400j
+Import OK for keyword_id=170228. Inserted 48 ads.
+KwId: 18921 | Country: IT | jeans levis stock
+Import OK for keyword_id=18921. Inserted 48 ads.
+KwId: 403218 | Country: IT | pallone champions 2017
+Import OK for keyword_id=403218. Inserted 48 ads.
+KwId: 196470 | Country: IT | kawasaki er6n faro anteriore
+Import OK for keyword_id=196470. Inserted 48 ads.
+KwId: 86949 | Country: IT | tartallegre 1992
+Import OK for keyword_id=86949. Inserted 48 ads.
+KwId: 191607 | Country: IT | samsung gear s
+Import OK for keyword_id=191607. Inserted 48 ads.
+KwId: 328464 | Country: IT | cofano turbo
+Import OK for keyword_id=328464. Inserted 48 ads.
+KwId: 373166 | Country: IT | 1972 dollaro 1
+Import OK for keyword_id=373166. Inserted 48 ads.
+KwId: 346314 | Country: IT | completo primaverile
+Import OK for keyword_id=346314. Inserted 48 ads.
+KwId: 29249 | Country: IT | golden goose 37
+Import OK for keyword_id=29249. Inserted 48 ads.
+KwId: 51260 | Country: IT | scarpe cesare paciotti donna
+Import OK for keyword_id=51260. Inserted 48 ads.
+KwId: 59820 | Country: IT | restauro moto epoca
+Import OK for keyword_id=59820. Inserted 48 ads.
+KwId: 199143 | Country: IT | esame
+Import OK for keyword_id=199143. Inserted 48 ads.
+KwId: 87716 | Country: IT | stelbel
+Import OK for keyword_id=87716. Inserted 17 ads.
+KwId: 220663 | Country: IT | distintivo lambretta
+Import OK for keyword_id=220663. Inserted 48 ads.
+KwId: 10438 | Country: IT | specchietti ducati monster
+Import OK for keyword_id=10438. Inserted 48 ads.
+KwId: 323636 | Country: IT | fiat 600 1 1 km
+Import OK for keyword_id=323636. Inserted 48 ads.
+KwId: 377905 | Country: IT | posteriore lunotto smart 453
+Import OK for keyword_id=377905. Inserted 48 ads.
+KwId: 131796 | Country: IT | hit parade cinema
+Import OK for keyword_id=131796. Inserted 48 ads.
+KwId: 255253 | Country: IT | tooway kit satellitare
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=255253. Inserted 0 ads.
+KwId: 381871 | Country: IT | h alexander dvd
+Import OK for keyword_id=381871. Inserted 48 ads.
+KwId: 379446 | Country: IT | 2011 320 anno bmw
+Import OK for keyword_id=379446. Inserted 48 ads.
+KwId: 56823 | Country: IT | coprimozzo alfa romeo 75
+Import OK for keyword_id=56823. Inserted 48 ads.
+KwId: 410260 | Country: IT | esselunga harry potter wizzis 2019
+Import OK for keyword_id=410260. Inserted 48 ads.
+KwId: 244895 | Country: IT | paraurti citroen c3 rosso
+Import OK for keyword_id=244895. Inserted 48 ads.
+KwId: 264662 | Country: IT | rasaerba scoppio sandri garden
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=264662. Inserted 0 ads.
+KwId: 297868 | Country: IT | palle bowling storm
+Import OK for keyword_id=297868. Inserted 48 ads.
+KwId: 418229 | Country: IT | zaino trolley pokemon
+Import OK for keyword_id=418229. Inserted 14 ads.
+KwId: 362790 | Country: IT | 1991 honda cr
+Import OK for keyword_id=362790. Inserted 48 ads.
+KwId: 217410 | Country: IT | rossignoli bicicletta
+Import OK for keyword_id=217410. Inserted 24 ads.
+KwId: 397872 | Country: IT | topolino green explorer
+Import OK for keyword_id=397872. Inserted 46 ads.
+KwId: 44381 | Country: IT | f 104 starfighter
+Import OK for keyword_id=44381. Inserted 48 ads.
+KwId: 231167 | Country: IT | radiatore motore intercooler
+Import OK for keyword_id=231167. Inserted 48 ads.
+KwId: 225227 | Country: IT | ricambi radiatore frigo bar
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=225227. Inserted 0 ads.
+KwId: 311385 | Country: IT | centralina rapid bike 848
+Import OK for keyword_id=311385. Inserted 48 ads.
+KwId: 333285 | Country: IT | ktm 450 exc 2007
+Import OK for keyword_id=333285. Inserted 48 ads.
+KwId: 315690 | Country: IT | binari lego duplo
+Import OK for keyword_id=315690. Inserted 48 ads.
+KwId: 125758 | Country: IT | portachiavi originali fiat
+Import OK for keyword_id=125758. Inserted 48 ads.
+KwId: 356699 | Country: IT | struttura divano legno
+Import OK for keyword_id=356699. Inserted 48 ads.
+KwId: 415161 | Country: IT | ebay abbacchiatore olive
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=415161. Inserted 0 ads.
+KwId: 307014 | Country: IT | peugeot 407 display navigatore
+Import OK for keyword_id=307014. Inserted 45 ads.
+KwId: 229282 | Country: IT | olivetti et margherita
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=229282. Inserted 2 ads.
+KwId: 308354 | Country: IT | ricevitore sw vhf uhf
+Import OK for keyword_id=308354. Inserted 48 ads.
+KwId: 403310 | Country: IT | lavelli cucina mondo convenienza
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=403310. Inserted 1 ads.
+KwId: 147113 | Country: IT | am6 motore
+Import OK for keyword_id=147113. Inserted 48 ads.
+KwId: 184630 | Country: IT | swarovski gang of dogs
+Import OK for keyword_id=184630. Inserted 48 ads.
+KwId: 387920 | Country: IT | divano 2 sedie
+Import OK for keyword_id=387920. Inserted 48 ads.
+KwId: 396670 | Country: IT | scarpe eleganti comode con tacco medio
+Import OK for keyword_id=396670. Inserted 25 ads.
+KwId: 83092 | Country: IT | velux 78x98
+Import OK for keyword_id=83092. Inserted 18 ads.
+KwId: 263176 | Country: IT | fabbricatore ghiaccio granulare 120 25 kg
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=263176. Inserted 0 ads.
+KwId: 239173 | Country: IT | impastatrice 25 kg
+Import OK for keyword_id=239173. Inserted 29 ads.
+KwId: 257570 | Country: IT | cucciolo jack russel regalo
+Import OK for keyword_id=257570. Inserted 48 ads.
+KwId: 225869 | Country: IT | fiat 127 sedili anteriori
+Import OK for keyword_id=225869. Inserted 48 ads.
+KwId: 74785 | Country: IT | harley davidson softail black line
+Import OK for keyword_id=74785. Inserted 48 ads.
+KwId: 314979 | Country: IT | cameretta ponte prato
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=314979. Inserted 1 ads.
+KwId: 414961 | Country: IT | bussola jack sparrow
+Import OK for keyword_id=414961. Inserted 48 ads.
+KwId: 114544 | Country: IT | gigabyte 1155
+Import OK for keyword_id=114544. Inserted 48 ads.
+KwId: 76802 | Country: IT | medaglia antica
+Import OK for keyword_id=76802. Inserted 48 ads.
+KwId: 338098 | Country: IT | corona suzuki gsr 2006
+Import OK for keyword_id=338098. Inserted 48 ads.
+KwId: 321710 | Country: IT | bicicletta primi 900
+Import OK for keyword_id=321710. Inserted 48 ads.
+KwId: 294449 | Country: IT | motorino avviamento motore aifo 8061
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=294449. Inserted 0 ads.
+KwId: 64279 | Country: IT | spoiler ford fiesta tuning
+Import OK for keyword_id=64279. Inserted 48 ads.
+KwId: 404390 | Country: IT | album battesimo thun
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=404390. Inserted 0 ads.
+KwId: 242013 | Country: IT | kit 3 vie focal
+Import OK for keyword_id=242013. Inserted 48 ads.
+KwId: 315421 | Country: IT | ghisa vasi
+Import OK for keyword_id=315421. Inserted 48 ads.
+KwId: 68679 | Country: IT | amplificatore audio system
+Import OK for keyword_id=68679. Inserted 48 ads.
+KwId: 288460 | Country: IT | camino legna deville
+Import OK for keyword_id=288460. Inserted 7 ads.
+KwId: 333244 | Country: IT | lotto 2 libri
+Import OK for keyword_id=333244. Inserted 48 ads.
+KwId: 231267 | Country: IT | fm broadcast watt
+Import OK for keyword_id=231267. Inserted 48 ads.
+KwId: 381111 | Country: IT | pvc vetrata
+Import OK for keyword_id=381111. Inserted 48 ads.
+KwId: 192204 | Country: IT | palloncini metallizzati
+Import OK for keyword_id=192204. Inserted 48 ads.
+KwId: 83519 | Country: IT | turbina alfa gt
+Import OK for keyword_id=83519. Inserted 48 ads.
+KwId: 339395 | Country: IT | cerchi alfaromeo 17 pollici
+Import OK for keyword_id=339395. Inserted 48 ads.
+KwId: 94044 | Country: IT | babbo natale led
+Import OK for keyword_id=94044. Inserted 48 ads.
+KwId: 91671 | Country: IT | tezenis donna
+Import OK for keyword_id=91671. Inserted 48 ads.
+KwId: 400935 | Country: IT | banco e retrobanco bar
+Import OK for keyword_id=400935. Inserted 12 ads.
+KwId: 250946 | Country: IT | tex raccoltina prima serie
+Import OK for keyword_id=250946. Inserted 48 ads.
+KwId: 34794 | Country: IT | roloil
+Import OK for keyword_id=34794. Inserted 48 ads.
+KwId: 184984 | Country: IT | elu ept
+Import OK for keyword_id=184984. Inserted 23 ads.
+KwId: 170035 | Country: IT | jane matrix isofix
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=170035. Inserted 2 ads.
+KwId: 48308 | Country: IT | 60w magsafe power
+Import OK for keyword_id=48308. Inserted 48 ads.
+KwId: 404575 | Country: IT | appendiabiti vintage country corner
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=404575. Inserted 2 ads.
+KwId: 399311 | Country: IT | polpo gigante peluche
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=399311. Inserted 4 ads.
+KwId: 8735 | Country: IT | oro filled
+Import OK for keyword_id=8735. Inserted 48 ads.
+KwId: 225406 | Country: IT | bugaboo camaleon telaio
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=225406. Inserted 0 ads.
+KwId: 345277 | Country: IT | box come foto
+Import OK for keyword_id=345277. Inserted 48 ads.
+KwId: 24644 | Country: IT | barbie d epoca
+Import OK for keyword_id=24644. Inserted 24 ads.
+KwId: 6153 | Country: IT | gulden olanda
+Import OK for keyword_id=6153. Inserted 48 ads.
+KwId: 420043 | Country: IT | stivali louis vuitton uomo
+Import OK for keyword_id=420043. Inserted 48 ads.
+KwId: 139876 | Country: IT | gemelli versace
+Import OK for keyword_id=139876. Inserted 48 ads.
+KwId: 332663 | Country: IT | audi a5 s line sportback
+Import OK for keyword_id=332663. Inserted 48 ads.
+KwId: 46032 | Country: IT | manubrio ducati monster
+Import OK for keyword_id=46032. Inserted 48 ads.
+KwId: 97916 | Country: IT | tele pittura 50x70
+Import OK for keyword_id=97916. Inserted 48 ads.
+KwId: 286802 | Country: IT | fanali yamaha majesty
+Import OK for keyword_id=286802. Inserted 48 ads.
+KwId: 382240 | Country: IT | sx100 epson stylus stampante
+Import OK for keyword_id=382240. Inserted 48 ads.
+KwId: 277647 | Country: IT | bull bar nissan king
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=277647. Inserted 2 ads.
+KwId: 286085 | Country: IT | casco enduro bmw motorrad
+Import OK for keyword_id=286085. Inserted 44 ads.
+KwId: 118678 | Country: IT | aereo modellismo
+Import OK for keyword_id=118678. Inserted 48 ads.
+KwId: 96307 | Country: IT | magis spun
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=96307. Inserted 4 ads.
+KwId: 62308 | Country: IT | grohe euphoria
+Import OK for keyword_id=62308. Inserted 48 ads.
+KwId: 150540 | Country: IT | moto guzzi v50c
+Import OK for keyword_id=150540. Inserted 48 ads.
+KwId: 130149 | Country: IT | batteria porsche
+Import OK for keyword_id=130149. Inserted 48 ads.
+KwId: 49977 | Country: IT | pedane honda xr 650
+Import OK for keyword_id=49977. Inserted 48 ads.
+KwId: 187960 | Country: IT | faro posteriore seat alhambra
+Import OK for keyword_id=187960. Inserted 48 ads.
+KwId: 187800 | Country: IT | fiat strada paraurti
+Import OK for keyword_id=187800. Inserted 48 ads.
+KwId: 17067 | Country: IT | decalcomanie bici d epoca
+Import OK for keyword_id=17067. Inserted 48 ads.
+KwId: 336287 | Country: IT | tavolo japan
+Import OK for keyword_id=336287. Inserted 48 ads.
+KwId: 238815 | Country: IT | teradak
+Import OK for keyword_id=238815. Inserted 48 ads.
+KwId: 259012 | Country: IT | portafogli nani
+Import OK for keyword_id=259012. Inserted 48 ads.
+KwId: 122165 | Country: IT | stagna muta
+Import OK for keyword_id=122165. Inserted 48 ads.
+KwId: 41691 | Country: IT | serie democratica 1945
+Import OK for keyword_id=41691. Inserted 48 ads.
+KwId: 274615 | Country: IT | gruppo termico 210 malossi liberty
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=274615. Inserted 0 ads.
+KwId: 138649 | Country: IT | ricambi lambretta 125 d
+Import OK for keyword_id=138649. Inserted 48 ads.
+KwId: 316881 | Country: IT | tavole surf shortboard
+Import OK for keyword_id=316881. Inserted 48 ads.
+KwId: 39581 | Country: IT | ventaglio segnaposto matrimonio
+Import OK for keyword_id=39581. Inserted 48 ads.
+KwId: 15772 | Country: IT | fender texas special
+Import OK for keyword_id=15772. Inserted 48 ads.
+KwId: 65392 | Country: IT | microfono archetto proel
+Import OK for keyword_id=65392. Inserted 48 ads.
+KwId: 396148 | Country: IT | prezzo folletto vk220s completo
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=396148. Inserted 0 ads.
+KwId: 388049 | Country: IT | frank miller s sin city
+Import OK for keyword_id=388049. Inserted 48 ads.
+KwId: 193554 | Country: IT | inter triplete
+Import OK for keyword_id=193554. Inserted 48 ads.
+KwId: 310484 | Country: IT | chevrolet captiva specchietto
+Import OK for keyword_id=310484. Inserted 48 ads.
+KwId: 123361 | Country: IT | carburatore keihin
+Import OK for keyword_id=123361. Inserted 48 ads.
+KwId: 227720 | Country: IT | goatmoon
+Import OK for keyword_id=227720. Inserted 48 ads.
+KwId: 7793 | Country: IT | bulova manuale
+Import OK for keyword_id=7793. Inserted 48 ads.
+KwId: 395071 | Country: IT | dante alighieri caserta
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=395071. Inserted 2 ads.
+KwId: 140800 | Country: IT | modellini auto scala 1 24
+Import OK for keyword_id=140800. Inserted 48 ads.
+KwId: 282474 | Country: IT | uomini lucertola esercito
+Import OK for keyword_id=282474. Inserted 48 ads.
+KwId: 403491 | Country: IT | vestito anna frozen adulto
+Import OK for keyword_id=403491. Inserted 48 ads.
+KwId: 122992 | Country: IT | nolan n44
+Import OK for keyword_id=122992. Inserted 48 ads.
+KwId: 339839 | Country: IT | orologio salvadanaio
+Import OK for keyword_id=339839. Inserted 48 ads.
+KwId: 375585 | Country: IT | xbox s gb 500 one
+Import OK for keyword_id=375585. Inserted 48 ads.
+KwId: 149332 | Country: IT | barre portatutto phedra
+Import OK for keyword_id=149332. Inserted 44 ads.
+KwId: 170322 | Country: IT | mario mafai
+Import OK for keyword_id=170322. Inserted 48 ads.
+KwId: 178727 | Country: IT | costume carnevale angelo
+Import OK for keyword_id=178727. Inserted 48 ads.
+KwId: 123129 | Country: IT | psicologia dell arte
+Import OK for keyword_id=123129. Inserted 48 ads.
+KwId: 221248 | Country: IT | numeri civici ferro
+Import OK for keyword_id=221248. Inserted 48 ads.
+KwId: 274800 | Country: IT | thonet sedie originali
+Import OK for keyword_id=274800. Inserted 48 ads.
+KwId: 286238 | Country: IT | ricambi motocoltivatore
+Import OK for keyword_id=286238. Inserted 48 ads.
+KwId: 324175 | Country: IT | bilancia alimenti vintage
+Import OK for keyword_id=324175. Inserted 24 ads.
+KwId: 3025 | Country: IT | contachilometri vespa faro
+Import OK for keyword_id=3025. Inserted 48 ads.
+KwId: 1641 | Country: IT | dvx100 panasonic
+Import OK for keyword_id=1641. Inserted 48 ads.
+KwId: 91171 | Country: IT | menage olio
+Import OK for keyword_id=91171. Inserted 48 ads.
+KwId: 396636 | Country: IT | carte oro pokemon
+Import OK for keyword_id=396636. Inserted 48 ads.
+KwId: 404337 | Country: IT | ping pong manga
+Import OK for keyword_id=404337. Inserted 48 ads.
+KwId: 216957 | Country: IT | pioneer sx 1080
+Import OK for keyword_id=216957. Inserted 48 ads.
+KwId: 209026 | Country: IT | converse basse verde
+Import OK for keyword_id=209026. Inserted 14 ads.
+KwId: 154696 | Country: IT | tute vintage anni
+Import OK for keyword_id=154696. Inserted 48 ads.
+KwId: 209062 | Country: IT | motozappa grillo 4500
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=209062. Inserted 0 ads.
+KwId: 329297 | Country: IT | bmw serie 1 118i 5 porte
+Import OK for keyword_id=329297. Inserted 48 ads.
+KwId: 247529 | Country: IT | motom bobina
+Import OK for keyword_id=247529. Inserted 48 ads.
+KwId: 263486 | Country: IT | espositore parete
+Import OK for keyword_id=263486. Inserted 48 ads.
+KwId: 81203 | Country: IT | ricambi gsx r k6
+Import OK for keyword_id=81203. Inserted 48 ads.
+KwId: 25210 | Country: IT | perizoma aperto
+Import OK for keyword_id=25210. Inserted 48 ads.
+KwId: 186012 | Country: IT | sony icf 2001
+Import OK for keyword_id=186012. Inserted 48 ads.
+KwId: 47946 | Country: IT | scarico honda xl 600 rm
+Import OK for keyword_id=47946. Inserted 48 ads.
+KwId: 268716 | Country: IT | amplificatore tensai
+Import OK for keyword_id=268716. Inserted 48 ads.
+KwId: 369901 | Country: IT | ricondizionato iphone apple x
+Import OK for keyword_id=369901. Inserted 48 ads.
+KwId: 296640 | Country: IT | antenna metronic interno
+Import OK for keyword_id=296640. Inserted 48 ads.
+KwId: 337947 | Country: IT | ristorante gorizia
+Import OK for keyword_id=337947. Inserted 39 ads.
+KwId: 175038 | Country: IT | mattonelle antiche 20x20
+Import OK for keyword_id=175038. Inserted 48 ads.
+KwId: 406990 | Country: IT | zaino eastpak verde militare
+Import OK for keyword_id=406990. Inserted 9 ads.
+KwId: 161992 | Country: IT | boston sub
+Import OK for keyword_id=161992. Inserted 48 ads.
+KwId: 363264 | Country: IT | bimba monnalisa completo
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=363264. Inserted 5 ads.
+KwId: 76291 | Country: IT | jeans carrera regular
+Import OK for keyword_id=76291. Inserted 48 ads.
+KwId: 344108 | Country: IT | dvd ocean s twelve
+Import OK for keyword_id=344108. Inserted 48 ads.
+KwId: 307806 | Country: IT | giochi ferrero giochi
+Import OK for keyword_id=307806. Inserted 48 ads.
+KwId: 60138 | Country: IT | lego 8069
+Import OK for keyword_id=60138. Inserted 48 ads.
+KwId: 414617 | Country: IT | lamborghini hot wheels
+Import OK for keyword_id=414617. Inserted 48 ads.
+KwId: 390633 | Country: IT | aspirapolvere samsung
+Import OK for keyword_id=390633. Inserted 48 ads.
+KwId: 222412 | Country: IT | carrello barca umbra rimorchi
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=222412. Inserted 0 ads.
+KwId: 257076 | Country: IT | batticarne
+Import OK for keyword_id=257076. Inserted 48 ads.
+KwId: 352032 | Country: IT | canali lamiera
+Import OK for keyword_id=352032. Inserted 48 ads.
+KwId: 241063 | Country: IT | paraurti audi s3 non originali
+Import OK for keyword_id=241063. Inserted 48 ads.
+KwId: 79675 | Country: IT | pulilux folletto
+Import OK for keyword_id=79675. Inserted 48 ads.
+KwId: 408269 | Country: IT | mobile per macchina da cucire
+Import OK for keyword_id=408269. Inserted 48 ads.
+KwId: 7813 | Country: IT | motori golf
+Import OK for keyword_id=7813. Inserted 48 ads.
+KwId: 223190 | Country: IT | cavalletto anteriore moto z1000sx
+Import OK for keyword_id=223190. Inserted 48 ads.
+KwId: 260457 | Country: IT | angelo bon
+Import OK for keyword_id=260457. Inserted 48 ads.
+KwId: 410389 | Country: IT | occhiali da sole solaris
+Import OK for keyword_id=410389. Inserted 48 ads.
+KwId: 155807 | Country: IT | panasonic sd 40
+Import OK for keyword_id=155807. Inserted 48 ads.
+KwId: 193528 | Country: IT | box calciatori panini 2014 2015
+Import OK for keyword_id=193528. Inserted 47 ads.
+KwId: 130705 | Country: IT | gravity varier
+Import OK for keyword_id=130705. Inserted 8 ads.
+KwId: 65319 | Country: IT | nastrino protezione civile
+Import OK for keyword_id=65319. Inserted 9 ads.
+KwId: 219100 | Country: IT | policar polistil
+Import OK for keyword_id=219100. Inserted 48 ads.
+KwId: 376135 | Country: IT | salsiera laveno zuppiera
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=376135. Inserted 3 ads.
+KwId: 245826 | Country: IT | vemer cronotermostato
+Import OK for keyword_id=245826. Inserted 48 ads.
+KwId: 242747 | Country: IT | minarelli k6 mr6
+Import OK for keyword_id=242747. Inserted 9 ads.
+KwId: 224925 | Country: IT | promelit next 8d
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=224925. Inserted 5 ads.
+KwId: 159855 | Country: IT | gomme fuoristrada 205 r16
+Import OK for keyword_id=159855. Inserted 48 ads.
+KwId: 16636 | Country: IT | borsa louis vuitton neverfull
+Import OK for keyword_id=16636. Inserted 48 ads.
+KwId: 208151 | Country: IT | nonni
+Import OK for keyword_id=208151. Inserted 48 ads.
+KwId: 147013 | Country: IT | specchio retrovisore sx smart
+Import OK for keyword_id=147013. Inserted 48 ads.
+KwId: 134118 | Country: IT | maniglia interna alfa gt
+Import OK for keyword_id=134118. Inserted 48 ads.
+KwId: 354285 | Country: IT | caravan 2
+Import OK for keyword_id=354285. Inserted 48 ads.
+KwId: 46342 | Country: IT | vacuometro
+Import OK for keyword_id=46342. Inserted 48 ads.
+KwId: 171933 | Country: IT | integrale arai rebel
+Import OK for keyword_id=171933. Inserted 6 ads.
+KwId: 232450 | Country: IT | scrivania angolare ikea napoli
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=232450. Inserted 0 ads.
+KwId: 19000 | Country: IT | maschere veneziane
+Import OK for keyword_id=19000. Inserted 48 ads.
+KwId: 342431 | Country: IT | giacca guess originali
+Import OK for keyword_id=342431. Inserted 48 ads.
+KwId: 141409 | Country: IT | gabriel knight
+Import OK for keyword_id=141409. Inserted 48 ads.
+KwId: 408627 | Country: IT | zaino sailor moon
+Import OK for keyword_id=408627. Inserted 48 ads.
+KwId: 254813 | Country: IT | gadget galbani
+Import OK for keyword_id=254813. Inserted 41 ads.
+KwId: 250517 | Country: IT | penn squall mulinello
+Import OK for keyword_id=250517. Inserted 48 ads.
+KwId: 305722 | Country: IT | hohner bassi
+Import OK for keyword_id=305722. Inserted 48 ads.
+KwId: 400447 | Country: IT | cofanetto signore degli anelli libri
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=400447. Inserted 5 ads.
+KwId: 249203 | Country: IT | camperos stivaletti donna
+Import OK for keyword_id=249203. Inserted 48 ads.
+KwId: 279075 | Country: IT | piatto ceramica turi
+Import OK for keyword_id=279075. Inserted 48 ads.
+KwId: 65068 | Country: IT | dreambox 800hd
+Import OK for keyword_id=65068. Inserted 48 ads.
+KwId: 411913 | Country: IT | tuta real madrid champions
+Import OK for keyword_id=411913. Inserted 7 ads.
+KwId: 368724 | Country: IT | 18 bicicletta atala
+Import OK for keyword_id=368724. Inserted 48 ads.
+KwId: 94143 | Country: IT | saucony xodus
+Import OK for keyword_id=94143. Inserted 48 ads.
+KwId: 361556 | Country: IT | deruta porcellana cestino
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=361556. Inserted 0 ads.
+KwId: 124199 | Country: IT | bici epoca zeus
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=124199. Inserted 4 ads.
+KwId: 55301 | Country: IT | breitling chronomat cinturino
+Import OK for keyword_id=55301. Inserted 48 ads.
+KwId: 95749 | Country: IT | peluche pippo
+Import OK for keyword_id=95749. Inserted 48 ads.
+KwId: 47533 | Country: IT | commodore 64 executive
+Import OK for keyword_id=47533. Inserted 21 ads.
+KwId: 262135 | Country: IT | thun volo
+Import OK for keyword_id=262135. Inserted 48 ads.
+KwId: 4019 | Country: IT | faro posteriore lancia
+Import OK for keyword_id=4019. Inserted 48 ads.
+KwId: 398398 | Country: IT | puff flex 2800 gusti
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=398398. Inserted 0 ads.
+KwId: 112689 | Country: IT | faro gilera
+Import OK for keyword_id=112689. Inserted 48 ads.
+KwId: 394486 | Country: IT | tappetino yoga decathlon
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=394486. Inserted 1 ads.
+KwId: 303726 | Country: IT | fiat 127 serie
+Import OK for keyword_id=303726. Inserted 48 ads.
+KwId: 84434 | Country: IT | fata les alpes tavolo
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=84434. Inserted 4 ads.
+KwId: 238806 | Country: IT | tenda ferrino proxes 5
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=238806. Inserted 1 ads.
+KwId: 363232 | Country: IT | tv smart sony 49 bravia
+Import OK for keyword_id=363232. Inserted 48 ads.
+KwId: 343546 | Country: IT | 3 polo
+Import OK for keyword_id=343546. Inserted 48 ads.
+KwId: 197791 | Country: IT | occhiali donna emporio armani
+Import OK for keyword_id=197791. Inserted 48 ads.
+KwId: 258395 | Country: IT | orologi parete kienzle
+Import OK for keyword_id=258395. Inserted 48 ads.
+KwId: 145664 | Country: IT | sicura submarine
+Import OK for keyword_id=145664. Inserted 48 ads.
+KwId: 252622 | Country: IT | cartucce caccia ricarica
+Import OK for keyword_id=252622. Inserted 45 ads.
+KwId: 366382 | Country: IT | tdi 0 q3 audi 2
+Import OK for keyword_id=366382. Inserted 48 ads.
+KwId: 221083 | Country: IT | motori fire 1200
+Import OK for keyword_id=221083. Inserted 36 ads.
+KwId: 28576 | Country: IT | olympus 5060
+Import OK for keyword_id=28576. Inserted 48 ads.
+KwId: 171581 | Country: IT | yamaha starter carburatore
+Import OK for keyword_id=171581. Inserted 48 ads.
+KwId: 133639 | Country: IT | secchio rame
+Import OK for keyword_id=133639. Inserted 48 ads.
+KwId: 24251 | Country: IT | uncinetto
+Import OK for keyword_id=24251. Inserted 48 ads.
+KwId: 222249 | Country: IT | goerz tenax
+Import OK for keyword_id=222249. Inserted 48 ads.
+KwId: 338184 | Country: IT | honda slr 1997
+Import OK for keyword_id=338184. Inserted 48 ads.
+KwId: 72531 | Country: IT | corpo forestale
+Import OK for keyword_id=72531. Inserted 48 ads.
+KwId: 363214 | Country: IT | yamaha max x 2008 250
+Import OK for keyword_id=363214. Inserted 48 ads.
+KwId: 39128 | Country: IT | wii pro
+Import OK for keyword_id=39128. Inserted 48 ads.
+KwId: 25213 | Country: IT | wild star
+Import OK for keyword_id=25213. Inserted 48 ads.
+KwId: 259268 | Country: IT | bocchini tromba bach
+Import OK for keyword_id=259268. Inserted 48 ads.
+KwId: 42576 | Country: IT | lima confezione
+Import OK for keyword_id=42576. Inserted 48 ads.
+KwId: 42837 | Country: IT | imbottitura giacca
+Import OK for keyword_id=42837. Inserted 48 ads.
+KwId: 247515 | Country: IT | volante fiat panda 750
+Import OK for keyword_id=247515. Inserted 48 ads.
+KwId: 350334 | Country: IT | trenino legno accessori
+Import OK for keyword_id=350334. Inserted 48 ads.
+KwId: 291498 | Country: IT | antico specchio bar
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=291498. Inserted 1 ads.
+KwId: 315464 | Country: IT | philip watch chaux
+Import OK for keyword_id=315464. Inserted 46 ads.
+KwId: 154881 | Country: IT | omega movimento
+Import OK for keyword_id=154881. Inserted 48 ads.
+KwId: 347647 | Country: IT | city fiat 500 l
+Import OK for keyword_id=347647. Inserted 48 ads.
+KwId: 255912 | Country: IT | easy star multiplex
+Import OK for keyword_id=255912. Inserted 48 ads.
+KwId: 408147 | Country: IT | tende doppio velo ikea
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=408147. Inserted 0 ads.
+KwId: 279190 | Country: IT | motoguzzi falcone 500 sella
+Import OK for keyword_id=279190. Inserted 11 ads.
+KwId: 35328 | Country: IT | opel corsa b ricambi
+Import OK for keyword_id=35328. Inserted 48 ads.
+KwId: 401273 | Country: IT | cofanetti profumi mignon
+Import OK for keyword_id=401273. Inserted 48 ads.
+KwId: 302790 | Country: IT | armadio ad angolo bologna
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=302790. Inserted 0 ads.
+KwId: 63029 | Country: IT | piatto crisp
+Import OK for keyword_id=63029. Inserted 48 ads.
+KwId: 142384 | Country: IT | grenson
+Import OK for keyword_id=142384. Inserted 48 ads.
+KwId: 48924 | Country: IT | modellismo elettrico
+Import OK for keyword_id=48924. Inserted 48 ads.
+KwId: 399552 | Country: IT | piante di alloro 150 cm
+Import OK for keyword_id=399552. Inserted 9 ads.
+KwId: 410934 | Country: IT | centro moderno uncinetto
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=410934. Inserted 3 ads.
+KwId: 60142 | Country: IT | samla ikea
+Import OK for keyword_id=60142. Inserted 48 ads.
+KwId: 381662 | Country: IT | legno vero camera
+Import OK for keyword_id=381662. Inserted 48 ads.
+KwId: 363364 | Country: IT | audi 272 tts cv
+Import OK for keyword_id=363364. Inserted 48 ads.
+KwId: 125742 | Country: IT | pesca attrezzature
+Import OK for keyword_id=125742. Inserted 48 ads.
+KwId: 109017 | Country: IT | yamaha majesty 400 frecce
+Import OK for keyword_id=109017. Inserted 48 ads.
+KwId: 200537 | Country: IT | cariola giardino
+Import OK for keyword_id=200537. Inserted 12 ads.
+KwId: 105373 | Country: IT | remus 147
+Import OK for keyword_id=105373. Inserted 48 ads.
+KwId: 363205 | Country: IT | variant 1 bleach steelbox
+Import OK for keyword_id=363205. Inserted 6 ads.
+KwId: 322127 | Country: IT | gonna flamenco
+Import OK for keyword_id=322127. Inserted 48 ads.
+KwId: 287797 | Country: IT | cassettiera 3 cassetti torino
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=287797. Inserted 1 ads.
+KwId: 382814 | Country: IT | camicia svasata
+Import OK for keyword_id=382814. Inserted 48 ads.
+KwId: 405369 | Country: IT | mio amico robot
+Import OK for keyword_id=405369. Inserted 48 ads.
+KwId: 396730 | Country: IT | adidas galaxy 2002
+Import OK for keyword_id=396730. Inserted 6 ads.
+KwId: 313137 | Country: IT | lampadari marocco
+Import OK for keyword_id=313137. Inserted 48 ads.
+KwId: 48271 | Country: IT | olympia nitro
+Import OK for keyword_id=48271. Inserted 20 ads.
+KwId: 111881 | Country: IT | neon genesis evangelion
+Import OK for keyword_id=111881. Inserted 48 ads.
+KwId: 413524 | Country: IT | posate alpacca vintage
+Import OK for keyword_id=413524. Inserted 48 ads.
+KwId: 273120 | Country: IT | sedili corsa gsi
+Import OK for keyword_id=273120. Inserted 19 ads.
+KwId: 205828 | Country: IT | telefono isdn telecom
+Import OK for keyword_id=205828. Inserted 10 ads.
+KwId: 19070 | Country: IT | jvc sp
+Import OK for keyword_id=19070. Inserted 48 ads.
+KwId: 331454 | Country: IT | mbk thunder 125
+Import OK for keyword_id=331454. Inserted 48 ads.
+KwId: 180273 | Country: IT | stampante samsung ml 3310
+Import OK for keyword_id=180273. Inserted 48 ads.
+KwId: 380089 | Country: IT | 36 lt igloo
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=380089. Inserted 2 ads.
+KwId: 345776 | Country: IT | tendine airbag toyota rav 4
+Import OK for keyword_id=345776. Inserted 48 ads.
+KwId: 373804 | Country: IT | juventus abbigliamento
+Import OK for keyword_id=373804. Inserted 48 ads.
+KwId: 324910 | Country: IT | san chirico
+Import OK for keyword_id=324910. Inserted 48 ads.
+KwId: 359841 | Country: IT | 1 citroen 4 idroguida hdi c3
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=359841. Inserted 3 ads.
+KwId: 122194 | Country: IT | pabx
+Import OK for keyword_id=122194. Inserted 48 ads.
+KwId: 360852 | Country: IT | 2000 bmw r 1150 gs
+Import OK for keyword_id=360852. Inserted 48 ads.
+KwId: 176824 | Country: IT | i borboni
+Import OK for keyword_id=176824. Inserted 48 ads.
+KwId: 76763 | Country: IT | microfono spia direzionale
+Import OK for keyword_id=76763. Inserted 21 ads.
+KwId: 75053 | Country: IT | jbl b
+Import OK for keyword_id=75053. Inserted 48 ads.
+KwId: 351445 | Country: IT | enduro divertente
+Import OK for keyword_id=351445. Inserted 48 ads.
+KwId: 139000 | Country: IT | pc pavilion
+Import OK for keyword_id=139000. Inserted 48 ads.
+KwId: 182167 | Country: IT | emu tavoli
+Import OK for keyword_id=182167. Inserted 48 ads.
+KwId: 215364 | Country: IT | 245 40 18 93y
+Import OK for keyword_id=215364. Inserted 48 ads.
+KwId: 15915 | Country: IT | denon dcd 2000
+Import OK for keyword_id=15915. Inserted 48 ads.
+KwId: 174893 | Country: IT | impermeabile pioggia bambina
+Import OK for keyword_id=174893. Inserted 48 ads.
+KwId: 123684 | Country: IT | 2 biciclette mtb
+Import OK for keyword_id=123684. Inserted 48 ads.
+KwId: 38454 | Country: IT | scarpe carnac
+Import OK for keyword_id=38454. Inserted 48 ads.
+KwId: 375736 | Country: IT | fs350 decespugliatore stihl
+Import OK for keyword_id=375736. Inserted 48 ads.
+KwId: 376340 | Country: IT | bancone isola
+Import OK for keyword_id=376340. Inserted 27 ads.
+KwId: 95424 | Country: IT | bagno arte povera
+Import OK for keyword_id=95424. Inserted 48 ads.
+KwId: 96830 | Country: IT | baby bjorn air
+Import OK for keyword_id=96830. Inserted 48 ads.
+KwId: 399542 | Country: IT | copricostume donna tezenis
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=399542. Inserted 5 ads.
+KwId: 162290 | Country: IT | next computer
+Import OK for keyword_id=162290. Inserted 48 ads.
+KwId: 313080 | Country: IT | daiwa super tanacom
+Import OK for keyword_id=313080. Inserted 48 ads.
+KwId: 234320 | Country: IT | radiatore rally 125
+Import OK for keyword_id=234320. Inserted 48 ads.
+KwId: 178381 | Country: IT | ac dc vinile originali
+Import OK for keyword_id=178381. Inserted 48 ads.
+KwId: 37223 | Country: IT | tiragraffi amaca
+Import OK for keyword_id=37223. Inserted 48 ads.
+KwId: 360465 | Country: IT | centrale golf tunnel 6
+Import OK for keyword_id=360465. Inserted 48 ads.
+KwId: 293534 | Country: IT | turbo racing adesivi
+Import OK for keyword_id=293534. Inserted 38 ads.
+KwId: 397937 | Country: IT | collane vintage anni '50
+Import OK for keyword_id=397937. Inserted 48 ads.
+KwId: 390078 | Country: IT | plafoniera led soffitto
+Import OK for keyword_id=390078. Inserted 48 ads.
+KwId: 283250 | Country: IT | poltrona relax bologna
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=283250. Inserted 0 ads.
+KwId: 224636 | Country: IT | girello voltafieno
+Skip: <= 5 products in JSON.
+Import OK for keyword_id=224636. Inserted 5 ads.
+KwId: 34679 | Country: IT | akrapovic 1198
+Import OK for keyword_id=34679. Inserted 48 ads.
+KwId: 132597 | Country: IT | gomme kia sportage
+Import OK for keyword_id=132597. Inserted 48 ads.
+KwId: 393845 | Country: IT | smeg bollitore
+Import OK for keyword_id=393845. Inserted 48 ads.
+KwId: 385897 | Country: IT | garmin solar edition 6 pro
+Import OK for keyword_id=385897. Inserted 48 ads.
+KwId: 70272 | Country: IT | bandiera ssc napoli
+Import OK for keyword_id=70272. Inserted 48 ads.
+KwId: 167046 | Country: IT | sony fisheye
+Import OK for keyword_id=167046. Inserted 48 ads.
+KwId: 200396 | Country: IT | gio ponti specchi
+Import OK for keyword_id=200396. Inserted 26 ads.
+KwId: 104199 | Country: IT | minolta xe 1
+Import OK for keyword_id=104199. Inserted 48 ads.
+KwId: 313355 | Country: IT | cerchi lega originali audi 18
+Import OK for keyword_id=313355. Inserted 48 ads.
+*** End of crawl for IT (keywords: 500) | 2025-12-09 06:23:08

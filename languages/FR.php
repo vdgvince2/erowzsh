@@ -1,6 +1,5 @@
 <?php
 // Translations
-$HeaderDropDown = array("Toutes les catégories", "Articles de sport", "Pêche", "Sports de plein air");
 $Header_Link_summary = "Résumé";
 $Header_Link_watchlist = "Suivi";
 $Header_Link_myaccount = "Compte";
@@ -56,7 +55,7 @@ $label_freepostage = "Livraison gratuite";
 $arraySticker = ["HOT", "NOUVEAU", "STOCK BAS", "2 DISPO"];
 $stopwords = ["occasion"];
 $label_product_metadesc_generic = " :  sélection des produits les moins chers, d'occasion ou neufs. Site facile et rapide.";
-$array_advices  = ["neuf" => "LH_ItemCondition", "occasion" => "", "les moins chers"  => "&_sop=2", "les plus chers" => "&_sop=3", "les plus vendus" => ""];
+$array_advices  = ["neuf" => "conditionNew", "occasion" => "conditionUsed", "les moins chers"  => "&_sop=15", "les plus chers" => "&_sop=16", "les plus vendus" => ""];
 $label_FAQ = "Questions fréquentes";
 
 $_TAIL = " d'occasion"; // tail for the page title

@@ -1,7 +1,4 @@
 <?php
-require __DIR__ . '/inc/config.php'; 
-require __DIR__ . '/inc/functions.php'; 
-
 
 $pageTitle = $WebsiteName;
 $additionnalMetaDesc = $label_hero_title;
@@ -49,10 +46,14 @@ $categories = $stmt->fetchAll();
     <div class="rounded-2xl bg-gray-50 p-6 sm:p-10 shadow-sm">
       <h1 class="text-2xl sm:text-4xl font-bold tracking-tight"><?= htmlspecialchars($label_hero_title, ENT_QUOTES, 'UTF-8') ?></h1>
       <p class="mt-3 text-gray-600 max-w-2xl"><?= htmlspecialchars($label_hero_subtitle, ENT_QUOTES, 'UTF-8') ?></p>
-        <form role="search" aria-label="Site search" action="bargain.php#results" method="post">
+        <form role="search" aria-label="Site search" action="<?=$rootDomain.$base;?>s/bargain#results" method="post">
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             <div class="">
-              <input type="text" name="keyword_search" placeholder="<?= htmlspecialchars($label_search_placeholder, ENT_QUOTES, 'UTF-8') ?>" class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10">
+              <input type="text" 
+                     name="keyword_search" 
+                     data-hj-allow
+                     placeholder="<?= htmlspecialchars($label_search_placeholder, ENT_QUOTES, 'UTF-8') ?>" 
+                     class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10">
               <input type="hidden" name="mode" value="standard" />
             </div>
             <div class="">
@@ -129,7 +130,7 @@ $categories = $stmt->fetchAll();
     <div class="rounded-2xl bg-white p-6 sm:p-8 border border-gray-200 p-6 sm:p-10 shadow-sm">
       <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_international_title, ENT_QUOTES, 'UTF-8') ?></h2>
       <div class="prose max-w-none prose-p:mt-2 prose-p:leading-relaxed">
-        <p><?= htmlspecialchars($label_international_p1, ENT_QUOTES, 'UTF-8') ?></p>
+        <p><?= $label_international_p1; ?></p>
       </div>
 
       <!-- Country chips -->

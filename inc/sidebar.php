@@ -1,11 +1,39 @@
 <?php
 
-// We display related search instead of filters 
+/***
+ * SIDEBAR
+ * DISPLAY THE BASIC LINKS : USED, NEW, CHEAPEST, etc.
+ * TODO : re-instate the real filters : color, size, etc. 
+ * 
+ * */ 
 
 
 // We prepare the same content for mobile & desktop
 $ret_toDisplay = "";
 
+// PREPARE THE FILTERS FOR DESKTOP AND MOBILE
+$filtersToDisplayDesktop = "";
+$filtersToDisplayMobile = "";
+$i = 0;
+foreach($array_advices as $advice => $filterKey){
+    // RULES FOR THE NEW/USED BUTTONS
+    if($filterKey == "conditionNew" or $filterKey == "conditionUsed"){
+            $condition = $filterKey;
+            $filterKey = null;
+    }
+    
+    $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null, $filterKey, $condition);
+    $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_FILTERDESKTOP_", $AffiliateSearchLink);
+    
+    // obfuscation
+    $AffiliateSearchLink = base64_encode($AffiliateSearchLink);    
+
+    $filtersToDisplayDesktop .= "<li><a href='#' target=_blank data-url='$AffiliateSearchLink' class='clickable-product cursor-pointer rounded-xl border px-4 mb-2'>".ucfirst($advice)."</a></li>";
+    $filtersToDisplayMobile .= "<li><a href='#' target=_blank data-url='$AffiliateSearchLink' class='clickable-product cursor-pointer rounded-xl border px-4 mb-2'>".ucfirst($advice)."</a></li>";
+    // Specific mobile on 2 lines
+    $i++;
+    if($i=="3") $filtersToDisplayMobile .= "</ul><ul class='flex flex-wrap gap-x-2 gap-y-2 mt-3'>";
+}
 
 ?>
 <!-- DESKTOP FILTERS -->
@@ -15,19 +43,7 @@ $ret_toDisplay = "";
             <h4 class="font-bold text-lg mb-4"><?=$label_filters;?></h4>
             <div class="justify-between items-center mb-4">
             <ul>
-                <?php 
-                    foreach($array_advices as $advice => $filterKey){
-                        // build the link and add the extra parameters.
-                        $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null, $filterKey);
-                        $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_FILTERDESKTOP_", $AffiliateSearchLink);
-
-                        // remove the condition if new
-                        if($filterKey == "LH_ItemCondition") $AffiliateSearchLinkFilter = str_replace("&LH_ItemCondition=3000", "", $AffiliateSearchLink);
-                        // obfuscation
-                        $AffiliateSearchLinkFilter = base64_encode($AffiliateSearchLinkFilter);    
-                        echo "<li><a href='#' data-url='$AffiliateSearchLinkFilter' class='clickable-product cursor-pointer rounded-xl border px-4 mb-2'>".ucfirst($advice)."</a></li>";
-                    }
-                ?>
+                <?=$filtersToDisplayDesktop;?>
             </ul>
             </div>
         </div>                 
@@ -39,23 +55,7 @@ $ret_toDisplay = "";
   <div class="max-w-screen-xl mx-auto py-2">
     <h4 class="font-bold text-lg mb-4"><?=$label_filters;?></h4>
     <ul class="flex flex-wrap gap-x-2 gap-y-2">
-        <?php 
-        $i = 0;
-        foreach($array_advices as $advice => $filterKey){
-            // build the link and add the extra parameters.
-            $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null, $filterKey);
-            $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_FILTERMOBILE_", $AffiliateSearchLink);
-
-            // remove the condition if new
-            if($filterKey == "LH_ItemCondition") $AffiliateSearchLinkFilter = str_replace("&LH_ItemCondition=3000", "", $AffiliateSearchLink);
-            // obfuscation
-            $AffiliateSearchLinkFilter = base64_encode($AffiliateSearchLinkFilter);    
-            echo "<li class='px-2'><a href='#' data-url='$AffiliateSearchLinkFilter' class='clickable-product cursor-pointer cinline-flex items-center px-3 py-1 border rounded-full text-sm'>".ucfirst($advice)."</a></li>";
-            // split in 2 lines
-            $i++;
-            if($i=="3") echo "</ul><ul class='flex flex-wrap gap-x-2 gap-y-2 mt-3'>";
-        }
-        ?>
+        <?=$filtersToDisplayMobile;?>
     </ul>
   </div>
 </div>

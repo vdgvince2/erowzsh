@@ -1,6 +1,5 @@
 <?php
 // Translations
-$HeaderDropDown = array("Alle Kategorien", "Sportartikel", "Angeln", "Outdoor-Sportarten");
 $Header_Link_summary = "Übersicht";
 $Header_Link_watchlist = "Beobachtungsliste";
 $Header_Link_myaccount = "Konto";
@@ -56,7 +55,7 @@ $label_freepostage = "Kostenloser Versand";
 $arraySticker = ["HEISS", "NEU", "GERINGER BESTAND", "2 VERFÜGBAR"];
 $stopwords = ["gebraucht", "gebraucht-kaufen", "kaufen"];
 $label_product_metadesc_generic = " : Auswahl der günstigsten Produkte, gebraucht oder neu. Einfache und schnelle Website.";
-$array_advices  = ["neu" => "LH_ItemCondition", "gebraucht" => "", "die günstigsten" => "&_sop=2", "die teuersten" => "&_sop=3", "die meistverkauften" => ""];
+$array_advices  = ["neu" => "conditionNew", "gebraucht" => "conditionUsed", "die günstigsten" => "&_sop=15", "die teuersten" => "&_sop=16", "die meistverkauften" => ""];
 $label_FAQ = "Häufig gestellte Fragen";
 
 $_TAIL = " "; // nothing because gebraucht kaufen is already in the title.

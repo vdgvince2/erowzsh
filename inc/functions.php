@@ -1,5 +1,75 @@
 <?php
 
+/**
+ * PRE CONFIG
+ * WITH URL FOR KEYWORD PAGE
+ * AND MYSQL CONNECTOR
+ */
+
+/* GESTION DES URLS */
+if(isset($_SERVER['REQUEST_URI'])){
+    $URI = $_SERVER['REQUEST_URI']; 
+    if (strpos($URI, $base) === 0) {
+        $URI = substr($URI, strlen($base));
+    }
+    $URI = trim($URI, "/");
+}
+
+/*** MYSQL CONNECTOR */
+try {
+    $dsn = "mysql:host={$dbConfig['host']};port={$dbConfig['port']};dbname={$dbConfig['dbname']};charset={$dbConfig['charset']}";
+    $pdo = new PDO($dsn, $dbConfig['user'], $dbConfig['pass'], [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ]);
+
+} catch (PDOException $e) {
+    die("❌ Erreur connexion MySQL : " . $e->getMessage());
+}
+
+/***
+ *  START ALL THE FUNCTIONS
+ *  
+ */
+
+/*****  Manage the subdomains */
+function get_subdomain_prefix() {
+    if (empty($_SERVER['HTTP_HOST'])) {
+        return false;
+    }
+
+    // Enlève le port éventuel : "billy.localhost:8888" → "billy.localhost"
+    $host = explode(':', $_SERVER['HTTP_HOST'])[0];
+
+    $parts = explode('.', $host);
+    $count = count($parts);
+
+    // Cas spécial localhost : billy.localhost, api.localhost, etc.
+    if ($parts[$count - 1] === 'localhost') {
+        // "localhost" seul → pas de sous-domaine
+        if ($count === 1) {
+            return false;
+        }
+        // "billy.localhost" → sous-domaine = "billy"
+        return $parts[0];
+    }
+
+    // Domaine classique : monsite.com, www.monsite.com, api.monsite.com, etc.
+    if ($count <= 2) {
+        return false; // pas de sous-domaine
+    }
+
+    // Ignore "www" comme faux sous-domaine
+    if ($parts[0] === 'www') {
+        return ($count > 3) ? $parts[1] : false;
+    }
+
+    return $parts[0];
+}
+
+
+
 
 function clean_url($string, $replacer = "-") {
 
@@ -442,7 +512,7 @@ function homepageBlog($pdo, int $limit = 5): string{
 }
 
 // Build the tracking link for ebay, amazon etc.
-function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilters = null){
+function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilters = null, $condition = "conditionUsed"){
 
     global $ebayRootURL, $ebay_mkrid, $ebay_siteid, $ebay_campid, $_AMAZON_AFFILIATE_LINK;
 
@@ -454,7 +524,17 @@ function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilter
 
     // if no url provided, it's a search.
     if($url == null){
-        $AffiliateSearchLink = $ebayRootURL."/sch/i.html?_nkw=".$ebay_search_keyword."&_sacat=0&_from=R40&rt=nc&LH_ItemCondition=3000".$affiliate_tracker.$extrafilters;
+
+        if($condition =="conditionNew"){
+        // EBAY NEW CONDITION = 1000
+        $conditionFilter = "&LH_ItemCondition=1000";
+        }else{
+        // EBAY USED & DERIVATED CONDITION = 1000|1500|2010|2020|2030|3000|7000
+        $conditionFilter = "&LH_ItemCondition=1500|2010|2020|2030|3000|7000";
+        }
+
+        $AffiliateSearchLink = $ebayRootURL."/sch/i.html?_nkw=".$ebay_search_keyword."&_sacat=0&_from=R40&rt=nc".$conditionFilter.$affiliate_tracker.$extrafilters;
+
     }else{
     // if there is a url provided, just add the trackers
         $AffiliateSearchLink = $url.$affiliate_tracker.$extrafilters;
@@ -465,6 +545,9 @@ function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilter
 
     return $AffiliateSearchLink;
 }
+
+
+
 
 // cut a string but don't split a word in two.
 function truncate_no_cut($text, $limit = 30)
@@ -524,7 +607,7 @@ function extract_top_ngrams(string $text, int $minN = 1, int $maxN = 3, int $top
 
     $n = count($cleanTokens);
     if ($n === 0) {
-        return [];
+        return "";
     }
 
     // 3) Génération des n-grams + comptage
@@ -582,7 +665,10 @@ function extract_top_ngrams(string $text, int $minN = 1, int $maxN = 3, int $top
     }
 
     // prepare the output
-    $shortNgrams = implode(" &#8226; ", $selected);
+    $shortNgrams = "";
+    if(is_array($selected)){
+        $shortNgrams = implode(" &#8226; ", $selected);
+    }
 
     return $shortNgrams;
 }
@@ -592,8 +678,36 @@ function extract_top_ngrams(string $text, int $minN = 1, int $maxN = 3, int $top
 
 /* debug local log file */
 function log_local_write($debugLine){
-    $debugLine = date('Y-m-d H:i:s') ." ". $debugLine.PHP_EOL;
-    file_put_contents('/Applications/MAMP/htdocs/SH/scripts/crawler/schedulers/logs/ebay_browse_debug.log', $debugLine, FILE_APPEND);
+    global $isLocal, $countryCode;
+
+    $debugLine = $countryCode." >> ".date('Y-m-d H:i:s') ." ". $debugLine.PHP_EOL;
+
+    if($isLocal){
+        $directory = "/Applications/MAMP/htdocs/SH/scripts/crawler/schedulers/logs/";
+    }else{
+        $directory = "/var/www/vhosts/crawlers/logs/";
+    }
+    
+    file_put_contents($directory.'ebay_browse_debug.log', $debugLine, FILE_APPEND);
+}
+
+// NORMALIZE THE SUB DOMAIN 
+function normalizeRootDomain($url, $rootDomain, $SERVER_Protocol, $base) {
+    // On découpe l'URL
+    $parts = parse_url($rootDomain);
+
+    // Host nu (sans www)
+    $host = $parts['host'] ?? $rootDomain;
+    $host = preg_replace('#^www\.#i', '', $host);
+
+    // Ajouter le port si présent
+    if (isset($parts['port'])) {
+        $host .= ':' . $parts['port'];
+    }
+
+    $host = $SERVER_Protocol."://".$url.".".$host.$base;
+
+    return $host;
 }
 
 ?>

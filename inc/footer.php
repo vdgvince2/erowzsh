@@ -149,7 +149,7 @@
     <?php
     // Show Outpush script if on production
     
-    if (!$isLocal && !$isEdge) {
+    if (!$isLocal && !$isEdge && !$isSub) {
         echo $outpush;
     }
     ?>

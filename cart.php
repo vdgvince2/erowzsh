@@ -6,9 +6,6 @@
 // don't display ads for this page
 $noAds = true;
 
-require __DIR__ . '/inc/config.php'; 
-require __DIR__ . '/inc/functions.php'; 
-
 
 $pageTitle = $label_cart." - ". $WebsiteName;
 

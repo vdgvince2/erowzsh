@@ -1,14 +1,9 @@
 Country passed : be
-KwId: 39588 | Country: BE | fmateriel peche
+KwId: 39046 | Country: BE | igetimage
+Categorie from ebay: Display Specimens
+Categorie match :  ()
+Import OK for keyword_id=39046. Inserted 48 ads.
+OK: 'igetimage' (0/500) => keyword_id=39046; KW not found #6268 supprimé.
+KwId: 40212 | Country: BE | lunette 306 cabriolet
 Skip: <= 5 products in JSON.
-OK: 'fmateriel peche' (0/500) => keyword_id=39588; KW not found #5088 supprimé.
-KwId: 39589 | Country: BE | les oracles
-Categorie from ebay: Livres anciens, de collection
-Categorie match :  ()
-Import OK for keyword_id=39589. Inserted 48 ads.
-OK: 'les oracles' (1/500) => keyword_id=39589; KW not found #5089 supprimé.
-KwId: 39590 | Country: BE | radio fun
-Categorie from ebay: CD
-Categorie match :  ()
-Import OK for keyword_id=39590. Inserted 48 ads.
-OK: 'radio fun' (2/500) => keyword_id=39590; KW not found #5090 supprimé.
+OK: 'lunette 306 cabriolet' (1/500) => keyword_id=40212; KW not found #6269 supprimé.

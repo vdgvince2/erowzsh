@@ -10,8 +10,6 @@
 // don't display ads for this page
 $noAds = true;
 
-include_once __DIR__.'/inc/config.php';
-include_once __DIR__.'/inc/functions.php';
 
 /**
  * Si ton app est dans un sous-dossier (ex: /SH), précise-le ici pour
@@ -115,12 +113,29 @@ $pageTitle = $label_search_notfound;
     <p><?=$label_search_somethingwrong;?> <code><?php if(isset($errorInfo)) echo $errorInfo;?></code></p>
     <p><?=$label_search_try;?></p>
 
-    <form action="search.php" method="post">
-    <input type="text" name="keyword"  placeholder="ex: ipad..." class="border border-gray-300 px-4 py-2 ">
-    <button class="px-4 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">
-        <?=$label_search_button;?>
-    </button>
-    </form>
+        <form class="hidden md:flex flex-1 mx-4" action="<?=$rootDomain.$base;?>s/bargain#results" method="post">
+          <div class="flex w-full bg-gray-50 rounded-full shadow-sm overflow-hidden">
+            <input type="hidden" name="mode" value="standard" />
+            <input
+              type="text"
+              placeholder="ipad, smartphone, ..."
+              data-hj-allow
+              class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none"
+              name="keyword_search"
+            />
+            <button
+              type="submit"
+              class="flex items-center justify-center px-5 bg-blue-500 text-white"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
+              </svg>
+            </button>
+          </div>
+        </form>
+
 
     <p style="margin-top:1rem;">
       <?=$label_search_goback;?> <a href="<?= $rootDomain.$base; ?>"><?=$label_search_homepage;?></a>.
