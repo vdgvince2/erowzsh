@@ -159,10 +159,25 @@
     }
     ?>
     </section>
+    <?php
+    /* internal linking SUB DOMAIN */
+    if (!empty($subDomainInternalLinks)): ?>
+    <section class="mt-8"  id="related-categories">
+    <h2 class="text-lg font-semibold"><?=$label_template_internalLinkingSubdom;?></h2>
+    <div class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <?php foreach ($subDomainInternalLinks as $link): ?>
+        <a href="<?=normalizeRootDomain($link['subdomain'], $rootDomain, $SERVER_Protocol, $base);?>"
+            class="rounded-xl border border-gray-200 bg-white px-4 hover:shadow-sm relatedbutton">
+            <?= htmlspecialchars($link['keyword_name'], ENT_QUOTES) ?>
+        </a>
+        <?php endforeach; ?>
+    </div>
+    </section>
+    <?php endif; ?>
 
     <?php
-    /* internal linking categories */
-    if (!empty($relatedLevel1Categories)): ?>
+    /* internal linking CATEGORIES */
+    if (!empty($relatedLevel1Categories) && $isSub == false): ?>
     <section class="mt-8"  id="related-categories">
     <h2 class="text-lg font-semibold"><?= htmlspecialchars($sectionLevel1Title, ENT_QUOTES) ?></h2>
     <div class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -177,8 +192,8 @@
     <?php endif; ?>
 
     <?php 
-    /* internal linking products */
-    if (!empty($relatedKeywords)): ?>
+    /* internal linking PRODUCTS */
+    if (!empty($relatedKeywords) && $isSub == false): ?>
     <section class="mt-8" id="related-keywords">
         <h2 class="text-lg font-semibold"><?=$label_related;?></h2>
         <div class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3">

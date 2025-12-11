@@ -27,6 +27,15 @@ function fetchBargainResults() {
             results.innerHTML =
                 '<div class="bg-red-100 text-red-700 px-4 py-3 rounded">Unexpected response from server.</div>';
         }
+        /* afficher les filtres après submit */
+        const refinePanel   = document.getElementById('refine-panel');
+        refinePanel.classList.remove('hidden');
+        /* aller à l'acnre results pour mobile */
+        const el = document.getElementById('results');
+        el.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     })
     .catch(err => {
         console.error(err);

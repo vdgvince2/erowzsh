@@ -57,6 +57,7 @@ $stopwords = ["gebraucht", "gebraucht-kaufen", "kaufen"];
 $label_product_metadesc_generic = " : Auswahl der günstigsten Produkte, gebraucht oder neu. Einfache und schnelle Website.";
 $array_advices  = ["neu" => "conditionNew", "gebraucht" => "conditionUsed", "die günstigsten" => "&_sop=15", "die teuersten" => "&_sop=16", "die meistverkauften" => ""];
 $label_FAQ = "Häufig gestellte Fragen";
+$label_template_internalLinkingSubdom = "Das könnte Ihnen auch gefallen...";
 
 $_TAIL = " "; // nothing because gebraucht kaufen is already in the title.
 

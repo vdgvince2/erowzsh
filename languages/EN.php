@@ -59,6 +59,7 @@ $stopwords = ["used", "for sale", "for-sale"];
 $label_product_metadesc_generic = " : selection of the cheapest products, used or new. Easy and fast website.";
 $array_advices  = ["new" => "conditionNew", "used" => "conditionUsed", "cheapest" => "&_sop=15", "most expensive" => "&_sop=16", "best sellers" => ""];
 $label_FAQ = "Frequently Asked Questions";
+$label_template_internalLinkingSubdom = "You might also like...";
 
 $_TAIL = " used for sale"; // tail for the page title
 

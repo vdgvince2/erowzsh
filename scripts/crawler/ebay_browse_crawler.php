@@ -177,17 +177,24 @@ function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 50, i
 /* Fonction that works for NotFound keywords (=> add keyword) and for Update of the Ads 
     Example: updateAds($pdo, $ebay_marketplace, $_EBAY_MAX_ADS, $_GET['keyword_id'], $countryCode, "update")
 */
-function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null, $keywordId = 0, $actionType = "update"){
+function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null, $keywordId = 0, $actionType = "update", $subDomain = false){
 
-    
+    // MANAGE THE SUBDOMAIN TABLES
+    if($subDomain === true){
+        $TABLE_keywords = "subdomain_keywords";
+        $TABLE_ads = "subdomain_ads";
+    }else{
+        $TABLE_keywords = "keywords";
+        $TABLE_ads = "ads";        
+    }
 
     // Retrieve the keyword name
-    $stmt = $pdo->prepare("SELECT keyword_name FROM keywords WHERE id = :id LIMIT 1");
+    $stmt = $pdo->prepare("SELECT keyword_name FROM $TABLE_keywords WHERE id = :id LIMIT 1");
     $stmt->execute([':id' => $keywordId]);
     $keywordArray = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if(empty($keywordArray)) { echo "No 404 keyword found"; exit(); }
-    echo "KwId: $keywordId | Country: $countryCode | ". $keywordArray['keyword_name'].PHP_EOL;
+    echo "KwId: $keywordId | (Sub: $subDomain) -- Country: $countryCode | ". $keywordArray['keyword_name'].PHP_EOL;
 
     // Get the JSON.
     $result = browse_search($keywordArray['keyword_name'], $ebay_marketplace, $maxAds, 0, ['fieldgroups' => 'PRODUCT']);
@@ -210,7 +217,7 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
         // remove the keyword if no ads only for the notFound
         if($actionType == "notfound"){
-            $del = $pdo->prepare("DELETE FROM keywords WHERE id = :kid");
+            $del = $pdo->prepare("DELETE FROM $TABLE_keywords WHERE id = :kid");
             $del->execute([':kid' => $keywordId]);
 
             // remove from notfound : TODO : mark it as not to process anymore
@@ -268,7 +275,7 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
             // Mettre à jour la table keywords.main_category si on a trouvé une catégorie
             if ($matchedCategoryId !== null) {
-                $upd = $pdo->prepare("UPDATE keywords SET main_category = :cid WHERE id = :kid");
+                $upd = $pdo->prepare("UPDATE $TABLE_keywords SET main_category = :cid WHERE id = :kid");
                 $upd->execute([
                     ':cid' => $matchedCategoryId,
                     ':kid' => $keywordId
@@ -286,7 +293,7 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
         /* prépar des categories */
         if($actionType == "update"){
             $sql_categ = "SELECT category_name_path, category_level1, category_level2, category_level3
-                            FROM ads
+                            FROM $TABLE_ads
                             WHERE keyword_id = :id
                             LIMIT 1";
 
@@ -308,12 +315,12 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
         // Supprimer les annonces existantes pour ce keyword
         
-        $del = $pdo->prepare("DELETE FROM ads WHERE keyword_id = :kid");
+        $del = $pdo->prepare("DELETE FROM $TABLE_ads WHERE keyword_id = :kid");
         $del->execute([':kid' => $keywordId]);        
 
         // Préparer l'INSERT des nouvelles annonces
         $ins = $pdo->prepare("
-            INSERT INTO ads
+            INSERT INTO $TABLE_ads
                 (keyword_id, title_original, description_itemspecs, photo, price, url, category_name_path, category_level1, category_level2, category_level3, insert_date)
             VALUES
                 (:keyword_id, :title_original, :description_itemspecs, :photo, :price, :url, :category_name_path, :category_level1, :category_level2, :category_level3, now())
@@ -378,7 +385,7 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
         echo "Import OK for keyword_id={$keywordId}. Inserted " . count($items) . " ads.\n";
 
         // update the keyword last_update datetime
-        $upd = $pdo->prepare("UPDATE keywords SET last_update = now() WHERE id = :kid");
+        $upd = $pdo->prepare("UPDATE $TABLE_keywords SET last_update = now() WHERE id = :kid");
         $upd->execute([':kid' => $keywordId]);
         
     } catch (Throwable $e) {

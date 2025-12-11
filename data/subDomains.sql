@@ -58,3 +58,5 @@ ALTER TABLE `subdomain_ads`
 ALTER TABLE `subdomain_keywords`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+ALTER TABLE `subdomain_keywords` ADD FULLTEXT(`keyword_name`);

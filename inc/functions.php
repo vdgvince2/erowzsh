@@ -572,7 +572,7 @@ function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilter
     }
 
     // specific France, replace by amazon
-    if($countryCode == "FR") $AffiliateSearchLink = str_replace("KEYWORD_TO_REPLACE", $ebay_search_keyword, $_AMAZON_AFFILIATE_LINK);
+    if(in_array($countryCode, array("FR", "BE")) && $condition == null) $AffiliateSearchLink = str_replace("KEYWORD_TO_REPLACE", $ebay_search_keyword, $_AMAZON_AFFILIATE_LINK);
 
     return $AffiliateSearchLink;
 }
@@ -739,6 +739,61 @@ function normalizeRootDomain($url, $rootDomain, $SERVER_Protocol, $base) {
     $host = $SERVER_Protocol."://".$url.".".$host.$base;
 
     return $host;
+}
+
+
+/* subdomain internal linking */
+function findSubdomainKeywordsByKeyword(string $keyword, $dbo, $maxResults = 5): array
+{
+
+    // Sécurité basique
+    $keyword = trim($keyword);
+    if ($keyword === '') {
+        return [];
+    }
+
+    // 1) FULLTEXT SEARCH
+    $sqlFulltext = "
+        SELECT 
+            *,
+            MATCH(keyword_name) AGAINST (? IN NATURAL LANGUAGE MODE) AS score
+        FROM subdomain_keywords
+        WHERE MATCH(keyword_name) AGAINST (? IN NATURAL LANGUAGE MODE)
+        AND keyword_name <> ?
+        ORDER BY score DESC
+        LIMIT ".$maxResults;
+
+    $stmt = $dbo->prepare($sqlFulltext);
+    $stmt->execute([$keyword, $keyword, $keyword]);
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (!empty($results)) {
+        return $results;
+    }
+
+    // 2) Fallback : même première lettre
+    $firstLetter = mb_substr($keyword, 0, 1, 'UTF-8');
+    if ($firstLetter === false || $firstLetter === '') {
+        return [];
+    }
+
+    $sqlFallback = "
+        SELECT *
+        FROM subdomain_keywords
+        WHERE keyword_name LIKE :prefix
+        AND keyword_name <> :kwname
+        ORDER BY keyword_name ASC
+        LIMIT ".$maxResults;
+
+    $stmt2 = $dbo->prepare($sqlFallback);
+    $stmt2->execute([
+        ':prefix' => $firstLetter . '%',
+        ':kwname' => $keyword,
+    ]);
+
+    $fallbackResults = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+    return $fallbackResults ?: [];
+    
 }
 
 ?>

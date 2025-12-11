@@ -256,6 +256,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     <label class="block text-base font-medium mb-1"><?=$label_bargain_search;?>
                         <input type="text" name="q" value="<?php echo htmlspecialchars($searchTerm, ENT_QUOTES); ?>" class="w-full border rounded px-3 py-2">
                     </label>
+
+                    <button type="submit" class="w-full mt-4 bg-blue-600 text-white font-semibold py-2 rounded-lg">
+                        <?=$label_bargain_search;?>
+                    </button>
                 </div>
 
 
@@ -269,6 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         class="w-full flex items-center justify-between px-4 py-3"
                     >
                         <span class="block text-base font-medium mb-1"><?=$label_bargain_refine;?></span>
+                        <p class="block text-xs text-gray-500">Filter by distance, price, category…</p>
                         <svg
                             id="refine-toggle-icon"
                             class="w-4 h-4 transform transition-transform duration-200"
@@ -347,11 +352,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             <option value="distance" <?php echo $sortUi === 'distance' ? 'selected' : ''; ?>><?=$label_bargain_nearest;?></option>
                         </select>
                     </div>
-                </div>
-
-                <button type="submit" class="w-full mt-4 bg-blue-600 text-white font-semibold py-2 rounded-lg">
-                    <?=$label_bargain_search;?>
-                </button>
+                    <button type="submit" class="w-full mt-4 bg-blue-600 text-white font-semibold py-2 rounded-lg">
+                        <?=$label_bargain_search;?>
+                    </button>
+                </div>                
                 </form>
         </aside>
 
@@ -360,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div id="loading" class="hidden mb-4 text-blue-500 font-semibold">
                 <?=$label_bargain_loading;?>
             </div>            
-            <div id="results">                  
+            <div>                  
                 <?php render_bargain_results($postcode, $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, $mode); ?>
             </div>
         </main>

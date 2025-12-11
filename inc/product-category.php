@@ -187,6 +187,7 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
 
         /* Get the content for the category */
         $ContentArray = get_content($pdo, $currentCat['id'], 'category');
+       
     
 }else{
 
@@ -285,6 +286,11 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     $ContentArray = get_content($pdo, $keywordId, 'product');
 }
 
+/* SUB DOMAIN INTERNAL LINK PREPARATION */
+$subDomainInternalLinks = findSubdomainKeywordsByKeyword($ebaySearchKeyword, $pdo, 5);
+
+
+/* GOOGLE SHOPPING */
 $googleadsense_body = '<div id="afscontainer1"></div>
     <div id="relatedsearches1"></div>
     <script type="text/javascript" charset="utf-8">

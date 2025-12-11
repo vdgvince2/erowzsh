@@ -19,19 +19,18 @@ require '../../inc/functions.php';
 require 'ebay_browse_crawler.php';
 
 
-if($isLocal) $MAX_keyword = 1; else $MAX_keyword = 500;
+if($isLocal) $MAX_keyword = 10; else $MAX_keyword = 500;
 
 echo "Crawling of $MAX_keyword starting".PHP_EOL;
 
 // --- Get the keywords
 // noads = 1 : means that we can't find ad for that keyword, we should not crawl it anymore.
 $sqlFetch = "SELECT *
-                FROM keywords
+                FROM subdomain_keywords
                 WHERE last_update IS NULL
                 OR last_update > NOW() - INTERVAL 3 DAY
                 ORDER BY 
-                    (last_update IS NOT NULL),  -- NULL d'abord, non-NULL ensuite
-                    last_visited DESC
+                    (last_update IS NOT NULL) DESC
              LIMIT ".$MAX_keyword;
 $rows = $pdo->query($sqlFetch)->fetchAll(PDO::FETCH_ASSOC);
 $countKeywords = 0;
@@ -40,14 +39,14 @@ if (!$rows) {
     exit("Aucune entrée à traiter dans Keywords.\n");
 }
 
-echo "*** Start crawling : ".date('Y-m-d H:i:s')." | MAX KW : ".$MAX_keyword. " | Country : ".$countryCode.PHP_EOL;
+echo "*** Start crawling : ".date('Y-m-d H:i:s')." | MAX KW : ".$MAX_keyword. " | SubDomain -- Country : ".$countryCode.PHP_EOL;
 
 // Boucle sur les mots-clés à traiter
 foreach ($rows as $r) {
     
     try {
         // Insérer les nouvelles annonces et supprimer les anciennes.
-        updateAds($pdo, $ebay_marketplace, $_EBAY_MAX_ADS, $countryCode, null, $r['id'], "update", false);
+        updateAds($pdo, $ebay_marketplace, $_EBAY_MAX_ADS, $countryCode, null, $r['id'], "update", true);
         $countKeywords++;
 
     } catch (Throwable $e) {

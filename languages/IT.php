@@ -27,6 +27,7 @@ $label_affiliate = "Questo sito propone offerte legate a una collaborazione retr
 $array_advices  = ["nuovo" => "conditionNew", "usato" => "conditionUsed", "i meno cari" => "&_sop=15", "i più cari" => "&_sop=16", "i più venduti" => ""];
 $label_bargain_topheader = "Ottime offerte vicino a me!";
 
+
 /* CONTACT PAGE */
 $label_contact = "Contatto";
 $label_intro_contact = "Siamo lieti di ricevere qualsiasi suggerimento relativo al sito web o proposte di partnership. Risponderemo entro 48 ore.<br>Non siamo in grado di fornire assistenza per gli acquisti su eBay o con i venditori. ";
@@ -72,6 +73,8 @@ $arraySticker = ["HOT", "NUOVO", "STOCK BASSO", "2 DISPONIBILI"];
 $stopwords = ["in-vendita", "usati", "usato", "usata"];
 $label_product_metadesc_generic = " : selezione dei prodotti più economici, usati o nuovi. Sito facile e veloce.";
 $label_FAQ = "Domande frequenti";
+$label_template_internalLinkingSubdom = "Potrebbe piacerti anche...";
+
 
 $_TAIL = " usato"; // tail for the page title
 

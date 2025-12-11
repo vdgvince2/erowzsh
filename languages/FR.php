@@ -57,6 +57,7 @@ $stopwords = ["occasion"];
 $label_product_metadesc_generic = " :  sélection des produits les moins chers, d'occasion ou neufs. Site facile et rapide.";
 $array_advices  = ["neuf" => "conditionNew", "occasion" => "conditionUsed", "les moins chers"  => "&_sop=15", "les plus chers" => "&_sop=16", "les plus vendus" => ""];
 $label_FAQ = "Questions fréquentes";
+$label_template_internalLinkingSubdom = "Vous pourriez aussi aimer...";
 
 $_TAIL = " d'occasion"; // tail for the page title
 
