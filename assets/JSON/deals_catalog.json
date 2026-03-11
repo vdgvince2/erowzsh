@@ -1,0 +1,36 @@
+{
+  "diy": {
+    "label": "DIY & Power Tools",
+    "min_price": 300,
+    "trigger_slugs": {
+      "IE": [
+        "power-tools",
+        "diy-tools-workshop-equipment",
+        "hand-tools",
+        "industrial-tools",
+        "garage-equipment-tools",
+        "business-office-industrial-power-tools",
+        "business-office-industrial-hand-tools",
+        "home-furniture-diy"
+      ],
+      "GB": [],
+      "FR": [],
+      "DE": [],
+      "IT": [],
+      "BE": [],
+      "US": []
+    },
+    "keywords": [
+      { "slug": "drill-press",      "label": "Drill Press" },
+      { "slug": "table-saw",        "label": "Table Saw" },
+      { "slug": "band-saw",         "label": "Band Saw" },
+      { "slug": "air-compressor",   "label": "Air Compressor" },
+      { "slug": "wood-lathe",       "label": "Wood Lathe" },
+      { "slug": "welding-machine",  "label": "Welding Machine" },
+      { "slug": "router-table",     "label": "Router Table" },
+      { "slug": "thickness-planer", "label": "Thickness Planer" },
+      { "slug": "radial-arm-saw",   "label": "Radial Arm Saw" },
+      { "slug": "metal-lathe",      "label": "Metal Lathe" }
+    ]
+  }
+}

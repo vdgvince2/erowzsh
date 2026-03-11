@@ -10,7 +10,7 @@ $Header_Search = "Rechercher un article";
 $breadcrumb_home = "Accueil";
 $breadcrumb_all = "Tout";
 $label_price = "Prix";
-$label_condition = "État";
+$label_condition = "Neuf & occasion";
 $label_new = "Neuf";
 $label_used = "Occasion";
 $label_refurb = "Reconditionné";
@@ -44,7 +44,7 @@ $label_security_centre = "Centre de sécurité";
 $label_site_map = "Plan du site";
 $label_official_time = "Heure officielle";
 $label_stay_connected = "Restez connecté";
-$label_copyright = "Droits d’auteur © 1995-2025 For Sale Inc. Tous droits réservés.";
+$label_copyright = "Droits d’auteur © 1995-".date('Y')." For Sale Inc. Tous droits réservés.";
 $label_accessibility = "Accessibilité, Conditions d’utilisation, Confidentialité, Cookies, Ne pas vendre mes informations personnelles et AdChoice";
 $label_explore_categories = "Explorer davantage dans ";
 $label_other_categories = "Autres catégories intéressantes";
@@ -55,7 +55,32 @@ $label_freepostage = "Livraison gratuite";
 $arraySticker = ["HOT", "NOUVEAU", "STOCK BAS", "2 DISPO"];
 $stopwords = ["occasion"];
 $label_product_metadesc_generic = " :  sélection des produits les moins chers, d'occasion ou neufs. Site facile et rapide.";
-$array_advices  = ["neuf" => "conditionNew", "occasion" => "conditionUsed", "les moins chers"  => "&_sop=15", "les plus chers" => "&_sop=16", "les plus vendus" => ""];
+$array_advices  = ["condition" => 
+                    ["nouveau" => "conditionNew", 
+                     "occasion" => "conditionUsed"],
+                  "purchase" =>
+                    ["enchères" => "&LH_Auction=1",
+                     "achat immédiat" => "&LH_BIN=1"],
+                  "sort by" =>
+                    ["moins cher" => "&_sop=15", 
+                     "plus cher" => "&_sop=16", 
+                     "meilleures ventes" => "",
+                     "nouveautés" => "&_sop=10"],
+                   "time" =>
+                    ["plus proche" => "&_sop=7",
+                     "presque terminé" => "&_sop=1"],
+                   "various" =>
+                   ["offres acceptées" => "&LH_BO=1",
+                    "retours gratuits" => "&LH_FR=1",
+                    "clickez collectez" => "&LH_BOPIS=1"
+                   ]
+                ];
+$translate_advices_labels =  ["condition" => "Etat", 
+                              "purchase" => "Achat",
+                              "sort by" => "Trier par",
+                              "time" => "Délais",
+                              "various" => "Divers",
+                              ];  
 $label_FAQ = "Questions fréquentes";
 $label_template_internalLinkingSubdom = "Vous pourriez aussi aimer...";
 
@@ -106,6 +131,9 @@ $label_country_argentina = "Argentine";
 $label_country_mexico = "Mexique";
 $label_country_belgium = "Belgique";
 $label_last_news = "Les dernières actus";
+$label_readmore = "Lire l'article";
+$label_publishedon = "Publié le";
+$label_checkitnow = "Voir plus";
 
 // Error page
 $label_nokwfound = "Aucun mot-clé trouvé";
@@ -153,6 +181,43 @@ $label_bargain_category_notavailable = "Catégories non disponibles";
 $label_bargain_category_errorloading = "Erreur lors du chargement des catégories";
 $label_bargain_category_invalid = "Données de catégories invalides";
 $label_bargain_category_allcateg = "Toutes les catégories";
+$label_filter_advanced = "Filtrer par distance, prix, catégorie";
+
+/* DEALS PAGE */
+$label_deals_page_title    = "Meilleures affaires {keyword} — {site}";
+$label_deals_meta_desc     = "Les meilleures affaires eBay pour {keyword} à partir de {currency}{min_price}. Triées par Bargain Score, mises à jour toutes les heures.";
+$label_deals_h1            = "Meilleures affaires";
+$label_deals_intro         = "Meilleures offres eBay pour {keyword}, à partir de {currency}{min_price}. Triées par Bargain Score. Mises à jour toutes les heures.";
+$label_deals_min_label     = "Min.";
+$label_deals_filter_title  = "Filtrer & Trier";
+$label_deals_max_price     = "Prix maximum";
+$label_deals_sort_label    = "Trier par";
+$label_deals_sort_best     = "Pertinence (Bargain Score)";
+$label_deals_apply         = "Appliquer les filtres";
+$label_deals_more_in       = "Plus dans";
+$label_deals_count         = "offres trouvées · min";
+$label_deals_cta_text      = "Vous voulez plus de contrôle ? Utilisez le Bargain Finder complet.";
+$label_deals_cta_button    = "Ouvrir dans le Bargain Finder →";
+$label_deals_widget_title  = "Meilleures affaires à plus de";
+$label_deals_widget_desc   = "Meilleures offres eBay pour {label}, uniquement les articles à plus de {currency}{min_price}.";
+$label_deals_score_tooltip    = "Bargain Score {score}/100 — Fiabilité vendeur : 30 pts · Niveau de prix : 25 pts · Urgence enchère : 25 pts · Volume vendeur : 10 pts · Proximité : 10 pts";
+$label_deals_homepage_title   = "Meilleures affaires à plus de {currency}{min_price}";
+$label_deals_homepage_see_all = "Voir toutes les affaires {label} →";
+
+/* DEALS PAGE — Graphique historique des prix */
+$label_deals_chart_title        = "Historique des prix — {keyword}";
+$label_deals_chart_desc         = "Ce graphique suit le prix médian des annonces {keyword} sur eBay au cours des {days} derniers jours. La ligne bleue représente la médiane lissée ; la zone ombrée correspond à l'intervalle interquartile (25e–75e percentile), soit les prix typiques après suppression des valeurs aberrantes.";
+$label_deals_chart_howto        = "Comment utiliser ce graphique : si la médiane est actuellement inférieure à sa moyenne récente, c'est peut-être le bon moment d'acheter. Si la tendance est à la hausse, attendre pourrait coûter plus cher. La zone ombrée indique la stabilité des prix — une bande étroite signifie des prix réguliers.";
+$label_deals_chart_trend_up     = "Les prix sont en hausse (+{pct}% sur la période suivie). Envisagez d'acheter rapidement.";
+$label_deals_chart_trend_down   = "Les prix sont en baisse (-{pct}% sur la période suivie). Patienter quelques jours pourrait vous faire faire des économies.";
+$label_deals_chart_trend_stable = "Les prix sont stables sur la période suivie. Pas d'urgence particulière.";
+$label_deals_chart_stats        = "Instantané du jour : médiane {currency}{median} · fourchette typique {currency}{p25}–{currency}{p75} · {count} annonces suivies.";
+$label_deals_chart_nodata       = "Pas encore assez d'historique de prix. Revenez dans quelques heures — les données sont collectées toutes les heures.";
+$label_deals_chart_median       = "Prix médian";
+$label_deals_chart_range        = "Fourchette typique (P25–P75)";
+$label_deals_tab_offers         = "Offres";
+$label_deals_tab_chart          = "Graphique des prix";
+$label_deals_tab_alert          = "Créer une alerte";
 
 /* crawler stopwords for ngram */
 $Array_language_stopwords = [

@@ -3,10 +3,14 @@
  * Insert keywords in sub domain. NOt valid for domain !!
  * 
  */
+
+// Force the country code.
+if(isset($argv[1])){
+    $countryCode = strtoupper($argv[1]) ?? null;
+}
+
 require_once __DIR__ . '/../inc/config.php';
 require_once __DIR__ . '/../inc/functions.php';
-
-
 
 $errors = [];
 $successCount = 0;
@@ -26,6 +30,81 @@ function keyword_to_subdomain(string $keyword): string
     return $s ?? '';
 }
 
+function import_keywords_from_file(string $countryCode, PDO $pdo): array
+{
+    $errors = [];
+    $successCount = 0;
+
+    // Chemin du fichier
+    $filePath = __DIR__ . "/../assets/JSON/subdomain_keywords/{$countryCode}.txt";
+
+    if (!file_exists($filePath)) {
+        $errors[] = "Fichier introuvable : " . htmlspecialchars($filePath, ENT_QUOTES);
+        return [
+            'successCount' => $successCount,
+            'errors'       => $errors,
+        ];
+    }
+
+    // Lecture du fichier, 1 mot-clé par ligne
+    $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    if ($lines === false || empty($lines)) {
+        $errors[] = "Impossible de lire le fichier ou fichier vide : " . htmlspecialchars($filePath, ENT_QUOTES);
+        return [
+            'successCount' => $successCount,
+            'errors'       => $errors,
+        ];
+    }
+
+    // Prépare la requête d'insert
+    $stmt = $pdo->prepare("
+        INSERT IGNORE INTO subdomain_keywords (keyword_name, subdomain, last_update)
+        VALUES (:keyword_name, :subdomain, '0000-00-00 00:00:00')
+    ");
+
+    foreach ($lines as $line) {
+        $keyword = trim($line);
+        if ($keyword === '') {
+            continue;
+        }
+
+        // Réutilise ta fonction existante
+        $subdomain = keyword_to_subdomain($keyword);
+
+        if ($subdomain === '') {
+            $errors[] = "Impossible de générer un subdomain pour le mot-clé (fichier {$countryCode}) : « " 
+                        . htmlspecialchars($keyword, ENT_QUOTES) . " »";
+            continue;
+        }
+
+        try {
+            $stmt->execute([
+                ':keyword_name' => strtolower($keyword),
+                ':subdomain'    => $subdomain,
+            ]);
+            $successCount++;
+        } catch (PDOException $e) {
+            $errors[] = "Erreur pour « " . htmlspecialchars($keyword, ENT_QUOTES) . " » (fichier {$countryCode}) : " 
+                        . $e->getMessage();
+        }
+    }
+
+    return [
+        'successCount' => $successCount,
+        'errors'       => $errors,
+    ];
+}
+
+$result = import_keywords_from_file($countryCode, $pdo);
+
+echo "Import $countryCode : " . $result['successCount'] . " mots-clés insérés."."\n";
+if (!empty($result['errors'])) {
+    print_r($result['errors']);
+}
+
+// IMPORT FROM THE FORM
+/*
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $raw = $_POST['keywords'] ?? '';
 
@@ -34,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Préparation de la requête
     $stmt = $pdo->prepare("
-        INSERT INTO subdomain_keywords (keyword_name, subdomain, last_update)
+        INSERT IGNORE INTO subdomain_keywords (keyword_name, subdomain, last_update)
         VALUES (:keyword_name, :subdomain, now())
     ");
 
@@ -54,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         try {
             $stmt->execute([
-                ':keyword_name' => $keyword,
+                ':keyword_name' => strtolower($keyword),
                 ':subdomain'    => $subdomain,
             ]);
             $successCount++;
@@ -64,6 +143,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+*/
+
+/*
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -127,3 +209,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+ */ ?>

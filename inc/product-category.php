@@ -207,7 +207,7 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     }else{        
         $SQL_keywords = "SELECT id, keyword_name, main_category, last_visited 
                          FROM keywords 
-                         WHERE keywordURL = :addr 
+                         WHERE keywordURL = :addr and active=1
                          LIMIT 1";
     }  
     $stmt = $pdo->prepare($SQL_keywords);                          
@@ -251,7 +251,7 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
         $stmt2->execute([':kwid' => $rowKeyword['id']]);
     }else{
         // main domain > get all keywords from the same category
-        $SQL_related = "SELECT id, keyword_name, keywordURL, 'maindomain' as source FROM keywords where main_category = :catid and id > :kwid LIMIT 40";
+        $SQL_related = "SELECT id, keyword_name, keywordURL, 'maindomain' as source FROM keywords where main_category = :catid and active=1 and id > :kwid LIMIT 40";
         $stmt2 = $pdo->prepare($SQL_related);
         $stmt2->execute([':catid' => $rowKeyword['main_category'], ':kwid' => $rowKeyword['id']]);
     }

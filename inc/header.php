@@ -36,7 +36,7 @@ inline_css_for_page();
       </div>
 
       <!-- Center : search desktop -->
-      <form class="hidden md:flex flex-1 mx-4" action="<?=$rootDomain.$base;?>s/bargain#results" method="post">
+      <form class="hidden md:flex flex-1 mx-4" action="<?=$rootDomain.$base;?>s/bargain" method="get">
         <div class="flex w-full bg-gray-50 rounded-full shadow-sm overflow-hidden">
           <input type="hidden" name="mode" value="standard" />
           <input
@@ -44,7 +44,7 @@ inline_css_for_page();
             placeholder="ipad, smartphone, ..."
             data-hj-allow
             class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none"
-            name="keyword_search"
+            name="q"
           />
           <button
             type="submit"
@@ -109,10 +109,10 @@ inline_css_for_page();
     </div>
 
     <!-- Mobile search -->
-    <form class="mt-3 md:hidden" action="<?=$rootDomain.$base;?>s/bargain#results" method="post">
+    <form class="mt-3 md:hidden" action="<?=$rootDomain.$base;?>s/bargain" method="get">
       <div class="flex w-full bg-gray-50 rounded-full shadow-sm overflow-hidden">
         <input type="hidden" name="mode" value="standard" />
-        <input type="text" name="keyword_search" placeholder="ipad, smartphone, ..." data-hj-allow 
+        <input type="text" name="q" placeholder="ipad, smartphone, ..." data-hj-allow
                class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none" />
         <button class="flex items-center justify-center px-5 bg-blue-500 text-white">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
@@ -192,6 +192,9 @@ inline_css_for_page();
         <a href="https://www.facebook.com/profile.php?id=61584598651411" class="px-4 py-3 hover:bg-gray-50">
           Facebook Page
         </a>
+        <a href="<?=$rootDomain.$base;?>mag/" class="px-4 py-3 hover:bg-gray-50">
+          Blog
+        </a>        
         <a href="<?=$rootDomain.$base;?>s/contact" class="px-4 py-3 hover:bg-gray-50">
           <?=$Header_Link_Help;?>
         </a>

@@ -1,4 +1,5 @@
 
+
 CREATE TABLE `subdomain_ads` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `keyword_id` bigint(20) UNSIGNED NOT NULL,
@@ -7,9 +8,12 @@ CREATE TABLE `subdomain_ads` (
   `photo` text,
   `price` decimal(12,2) DEFAULT NULL,
   `url` text,
-  `insert_date` datetime DEFAULT CURRENT_TIMESTAMP
+  `category_name_path` text,
+  `category_level1` varchar(255) DEFAULT NULL,
+  `category_level2` varchar(255) DEFAULT NULL,
+  `category_level3` varchar(255) DEFAULT NULL,
+  `insert_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 -- --------------------------------------------------------
 
 --
@@ -60,3 +64,4 @@ ALTER TABLE `subdomain_keywords`
 COMMIT;
 
 ALTER TABLE `subdomain_keywords` ADD FULLTEXT(`keyword_name`);
+ALTER TABLE `subdomain_keywords` ADD UNIQUE(`keyword_name`);

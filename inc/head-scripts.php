@@ -1,21 +1,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$pageTitle;?></title>
-    <meta name="description" content="<?=$pageTitle." "; if(isset($additionnalMetaDesc)) echo $additionnalMetaDesc;?>">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?=$rootDomain.$base;?>favicon.ico"> 
+    <title><?=ucfirst($pageTitle);?></title>
+    <meta name="description" content="<?=ucfirst($pageTitle)." "; if(isset($additionnalMetaDesc)) echo $additionnalMetaDesc;?>">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?=$rootDomainForAssets;?>favicon.ico"> 
     <meta name="google-site-verification" content="7Pw3UtAoJp2P_V9zSeV3LhHz7NlX0BQM-OY9337K8M8" />
+    <?php 
+    // don't show ads for local 
+    if (!$isLocal && !isset($noAds)) { 
+        
+        // script for google shopping ads
+        echo $googleadsenseHead;
+           
+     } 
     
-    <?php if (!$isLocal && !isset($noAds)) { ?>
-        <script type="text/javascript" src="https://cache.consentframework.com/js/pa/21931/c/3anGX/stub" referrerpolicy="unsafe-url" charset="utf-8" async></script>
-        <script type="text/javascript" src="https://choices.consentframework.com/js/pa/21931/c/3anGX/cmp" referrerpolicy="unsafe-url" charset="utf-8" async></script>
-        <script type="text/javascript" src="https://a.rltd.net/tags/ezsa.js" async></script>
-        <?=$googleadsenseHead;?>   
-     
-    <?php } 
-    
-    // Specific hotjar for Bargain page
-    if(!$isLocal && $scriptName == "bargain.php"){        
+    // Specific hotjar for Bargain page    
+    if(!$isLocal && $scriptName == "bargain"){        
         ?>
             <!-- Hotjar Tracking Code for SH -->
             <script>
@@ -38,4 +38,5 @@
     }
     
     ?>
+    <?php if (!empty($extraHeadTags)) echo $extraHeadTags; ?>
 </head>

@@ -13,7 +13,7 @@
             <span>/</span>
             <span class="maxHeightLine"><?php if(isset($breadcrumbLink)) echo $breadcrumbLink; else echo $breadcrumb_all;?></span>
             <span>/</span>
-            <span class="font-medium maxHeightLine"><?=$pageTitle;?></span>
+            <span class="font-medium maxHeightLine"><?=ucfirst($pageTitle);?></span>
         </div>
     </div>
 
@@ -29,7 +29,7 @@
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <h1 class="text-xl font-bold mb-2 md:mb-0"><?=ucfirst($ebaySearchKeyword);?></h1>                        
                     </div>
-                    <h2 class="text-sm text-gray-500"><?=ucfirst($ebaySearchKeyword." ".$tagline);?></h2>
+                    <h2 class="text-sm text-gray-600"><?=ucfirst($ebaySearchKeyword." ".$tagline);?></h2>
 
                     <?php 
                     /* internal linking categories */
@@ -63,10 +63,10 @@
                                 $href = htmlspecialchars($rootDomain.$base.$rawHref ?: '#', ENT_QUOTES, 'UTF-8');
                             }
                             
-                            $links[] = "<a href=\"{$href}\">{$label}</a>";
+                            $links[] = "<a href=\"{$href}\" class=\"text-gray-600\">{$label}</a>";
                         }
 
-                        echo '<p class="text-sm maxHeightLine">'.$label_topTemplate_related.implode(' | ', $links).'</p>';
+                        echo '<p class="text-sm maxHeightLine text-gray-600">'.$label_topTemplate_related.implode(' | ', $links).'</p>';
                     }
                     ?>
                 </div>
@@ -81,19 +81,24 @@
 
                 <?php foreach ($products as $prod) : 
                 // Prepare eBay link Tracker for both : categories & products
-                    $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null);
+                    $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null, null, null);
                     $AffiliateSearchLink  = base64_encode($AffiliateSearchLink);
                 ?>
                 <!-- Product Card 1 -->                            
-                   <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300 clickable-product cursor-pointer" data-url="<?= $AffiliateSearchLink; ?>">
-                        <div class="flex-shrink-0 w-24 h-24 bg-gray-50 flex items-center justify-center overflow-hidden">
-                            <img src="<?=$rootDomain.$base;?>image.php?url=<?= base64_encode($prod['photo']) ?>" 
-                                 alt="<?= htmlspecialchars($prod['title_original'] ?? 'Image produit', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" 
-                                 class="max-w-full max-h-full object-contain" fetchpriority="high" width=128 height=128>
-                            <?php /* <div class="top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded"><?= randomSticker();?></div> */?>
+                   <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300 clickable-product cursor-pointer flex flex-row md:flex-col" 
+                        data-url="<?= $AffiliateSearchLink; ?>">
+                        <div class="flex-shrink-0 w-24 md:w-full flex flex-col">
+                            <div class="w-24 h-24 md:w-full md:h-48 bg-gray-50 flex items-center justify-center overflow-hidden">
+                                <img src="<?=$rootDomainForAssets;?>image.php?url=<?= base64_encode($prod['photo']) ?>" 
+                                    alt="<?= htmlspecialchars($prod['title_original'] ?? 'Image produit', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" 
+                                    class="max-w-full max-h-full object-contain" fetchpriority="high" width=128 height=128>
+                                <?php /* <div class="top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded"><?= randomSticker();?></div> */?>
+                                
+                            </div>
+                        <span class="block w-full text-xs text-gray-500 mt-1 text-center">#sponsored</span>
                         </div>
-                        <div class="flex-1 flex flex-col gap-2">
-                            <h3 class="font-bold text-m mb-1 line-clamp-2">
+                        <div class="flex-1 flex flex-col gap-2 p-3 md:p-4">
+                            <span class="font-bold text-m mb-1 line-clamp-2">
                                 <?php
                                 try{
                                     $titleGenerator = new titleGenerator();
@@ -103,18 +108,17 @@
                                     //echo $e;
                                     echo htmlspecialchars($prod['title_original'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
                                 }; 
-                                ?></h3>
-                            <div class="items-center justify-between">
-                                <strong><?=$currency;?><?= htmlspecialchars($prod['price'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></strong>
-                                <p class="text-sm text-gray-600">
-                                    <?php if($prod['description_itemspecs'] != null) echo html_entity_decode($prod['description_itemspecs'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>
-                                    - <?=$label_freepostage;?> - <?=$label_condition;?>
-                                </p>
+                                ?> - <?=$currency;?><?= htmlspecialchars($prod['price'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></span>
+                            <div class="items-center justify-between min-h-[80px]">
+                                
+                                <div class="flex items-start gap-2 text-sm text-gray-600">
+                                    <img src="<?=$rootDomainForAssets;?>assets/online-shopping.png" alt="<?=$label_addtocart;?>" width="16" height="16" class="hrink-0 w-4 h-4 object-contain" />
+                                    <span><?php if($prod['description_itemspecs'] != null) echo html_entity_decode($prod['description_itemspecs'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?>
+                                    - <?=$label_freepostage;?> - <?=$label_condition;?></span>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <button class="w-full border border-blue-500 text-blue-500 rounded-md"><?=$label_addtocart;?></button>
-                                <button class="w-full bg-blue-500 text-white py-2 rounded-md mt-3"><?=$label_viewdetails;?></button>
-                                <span class="text-xs text-gray-500">#sponsored</span>
+                            <div class="mt-4">                              
+                                <button class="w-full bg-blue-500 text-white py-2 rounded-md mt-3"><strong>&raquo;</strong> <?=$label_viewdetails;?></button>                                
                             </div>
                         </div>
                     </div>  
@@ -211,6 +215,14 @@
     </section>
     <?php endif; ?>
 
+
+    <?php
+    // Deals widget — shown on DIY/tools category pages
+    if (isset($matched['url'])) {
+        require_once __DIR__ . '/inc/functions-bargain.php';
+        render_deals_widget($matched['url'], $rootDomain, $base, $currency);
+    }
+    ?>
 
     <?php require __DIR__ . '/inc/footer.php'; ?>
 

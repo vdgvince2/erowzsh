@@ -164,8 +164,7 @@ function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 50, i
     // write in the log file for debug purpose
     if ($isLocal) {
         $jsonString = json_encode($json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        log_local_write($jsonString);
-
+        log_local_write($jsonString, 'ebay_browse_debug.log');
     }
 
     return $json;
@@ -330,19 +329,28 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
         $adsCount = 0;
 
         foreach ($items as $it) {
-            
+
             // title is mandatory + we cut to 30 to avoid duplicate content.
             if($it['title'] != null){
                 $title = truncate_no_cut($it['title'], $limit = 30);
             }else{
                 break;
-            }
+            }        
 
             // Extraire des ngrams depuis la description courte
             $description_itemspecs = "";
             if(isset($it['shortDescription']) && $it['shortDescription'] != null){
                 $description_itemspecs = extract_top_ngrams($it['shortDescription'], 1, 3, 3);
                 $description_itemspecs = substr($description_itemspecs, 0, 511); // max size for sql.
+            }
+                    
+            // if the ads language is not the same as the country, don't save the description.  
+            $specificLang = array("FR", "IT", "DE");
+            if(in_array($countryCode, $specificLang)){
+                if($it['itemLocation']['country'] != $countryCode){
+                    $description_itemspecs = "";
+                    echo "not matching CC:".$countryCode." - IL: ".$it['itemLocation']['country']."\n";
+                }
             }
 
             // Photo (image principale puis fallback sur thumbnail)
@@ -383,6 +391,12 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
         $pdo->commit();
         $importValid = true;
         echo "Import OK for keyword_id={$keywordId}. Inserted " . count($items) . " ads.\n";
+
+        if(count($items) == 0){
+            // update the keyword last_update datetime
+            $upd = $pdo->prepare("UPDATE $TABLE_keywords SET active=0 WHERE id = :kid");
+            $upd->execute([':kid' => $keywordId]);            
+        }
 
         // update the keyword last_update datetime
         $upd = $pdo->prepare("UPDATE $TABLE_keywords SET last_update = now() WHERE id = :kid");

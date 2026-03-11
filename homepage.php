@@ -1,5 +1,10 @@
 <?php
 
+/* prepare the picture carrousel */
+      $ads = getRandomAdsDistinctKeyword($pdo, 60, [], ['id','keyword_id', 'photo', 'title_original', 'url'], 500);
+      [$block1, $block2, $block3] = splitAdsIntoBlocks($ads, 3);
+
+/* Prepare the data for the homepage */
 $pageTitle = $WebsiteName;
 $additionnalMetaDesc = $label_hero_title;
 $noAds = true;
@@ -8,7 +13,7 @@ $noAds = true;
 $sql = <<<SQL
 SELECT *
 FROM keywords
-WHERE homepage = 1
+WHERE homepage = 1 and active=1
 LIMIT 20
 SQL;
 
@@ -44,13 +49,13 @@ $categories = $stmt->fetchAll();
   <!-- Hero / Search -->
   <section class="py-8 sm:py-2">
     <div class="rounded-2xl bg-gray-50 p-6 sm:p-10 shadow-sm">
-      <h1 class="text-2xl sm:text-4xl font-bold tracking-tight"><?= htmlspecialchars($label_hero_title, ENT_QUOTES, 'UTF-8') ?></h1>
+      <h1 class="font-serif text-2xl sm:text-4xl font-bold tracking-tight"><?= htmlspecialchars($label_hero_title, ENT_QUOTES, 'UTF-8') ?></h1>
       <p class="mt-3 text-gray-600 max-w-2xl"><?= htmlspecialchars($label_hero_subtitle, ENT_QUOTES, 'UTF-8') ?></p>
-        <form role="search" aria-label="Site search" action="<?=$rootDomain.$base;?>s/bargain#results" method="post">
+        <form role="search" aria-label="Site search" action="<?=$rootDomain.$base;?>s/bargain" method="get">
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             <div class="">
-              <input type="text" 
-                     name="keyword_search" 
+              <input type="text"
+                     name="q"
                      data-hj-allow
                      placeholder="<?= htmlspecialchars($label_search_placeholder, ENT_QUOTES, 'UTF-8') ?>" 
                      class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10">
@@ -67,11 +72,29 @@ $categories = $stmt->fetchAll();
     </div>
   </section>
 
+  <!-- visual ads -->
+  <section id="home_ads_1" class="py-3 sm:py-2 rounded-2xl bg-gray-50 mt-2">
+    <div class="p-3 sm:p-10 shadow-sm">
+      <h2 class="font-serif text-xl sm:text-2xl font-semibold mb-10"><?=$label_bargain_endingsoon;?></h2>
+      <?php renderAdsCarousel($block1, 'carousel-1');?>
+    </div>
+  </section>
+
+  <!-- MAGAZINE SECTION -->
+  <section id="magazine" class="py-8 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="p-6 sm:p-10 shadow-sm">
+      <h2 class="font-serif text-xl font-semibold"><?=$label_last_news;?></h2>
+      <ul id="rss-feed" class="grid gap-8 px-8 py-8 md:grid-cols-2 xl:grid-cols-3">
+          <?=homepageBlog($pdo, 3);?>
+      </ul>
+    </div>
+  </section>  
+
   <!-- Popular Categories -->
   <section id="categories" class="py-6 sm:py-2 rounded-2xl bg-gray-50 mt-8">
-    <div class="p-6 sm:p-10 shadow-sm">
+    <div class="p-3 sm:p-10 shadow-sm">
       <div class="mb-5 flex items-center justify-between">
-          <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_popular_categories, ENT_QUOTES, 'UTF-8') ?></h2>
+          <h2 class="font-serif text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_popular_categories, ENT_QUOTES, 'UTF-8') ?></h2>
           
       </div>
 
@@ -90,23 +113,72 @@ $categories = $stmt->fetchAll();
     </div>
   </section>
 
-  <?php if($countryCode =="US" or $isLocal){ ?>
-  <!-- MAGAZINE SECTION -->
-  <section id="magazine" class="py-8 sm:py-2 rounded-2xl bg-gray-50 mt-8">
-    <div class="p-6 sm:p-10 shadow-sm">
-      <h2 class="text-xl font-semibold"><?=$label_last_news;?></h2>
-      <ul id="rss-feed" class="homelist py-8 px-8">
-          <?=homepageBlog($pdo);?>
-      </ul>
+  <!-- visual ads -->
+  <section id="home_ads_2" class="py-6 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="p-3 sm:p-10 shadow-sm">
+      <h2 class="font-serif text-xl sm:text-2xl font-semibold mb-10"><?=$label_topTemplate_related;?></h2>
+      <?php renderAdsCarousel($block2, 'carousel-2');?>
+    </div>
+  </section>  
+  
+
+  <!-- Deals section -->
+  <?php
+  $dealsCatalogFile = __DIR__ . '/assets/JSON/deals_catalog.json';
+  $dealsCatalog     = file_exists($dealsCatalogFile) ? (json_decode(file_get_contents($dealsCatalogFile), true) ?? []) : [];
+
+  foreach ($dealsCatalog as $catKey => $cat):
+      $allKw   = $cat['keywords'] ?? [];
+      $display = array_slice($allKw, 0, 10);
+      if (empty($display)) continue;
+
+      $minP         = (int)($cat['min_price'] ?? 0);
+      $fillVars     = ['{currency}' => $currency, '{min_price}' => (string)$minP, '{label}' => $cat['label']];
+      $sectionTitle = str_replace(array_keys($fillVars), array_values($fillVars), $label_deals_homepage_title ?? '');
+      $seeAllLabel  = str_replace(array_keys($fillVars), array_values($fillVars), $label_deals_homepage_see_all ?? '');
+  ?>
+  <section id="deals-<?= htmlspecialchars($catKey, ENT_QUOTES); ?>" class="py-6 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="p-3 sm:p-10 shadow-sm">
+      <div class="mb-5 flex items-center justify-between flex-wrap gap-3">
+        <h2 class="font-serif text-xl sm:text-2xl font-semibold">
+          🔥 <?= htmlspecialchars($sectionTitle, ENT_QUOTES); ?>
+        </h2>
+        <span class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
+          <?= htmlspecialchars($cat['label'], ENT_QUOTES); ?>
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <?php foreach ($display as $kw): ?>
+        <a href="<?= $rootDomain . $base; ?>deals/<?= rawurlencode($catKey); ?>/<?= rawurlencode($kw['slug']); ?>"
+           class="rounded-xl border border-gray-200 bg-white px-3 py-3 hover:shadow-sm hover:border-blue-300 transition group flex flex-col gap-1">
+          <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600">
+            <?= htmlspecialchars($kw['label'], ENT_QUOTES); ?>
+          </span>
+          <span class="text-xs text-gray-400">
+            <?= htmlspecialchars($currency, ENT_QUOTES); ?><?= $minP; ?>+
+          </span>
+        </a>
+        <?php endforeach; ?>
+      </div>
+
+      <?php if (count($allKw) > 10): ?>
+      <div class="mt-4 text-right">
+        <a href="<?= $rootDomain . $base; ?>deals/<?= rawurlencode($catKey); ?>/<?= rawurlencode($allKw[0]['slug']); ?>"
+           class="text-sm text-blue-600 hover:underline">
+          <?= htmlspecialchars($seeAllLabel, ENT_QUOTES); ?>
+        </a>
+      </div>
+      <?php endif; ?>
     </div>
   </section>
-  <?php } ?>
+  <?php endforeach; ?>
 
   <!-- TOP 20 Products -->
   <section id="top20" class="py-8 sm:py-2 rounded-2xl bg-gray-50 mt-8">
     <div class="p-6 sm:p-10 shadow-sm">
       <div class="mb-5 flex items-center justify-between">
-        <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_top20_title, ENT_QUOTES, 'UTF-8') ?></h2>
+        <h2 class="font-serif text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_top20_title, ENT_QUOTES, 'UTF-8') ?></h2>
         
       </div>
 
@@ -125,10 +197,18 @@ $categories = $stmt->fetchAll();
     </div>
   </section>
 
+  <!-- visual ads -->
+  <section id="home_ads_3" class="py-6 sm:py-2 rounded-2xl bg-gray-50 mt-8">
+    <div class="p-6 sm:p-10 shadow-sm">
+      <h2 class="font-serif text-xl sm:text-2xl font-semibold mb-10"><?=$label_bargain_standard;?></h2>
+      <?php renderAdsCarousel($block3, 'carousel-3');?>
+    </div>
+  </section>  
+
   <!-- International Network -->
   <section class="py-10 sm:py-2 rounded-2xl bg-gray-50 mt-8">
     <div class="rounded-2xl bg-white p-6 sm:p-8 border border-gray-200 p-6 sm:p-10 shadow-sm">
-      <h2 class="text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_international_title, ENT_QUOTES, 'UTF-8') ?></h2>
+      <h2 class="font-serif text-xl sm:text-2xl font-semibold"><?= htmlspecialchars($label_international_title, ENT_QUOTES, 'UTF-8') ?></h2>
       <div class="prose max-w-none prose-p:mt-2 prose-p:leading-relaxed">
         <p><?= $label_international_p1; ?></p>
       </div>

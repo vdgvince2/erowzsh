@@ -10,6 +10,8 @@
     Usage avec country code
     Production : /opt/plesk/php/8.3/bin/php pageAccessor.php IE
 
+    AVAILABLE ARGUMENTS : uk, be, ie, fr, de, it, com, forsale
+
     */
 
 
@@ -27,8 +29,8 @@ echo "Crawling of $MAX_keyword starting".PHP_EOL;
 // noads = 1 : means that we can't find ad for that keyword, we should not crawl it anymore.
 $sqlFetch = "SELECT *
                 FROM keywords
-                WHERE last_update IS NULL
-                OR last_update > NOW() - INTERVAL 3 DAY
+                WHERE last_update IS NULL AND active=1
+                OR last_update < NOW() - INTERVAL 3 DAY
                 ORDER BY 
                     (last_update IS NOT NULL),  -- NULL d'abord, non-NULL ensuite
                     last_visited DESC

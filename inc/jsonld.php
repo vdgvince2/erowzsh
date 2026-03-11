@@ -40,11 +40,6 @@ echo '<script type="application/ld+json">
               "price":"'.$prod['price'].'",
               "availability":"https://schema.org/InStock",
               "url": "'.$SERVER_PageFullURL."#".$prod['id'].'"
-          },
-          "aggregateRating":{
-              "@type":"AggregateRating",
-              "ratingValue":'.rand(3,5).',
-              "reviewCount":'.rand(3, 150).'
           }
         }'.$comma;
         $i++;

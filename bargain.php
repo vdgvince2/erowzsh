@@ -12,12 +12,6 @@ $ebay_marketplace = 'EBAY_US';
 $priceCurrencySchema = 'USD';
 */
 
-// If the keyword comes from another page.
-$keywordSearch = "";
-if(isset($_POST['keyword_search'])){
-    $keywordSearch = $_POST['keyword_search'];    
-}
-
 // Buffer
 ob_start();
 
@@ -93,6 +87,8 @@ $products = [];
 $errorMsg = null;
 
 if($searchTerm != null){
+
+    // prepare the query
     $queryParams = [
         'q'          => $searchTerm,
         'limit'      => 50,
@@ -124,6 +120,13 @@ if($searchTerm != null){
 $isAjax = ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['ajax']));
 
 if ($isAjax) {
+
+    // Save the search
+    if($searchTerm != null){
+        $debugLine = "q: $searchTerm | postcode: $postcode | mode: $mode | sorting: $sort [".date('Y-m-d H:i:s')."]";
+        log_local_write($debugLine, 'searches.log');        
+    }
+
     // On ne veut AUCUN HTML avant le JSON
     ob_clean(); // supprime tout ce qui a été envoyé avant (echo, print_r, warnings html, etc.)
 
@@ -131,6 +134,8 @@ if ($isAjax) {
     ob_start();
     render_bargain_results($postcode, $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, $mode);
     $html = ob_get_clean();
+
+
 
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode([
@@ -144,6 +149,7 @@ if ($isAjax) {
 // Affichage HTML (layout proche bargaintime.co). Les cartes produits
 // seront rendues par template.php qui lit $products.
 // -----------------------------------------------------------------------------
+
 ?>
 <!DOCTYPE html>
 <html lang="<?=strtolower($mainLanguage);?>" class="js">
@@ -152,34 +158,6 @@ if ($isAjax) {
 <?php require __DIR__ . '/inc/header.php'; ?>
 
 <script src="<?=$rootDomain.$base;?>assets/bargain.js?v=<?=date('Ymd');?>"></script>
-<?php if (!empty($keywordSearch)) : ?>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('[AUTOSEARCH] DOM ready, lancement auto');
-
-    var form = document.getElementById('bargain-form');
-    if (!form) {
-        console.warn('[AUTOSEARCH] form not found');
-        return;
-    }
-
-    var qInput = form.querySelector('input[name="q"]');
-    if (qInput) {
-        qInput.value = <?= json_encode($keywordSearch) ?>;
-        console.log('[AUTOSEARCH] q =', qInput.value);
-    } else {
-        console.warn('[AUTOSEARCH] input[name="q"] not found');
-    }
-
-    console.log('[AUTOSEARCH] typeof fetchBargainResults =', typeof fetchBargainResults);
-    if (typeof fetchBargainResults === 'function') {
-        fetchBargainResults();
-    } else {
-        console.error('[AUTOSEARCH] fetchBargainResults non défini au moment de l’appel');
-    }
-});
-</script>
-<?php endif; ?>
 
 <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -201,29 +179,32 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <div class="mt-4 w-full">
             <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                <a href="?mode=standard"
-                class="flex flex-col items-center justify-center px-1 py-1 rounded-2xl border <?php if($mode=="standard") echo "bg-blue-600 text-white";?> text-center shadow-sm 
+                <?php
+                $qParam = $searchTerm !== '' ? '&q=' . urlencode($searchTerm) : '';
+                ?>
+                <a href="?mode=standard<?=$qParam?>"
+                class="flex flex-col items-center justify-center px-1 py-1 rounded-2xl border <?php if($mode=="standard") echo "bg-blue-600 text-white";?> text-center shadow-sm
                         hover:shadow-md hover:-translate-y-0.5 transition-transform transition-shadow duration-150">
                     <span class="text-2xl">🛍️</span>
                     <span class="mt-1 text-sm sm:text-sm font-semibold"><?=$label_bargain_bestmatch;?></span>
                 </a>
 
-                <a href="?mode=local"
-                class="flex flex-col items-center justify-center px-3 py-3 rounded-2xl border <?php if($mode=="local") echo "bg-blue-600 text-white";?> text-center shadow-sm 
+                <a href="?mode=local<?=$qParam?>"
+                class="flex flex-col items-center justify-center px-3 py-3 rounded-2xl border <?php if($mode=="local") echo "bg-blue-600 text-white";?> text-center shadow-sm
                         hover:shadow-md hover:-translate-y-0.5 transition-transform transition-shadow duration-150">
                     <span class="text-2xl">📍</span>
                     <span class="mt-1 text-sm sm:text-sm font-semibold"><?=$label_bargain_local;?></span>
                 </a>
 
-                <a href="?mode=misspelled"
-                class="flex flex-col items-center justify-center px-3 py-3 rounded-2xl border <?php if($mode=="misspelled") echo "bg-blue-600 text-white";?> text-center shadow-sm 
+                <a href="?mode=misspelled<?=$qParam?>"
+                class="flex flex-col items-center justify-center px-3 py-3 rounded-2xl border <?php if($mode=="misspelled") echo "bg-blue-600 text-white";?> text-center shadow-sm
                         hover:shadow-md hover:-translate-y-0.5 transition-transform transition-shadow duration-150">
                     <span class="text-2xl">A?</span>
                     <span class="mt-1 text-sm sm:text-sm font-semibold"><?=$label_bargain_misspelled;?></span>
                 </a>
 
-                <a href="?mode=lastminute"
-                class="flex flex-col items-center justify-center px-3 py-3 rounded-2xl border <?php if($mode=="lastminute") echo "bg-blue-600 text-white";?> text-center shadow-sm 
+                <a href="?mode=lastminute<?=$qParam?>"
+                class="flex flex-col items-center justify-center px-3 py-3 rounded-2xl border <?php if($mode=="lastminute") echo "bg-blue-600 text-white";?> text-center shadow-sm
                         hover:shadow-md hover:-translate-y-0.5 transition-transform transition-shadow duration-150">
                     <span class="text-2xl">⏱</span>
                     <span class="mt-1 text-sm sm:text-sm font-semibold"><?=$label_bargain_lastminute;?></span>
@@ -233,12 +214,39 @@ document.addEventListener('DOMContentLoaded', function () {
         
     </div>
 
+    <!-- Quick Filter Chips -->
+    <div class="mt-4 flex flex-wrap gap-2 items-center">
+        <span class="text-xs text-gray-400 mr-1">Quick:</span>
+        <?php
+        $chips = [
+            ['label' => "< {$currency}10",  'name' => 'max_price', 'value' => '10'],
+            ['label' => "< {$currency}25",  'name' => 'max_price', 'value' => '25'],
+            ['label' => "< {$currency}50",  'name' => 'max_price', 'value' => '50'],
+            ['label' => "< {$currency}100", 'name' => 'max_price', 'value' => '100'],
+            ['label' => $label_bargain_endingsoon, 'name' => 'mode', 'value' => 'lastminute'],
+            ['label' => $label_bargain_local,      'name' => 'mode', 'value' => 'local'],
+        ];
+        foreach ($chips as $chip):
+            $isActive = ($src[$chip['name']] ?? '') === $chip['value'];
+        ?>
+        <button type="button"
+            class="chip-filter text-sm px-3 py-1 rounded-full border transition
+                   <?= $isActive
+                       ? 'bg-blue-600 text-white border-blue-600'
+                       : 'bg-white border-gray-300 hover:bg-blue-50 hover:border-blue-400' ?>"
+            data-name="<?= htmlspecialchars($chip['name'], ENT_QUOTES) ?>"
+            data-value="<?= htmlspecialchars($chip['value'], ENT_QUOTES) ?>">
+            <?= htmlspecialchars($chip['label'], ENT_QUOTES) ?>
+        </button>
+        <?php endforeach; ?>
+    </div>
+
     <!-- Main content: Form + Results -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
 
         <!-- Sidebar: filters -->
         <aside class="bg-white rounded-xl shadow lg:col-span-1">
-            <form id="bargain-form" method="post" action="<?=$rootDomain.$base;?>s/bargain" class="space-y-4">
+            <form id="bargain-form" method="get" action="<?=$rootDomain.$base;?>s/bargain" class="space-y-4">
                 <input type="hidden" name="mode" value="<?php echo htmlspecialchars($mode, ENT_QUOTES); ?>">
 
                 <div class="px-4 py-2">
@@ -273,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         class="w-full flex items-center justify-between px-4 py-3"
                     >
                         <span class="block text-base font-medium mb-1"><?=$label_bargain_refine;?></span>
-                        <p class="block text-xs text-gray-500">Filter by distance, price, category…</p>
+                        <p class="block text-xs text-gray-500"><?=$label_filter_advanced;?></p>
                         <svg
                             id="refine-toggle-icon"
                             class="w-4 h-4 transform transition-transform duration-200"

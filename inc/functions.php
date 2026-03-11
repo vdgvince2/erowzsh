@@ -228,16 +228,6 @@ function inline_css_for_page(): void {
 
     $script = basename($_SERVER['SCRIPT_NAME'] ?? '');
 
-    /*
-    if ($script === 'template.php' or $script === 'bargain.php') {
-        //echo inline_asset('assets/product.css', ['attrs' => ['id' => 'inline-css']]);
-    } elseif ($script === 'homepage.php') {
-        echo inline_asset('assets/homepage.css', ['attrs' => ['id' => 'inline-css']]);
-    } else {
-        echo inline_asset('assets/homepage.css', ['attrs' => ['id' => 'inline-css']]);      
-    }
-    */
-
     // en local, on affiche la version non compilée.
     if(!$isLocal){        
         echo inline_asset('assets/tailwind.css', ['attrs' => ['id' => 'inline-css']])."\n";
@@ -487,12 +477,15 @@ function create_search_alert(PDO $pdo, string $keyword, string $email): array
 
 function homepageBlog($pdo, int $limit = 5): string{
 
+global $label_readmore, $label_publishedon;
+
     $html = '';
 
     try {
         $stmt = $pdo->prepare("
-            SELECT title, link, description, pub_date
+            SELECT title, link, description, pub_date, photo
             FROM mag_feed_articles
+            WHERE photo <> ''
             ORDER BY pub_date DESC
             LIMIT :limit
         ");
@@ -511,6 +504,7 @@ function homepageBlog($pdo, int $limit = 5): string{
     foreach ($articles as $article) {
         $title = htmlspecialchars($article['title'] ?? '', ENT_QUOTES, 'UTF-8');
         $link  = htmlspecialchars($article['link'] ?? '', ENT_QUOTES, 'UTF-8');
+        $imgUrl = "<img src='".$article['photo']."' class='w-full h-56 object-cover group-hover:scale-[1.02] transition-transform duration-300' loading='lazy'>";
 
         // Date formatée (optionnel)
         $dateLabel = '';
@@ -521,21 +515,35 @@ function homepageBlog($pdo, int $limit = 5): string{
             }
         }
 
-        // Extrait de description
-        $desc = strip_tags($article['description'] ?? '');
-        $desc = trim(preg_replace('/\s+/', ' ', $desc));
-        if (mb_strlen($desc) > 180) {
-            $desc = mb_substr($desc, 0, 177) . '...';
-        }
-        $desc = htmlspecialchars($desc, ENT_QUOTES, 'UTF-8');
+        
 
         $html .= '
-        <li class="mb-6 pb-6 border-b border-gray-200 last:border-b-0">
-            <a href="' . $link . '" class="block group">
-                <h3 class="text-lg  mb-1 group-hover:underline">'
-                    . $title .
-                '</h3>                            
-            </a>
+        <li class="mb-8">
+        <a href="' . $link . '" class="block group">
+            <article class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-200 overflow-hidden">
+            
+            <div class="p-6">
+                <div class="rounded-2xl overflow-hidden bg-gray-100">
+                '.$imgUrl.'
+                </div>
+
+                <h3 class="mt-6 text-xl font-serif leading-tight text-gray-900">
+                ' . $title . '
+                </h3>
+
+                ' . (!empty($dateLabel) ? '
+                <p class="mt-3 text-lg text-gray-600">
+                    -  '.$label_publishedon. " " . $dateLabel . '
+                </p>
+                ' : '') . '
+
+                <div class="mt-6 text-lg font-semibold text-blue-500 group-hover:underline underline-offset-4">
+                '.$label_readmore.' →
+                </div>
+            </div>
+
+            </article>
+        </a>
         </li>';
     }
 
@@ -543,6 +551,11 @@ function homepageBlog($pdo, int $limit = 5): string{
 }
 
 // Build the tracking link for ebay, amazon etc.
+/* 
+    * URL : if it's a direct link to a product ebay page, null by default
+    * extraFilters = for the sidebar filters , null by default
+    * condition = for bargain filters, null by default
+*/
 function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilters = null, $condition = "conditionUsed"){
 
     global $ebayRootURL, $ebay_mkrid, $ebay_siteid, $ebay_campid, $_AMAZON_AFFILIATE_LINK;
@@ -572,7 +585,7 @@ function tracking_link_builder($keyword, $countryCode, $url = null, $extrafilter
     }
 
     // specific France, replace by amazon
-    if(in_array($countryCode, array("FR", "BE")) && $condition == null) $AffiliateSearchLink = str_replace("KEYWORD_TO_REPLACE", $ebay_search_keyword, $_AMAZON_AFFILIATE_LINK);
+    if(in_array($countryCode, array("FR", "BE"))) $AffiliateSearchLink = str_replace("KEYWORD_TO_REPLACE", $ebay_search_keyword, $_AMAZON_AFFILIATE_LINK);
 
     return $AffiliateSearchLink;
 }
@@ -708,18 +721,19 @@ function extract_top_ngrams(string $text, int $minN = 1, int $maxN = 3, int $top
 
 
 /* debug local log file */
-function log_local_write($debugLine){
+function log_local_write($debugLine, $filename){
     global $isLocal, $countryCode;
 
     $debugLine = $countryCode." >> ".date('Y-m-d H:i:s') ." ". $debugLine.PHP_EOL;
 
     if($isLocal){
-        $directory = "/Applications/MAMP/htdocs/SH/scripts/crawler/schedulers/logs/";
+        $directory = "/Applications/MAMP/htdocs/SH/archive/logs/";
     }else{
-        $directory = "/var/www/vhosts/crawlers/logs/";
+        /// ne fonctionne pas, le script ne peut écrire que dans "httpdocs"
+        $directory = "/var/www/vhosts/".$_SERVER['HTTP_HOST']."/crawler-log/";
     }
     
-    file_put_contents($directory.'ebay_browse_debug.log', $debugLine, FILE_APPEND);
+    file_put_contents($directory.$filename, $debugLine, FILE_APPEND);
 }
 
 // NORMALIZE THE SUB DOMAIN 
@@ -760,6 +774,7 @@ function findSubdomainKeywordsByKeyword(string $keyword, $dbo, $maxResults = 5):
         FROM subdomain_keywords
         WHERE MATCH(keyword_name) AGAINST (? IN NATURAL LANGUAGE MODE)
         AND keyword_name <> ?
+        AND active=1
         ORDER BY score DESC
         LIMIT ".$maxResults;
 
@@ -794,6 +809,287 @@ function findSubdomainKeywordsByKeyword(string $keyword, $dbo, $maxResults = 5):
     $fallbackResults = $stmt2->fetchAll(PDO::FETCH_ASSOC);
     return $fallbackResults ?: [];
     
+}
+
+
+
+/**
+ * Récupère des ads "random" sans ORDER BY RAND() sur 1M+ lignes.
+ * Hypothèse: table `ads` a un champ `id` numérique indexé (PK auto-incrément).
+ *
+ * @param PDO   $dbo
+ * @param int   $limit
+ * @param array $where  Conditions simples: [ 'status' => 'active', ... ] (optionnel)
+ * @param array $fields Champs à retourner (par défaut: id, photo)
+ * @return array
+ */
+function getRandomAdsDistinctKeyword(
+    PDO $dbo,
+    int $limit = 60,
+    array $where = [],
+    array $fields = ['id', 'keyword_id', 'photo', 'title_orignal', 'url'],
+    int $oversample = 400
+): array {
+    $limit = max(1, min($limit, 200));
+    $oversample = max($limit, min($oversample, 2000)); // garde-fou
+
+    // MAX(id)
+    $stmt = $dbo->prepare("SELECT MAX(id) AS max_id FROM ads");
+    $stmt->execute();
+    $maxId = (int)($stmt->fetch(PDO::FETCH_ASSOC)['max_id'] ?? 0);
+    if ($maxId <= 0) return [];
+
+    $start = random_int(1, $maxId);
+
+    // Champs safe
+    $safeFields = [];
+    foreach ($fields as $f) {
+        if (preg_match('/^[a-zA-Z0-9_]+$/', (string)$f)) {
+            $safeFields[] = "`$f`";
+        }
+    }
+    if (!$safeFields) $safeFields = ['`id`','`keyword_id`','`photo`','`title_original`', '`url`'];
+    $select = implode(", ", $safeFields);
+
+    // 1er batch (>= start)
+    $sql1 = "SELECT $select
+             FROM ads
+             WHERE id >= :start 
+             ORDER BY id
+             LIMIT $oversample";
+    $stmt1 = $dbo->prepare($sql1);
+    $stmt1->execute(['start' => $start]);
+    $rows = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+
+    // compléter si pas assez (wrap)
+    if (count($rows) < $oversample) {
+        $missing = $oversample - count($rows);
+        $sql2 = "SELECT $select
+                 FROM ads
+                 WHERE id < :start 
+                 ORDER BY id
+                 LIMIT $missing";
+        $stmt2 = $dbo->prepare($sql2);
+        $stmt2->execute(['start' => $start]);
+        $rows = array_merge($rows, $stmt2->fetchAll(PDO::FETCH_ASSOC));
+    }
+
+    // shuffle pour casser l'effet "suit id"
+    shuffle($rows);
+
+    // dédup keyword_id
+    $out = [];
+    $seen = [];
+    foreach ($rows as $r) {
+        /*if (empty($r['photo'])) continue;
+        $kid = $r['keyword_id'] ?? null;
+        if ($kid === null || $kid === '') continue;
+        if (isset($seen[$kid])) continue;
+
+        $seen[$kid] = true;*/
+        $out[] = $r;
+        if (count($out) >= $limit) break;
+    }
+
+    return $rows;
+}
+
+function truncateText(string $s, int $max = 30): string
+{
+    $s = trim(preg_replace('/\s+/', ' ', $s));
+    if (mb_strlen($s, 'UTF-8') <= $max) return $s;
+    return mb_substr($s, 0, $max, 'UTF-8') . '…';
+}
+
+/**
+ * Affiche un carrousel d'annonces à partir d'un tableau MySQL
+ *
+ * @param array $ads
+ */
+function renderAdsCarousel(array $ads, string $carouselId): void
+{
+    global $label_checkitnow;
+
+    $ads = array_values(array_filter($ads, fn($a) => !empty($a['photo'])));
+    if (!$ads) return;
+
+    $safeId = preg_replace('/[^a-zA-Z0-9\-_]/', '', $carouselId);
+
+    ?>
+    <style>
+      #<?= htmlspecialchars($safeId) ?> .carousel-track { --gap: 12px; --cols: 2; gap: var(--gap); }
+      @media (min-width: 1024px) { #<?= htmlspecialchars($safeId) ?> .carousel-track { --cols: 6; } }
+      #<?= htmlspecialchars($safeId) ?> .carousel-item {
+        width: min(225px, calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols)));
+      }
+    </style>
+
+    <section id="<?= htmlspecialchars($safeId) ?>" class="w-full">
+      <div class="relative">
+
+        <button type="button"
+                class="carousel-prev hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10
+                       h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow
+                       border border-gray-200 hover:bg-white"
+                aria-label="Previous">
+          <span class="text-xl leading-none">‹</span>
+        </button>
+
+        <button type="button"
+                class="carousel-next hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10
+                       h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow
+                       border border-gray-200 hover:bg-white"
+                aria-label="Next">
+          <span class="text-xl leading-none">›</span>
+        </button>
+
+        <div class="overflow-hidden">
+          <div class="carousel-track flex scroll-smooth px-10 sm:px-12"
+               data-carousel-track>
+            <?php foreach ($ads as $ad): ?>
+              <?php
+                $title = (string)($ad['title_original'] ?? '');
+                $titleShort = truncateText($title, 30);
+                $adlink = base64_encode($ad['url']);
+              ?>
+              <a href="#" data-url="<?=$adlink;?>" target="_blank"
+                 class="carousel-item clickable-product flex-shrink-0"
+                 data-url="">
+                <div class="group w-full">
+                  <div class="relative overflow-hidden rounded-xl bg-gray-100 border border-gray-200">
+                    <img
+                      src="<?= htmlspecialchars($ad['photo'], ENT_QUOTES) ?>"
+                      alt="<?= htmlspecialchars($titleShort, ENT_QUOTES) ?>"
+                      loading="lazy"
+                      class="w-full h-28 sm:h-32 lg:h-32 object-cover transition-transform duration-300 group-hover:scale-105"
+                      style="max-width:225px;"
+                    >
+                  </div>
+
+                  <p class="font-serif mt-2 text-xl text-gray-800 leading-tight min-h-24"
+                     title="<?= htmlspecialchars($title, ENT_QUOTES) ?>">
+                    <?= htmlspecialchars($titleShort, ENT_QUOTES) ?>                    
+                  </p>
+                  <div class="mt-6 text-lg font-semibold text-blue-500 group-hover:underline underline-offset-4">
+                        <?=$label_checkitnow;?> →
+                  </div>                    
+                                  
+                </div>
+              </a>
+            <?php endforeach; ?>
+          </div>
+        </div>
+
+        <div class="carousel-dots mt-3 flex items-center justify-center gap-2"></div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const root = document.getElementById(<?= json_encode($safeId) ?>);
+        if (!root) return;
+
+        const track = root.querySelector("[data-carousel-track]");
+        const prevBtn = root.querySelector(".carousel-prev");
+        const nextBtn = root.querySelector(".carousel-next");
+        const dotsWrap = root.querySelector(".carousel-dots");
+        const items = Array.from(track.querySelectorAll(".carousel-item"));
+        if (!track || items.length === 0) return;
+
+        let index = 0;
+        let itemsPerView = 2;
+        let pageCount = 1;
+
+        function compute() {
+          itemsPerView = window.matchMedia("(min-width: 1024px)").matches ? 6 : 2;
+          pageCount = Math.max(1, Math.ceil(items.length / itemsPerView));
+          index = Math.min(index, pageCount - 1);
+          renderDots();
+          sync(false);
+        }
+
+        function pageStartItem(i) {
+          const start = i * itemsPerView;
+          return items[Math.min(start, items.length - 1)];
+        }
+
+        function renderDots() {
+          dotsWrap.innerHTML = "";
+          for (let i = 0; i < pageCount; i++) {
+            const b = document.createElement("button");
+            b.type = "button";
+            b.className =
+              "h-2.5 w-2.5 rounded-full border border-gray-300 transition " +
+              (i === index ? "bg-gray-700" : "bg-gray-200 hover:bg-gray-300");
+            b.setAttribute("aria-label", "Go to slide " + (i + 1));
+            b.addEventListener("click", () => { index = i; sync(true); });
+            dotsWrap.appendChild(b);
+          }
+        }
+
+        function sync(smooth) {
+          const target = pageStartItem(index);
+          if (target) {
+            target.scrollIntoView({ behavior: smooth ? "smooth" : "auto", inline: "start", block: "nearest" });
+          }
+
+          const dots = Array.from(dotsWrap.children);
+          dots.forEach((d, i) => {
+            d.classList.toggle("bg-gray-700", i === index);
+            d.classList.toggle("bg-gray-200", i !== index);
+          });
+
+          if (prevBtn) {
+            prevBtn.disabled = (index === 0);
+            prevBtn.classList.toggle("opacity-40", index === 0);
+          }
+          if (nextBtn) {
+            nextBtn.disabled = (index >= pageCount - 1);
+            nextBtn.classList.toggle("opacity-40", index >= pageCount - 1);
+          }
+        }
+
+        function next() { index = Math.min(pageCount - 1, index + 1); sync(true); }
+        function prev() { index = Math.max(0, index - 1); sync(true); }
+
+        if (prevBtn) prevBtn.addEventListener("click", prev);
+        if (nextBtn) nextBtn.addEventListener("click", next);
+
+        // Si l'utilisateur scrolle à la main, on approx la page courante
+        let raf = null;
+        track.addEventListener("scroll", () => {
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            const left = track.scrollLeft;
+            // trouve l'item le plus proche du bord gauche
+            let best = 0, bestDist = Infinity;
+            for (let i = 0; i < items.length; i++) {
+              const dist = Math.abs(items[i].offsetLeft - left);
+              if (dist < bestDist) { bestDist = dist; best = i; }
+            }
+            const newIndex = Math.min(pageCount - 1, Math.floor(best / itemsPerView));
+            if (newIndex !== index) { index = newIndex; sync(false); }
+          });
+        }, { passive: true });
+
+        window.addEventListener("resize", compute);
+        compute();
+      })();
+    </script>
+    <?php
+}
+
+// Split the homepage ads
+function splitAdsIntoBlocks(array $ads, int $blocks = 3): array
+{
+    $blocks = max(1, $blocks);
+    $perBlock = (int)ceil(count($ads) / $blocks);
+    $chunks = array_chunk($ads, $perBlock);
+
+    // garantit exactement $blocks tableaux (même si vides)
+    while (count($chunks) < $blocks) $chunks[] = [];
+
+    return array_slice($chunks, 0, $blocks);
 }
 
 ?>

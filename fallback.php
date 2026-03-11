@@ -45,10 +45,12 @@ if (!preg_match('#(?:[^/]*/){2,}|\.#', $requestUri)) {
       http_response_code(429);
       exit('Too many requests');
   }else{
-    // prepre the kehword
-    $matchKey = str_replace("-", " ", $matchKey);
+    // prepre the keyword
+    // remove on 8/01/2026 because it creates too many keywords that we can't refresh with the crawl daily limit.
+    /*$matchKey = str_replace("-", " ", $matchKey);
     $stmt = $pdo->prepare("INSERT INTO notfound (keywordname) VALUES (:keywordname) ON DUPLICATE KEY UPDATE last_detected = now()");
     $stmt->execute([':keywordname' => $matchKey ]);
+    */
   }
   
 }else{

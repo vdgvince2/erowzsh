@@ -20,12 +20,17 @@ if(isset($_SERVER['HTTP_HOST'])){
     $SERVER_PageFullURL = $SERVER_Protocol."://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
     // Specific per browser
-    $isEdge = (strpos($_SERVER['HTTP_USER_AGENT'], 'Edg/') !== false) || (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge/') !== false);
-    $isLocal    = preg_match('/^localhost(:\d+)?$/', $_SERVER['HTTP_HOST']);
+    if(isset($_SERVER['HTTP_USER_AGENT'])){
+        $isEdge = (strpos($_SERVER['HTTP_USER_AGENT'], 'Edg/') !== false) || (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge/') !== false);
+        $isLocal  = preg_match('/^localhost(:\d+)?$/', $_SERVER['HTTP_HOST']);
+    }else{
+        $isEdge = false;
+        $isLocal = false;
+    }
 }
 
 // Script Name behind rewriting
-$scriptName = basename($_SERVER['SCRIPT_NAME'] ?? '');
+$scriptName = basename($_SERVER['REQUEST_URI'] ?? '');
 
 
 

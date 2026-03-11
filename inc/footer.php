@@ -40,6 +40,7 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="<?= $rootDomain.$base;?>s/contact" class="hover:text-blue-600"><?=$label_contact;?></a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=61584598651411" class="hover:text-blue-600">Facebook</a></li>
+                        <li><a href="<?=$rootDomain.$base;?>mag/" class="hover:text-blue-600">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,53 +61,42 @@
     <script>
         // obfuscation
         document.addEventListener('DOMContentLoaded', () => {
+        const decodeAndGo = (encoded) => {
+            if (!encoded) return;
+
+            try {
+            const decoded = atob(encoded.trim());
+            if (decoded.startsWith('http')) {
+                window.location.href = decoded;
+            } else {
+                console.warn('Invalid decoded URL:', decoded);
+            }
+            } catch (err) {
+            console.error('Invalid base64 URL:', err);
+            }
+        };
+
         document.querySelectorAll('.clickable-product').forEach(el => {
+
+            // change for SELECT
+            if (el.tagName === 'SELECT') {
+            el.addEventListener('change', () => {
+                const opt = el.selectedOptions && el.selectedOptions[0];
+                const encoded = opt?.dataset?.url || el.dataset.url; 
+                decodeAndGo(encoded);
+            });
+            return;
+            }
+
+            // CLICK FOR DIV/A elements
             el.addEventListener('click', () => {
             const encoded = el.dataset.url;
-            try {
-                const decoded = atob(encoded);
-                if (decoded.startsWith('http')) {
-                window.location.href = decoded;
-                } else {
-                console.warn('Invalid decoded URL:', decoded);
-                }
-            } catch (err) {
-                console.error('Invalid base64 URL:', err);
-            }
+            decodeAndGo(encoded);
             });
         });
         });
+
        
-      <?php if(isset($keywordId) && $lastVisit === false){ ?>
-        // visit management
-        (function () {
-        const KID = <?= (int)$keywordId ?>;
-        const KEY = 'kwv_' + KID;
-
-        try {
-            // 1) évite bots évidents et contextes automation
-            if (navigator.webdriver) return;
-            if (typeof document.visibilityState !== 'undefined' && document.visibilityState === 'hidden') return;
-
-            // 3) fire & forget
-            //if (!('sendBeacon' in navigator)) return;
-            const fd = new FormData();
-            fd.append('p', '<?= $payload ?>');
-            fd.append('s', '<?= $sig ?>');
-            console.log("visit recorded");
-
-            // petit jitter pour éviter pattern robotique & laisser le temps au rendu
-            const delay = 300 + Math.floor(Math.random() * 700);
-            setTimeout(function () {
-            navigator.sendBeacon('<?=$rootDomain.$base;?>inc/visited.php', fd);
-            }, delay);
-
-        } catch (e) {
-           console.log("visit not recorded");
-        }
-        })();
-
-      <?php } ?> 
 
 
       // mobile hamburger

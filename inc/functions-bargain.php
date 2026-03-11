@@ -156,8 +156,8 @@ function ebay_browse_search(array $params, string $filter = null, ?string $autoC
     }
 
     // 🔍 LOG DEBUG
-    log_local_write(" URL: " . $url . " | filter: " . $filter);
-    if (!empty($data['warnings'])) log_local_write(print_r($data['warnings'], true));
+    log_local_write(" URL: " . $url . " | filter: " . $filter, 'ebay_browse_debug.log');
+    if (!empty($data['warnings'])) log_local_write(print_r($data['warnings'], true), 'ebay_browse_debug.log');
 
     return $data;
 }
@@ -401,6 +401,59 @@ function map_browse_to_products(array $data, ?int $keywordId = null): array
 }
 
 
+/**
+ * Calcule un score "bonne affaire" de 0 à 100.
+ * Basé sur : fiabilité vendeur, prix, dynamique enchère, proximité.
+ */
+function computeBargainScore(array $prod): int
+{
+    $score = 0;
+
+    // Fiabilité vendeur (0–30 pts)
+    $pct = (float)($prod['seller_feedback_pct'] ?? 0);
+    if      ($pct >= 99.5) $score += 30;
+    elseif  ($pct >= 99)   $score += 20;
+    elseif  ($pct >= 97)   $score += 10;
+
+    // Volume vendeur (0–10 pts)
+    $fbScore = (int)($prod['seller_feedback_score'] ?? 0);
+    if      ($fbScore >= 10000) $score += 10;
+    elseif  ($fbScore >= 1000)  $score += 7;
+    elseif  ($fbScore >= 100)   $score += 4;
+
+    // Niveau de prix (0–25 pts) — absolu, sans données historiques
+    $price = (float)($prod['price'] ?? 0);
+    if ($price > 0) {
+        if      ($price <= 5)   $score += 25;
+        elseif  ($price <= 15)  $score += 20;
+        elseif  ($price <= 30)  $score += 15;
+        elseif  ($price <= 75)  $score += 10;
+        elseif  ($price <= 150) $score += 5;
+    }
+
+    // Dynamique enchère (0–25 pts)
+    if (!empty($prod['is_auction'])) {
+        $score += 10;
+        if (!empty($prod['current_bid'])) $score += 5;
+        if (!empty($prod['end_time'])) {
+            $endTs     = strtotime((string)$prod['end_time']);
+            $hoursLeft = $endTs ? ($endTs - time()) / 3600 : PHP_INT_MAX;
+            if      ($hoursLeft <= 1)  $score += 15;
+            elseif  ($hoursLeft <= 6)  $score += 10;
+            elseif  ($hoursLeft <= 24) $score += 5;
+        }
+    }
+
+    // Proximité (0–10 pts)
+    $dist = isset($prod['distance_value']) ? (float)$prod['distance_value'] : null;
+    if ($dist !== null && $dist < 20)     $score += 10;
+    elseif ($dist !== null && $dist < 50) $score += 6;
+    elseif (!empty($prod['item_location'])) $score += 3;
+
+    return min(100, max(0, $score));
+}
+
+
 /* DISPLAY THE BARGAIN FROM EBAY */
 function render_bargain_results($postcode, $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, $mode) {
 
@@ -411,8 +464,18 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
         <div class="bg-red-100 text-red-700 px-4 py-3 rounded mb-4">
             <?= htmlspecialchars($errorMsg, ENT_QUOTES); ?>
         </div>
+    <?php elseif (empty($products) && $searchTerm !== ''): ?>
+        <div class="text-center py-16 text-gray-400">
+            <p class="text-4xl mb-3">🔍</p>
+            <p class="text-lg font-medium">No results for &ldquo;<?= htmlspecialchars($searchTerm, ENT_QUOTES) ?>&rdquo;</p>
+            <p class="text-sm mt-1">Try a different keyword or adjust the filters.</p>
+        </div>
+    <?php elseif (empty($products)): ?>
+        <div class="text-center py-16 text-gray-400">
+            <p class="text-lg">Enter a keyword to find deals.</p>
+        </div>
     <?php else: ?>
-        <!-- Product Grid -->           
+        <!-- Product Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <?php foreach ($products as $prod) : ?>
             <!-- Product Card 1 -->                            
@@ -427,12 +490,26 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
                         <?php endif; ?>
 
                         <div class="flex-1 flex flex-col gap-2">
+                            <?php
+                            $score = computeBargainScore($prod);
+                            global $label_deals_score_tooltip;
+                            $scoreTooltip = str_replace('{score}', $score, $label_deals_score_tooltip ?? '');
+                            ?>
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center gap-1 text-xs font-semibold text-gray-800 cursor-help"
+                                      title="<?= htmlspecialchars($scoreTooltip, ENT_QUOTES); ?>">
+                                    🔥 Score <?= $score ?>
+                                </span>
+                                <?php if (!empty($prod['is_auction'])): ?>
+                                    <span class="text-xs font-semibold text-orange-600 uppercase tracking-wide">Auction</span>
+                                <?php endif; ?>
+                            </div>
                             <h2 class="text-sm font-semibold line-clamp-2 h-42">
                                 <?= htmlspecialchars($prod['title_original'], ENT_QUOTES); ?>
                             </h2>
 
                             <?php if (!empty($prod['condition'])): ?>
-                                <span class="inline-block text-xs px-2 py-1 rounded-full bg-green-100 text-green-800 condition">
+                                <span class="inline-block text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 condition">
                                     <?= htmlspecialchars($prod['condition'], ENT_QUOTES); ?>
                                 </span>
                             <?php endif; ?>
@@ -497,16 +574,76 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
         
                             </div>
 
-                            <div class="mt-2 w-full calltoaction">                                
-                                <button class="w-full bg-blue-500 text-white py-2 rounded-md mt-3"><?= htmlspecialchars($label_viewdetails, ENT_QUOTES); ?>
-                                </button>
+                            <div class="mt-2 calltoaction">
+                                <button class="bg-blue-500 text-white text-sm px-4 py-1.5 rounded-md mt-3"><?= htmlspecialchars($label_viewdetails, ENT_QUOTES); ?></button>
                             </div>
                         </div>
                     </a>
                 </div>
                 
-            <?php endforeach; ?>   
+            <?php endforeach; ?>
         </div>
-    <?php endif; 
+    <?php endif;
+}
 
+
+/**
+ * Renders a "Best deals over €X" widget for a given category page.
+ * Shows the first N keywords from the matching catalog entry.
+ *
+ * @param string $categorySlug  The current category URL slug (from $matched['url'])
+ * @param string $rootDomain
+ * @param string $base
+ * @param string $currency      e.g. "€"
+ */
+function render_deals_widget(string $categorySlug, string $rootDomain, string $base, string $currency): void
+{
+    global $countryCode;
+
+    $catalogFile = __DIR__ . '/../assets/JSON/deals_catalog.json';
+    if (!file_exists($catalogFile)) return;
+
+    $catalog = json_decode(file_get_contents($catalogFile), true) ?? [];
+
+    // Find the first catalog category whose trigger_slugs (for this country) include this page's slug
+    $match = null;
+    $catKey = '';
+    foreach ($catalog as $key => $cat) {
+        $slugsForCountry = $cat['trigger_slugs'][$countryCode] ?? [];
+        if (!empty($slugsForCountry) && in_array($categorySlug, $slugsForCountry, true)) {
+            $match  = $cat;
+            $catKey = $key;
+            break;
+        }
+    }
+    if (!$match) return;
+
+    global $label_deals_widget_title, $label_deals_widget_desc;
+
+    $minPrice = (int)($match['min_price'] ?? 0);
+    $keywords = array_slice($match['keywords'], 0, 6);
+
+    $widgetVars  = ['currency' => $currency, 'min_price' => (string)$minPrice, 'label' => $match['label']];
+    $widgetTitle = str_replace(array_map(fn($k) => '{' . $k . '}', array_keys($widgetVars)), array_values($widgetVars), $label_deals_widget_title ?? '');
+    $widgetDesc  = str_replace(array_map(fn($k) => '{' . $k . '}', array_keys($widgetVars)), array_values($widgetVars), $label_deals_widget_desc ?? '');
+    ?>
+    <div class="my-6 bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl">🔥</span>
+            <h3 class="font-bold text-gray-800 text-base">
+                <?= htmlspecialchars($widgetTitle, ENT_QUOTES); ?> <?= htmlspecialchars($currency, ENT_QUOTES); ?><?= $minPrice; ?>
+                — <?= htmlspecialchars($match['label'], ENT_QUOTES); ?>
+            </h3>
+        </div>
+        <p class="text-sm text-gray-600 mb-3"><?= htmlspecialchars($widgetDesc, ENT_QUOTES); ?></p>
+        <div class="flex flex-wrap gap-2">
+            <?php foreach ($keywords as $kw): ?>
+            <a href="<?= $rootDomain . $base; ?>deals/<?= rawurlencode($catKey); ?>/<?= rawurlencode($kw['slug']); ?>"
+               class="text-sm px-3 py-1 rounded-full border border-yellow-400 bg-white text-gray-700 hover:bg-yellow-100 hover:border-yellow-600 transition">
+                <?= htmlspecialchars($kw['label'], ENT_QUOTES); ?>
+            </a>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <?php
 }

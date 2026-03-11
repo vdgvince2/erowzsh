@@ -15,8 +15,19 @@ $subDomain = get_subdomain_prefix();
 if ($subDomain !== false) {
     $noAds = true;
     $isSub = true;
+
+    // extract the domain name only : 
+    $host = parse_url($rootDomain, PHP_URL_HOST);
+    $domain = preg_replace('/^www\./', '', $host);
+
+    $rootDomainForAssets = "https://".$subDomain.".".$domain.$base;
     require 'template.php';
     exit;
+
+}else{
+    $rootDomainForAssets = $rootDomain.$base;
+    $noAds = false;
+    $isSub = false;
 }
 
 
@@ -117,6 +128,14 @@ if (preg_match('#^s/([^/]+)/([^/]+)/([^/]+)$#', $path, $m)) {
     $_GET['level2'] = $m[2];
     $_GET['level3'] = $m[3];
     require 'template.php';
+    exit;
+}
+
+// 7b) Deal pages : /deals/{category}/{keyword}
+if (preg_match('#^deals/([a-z0-9\-]+)/([a-z0-9\-]+)$#i', $path, $m)) {
+    $_GET['deal_cat']     = rawurldecode($m[1]);
+    $_GET['deal_keyword'] = rawurldecode($m[2]);
+    require 'deals.php';
     exit;
 }
 
