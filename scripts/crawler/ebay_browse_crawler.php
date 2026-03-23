@@ -131,14 +131,19 @@ function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 50, i
 
     $url = EBAY_API_BASE . '/buy/browse/v1/item_summary/search?' . http_build_query($params);
 
+    // Build headers — omit marketplace header for global search (no market restriction)
+    $headers = [
+        'Authorization: Bearer ' . $token,
+        'Content-Type: application/json',
+    ];
+    if (!empty($market)) {
+        $headers[] = 'X-EBAY-C-MARKETPLACE-ID: ' . $market; // e.g., EBAY_FR, EBAY_GB, EBAY_US, EBAY_DE, EBAY_IT
+    }
+
     $ch = curl_init($url);
     curl_setopt_array($ch, [
         CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER     => [
-            'Authorization: Bearer ' . $token,
-            'Content-Type: application/json',
-            'X-EBAY-C-MARKETPLACE-ID: ' . $market, // e.g., EBAY_FR, EBAY_GB, EBAY_US, EBAY_DE, EBAY_IT
-        ],
+        CURLOPT_HTTPHEADER     => $headers,
         CURLOPT_TIMEOUT        => 30,
     ]);
     $resp = curl_exec($ch);
@@ -187,16 +192,24 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
         $TABLE_ads = "ads";        
     }
 
-    // Retrieve the keyword name
-    $stmt = $pdo->prepare("SELECT keyword_name FROM $TABLE_keywords WHERE id = :id LIMIT 1");
+    // Retrieve the keyword name and global marketplace flag
+    $stmt = $pdo->prepare("SELECT keyword_name, ebay_marketplace_global FROM $TABLE_keywords WHERE id = :id LIMIT 1");
     $stmt->execute([':id' => $keywordId]);
     $keywordArray = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if(empty($keywordArray)) { echo "No 404 keyword found"; exit(); }
     echo "KwId: $keywordId | (Sub: $subDomain) -- Country: $countryCode | ". $keywordArray['keyword_name'].PHP_EOL;
 
+    // If keyword is marked as global, skip the marketplace-specific call entirely
+    $useGlobalMarket = !empty($keywordArray['ebay_marketplace_global']);
+    $effectiveMarket = $useGlobalMarket ? '' : $ebay_marketplace;
+
+    if ($useGlobalMarket) {
+        echo "Global marketplace mode (no marketplace restriction).\n";
+    }
+
     // Get the JSON.
-    $result = browse_search($keywordArray['keyword_name'], $ebay_marketplace, $maxAds, 0, ['fieldgroups' => 'PRODUCT']);
+    $result = browse_search($keywordArray['keyword_name'], $effectiveMarket, $maxAds, 0, ['fieldgroups' => 'PRODUCT']);
     $rawJson = json_encode($result, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
     // Retrieve eBay data
@@ -208,7 +221,23 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
     // Parse ebay data
     $items = $data['itemSummaries'] ?? [];
- 
+
+
+    // If not enough results with marketplace-specific search, try a global search (no marketplace)
+    if (!$useGlobalMarket && count($items) <= 5) {
+        echo "Few/no results with marketplace {$ebay_marketplace}, trying global search...\n";
+        $globalResult = browse_search($keywordArray['keyword_name'], '', $maxAds, 0, ['fieldgroups' => 'PRODUCT']);
+        $globalItems  = $globalResult['itemSummaries'] ?? [];
+
+        if (count($globalItems) > 5) {
+            // Global search has results — mark keyword and use global items
+            $upd = $pdo->prepare("UPDATE $TABLE_keywords SET ebay_marketplace_global = 1 WHERE id = :kid");
+            $upd->execute([':kid' => $keywordId]);
+            echo "Global search found " . count($globalItems) . " items — marking ebay_marketplace_global=1.\n";
+            $items = $globalItems;
+        }
+        // If global also <= 5, keep original $items and fall through to existing logic below
+    }
 
     if (count($items) <= 5) {
         // Rien à faire si pas assez de produits

@@ -14,6 +14,7 @@
  */
 
 require '../../inc/config.php';
+require '../../inc/functions.php';
 require '../../inc/functions-bargain.php';
 require '../../inc/functions-deals-history.php';
 require 'ebay_browse_crawler.php';
@@ -39,7 +40,7 @@ echo "=== Deals history crawler | " . date('Y-m-d H:i:s') . " | country: $countr
 foreach ($catalog as $catSlug => $cat) {
     $minPrice = (int)($cat['min_price'] ?? 0);
 
-    foreach ($cat['keywords'] as $kw) {
+    foreach ($cat['countries'][$countryCode]['keywords'] ?? [] as $kw) {
         $kwSlug      = $kw['slug'];
         $searchTerm  = str_replace('-', ' ', $kwSlug);
         $safeKey     = preg_replace('/[^a-z0-9_\-]/i', '_', $catSlug . '_' . $kwSlug . '_' . $countryCode);

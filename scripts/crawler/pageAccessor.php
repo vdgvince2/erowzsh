@@ -26,15 +26,13 @@ if($isLocal) $MAX_keyword = 1; else $MAX_keyword = 500;
 echo "Crawling of $MAX_keyword starting".PHP_EOL;
 
 // --- Get the keywords
-// noads = 1 : means that we can't find ad for that keyword, we should not crawl it anymore.
+// Crawl active keywords, not crawled in the last 3 days, and oldest updated first
 $sqlFetch = "SELECT *
                 FROM keywords
-                WHERE last_update IS NULL AND active=1
-                OR last_update < NOW() - INTERVAL 3 DAY
-                ORDER BY 
-                    (last_update IS NOT NULL),  -- NULL d'abord, non-NULL ensuite
-                    last_visited DESC
-             LIMIT ".$MAX_keyword;
+                WHERE active=1 AND
+                    last_update < NOW() - INTERVAL 3 DAY
+                ORDER BY last_update ASC
+                LIMIT ".$MAX_keyword;          
 $rows = $pdo->query($sqlFetch)->fetchAll(PDO::FETCH_ASSOC);
 $countKeywords = 0;
 
