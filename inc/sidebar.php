@@ -12,7 +12,7 @@ $condition = null;
 
 <!-- DESKTOP FILTERS -->
 <div class="w-full md:w-1/4 lg:w-1/5 pr-4 mb-6 sidebar">
-    <div class="bg-white rounded-2xl p-4 shadow-sm space-y-6 border border-gray-200 border-l-4 border-l-blue-500">
+    <div class="sticky top-4 bg-white rounded-2xl p-4 shadow-sm space-y-6 border border-gray-200 border-l-4 border-l-blue-500">
         <div class="justify-between items-center mb-4">           
             <div class="justify-between items-center mb-4">
 
@@ -96,7 +96,7 @@ $condition = null;
                     }
                 }
                 $AffiliateSearchLink = tracking_link_builder($ebaySearchKeyword, $countryCode, null, $filterKey, $condition);
-                $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_FILTERDESKTOP_", $AffiliateSearchLink);
+                $AffiliateSearchLink = str_replace("customid=".$countryCode."_", "customid=".$countryCode."_FILTERMOBILE_", $AffiliateSearchLink);
                 $AffiliateSearchLink = base64_encode($AffiliateSearchLink); 
                 
                 echo '<option data-url="'.$AffiliateSearchLink.'">'.$advice.'</option>';

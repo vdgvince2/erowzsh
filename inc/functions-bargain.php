@@ -457,7 +457,7 @@ function computeBargainScore(array $prod): int
 /* DISPLAY THE BARGAIN FROM EBAY */
 function render_bargain_results($postcode, $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, $mode) {
 
-global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $label_bargain_calculating, $label_bargain_endson, $label_bargain_standard, $countryCode;
+global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $label_bargain_calculating, $label_bargain_endson, $label_bargain_standard, $label_deals_below_market, $label_deals_top_deal, $countryCode;
 
     ?>
     <?php if ($errorMsg): ?>
@@ -477,9 +477,19 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
     <?php else: ?>
         <!-- Product Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <?php foreach ($products as $prod) : ?>
-            <!-- Product Card 1 -->                            
-                <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300">
+            <?php foreach ($products as $prod) :
+                $isTopDeal   = !empty($prod['is_top_deal']);
+                $belowPct    = isset($prod['below_market_pct']) ? (int)$prod['below_market_pct'] : 0;
+                $condNorm    = htmlspecialchars($prod['condition'] ?? '', ENT_QUOTES);
+                $cardRing    = $isTopDeal ? ' ring-2 ring-emerald-400' : '';
+            ?>
+                <div class="bg-white rounded-lg shadow overflow-hidden product-card transition duration-300<?= $cardRing ?>"
+                     data-cond="<?= $condNorm ?>">
+                    <?php if ($isTopDeal && !empty($label_deals_top_deal)): ?>
+                    <div class="bg-emerald-500 text-white text-xs font-semibold text-center py-1 px-3 tracking-wide">
+                        ⭐ <?= htmlspecialchars($label_deals_top_deal, ENT_QUOTES) ?>
+                    </div>
+                    <?php endif; ?>
                     <a href="<?= htmlspecialchars(tracking_link_builder($searchTerm, $countryCode, $prod['url']), ENT_QUOTES); ?>" target="_blank" rel="noopener noreferrer" class="flex">
                         <?php if (!empty($prod['photo'])): ?>
                             <div class="flex-shrink-0 w-24 h-24 bg-gray-50 flex items-center justify-center overflow-hidden">
@@ -495,15 +505,22 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
                             global $label_deals_score_tooltip;
                             $scoreTooltip = str_replace('{score}', $score, $label_deals_score_tooltip ?? '');
                             ?>
-                            <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-between flex-wrap gap-1">
                                 <span class="inline-flex items-center gap-1 text-xs font-semibold text-gray-800 cursor-help"
                                       title="<?= htmlspecialchars($scoreTooltip, ENT_QUOTES); ?>">
                                     🔥 Score <?= $score ?>
                                 </span>
-                                <?php if (!empty($prod['is_auction'])): ?>
+                                <?php if ($belowPct >= 5 && !empty($label_deals_below_market)): ?>
+                                    <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-full">
+                                        <?= htmlspecialchars(str_replace('{pct}', $belowPct, $label_deals_below_market), ENT_QUOTES) ?>
+                                    </span>
+                                <?php elseif (!empty($prod['is_auction'])): ?>
                                     <span class="text-xs font-semibold text-orange-600 uppercase tracking-wide">Auction</span>
                                 <?php endif; ?>
                             </div>
+                            <?php if (!empty($prod['is_auction']) && $belowPct >= 5): ?>
+                                <span class="text-xs font-semibold text-orange-600 uppercase tracking-wide">Auction</span>
+                            <?php endif; ?>
                             <h2 class="text-sm font-semibold line-clamp-2 h-42">
                                 <?= htmlspecialchars($prod['title_original'], ENT_QUOTES); ?>
                             </h2>
@@ -609,7 +626,7 @@ function render_deals_widget(string $categorySlug, string $rootDomain, string $b
     $match = null;
     $catKey = '';
     foreach ($catalog as $key => $cat) {
-        $slugsForCountry = $cat['trigger_slugs'][$countryCode] ?? [];
+        $slugsForCountry = $cat['countries'][$countryCode]['trigger_slugs'] ?? [];
         if (!empty($slugsForCountry) && in_array($categorySlug, $slugsForCountry, true)) {
             $match  = $cat;
             $catKey = $key;
@@ -621,7 +638,7 @@ function render_deals_widget(string $categorySlug, string $rootDomain, string $b
     global $label_deals_widget_title, $label_deals_widget_desc;
 
     $minPrice = (int)($match['min_price'] ?? 0);
-    $keywords = array_slice($match['keywords'], 0, 6);
+    $keywords = array_slice($match['countries'][$countryCode]['keywords'] ?? [], 0, 6);
 
     $widgetVars  = ['currency' => $currency, 'min_price' => (string)$minPrice, 'label' => $match['label']];
     $widgetTitle = str_replace(array_map(fn($k) => '{' . $k . '}', array_keys($widgetVars)), array_values($widgetVars), $label_deals_widget_title ?? '');
@@ -645,5 +662,101 @@ function render_deals_widget(string $categorySlug, string $rootDomain, string $b
             <?php endforeach; ?>
         </div>
     </div>
+    <?php
+}
+
+
+/**
+ * Renders a lightweight "Best deals" strip using already-loaded DB products.
+ * Zero extra API calls — reads from $products already fetched by product-category.php.
+ *
+ * Shows top 3 cheapest products + a CTA link to the eBay bargain search.
+ *
+ * @param array  $products            Already loaded from DB (ads table)
+ * @param string $keyword             Display keyword / search term
+ * @param string $currency            e.g. "€"
+ * @param string $rootDomain
+ * @param string $base
+ * @param string $rootDomainForAssets For image proxy URL
+ * @param string $countryCode         e.g. "IE"
+ * @param string $labelTitle          Template string with {keyword} placeholder
+ * @param string $labelCta            "See all listings on eBay"
+ */
+function render_best_deals_strip(
+    array  $products,
+    string $keyword,
+    string $currency,
+    string $rootDomain,
+    string $base,
+    string $rootDomainForAssets,
+    string $countryCode,
+    string $labelTitle,
+    string $labelCta,
+    string $labelIntro  = '',
+    string $labelLowest = 'Lowest price'
+): void {
+    $valid = array_values(array_filter($products, fn($p) => !empty($p['photo']) && (float)($p['price'] ?? 0) > 0));
+    if (empty($valid)) return;
+
+    $top   = array_slice($valid, 0, 3);
+    $count = count($valid);
+
+    $kwSafe     = htmlspecialchars($keyword, ENT_QUOTES);
+    $title      = str_replace('{keyword}', $kwSafe, $labelTitle);
+    $intro      = str_replace(['{count}', '{keyword}'], [(string)$count, $kwSafe], $labelIntro);
+    $searchLink = base64_encode(tracking_link_builder($keyword, $countryCode, null, null, null));
+    ?>
+    <section class="mt-8 border border-gray-200 rounded-xl overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gray-50 px-4 py-3 flex items-center justify-between border-b border-gray-200">
+            <h2 class="text-sm font-semibold text-gray-800">🔥 <?= $title ?></h2>
+            <a href="<?= $rootDomain . $base ?>s/bargain?q=<?= rawurlencode($keyword) ?>"
+               class="text-xs text-blue-600 hover:underline font-medium">
+                <?= htmlspecialchars($labelCta, ENT_QUOTES) ?> →
+            </a>
+        </div>
+
+        <?php if ($intro): ?>
+        <!-- Intro — texte à trou -->
+        <p class="px-4 pt-3 pb-1 text-xs text-gray-500 italic"><?= $intro ?></p>
+        <?php endif; ?>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-100 bg-white">
+        <?php foreach ($top as $i => $prod):
+            $isLowest  = $i === 0;
+            $directUrl = !empty($prod['url']) ? base64_encode(tracking_link_builder($keyword, $countryCode, $prod['url'], null, null)) : $searchLink;
+            $specs     = trim($prod['description_itemspecs'] ?? '');
+        ?>
+            <div class="flex flex-col clickable-product cursor-pointer hover:bg-gray-50 transition"
+                 data-url="<?= $directUrl ?>">
+                <!-- Image -->
+                <div class="relative w-full bg-gray-50 flex items-center justify-center overflow-hidden"
+                     style="min-height:180px;">
+                    <img src="<?= $rootDomainForAssets ?>image.php?url=<?= base64_encode($prod['photo']) ?>"
+                         alt="<?= htmlspecialchars($prod['title_original'] ?? '', ENT_QUOTES) ?>"
+                         class="w-full h-44 object-contain p-2" loading="lazy" width="200" height="176">
+                    <?php if ($isLowest): ?>
+                    <span class="absolute top-2 left-2 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                        <?= htmlspecialchars($labelLowest, ENT_QUOTES) ?>
+                    </span>
+                    <?php endif; ?>
+                </div>
+                <!-- Info -->
+                <div class="p-3 flex flex-col gap-1 flex-1">
+                    <p class="text-xs text-gray-700 line-clamp-2 leading-snug font-medium">
+                        <?= htmlspecialchars($prod['title_original'] ?? '', ENT_QUOTES) ?>
+                    </p>
+                    <?php if ($specs): ?>
+                    <p class="text-[11px] text-gray-400 line-clamp-1"><?= htmlspecialchars($specs, ENT_QUOTES) ?></p>
+                    <?php endif; ?>
+                    <p class="text-base font-bold text-gray-900 mt-auto pt-1">
+                        <?= $currency ?><?= number_format((float)$prod['price'], 0) ?>
+                    </p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </div>
+    </section>
     <?php
 }

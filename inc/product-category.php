@@ -62,7 +62,9 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     if (!$matched) { $errorInfo = $label_nocatfound; include('fallback.php'); exit; }
 
     // 4) Titre de page
-    $pageTitle = prettyNameFromSlug($matched['slug_path']).$_TAIL. " | $WebsiteName";
+    $catDisplayName = prettyNameFromSlug($matched['slug_path']);
+    $pageTitle = str_replace('{category}', $catDisplayName, $label_category_page_title ?? 'Best {category} deals')
+               . $_TAIL . " | $WebsiteName";
     $ebaySearchKeyword = $matched['name'];
     $additionnalMetaDesc = $label_product_metadesc_generic;
 
@@ -215,7 +217,23 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     $rowKeyword = $stmt->fetch();
 
     // 404 if no results
-    if (!$rowKeyword){ $errorInfo = $label_nokwfound; include('fallback.php'); exit; }
+    if (!$rowKeyword) {
+        // Main domain only: check if keyword exists regardless of active status
+        if ($subDomain === false) {
+            $stmtAny = $pdo->prepare("SELECT id, keyword_name FROM keywords WHERE keywordURL = :addr LIMIT 1");
+            $stmtAny->execute([':addr' => remove_stopwords($URI, $stopwords, '')]);
+            $crawlRow = $stmtAny->fetch();
+            if ($crawlRow) {
+                $crawlKeywordId   = $crawlRow['id'];
+                $crawlKeywordName = $crawlRow['keyword_name'];
+                include __DIR__ . '/crawl-loading.php';
+                exit;
+            }
+        }
+        $errorInfo = $label_nokwfound;
+        include('fallback.php');
+        exit;
+    }
 
     // META tag for SEO
     $pageTitle = $rowKeyword['keyword_name'] ?? 'Produits';
@@ -267,8 +285,18 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     }
 
 
-    // DEBUG if no products found
-    if (!$products) {   http_response_code(404);   echo "Aucune donnée produits : " . htmlspecialchars($URI, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');   exit; }
+    // No products in DB → trigger on-demand crawl (main domain only)
+    if (!$products) {
+        if ($subDomain === false) {
+            $crawlKeywordId   = $rowKeyword['id'];
+            $crawlKeywordName = $rowKeyword['keyword_name'];
+            include __DIR__ . '/crawl-loading.php';
+            exit;
+        }
+        http_response_code(404);
+        include('fallback.php');
+        exit;
+    }
 
 
     // Visited script page
@@ -284,6 +312,29 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
 
     /* Get the content for the keyword */
     $ContentArray = get_content($pdo, $keywordId, 'product');
+
+    /* ── SEO: price stats ─────────────────────────────────────────── */
+    $kwPriceStats = null;
+    $kwPrices = array_filter(array_map(fn($p) => (float)($p['price'] ?? 0), $products), fn($v) => $v > 0);
+    if (!empty($kwPrices)) {
+        $sortedP = $kwPrices; sort($sortedP);
+        $kwPriceStats = [
+            'count' => count($sortedP),
+            'min'   => round(min($sortedP), 2),
+            'max'   => round(max($sortedP), 2),
+            'avg'   => round(array_sum($sortedP) / count($sortedP), 2),
+        ];
+    }
+
+    /* ── SEO: freshness ───────────────────────────────────────────── */
+    $kwDaysSinceUpdate = null;
+    $latestTs = 0;
+    foreach ($products as $p) {
+        $d = $p['insert_date'] ?? null;
+        if ($d) { $ts = strtotime($d); if ($ts > $latestTs) $latestTs = $ts; }
+    }
+    if ($latestTs > 0) $kwDaysSinceUpdate = (int)floor((time() - $latestTs) / 86400);
+
 }
 
 /* SUB DOMAIN INTERNAL LINK PREPARATION */

@@ -228,6 +228,38 @@ $label_deals_chart_range        = "Typische Spanne (P25–P75)";
 $label_deals_tab_offers         = "Angebote";
 $label_deals_tab_chart          = "Preisdiagramm";
 $label_deals_tab_alert          = "Benachrichtigung";
+$label_deals_price_context      = "{count} Angebote · Median {currency}{median} · Spanne {currency}{p25}–{currency}{p75}";
+$label_deals_below_market       = "−{pct}% unter dem Markt";
+$label_deals_top_deal           = "Top-Angebot";
+$label_deals_key_specs_title    = "Vor dem Kauf prüfen";
+$label_deals_cond_all           = "Alle";
+
+/* CATEGORY & KEYWORD PAGE — eBay deals strip */
+$label_ebay_strip_title         = "Beste eBay-Angebote für {keyword}";
+$label_ebay_strip_intro         = "Diese {count} {keyword}-Angebote sind die günstigsten in unserem Index. Die Preise sind aufsteigend sortiert, damit Sie den Markt schnell einschätzen können.";
+$label_ebay_strip_lowest        = "Günstigster Preis";
+$label_ebay_strip_cta           = "Alle Angebote auf eBay ansehen";
+$label_category_page_title      = "Beste Angebote für {category}";
+$label_bargain_live_btn         = "Live-Angebote suchen";
+$label_bargain_banner_title     = "Mehr {keyword} finden?";
+$label_bargain_banner_desc      = "Direkt auf eBay suchen — frische, stündlich aktualisierte Ergebnisse nach bestem Preis-Leistungs-Verhältnis gefiltert.";
+$label_bargain_sticky_cta       = "Live auf eBay suchen";
+
+/* KEYWORD PAGE — SEO improvements */
+$label_kw_price_context     = "{count} Angebote · ab {currency}{min} · Ø {currency}{avg}";
+$label_kw_stale_notice      = "⚠️ Diese Angebote wurden vor mehr als {days} Tagen aktualisiert.";
+$label_kw_stale_cta         = "Aktuelle Angebote suchen";
+$label_kw_intro_short       = "Entdecken Sie {count} {keyword}-Angebote in unserem Index. Preise reichen von {currency}{min} bis {currency}{max}, mit einem Durchschnitt von {currency}{avg}. Ob Schnäppchen oder Premium-Modell — die Auswahl unten deckt alle Preisklassen ab, neu, gebraucht und generalüberholt. <a href=\"#kw-full-desc\" class=\"underline text-blue-600\">Mehr über {keyword} →</a>";
+$label_kw_intro_full_h2     = "Alles Wissenswerte über {keyword}";
+$label_kw_intro_full        = "Ob neu oder gebraucht — eBay bietet eine der größten {keyword}-Auswahlen online. Mit {count} aktiven Angeboten zum Zeitpunkt der letzten Seitenaktualisierung haben Sie die Wahl zwischen verschiedenen Zuständen, Verkäufern und Preislagen. Die günstigste Option beginnt bei {currency}{min}, während Premium-Angebote bis zu {currency}{max} erreichen können. Der Durchschnittspreis von {currency}{avg} dient als nützlicher Orientierungspunkt: Angebote darunter sind oft gebraucht oder als Auktion angeboten, während teurere Angebote häufig Zubehör, Garantien oder professionelle Verkäufer mit hoher Bewertung umfassen. Prüfen Sie immer die Bewertungen des Verkäufers und die Rückgaberichtlinien vor dem Kauf. Achten Sie bei gebrauchten Artikeln genau auf die Zustandsbeschreibung und Fotos.";
+$label_crawling_title    = "Angebote werden gesucht…";
+$label_crawling_desc     = "Wir suchen {keyword} auf eBay, das dauert nur ein paar Sekunden…";
+$label_crawling_success  = "Angebote gefunden! Wird geladen…";
+$label_crawling_notfound = "Keine Angebote für dieses Stichwort gefunden.";
+$label_price_ranges      = "Nach Budget";
+$label_kw_range_budget      = "Günstige Angebote — unter {currency}{threshold}";
+$label_kw_range_mid         = "Mittlere Preisklasse — {currency}{low} bis {currency}{high}";
+$label_kw_range_premium     = "Premium — über {currency}{threshold}";
 
 /* crawler stopwords for ngram */
 $Array_language_stopwords = [
