@@ -13,7 +13,7 @@
  * Construit le system prompt (mis en cache côté API).
  * Décrit la structure imposée de l'article et les règles EEAT.
  */
-function cs_ai_system_prompt(string $language, string $countryLabel): string
+function cs_ai_system_prompt(string $language, string $countryLabel, string $today): string
 {
     $languageNames = [
         'EN' => 'English',
@@ -25,7 +25,8 @@ function cs_ai_system_prompt(string $language, string $countryLabel): string
 
     return "You are an expert content writer specialising in buying guides for {$countryLabel}.
 Tone: authoritative, helpful, trustworthy (EEAT).
-Output ONLY valid HTML — no markdown, no code fences, no commentary outside HTML.
+Output ONLY the inner body HTML — no <!DOCTYPE>, no <html>, no <head>, no <body> tags, no markdown, no code fences, no commentary.
+The output must start directly with <h1> and contain only these allowed elements: h1, h2, h3, p, ul, ol, li, strong, em, a, details, summary, time, div, span, <!-- comments -->.
 IMPORTANT: You MUST write the entire article in {$langName}. Every word of content must be in {$langName}.
 
 Article structure (use exactly this order):
@@ -40,7 +41,7 @@ Article structure (use exactly this order):
 9. <h2> — \"Where to buy [sub-niche]\" section — mention eBay specifically
 10. <!-- PRODUCT_BLOCK_3 --> placeholder
 11. <h2> — FAQ (4 questions minimum, use <details><summary>Q</summary>A</details>)
-12. <div class=\"eeat-trust\"> — trust signals: last updated date, methodology note
+12. <div class=\"eeat-trust\"> — trust signals with <time datetime=\"{$today}\">{$today}</time> — use this exact date, never invent a date
 13. <div class=\"article-conclusion\"> — conclusion paragraph with CTA
 
 Rules:
@@ -48,9 +49,8 @@ Rules:
 - Do NOT invent prices or product names — the real products are injected via placeholders.
 - Do NOT use placeholder text like [KEYWORD] or [COUNTRY].
 - The article must be at least 900 words of real content (excluding product blocks).
-- Include schema-friendly datetime in <time datetime=\"YYYY-MM-DD\"> inside .eeat-trust.
 - Be empathic, nice, emotional.
-- show your expertise along the writing.";
+- Show your expertise along the writing.";
 }
 
 /**
@@ -112,7 +112,8 @@ function cs_generate_article_html(
         return null;
     }
 
-    $systemPrompt = cs_ai_system_prompt($language, $countryLabel);
+    $today        = date('Y-m-d');
+    $systemPrompt = cs_ai_system_prompt($language, $countryLabel, $today);
     $userPrompt   = cs_ai_user_prompt($subNicheName, $nicheName, $language, $countryLabel, $products);
 
     $payload = json_encode([
@@ -166,6 +167,11 @@ function cs_generate_article_html(
     // Retire d'éventuelles balises de code que le modèle aurait ajoutées
     $html = preg_replace('/^```html\s*/i', '', trim($html));
     $html = preg_replace('/```\s*$/', '', $html);
+
+    // Retire les wrappers html/head/body si le modèle les a ajoutés malgré les consignes
+    $html = preg_replace('/<!DOCTYPE[^>]*>/i', '', $html);
+    $html = preg_replace('/<head\b[^>]*>.*?<\/head>/si', '', $html);
+    $html = preg_replace('/<\/?(?:html|body)\b[^>]*>/i', '', $html);
 
     return trim($html);
 }

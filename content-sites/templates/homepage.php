@@ -152,6 +152,32 @@ $bioLang = 'bio_' . strtolower($mainLanguage ?? 'en');
     <?php endif; ?>
   </section>
 
+  <!-- ── Pages récupérées (site recover) ─────────────────────────────────── -->
+  <?php if (!empty($recTopPages)): ?>
+  <section class="max-w-7xl mx-auto px-4 py-10 border-t border-gray-100">
+    <div class="divider mb-6">
+      <h2 class="text-sm font-bold tracking-[0.3em] uppercase text-gray-900 whitespace-nowrap px-4">Archived pages</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-5">
+      <?php foreach ($recTopPages as $rp): ?>
+      <a href="<?= htmlspecialchars(rec_page_url($recoveredSite, $rp['slug'], $SERVER_Protocol, $portStr, $isLocal, $base)) ?>"
+         class="flex items-center gap-3 bg-white border border-gray-200 rounded-sm px-4 py-3 hover:border-brand group transition-colors">
+        <svg class="flex-shrink-0 w-4 h-4 text-gray-300 group-hover:text-brand transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        <span class="text-[11px] font-semibold uppercase tracking-wide text-gray-700 group-hover:text-brand transition-colors line-clamp-2">
+          <?= htmlspecialchars($rp['title']) ?>
+        </span>
+      </a>
+      <?php endforeach; ?>
+    </div>
+    <div class="text-center">
+      <a href="<?= htmlspecialchars(rec_sitemap_url($recoveredSite, 1, $SERVER_Protocol, $portStr, $isLocal, $base)) ?>"
+         class="text-xs font-bold tracking-widest uppercase text-brand hover:underline">View all archived pages →</a>
+    </div>
+  </section>
+  <?php endif; ?>
+
   <!-- ── Zones éditoriales (si contenu configuré) ───────────────────────────── -->
   <?php
   $hasContent = $homepageContent && (

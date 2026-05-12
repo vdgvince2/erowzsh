@@ -34,30 +34,25 @@ if (empty($nicheSlug)) {
 
 // ── Helper URL ───────────────────────────────────────────────────────────────
 /**
- * Construit l'URL d'une page selon le contexte (local ou prod).
+ * Construit l'URL d'une page (sous-répertoire).
  *
- * Local  : http://antique-clocks.antiques.localhost:8888/SH/content-sites/[?article=slug]
- * Prod   : https://antique-clocks.antiques.co.uk/[guide-slug]
+ * Local  : http://antiques.localhost:8888/SH/content-sites/antique-clocks/[guide-slug]
+ * Prod   : https://antiques.co.uk/antique-clocks/[guide-slug]
  *
  * @param string $subNicheSlug  Slug de la sous-niche (vide = homepage niche)
  * @param string $articleSlug   Slug de l'article     (vide = homepage sous-niche)
  */
 function cs_url(string $subNicheSlug = '', string $articleSlug = ''): string
 {
-    global $nicheBaseUrl, $nicheRootHost, $portStr, $SERVER_Protocol, $base, $isLocal;
+    global $nicheBaseUrl;
 
     if (!$subNicheSlug) return $nicheBaseUrl;
 
-    // Ex : antique-clocks.antiques.localhost
-    $subNicheHost = $subNicheSlug . '.' . $nicheRootHost;
-    $subNicheBase = $SERVER_Protocol . '://' . $subNicheHost . $portStr . $base;
+    $subNicheBase = rtrim($nicheBaseUrl, '/') . '/' . $subNicheSlug . '/';
 
     if (!$articleSlug) return $subNicheBase;
 
-    // Prod : slug dans le chemin ; local : paramètre GET
-    return $isLocal
-        ? $subNicheBase . '?article=' . urlencode($articleSlug)
-        : $subNicheBase . $articleSlug;
+    return $subNicheBase . $articleSlug;
 }
 
 // ── Charge la niche ───────────────────────────────────────────────────────────
@@ -68,6 +63,7 @@ if (!$niche) { http_response_code(404); die('Unknown niche: ' . htmlspecialchars
 
 // ── Niveau 1 : Homepage niche ─────────────────────────────────────────────────
 if (empty($subNicheSlug)) {
+    $recTopPages = [];
     $articles  = cs_get_articles_for_niche($pdo, $nicheSlug, $currentDomain);
     $subNiches = cs_get_subniche_nav($pdo, $nicheSlug);
 

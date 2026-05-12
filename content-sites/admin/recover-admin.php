@@ -14,10 +14,7 @@
  */
 
 // ── Sécurité : local only ─────────────────────────────────────────────────────
-$clientIp = $_SERVER['REMOTE_ADDR'] ?? '';
-if (!in_array($clientIp, ['127.0.0.1', '::1'], true)) {
-    http_response_code(403); die('Accès refusé.');
-}
+require_once __DIR__ . '/auth.php';
 
 define('CS_CLI', false);
 
@@ -58,15 +55,11 @@ if (file_exists($envFile)) {
     }
 }
 
-// ── Pays disponibles ──────────────────────────────────────────────────────────
+// ── Langues disponibles ───────────────────────────────────────────────────────
 
-$countries = ['IE', 'GB', 'FR', 'DE', 'IT', 'BE'];
 $languages = ['EN' => 'English', 'FR' => 'French', 'DE' => 'German', 'IT' => 'Italian', 'NL' => 'Dutch'];
 
 // ── DB unique CONTENT (depuis .env) ──────────────────────────────────────────
-
-$selectedCountry = strtoupper($_GET['country'] ?? $_POST['country'] ?? 'IE');
-if (!in_array($selectedCountry, $countries)) $selectedCountry = 'IE';
 
 $_dbHost = getenv('DB_HOST') ?: '127.0.0.1';
 $_dbPort = getenv('DB_PORT') ?: '8889';
@@ -82,6 +75,22 @@ unset($_dbHost, $_dbPort, $_dbName, $_dbUser, $_dbPass);
 
 // Charge les niches pour le select
 $niches = $pdo->query('SELECT id, name, slug FROM niches ORDER BY sort_order, name')->fetchAll();
+
+// ── Handler AJAX : lecture de log ────────────────────────────────────────────
+
+if (isset($_GET['action']) && $_GET['action'] === 'fetch_log') {
+    $siteId = (int)($_GET['site_id'] ?? 0);
+    $type   = ($_GET['type'] ?? '') === 'gen' ? 'gen' : 'crawl';
+    $file   = '/tmp/rec_' . $type . '_' . $siteId . '.log';
+    header('Content-Type: text/plain; charset=utf-8');
+    if (!$siteId || !file_exists($file)) {
+        echo '(aucun log disponible)';
+    } else {
+        $lines = file($file, FILE_IGNORE_NEW_LINES);
+        echo implode("\n", array_slice($lines, -200));
+    }
+    exit;
+}
 
 // ── Actions POST ──────────────────────────────────────────────────────────────
 
@@ -128,13 +137,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if ($action === 'run_crawl') {
-        $siteId = (int)($_POST['site_id'] ?? 0);
-        $phpBin = rec_php_binary();
-        $script = escapeshellarg($rootDir . '/scripts/recover/fetch_commoncrawl.php');
-        $log    = escapeshellarg('/tmp/rec_crawl_' . $siteId . '.log');
-        $cmd    = "$phpBin $script --site-id=" . escapeshellarg((string)$siteId) . " --country=" . escapeshellarg($selectedCountry) . " > $log 2>&1 &";
+        $siteId  = (int)($_POST['site_id'] ?? 0);
+        $phpBin  = rec_php_binary();
+        $script  = escapeshellarg($rootDir . '/scripts/recover/fetch_commoncrawl.php');
+        $log     = escapeshellarg('/tmp/rec_crawl_' . $siteId . '.log');
+        $proto   = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+        $apiUrl  = escapeshellarg($proto . '://' . $_SERVER['HTTP_HOST']);
+        $cmd     = "$phpBin $script --site-id=" . escapeshellarg((string)$siteId) . " --api-url=$apiUrl > $log 2>&1 &";
         exec($cmd);
-        $flash = '<div class="flash ok">Crawl CommonCrawl lancé en arrière-plan. Log : <code>/tmp/rec_crawl_' . $siteId . '.log</code></div>';
+        $flash = '<div class="flash ok">Crawl CommonCrawl lancé pour le site #' . $siteId . '.</div>';
     }
 
     if ($action === 'run_generate') {
@@ -143,9 +154,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $phpBin = rec_php_binary();
         $script = escapeshellarg($rootDir . '/scripts/recover/generate_content.php');
         $log    = escapeshellarg('/tmp/rec_gen_' . $siteId . '.log');
-        $cmd    = "$phpBin $script --site-id=" . escapeshellarg((string)$siteId) . " --country=" . escapeshellarg($selectedCountry) . " --limit=" . escapeshellarg((string)$limit) . " > $log 2>&1 &";
+        $cmd    = "$phpBin $script --site-id=" . escapeshellarg((string)$siteId) . " --limit=" . escapeshellarg((string)$limit) . " > $log 2>&1 &";
         exec($cmd);
-        $flash = '<div class="flash ok">Génération IA lancée (' . $limit . ' pages). Log : <code>/tmp/rec_gen_' . $siteId . '.log</code></div>';
+        $flash = '<div class="flash ok">Génération IA lancée (' . $limit . ' pages) pour le site #' . $siteId . '.</div>';
     }
 
     if ($action === 'retry_errors') {
@@ -178,8 +189,8 @@ $sites = $pdo->query('
     ORDER BY rs.id DESC
 ')->fetchAll();
 
-$adminUrl = '?country=' . $selectedCountry;
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -198,19 +209,9 @@ $adminUrl = '?country=' . $selectedCountry;
 </head>
 <body class="bg-gray-50">
 
-<header class="bg-gray-900 text-white px-6 py-4 flex items-center justify-between">
-  <div>
-    <span class="text-xs font-bold tracking-widest uppercase text-brand">Content Sites</span>
-    <h1 class="text-base font-bold mt-0.5">Recovered Sites — Admin</h1>
-  </div>
-  <div class="flex items-center gap-3">
-    <span class="text-xs text-gray-400">Base :</span>
-    <?php foreach ($countries as $c): ?>
-      <a href="?country=<?= $c ?>" class="px-3 py-1 rounded-full text-xs font-semibold border transition-colors <?= $c === $selectedCountry ? 'bg-brand text-white border-brand' : 'border-gray-600 text-gray-300 hover:border-brand hover:text-white' ?>">
-        <?= $c ?>
-      </a>
-    <?php endforeach; ?>
-  </div>
+<header class="bg-gray-900 text-white px-6 py-4">
+  <span class="text-xs font-bold tracking-widest uppercase text-brand">Content Sites</span>
+  <h1 class="text-base font-bold mt-0.5">Recovered Sites — Admin</h1>
 </header>
 
 <?php
@@ -223,7 +224,7 @@ $adminPages = [
 <nav class="bg-gray-800 border-b border-gray-700 px-6">
   <div class="max-w-6xl mx-auto flex items-center gap-1 overflow-x-auto">
     <?php foreach ($adminPages as $page): ?>
-    <a href="<?= htmlspecialchars($page['href']) ?>?country=<?= urlencode($selectedCountry) ?>"
+    <a href="<?= htmlspecialchars($page['href']) ?>"
        class="flex items-center gap-1.5 px-4 py-3 text-xs font-semibold tracking-wide whitespace-nowrap border-b-2 transition-colors
               <?= $currentPage === $page['file']
                   ? 'border-brand text-white'
@@ -244,7 +245,6 @@ $adminPages = [
     <h2 class="text-sm font-700 uppercase tracking-widest text-gray-500 mb-4">Ajouter un domaine</h2>
     <form method="post" class="grid sm:grid-cols-5 gap-3 items-end">
       <input type="hidden" name="action" value="add_site">
-      <input type="hidden" name="country" value="<?= $selectedCountry ?>">
 
       <div>
         <label class="block text-xs text-gray-500 mb-1">Hostname routing</label>
@@ -288,11 +288,11 @@ $adminPages = [
   <!-- Liste des sites -->
   <section>
     <h2 class="text-sm font-700 uppercase tracking-widest text-gray-500 mb-4">
-      Sites configurés (<?= $selectedCountry ?> — <?= count($sites) ?>)
+      Sites configurés (<?= count($sites) ?>)
     </h2>
 
     <?php if (empty($sites)): ?>
-      <p class="text-sm text-gray-400 py-8 text-center">Aucun site configuré pour <?= $selectedCountry ?>.</p>
+      <p class="text-sm text-gray-400 py-8 text-center">Aucun site configuré.</p>
     <?php endif; ?>
 
     <div class="grid gap-4">
@@ -317,7 +317,6 @@ $adminPages = [
             <form method="post" class="inline">
               <input type="hidden" name="action" value="toggle_status">
               <input type="hidden" name="site_id" value="<?= $site['id'] ?>">
-              <input type="hidden" name="country" value="<?= $selectedCountry ?>">
               <button type="submit" class="text-xs text-gray-500 hover:text-brand border border-gray-200 rounded-lg px-2 py-1 transition-colors">
                 <?= $site['status'] === 'active' ? 'Désactiver' : 'Activer' ?>
               </button>
@@ -326,7 +325,6 @@ $adminPages = [
             <form method="post" class="inline" onsubmit="return confirm('Supprimer ce site et toutes ses pages ?')">
               <input type="hidden" name="action" value="delete_site">
               <input type="hidden" name="site_id" value="<?= $site['id'] ?>">
-              <input type="hidden" name="country" value="<?= $selectedCountry ?>">
               <button type="submit" class="text-xs text-red-400 hover:text-red-600 border border-red-100 rounded-lg px-2 py-1 transition-colors">
                 Supprimer
               </button>
@@ -359,7 +357,6 @@ $adminPages = [
               <form method="post" class="flex items-center gap-2">
                 <input type="hidden" name="action" value="run_crawl">
                 <input type="hidden" name="site_id" value="<?= $site['id'] ?>">
-                <input type="hidden" name="country" value="<?= $selectedCountry ?>">
                 <button type="submit" class="text-xs bg-gray-800 text-white rounded-lg px-3 py-1.5 hover:bg-gray-700 transition-colors">
                   🕷 Crawl CommonCrawl
                 </button>
@@ -368,7 +365,6 @@ $adminPages = [
               <form method="post" class="flex items-center gap-2">
                 <input type="hidden" name="action" value="run_generate">
                 <input type="hidden" name="site_id" value="<?= $site['id'] ?>">
-                <input type="hidden" name="country" value="<?= $selectedCountry ?>">
                 <input type="number" name="gen_limit" value="50" min="1" max="200"
                        class="w-16 border border-gray-200 rounded text-xs px-2 py-1 text-center">
                 <button type="submit" class="text-xs bg-brand text-white rounded-lg px-3 py-1.5 hover:bg-orange-600 transition-colors">
@@ -384,7 +380,6 @@ $adminPages = [
             <form method="post" class="flex flex-col gap-2">
               <input type="hidden" name="action" value="update_niche">
               <input type="hidden" name="site_id" value="<?= $site['id'] ?>">
-              <input type="hidden" name="country" value="<?= $selectedCountry ?>">
               <select name="niche_id" class="border border-gray-200 rounded text-xs px-2 py-1.5 focus:outline-none focus:border-brand">
                 <option value="">— pas de niche —</option>
                 <?php foreach ($niches as $n): ?>
@@ -408,6 +403,28 @@ $adminPages = [
 
         </div>
 
+        <!-- Logs crawl / génération -->
+        <div class="border-t border-gray-100 bg-gray-950 px-5 py-3" id="log-area-<?= $site['id'] ?>">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Logs</span>
+            <button onclick="loadLog(<?= $site['id'] ?>, 'crawl', this)"
+                    class="text-xs border border-gray-700 text-gray-400 hover:text-white hover:border-gray-400 rounded px-2 py-0.5 transition-colors">
+              Crawl
+            </button>
+            <button onclick="loadLog(<?= $site['id'] ?>, 'gen', this)"
+                    class="text-xs border border-gray-700 text-gray-400 hover:text-white hover:border-gray-400 rounded px-2 py-0.5 transition-colors">
+              Génération
+            </button>
+            <button onclick="stopLog(<?= $site['id'] ?>)"
+                    class="text-xs text-gray-600 hover:text-gray-400 rounded px-2 py-0.5 transition-colors hidden" id="log-stop-<?= $site['id'] ?>">
+              ✕ stop
+            </button>
+            <span class="text-xs text-gray-600 ml-auto" id="log-status-<?= $site['id'] ?>"></span>
+          </div>
+          <pre id="log-output-<?= $site['id'] ?>"
+               class="text-[11px] font-mono text-green-400 bg-black rounded p-3 max-h-48 overflow-y-auto whitespace-pre-wrap break-all leading-relaxed hidden"></pre>
+        </div>
+
         <!-- Erreurs de génération -->
         <?php
         $errPages = $pdo->prepare('SELECT id, title, slug, error_msg FROM recovered_pages WHERE site_id = ? AND status = "error" ORDER BY id DESC LIMIT 20');
@@ -421,7 +438,6 @@ $adminPages = [
             <form method="post" class="inline">
               <input type="hidden" name="action" value="retry_errors">
               <input type="hidden" name="site_id" value="<?= $site['id'] ?>">
-              <input type="hidden" name="country" value="<?= $selectedCountry ?>">
               <button type="submit" class="text-xs bg-red-500 text-white rounded px-2 py-1 hover:bg-red-600 transition-colors">
                 Retry toutes
               </button>
@@ -445,7 +461,7 @@ $adminPages = [
           <strong>Local dev :</strong>
           enregistrer le domaine comme <code><?= htmlspecialchars(preg_replace('/\.com$|\.ie$|\.fr$|\.de$|\.co\.uk$/', '.localhost', $site['domain'])) ?></code>
           et ajouter dans <code>sites.json</code> :
-          <code>"<?= htmlspecialchars(preg_replace('/\.com$|\.ie$|\.fr$|\.de$|\.co\.uk$/', '.localhost', $site['domain'])) ?>": "<?= $selectedCountry ?>"</code>
+          <code>"<?= htmlspecialchars(preg_replace('/\.com$|\.ie$|\.fr$|\.de$|\.co\.uk$/', '.localhost', $site['domain'])) ?>": "IE"</code>
           — En prod, le domaine est <code><?= htmlspecialchars($site['domain']) ?></code>.
         </div>
 
@@ -455,5 +471,41 @@ $adminPages = [
   </section>
 
 </main>
+
+<script>
+const _logTimers = {};
+
+function loadLog(siteId, type, btn) {
+  const out    = document.getElementById('log-output-' + siteId);
+  const status = document.getElementById('log-status-' + siteId);
+  const stop   = document.getElementById('log-stop-'   + siteId);
+
+  stopLog(siteId);
+  out.classList.remove('hidden');
+  stop.classList.remove('hidden');
+  status.textContent = 'chargement…';
+
+  const poll = () => {
+    fetch('?action=fetch_log&site_id=' + siteId + '&type=' + type)
+      .then(r => r.text())
+      .then(txt => {
+        out.textContent = txt;
+        out.scrollTop   = out.scrollHeight;
+        status.textContent = new Date().toLocaleTimeString();
+      })
+      .catch(() => { status.textContent = 'erreur'; });
+    _logTimers[siteId] = setTimeout(poll, 3000);
+  };
+  poll();
+}
+
+function stopLog(siteId) {
+  clearTimeout(_logTimers[siteId]);
+  const stop = document.getElementById('log-stop-' + siteId);
+  if (stop) stop.classList.add('hidden');
+  const status = document.getElementById('log-status-' + siteId);
+  if (status) status.textContent = '';
+}
+</script>
 </body>
 </html>

@@ -23,20 +23,20 @@ define('CS_CLI', true);
 $rootDir = dirname(__DIR__, 2); // /content-sites
 
 // Parse args
-$opts = getopt('', ['site-id:', 'domain:', 'country:', 'limit:']);
+$opts    = getopt('', ['site-id:', 'domain:', 'country:', 'limit:', 'api-url:']);
 $siteId  = isset($opts['site-id'])  ? (int)$opts['site-id']  : null;
 $domain  = $opts['domain']  ?? null;
 $country = strtoupper($opts['country'] ?? 'IE');
 $limit   = min(200, (int)($opts['limit'] ?? 200));
+$apiUrlArg = rtrim($opts['api-url'] ?? '', '/');
 
 if (!$siteId && !$domain) {
     fwrite(STDERR, "Usage: php fetch_commoncrawl.php --site-id=N  OR  --domain=example.com --country=IE\n");
     exit(1);
 }
 
-// ── Connexion DB ──────────────────────────────────────────────────────────────
+// ── Config API front ─────────────────────────────────────────────────────────
 
-// ── .env ─────────────────────────────────────────────────────────────────────
 $_envFile = $rootDir . '/.env';
 if (!file_exists($_envFile)) $_envFile = $rootDir . '/../.env';
 if (file_exists($_envFile)) {
@@ -46,24 +46,51 @@ if (file_exists($_envFile)) {
         if (!getenv(trim($_k))) putenv(trim($_k) . '=' . trim($_v));
     }
 }
-$pdo = new PDO(
-    'mysql:host=' . (getenv('DB_HOST') ?: '127.0.0.1') . ';port=' . (getenv('DB_PORT') ?: '8889') . ';dbname=' . (getenv('DB_NAME') ?: 'CONTENT') . ';charset=utf8mb4',
-    getenv('DB_USER') ?: '', getenv('DB_PASS') ?: '',
-    [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]
-);
 
-// ── Charge le site récupéré ───────────────────────────────────────────────────
+// URL de l'API : priorité à --api-url (passé par recover-admin.php), sinon fallback .env
+$_apiBase = $apiUrlArg ?: rtrim(getenv('RECOVER_API_URL') ?: '', '/');
+if (!$_apiBase) {
+    fwrite(STDERR, "Passe --api-url=https://tondomain.com ou définis RECOVER_API_URL dans .env\n");
+    exit(1);
+}
+$apiBase  = $_apiBase . '/admin/recover-api.php';
+$apiToken = getenv('RECOVER_API_TOKEN') ?: '';
+
+if (!$apiToken) {
+    fwrite(STDERR, "RECOVER_API_TOKEN manquant dans .env\n");
+    exit(1);
+}
+
+/**
+ * Appelle l'API web interne (évite PDO CLI).
+ * @return mixed parsed JSON ou null en cas d'erreur
+ */
+function api_call(string $url, string $method = 'GET', mixed $body = null): mixed
+{
+    global $apiToken;
+    $opts = [
+        'http' => [
+            'method'  => $method,
+            'header'  => "X-Api-Token: {$apiToken}\r\nContent-Type: application/json\r\n",
+            'timeout' => 15,
+        ],
+    ];
+    if ($body !== null) {
+        $opts['http']['content'] = json_encode($body);
+    }
+    $resp = @file_get_contents($url, false, stream_context_create($opts));
+    if ($resp === false) return null;
+    return json_decode($resp, true);
+}
+
+// ── Charge le site récupéré via API ──────────────────────────────────────────
 
 if ($siteId) {
-    $stmt = $pdo->prepare('SELECT * FROM recovered_sites WHERE id = ? LIMIT 1');
-    $stmt->execute([$siteId]);
-    $site = $stmt->fetch();
+    $site = api_call($apiBase . '?action=get_site&site_id=' . $siteId);
     if (!$site) { fwrite(STDERR, "Site id=$siteId introuvable.\n"); exit(1); }
     $domain = $site['domain'];
 } else {
-    $stmt = $pdo->prepare('SELECT * FROM recovered_sites WHERE domain = ? AND status = "active" LIMIT 1');
-    $stmt->execute([$domain]);
-    $site = $stmt->fetch();
+    $site = api_call($apiBase . '?action=get_site_by_domain&domain=' . urlencode($domain));
     if (!$site) { fwrite(STDERR, "Domaine $domain non configuré dans recovered_sites.\n"); exit(1); }
     $siteId = (int)$site['id'];
 }
@@ -220,24 +247,17 @@ if (empty($allUrls)) {
     exit(0);
 }
 
-// ── Insère dans la DB ─────────────────────────────────────────────────────────
-
-$stmtInsert = $pdo->prepare('
-    INSERT IGNORE INTO recovered_pages (site_id, original_path, slug, title, status)
-    VALUES (?, ?, ?, ?, "pending")
-');
+// ── Prépare le batch à insérer via API ───────────────────────────────────────
 
 $usedSlugs = [];
-$inserted  = 0;
-$skipped   = 0;
+$batch     = [];
 
 foreach ($allUrls as $path) {
     $title = path_to_title($path);
-    if (!$title) { $skipped++; continue; }
+    if (!$title) continue;
 
     $slug = path_to_slug($path);
 
-    // Garantit l'unicité des slugs dans ce batch
     $baseSlug = $slug;
     $suffix   = 2;
     while (isset($usedSlugs[$slug])) {
@@ -245,21 +265,22 @@ foreach ($allUrls as $path) {
     }
     $usedSlugs[$slug] = true;
 
-    try {
-        $stmtInsert->execute([$siteId, $path, $slug, $title]);
-        if ($stmtInsert->rowCount() > 0) {
-            $inserted++;
-        } else {
-            $skipped++;
-        }
-    } catch (PDOException $e) {
-        echo "  SKIP $path : " . $e->getMessage() . "\n";
-        $skipped++;
-    }
+    $batch[] = ['path' => $path, 'slug' => $slug, 'title' => $title];
 }
 
-// Met à jour crawled_at
-$pdo->prepare('UPDATE recovered_sites SET crawled_at = NOW() WHERE id = ?')->execute([$siteId]);
+// ── Envoie le batch à l'API ───────────────────────────────────────────────────
+
+$result = api_call(
+    $apiBase . '?action=insert_urls',
+    'POST',
+    ['site_id' => $siteId, 'urls' => $batch]
+);
+
+$inserted = $result['inserted'] ?? 0;
+$skipped  = $result['skipped']  ?? 0;
+
+// Met à jour crawled_at via API
+api_call($apiBase . '?action=update_crawled&site_id=' . $siteId, 'POST');
 
 echo "[OK] Insérées : $inserted | Ignorées/doublons : $skipped\n";
 echo "Utilisez generate_content.php pour générer le contenu AI.\n";

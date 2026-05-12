@@ -1,23 +1,25 @@
 <?php
 /**
- * Content-Sites — Routing
+ * Content-Sites — Routing (subdirectory mode)
  *
- * Produit depuis le hostname :
+ * Produit depuis le hostname et l'URI :
  *   $currentDomain  clé DB du site courant — code pays (IE/GB…) en local/CLI,
  *                   domaine réel (antiques.ie) en production
  *   $countryCode    GB | FR | DE | IT | BE | IE  (depuis sites.json)
  *   $nicheSlug      slug de la niche       (ex: antiques)
  *   $subNicheSlug   slug de la sous-niche  (ex: antique-clocks) ou null
  *   $articleSlug    slug de l'article      (ex: guide-to-buying-...) ou null
- *   $nicheRootHost  domaine racine de la niche (ex: antiques.localhost)
+ *   $nicheRootHost  domaine de la niche    (ex: antiques.localhost)
  *   $portStr        ex: ':8888' ou ''
  *   $isLocal        bool
  *
- * Structure hostname :
- *   antiques.localhost                → niche=antiques, sub=null
- *   antique-clocks.antiques.localhost → niche=antiques, sub=antique-clocks
- *   antiques.co.uk                   → niche=antiques, sub=null
- *   antique-clocks.antiques.co.uk    → niche=antiques, sub=antique-clocks
+ * Structure URL :
+ *   antiques.localhost:8888/SH/content-sites/                          → niche homepage
+ *   antiques.localhost:8888/SH/content-sites/antique-clocks/           → sous-niche homepage
+ *   antiques.localhost:8888/SH/content-sites/antique-clocks/guide-slug → article
+ *   antiques.co.uk/                                                     → niche homepage
+ *   antiques.co.uk/antique-clocks/                                      → sous-niche homepage
+ *   antiques.co.uk/antique-clocks/guide-slug                            → article
  */
 
 // CLI : $currentDomain déjà défini par le script → on saute tout
@@ -39,32 +41,23 @@ $rawHost      = preg_replace('/^www\./', '', $hostParts[0]);
 $portStr      = (isset($hostParts[1]) && !in_array($hostParts[1], ['80', '443']))
                 ? ':' . $hostParts[1] : '';
 
-$URI = trim($_SERVER['REQUEST_URI'] ?? '/', '/');
+// ── Parse l'URI : sous-niche + article ───────────────────────────────────────
 
-// ── Parse le hostname : niche + subniche ──────────────────────────────────────
+$uriPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
+$uriBase = $isLocal ? '/SH/content-sites/' : '/';
+$relPath  = trim(substr($uriPath, strlen($uriBase)), '/');
 
-$parts = explode('.', $rawHost);
-$count = count($parts);
-
-$multiPartTlds = ['co.uk', 'ac.uk', 'gov.uk', 'com.au', 'com.br', 'co.nz'];
-$tldSuffix     = ($count >= 2) ? $parts[$count - 2] . '.' . $parts[$count - 1] : '';
-$isMultiTld    = in_array($tldSuffix, $multiPartTlds, true);
-
-$tldPartCount = $isMultiTld ? 2 : 1;
-$nicheIndex   = $count - $tldPartCount - 1;
-
-$nicheSlug    = ($nicheIndex >= 0) ? $parts[$nicheIndex] : null;
-$subNicheSlug = ($nicheIndex > 0)  ? $parts[$nicheIndex - 1] : null;
-
-$tldStr        = implode('.', array_slice($parts, -$tldPartCount));
-$nicheRootHost = $nicheSlug ? ($nicheSlug . '.' . $tldStr) : $rawHost;
+$pathSegments = ($relPath !== '') ? explode('/', $relPath) : [];
+$subNicheSlug = ($pathSegments[0] ?? '') !== '' ? $pathSegments[0] : null;
+$articleSlug  = ($pathSegments[1] ?? '') !== '' ? $pathSegments[1] : null;
 
 // ── Résolution du site depuis sites.json ──────────────────────────────────────
 
-$_sitesFile = __DIR__ . '/../sites.json';
-$_sites     = file_exists($_sitesFile) ? json_decode(file_get_contents($_sitesFile), true) : [];
+$_sitesFile  = __DIR__ . '/../sites.json';
+$_sites      = file_exists($_sitesFile) ? json_decode(file_get_contents($_sitesFile), true) : [];
 
-$_entry = $_sites[$nicheRootHost] ?? null;
+$nicheRootHost = $rawHost;
+$_entry        = $_sites[$nicheRootHost] ?? null;
 if (is_string($_entry)) {
     $_entry = $_sites[$_entry] ?? null;                      // alias string → config pays
 } elseif (is_array($_entry) && isset($_entry['ref'])) {
@@ -73,24 +66,10 @@ if (is_string($_entry)) {
     unset($_entry['ref']);
 }
 
-// En local : clé DB = code pays (partage data avec CLI)
-// En prod  : clé DB = domaine réel (isolation par site)
-$currentDomain = $isLocal
-    ? ($_entry['country'] ?? 'IE')
-    : $nicheRootHost;
+// Clé DB = code pays (IE/GB…) dans tous les contextes → cohérence avec le CLI
+$currentDomain = $_entry['country'] ?? 'IE';
 
 $countryCode = $_entry['country'] ?? 'IE';
+$nicheSlug   = $_entry['niche']   ?? null;
 
 unset($_sitesFile, $_sites, $_entry);
-
-// ── Article slug ──────────────────────────────────────────────────────────────
-
-$articleSlug = null;
-
-if (!$isLocal && $subNicheSlug !== null && $URI !== '') {
-    $articleSlug = $URI;
-}
-
-if ($isLocal) {
-    $articleSlug = (!empty($_GET['article'])) ? $_GET['article'] : null;
-}

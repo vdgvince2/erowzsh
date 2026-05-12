@@ -13,10 +13,7 @@
  */
 
 // ── Sécurité : local only ─────────────────────────────────────────────────────
-$clientIp = $_SERVER['REMOTE_ADDR'] ?? '';
-if (!in_array($clientIp, ['127.0.0.1', '::1'], true)) {
-    http_response_code(403); die('Accès refusé.');
-}
+require_once __DIR__ . '/auth.php';
 
 define('CS_CLI', false);
 $rootDir = dirname(__DIR__);

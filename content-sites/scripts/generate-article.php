@@ -11,10 +11,8 @@
  *  1. Sélectionne la prochaine sous-niche non traitée (ou en erreur)
  *  2. Appelle l'API eBay pour récupérer des produits
  *  3. Appelle Claude Sonnet pour générer le HTML de l'article
- *  4. Insère l'article en DB avec status=draft
+ *  4. Insère l'article en DB avec status=published
  *  5. Sauvegarde les produits associés
- *
- * Appelé par le cron — publish-article.php est appelé juste après.
  */
 
 define('CS_CLI', true);
@@ -84,8 +82,9 @@ $articleId = cs_upsert_article(
     $slug,
     $metaDescription,
     $contentHtml,
-    'draft'
+    'published'
 );
+cs_publish_article($pdo, $articleId);
 
 echo "[generate-article] Article inséré/mis à jour — ID: {$articleId}" . PHP_EOL;
 
@@ -101,5 +100,5 @@ if (!empty($subNiche['kw_id'])) {
     echo "[generate-article] Keyword ID {$subNiche['kw_id']} marqué comme utilisé." . PHP_EOL;
 }
 
-echo "[generate-article] Terminé. Article ID {$articleId} en statut 'draft'." . PHP_EOL;
+echo "[generate-article] Terminé. Article ID {$articleId} publié." . PHP_EOL;
 exit(0);

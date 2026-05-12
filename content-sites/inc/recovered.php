@@ -142,20 +142,71 @@ if ($requestedSlug === '') {
     $stmtTop->execute([$recSiteId]);
     $recTopPages = $stmtTop->fetchAll();
 
-    // Articles content-sites liés à la niche (pour la sidebar/footer)
-    $recNicheArticles = [];
+    // Charge la niche liée pour afficher la homepage normale + section recovered
+    $niche           = null;
+    $articles        = [];
+    $subNiches       = [];
+    $homepageContent = null;
+    $eeatProfiles    = [];
+    $galleryImages   = [];
+
     if ($recNicheId) {
-        $stmtNA = $pdo->prepare('
-            SELECT a.title, a.slug, sn.slug AS sub_niche_slug
-            FROM articles a
-            JOIN sub_niches sn ON sn.id = a.sub_niche_id
-            WHERE sn.niche_id = ? AND a.language = ? AND a.status = "published"
-            ORDER BY a.published_at DESC LIMIT 6
-        ');
-        $stmtNA->execute([$recNicheId, $recLang]);
-        $recNicheArticles = $stmtNA->fetchAll();
+        $stmtNiche = $pdo->prepare('SELECT * FROM niches WHERE id = :id LIMIT 1');
+        $stmtNiche->execute([':id' => $recNicheId]);
+        $niche = $stmtNiche->fetch() ?: null;
     }
 
+    if ($niche) {
+        // Aligne la langue sur celle du site récupéré
+        $mainLanguage = strtoupper($recLang);
+
+        $articles  = cs_get_articles_for_niche($pdo, $niche['slug'], $currentDomain);
+        $subNiches = cs_get_subniche_nav($pdo, $niche['slug']);
+
+        $stmtHpc = $pdo->prepare('SELECT * FROM niche_homepage_content WHERE niche_id = :nid AND domain = :dom LIMIT 1');
+        $stmtHpc->execute([':nid' => $niche['id'], ':dom' => $currentDomain]);
+        $homepageContent = $stmtHpc->fetch() ?: null;
+
+        $stmtEeat = $pdo->prepare('
+            SELECT ep.expert_name, ep.social_link,
+                   ep.bio_en, ep.bio_fr, ep.bio_de, ep.bio_it,
+                   sn.name AS sub_niche_name, sn.slug AS sub_niche_slug
+            FROM eeat_profiles ep
+            JOIN sub_niches sn ON sn.id = ep.sub_niche_id
+            JOIN niches n ON n.id = sn.niche_id
+            WHERE n.slug = :slug
+            ORDER BY sn.sort_order ASC, sn.name ASC
+        ');
+        $stmtEeat->execute([':slug' => $niche['slug']]);
+        $eeatProfiles = $stmtEeat->fetchAll();
+
+        $stmtGallery = $pdo->prepare('
+            SELECT ap.image_url, sn.slug AS sub_niche_slug, sn.name AS sub_niche_name
+            FROM article_products ap
+            JOIN articles a ON a.id = ap.article_id
+            JOIN sub_niches sn ON sn.id = a.sub_niche_id
+            JOIN niches n ON n.id = sn.niche_id
+            WHERE n.slug = :slug
+              AND a.domain = :domain
+              AND a.status = "published"
+              AND ap.image_url IS NOT NULL
+              AND ap.image_url != ""
+            ORDER BY RAND()
+            LIMIT 28
+        ');
+        $stmtGallery->execute([':slug' => $niche['slug'], ':domain' => $currentDomain]);
+        $galleryImages = $stmtGallery->fetchAll();
+        $galleryImages = array_map(function (array $row): array {
+            $row['image_url'] = preg_replace('/s-l\d+/', 's-l500', $row['image_url']);
+            return $row;
+        }, $galleryImages);
+
+        require __DIR__ . '/../templates/homepage.php';
+        exit;
+    }
+
+    // Fallback si aucune niche liée : ancienne homepage recovered
+    $recNicheArticles = [];
     require __DIR__ . '/../templates/recovered-homepage.php';
     exit;
 }
