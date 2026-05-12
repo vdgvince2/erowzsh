@@ -70,7 +70,7 @@ function renderEbayCategoryDropdown(
 
 
 /**
- * Appel simple de l’API Browse (reprend l’esprit d’un crawler classique).
+ * Appel simple de l'API Browse (reprend l'esprit d'un crawler classique).
  */
 function ebay_browse_search(array $params, string $filter = null, ?string $autoCorrect = null, ?string $sort = null): ?array
 {
@@ -109,7 +109,7 @@ function ebay_browse_search(array $params, string $filter = null, ?string $autoC
         'X-EBAY-C-MARKETPLACE-ID: ' . $EBAY_MARKETPLACE_ID,
     ];
 
-    // Si tu gères l’affiliation/enduserctx, ajoute ton header existant ici
+    // Si tu gères l'affiliation/enduserctx, ajoute ton header existant ici
     /*
     if (!empty($params['postcode'])) {
         $ctx = 'contextualLocation=country='.$countryCode.',zip=' . $params['postcode'];
@@ -259,13 +259,13 @@ function build_ebay_filter_string(array $input, string $mode, string $postcode, 
         $parts[] = "maxDeliveryCost:{$deliveryMax}";
         $parts[] = "maxDeliveryCostCurrency:{$priceCurrencySchema}";
     }
-    // deliveryMin n’est pas supporté → ignoré volontairement
+    // deliveryMin n'est pas supporté → ignoré volontairement
 
     // Last-minute = enchères qui se terminent bientôt
     if ($mode === 'lastminute') {
         // auctions uniquement
         $parts[] = "buyingOptions:{AUCTION}";
-        // enchères qui se terminent dans l’heure
+        // enchères qui se terminent dans l'heure
         $now   = new DateTime('now', new DateTimeZone('UTC'));
         $end   = (clone $now)->modify('+3 hour');
         $endIso = $end->format('Y-m-d\TH:i:s\Z');
@@ -359,7 +359,7 @@ function map_browse_to_products(array $data, ?int $keywordId = null): array
             $descSpecs = implode(' • ', $pieces);
         }*/
 
-        // ⏱ fin de l’enchère
+        // ⏱ fin de l'enchère
         $endTime = $item['itemEndDate'] ?? null; // ISO style "2025-12-05T10:23:00.000Z"
         // Version lisible en Europe/Brussels
         $endTimeLocal = null;
@@ -373,20 +373,53 @@ function map_browse_to_products(array $data, ?int $keywordId = null): array
             }
         }
 
+        // watchers & bids
+        $watchCount = isset($item['watchCount']) ? (int)$item['watchCount'] : null;
+        $bidCount   = isset($item['bidCount'])   ? (int)$item['bidCount']   : null;
+
+        // prix barré vendeur (marketingPrice)
+        $marketingOriginalPrice = null;
+        $marketingDiscountPct   = null;
+        if (!empty($item['marketingPrice'])) {
+            $mp = $item['marketingPrice'];
+            if (isset($mp['originalPrice']['value'])) {
+                $marketingOriginalPrice = (float)$mp['originalPrice']['value'];
+            }
+            if (isset($mp['discountPercentage'])) {
+                $marketingDiscountPct = (float)$mp['discountPercentage'];
+            }
+        }
+
+        // livraison
+        $shippingCost   = null;
+        $isFreeShipping = false;
+        if (!empty($item['shippingOptions']) && is_array($item['shippingOptions'])) {
+            $ship    = $item['shippingOptions'][0];
+            $costVal = isset($ship['shippingCost']['value']) ? (float)$ship['shippingCost']['value'] : null;
+            if ($costVal !== null) {
+                $shippingCost   = $costVal;
+                $isFreeShipping = ($costVal == 0.0);
+            }
+        }
+
+        // top rated & programmes qualifiés
+        $topRated          = !empty($item['topRatedBuyingExperience']);
+        $qualifiedPrograms = $item['qualifiedPrograms'] ?? [];
+
         $products[] = [
             'id'                     => null,
             'keyword_id'             => $keywordId,
             'title_original'         => $title,
             //'description_itemspecs'  => $descSpecs,
             'photo'                  => $imageUrl,
-            'price'                  => $displayPrice,   
-            'price_original'         => $priceValue,       
-            'current_bid'            => $currentBid,        
-            'is_auction'             => $isAuction ? 1 : 0,   
-            'end_time'               => $endTime,        
+            'price'                  => $displayPrice,
+            'price_original'         => $priceValue,
+            'current_bid'            => $currentBid,
+            'is_auction'             => $isAuction ? 1 : 0,
+            'end_time'               => $endTime,
             'url'                    => $itemUrl,
 
-            // 👇 nouveaux champs
+            // champs vendeur & localisation
             'condition'              => $condition,
             'seller_username'        => $sellerName,
             'seller_feedback_score'  => $sellerScore,
@@ -394,6 +427,16 @@ function map_browse_to_products(array $data, ?int $keywordId = null): array
             'distance_value'         => $distanceValue,
             'distance_unit'          => $distanceUnit,
             'item_location'          => $itemLocationStr,
+
+            // champs marché eBay
+            'watch_count'              => $watchCount,
+            'bid_count'                => $bidCount,
+            'marketing_original_price' => $marketingOriginalPrice,
+            'marketing_discount_pct'   => $marketingDiscountPct,
+            'shipping_cost'            => $shippingCost,
+            'is_free_shipping'         => $isFreeShipping,
+            'top_rated'                => $topRated,
+            'qualified_programs'       => $qualifiedPrograms,
         ];
     }
 
@@ -586,9 +629,29 @@ global $label_bargain_distance, $label_bargain_seller, $label_bargain_endsin, $l
                                 </p>
                             <?php endif; ?>
 
+                            <!-- badges marché -->
+                            <div class="flex flex-wrap gap-1 mt-1">
+                                <?php if (!empty($prod['is_free_shipping'])): ?>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-green-50 border border-green-200 text-green-700 font-medium">🚚 Free shipping</span>
+                                <?php elseif (isset($prod['shipping_cost']) && $prod['shipping_cost'] !== null && $prod['shipping_cost'] > 0): ?>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-gray-50 border border-gray-200 text-gray-500">+<?= htmlspecialchars($currency . number_format($prod['shipping_cost'], 0), ENT_QUOTES) ?> ship.</span>
+                                <?php endif; ?>
+                                <?php if (!empty($prod['marketing_discount_pct'])): ?>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-orange-50 border border-orange-200 text-orange-700 font-semibold">-<?= (int)$prod['marketing_discount_pct'] ?>%</span>
+                                <?php endif; ?>
+                                <?php if (!empty($prod['watch_count'])): ?>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600">👁 <?= (int)$prod['watch_count'] ?></span>
+                                <?php endif; ?>
+                                <?php if (!empty($prod['top_rated'])): ?>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700">🏅 Top Rated</span>
+                                <?php endif; ?>
+                            </div>
+
                             <div class="items-center justify-between price">
+                                <?php if (!empty($prod['marketing_original_price']) && $prod['marketing_original_price'] > $prod['price']): ?>
+                                    <span class="text-xs text-gray-400 line-through"><?= htmlspecialchars($currency . number_format($prod['marketing_original_price'], 0), ENT_QUOTES) ?></span>
+                                <?php endif; ?>
                                 <span class="text-lg font-bold"><?= htmlspecialchars($currency, ENT_QUOTES); ?> <?= htmlspecialchars(number_format($prod['price'], 2), ENT_QUOTES); ?></span>
-        
                             </div>
 
                             <div class="mt-2 calltoaction">

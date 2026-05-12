@@ -82,6 +82,16 @@ FileETag None
 # 0) Homepage du dossier SH → pager.php
 RewriteRule ^$ pager.php [QSA,L]
 
+# 0b) Sitemap pretty URLs
+RewriteRule ^sitemap-main\.xml$       sitemap-main.php       [L]
+RewriteRule ^sitemap-pages\.xml$      sitemap-pages.php      [L]
+RewriteRule ^sitemap-categories\.xml$ sitemap-categories.php [L]
+RewriteRule ^sitemap-keywords\.xml$   sitemap-keywords.php   [L]
+RewriteRule ^sitemap-deals\.xml$      sitemap-deals.php      [L]
+
+# 0c) IndexNow key file — serve as plain text
+RewriteRule ^b4e8f2c7d1a9b3e5c2f8d6a4b1e7c3f9\.txt$ b4e8f2c7d1a9b3e5c2f8d6a4b1e7c3f9.txt [L]
+
 # 1) Laisser passer les fichiers / dossiers réels
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

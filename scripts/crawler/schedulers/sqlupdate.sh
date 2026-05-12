@@ -10,8 +10,8 @@ MYSQL_PASS="DB8Fv?bbyul65g!w"
 DBS=(FR EROWZ IE UK DE BE IT US)
 
 SQL=$(cat <<'EOF'
-ALTER TABLE `subdomain_keywords` ADD `active` INT(11) NOT NULL DEFAULT '1' AFTER `subdomain`;
-ALTER TABLE `keywords` ADD `active` INT(11) NOT NULL DEFAULT '1' AFTER `main_category`;
+update `keywords` set active= 1 where active=0;
+update `subdomain_keywords` set active= 1 where active=0;
 EOF
 )
 

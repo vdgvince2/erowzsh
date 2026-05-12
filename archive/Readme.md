@@ -10,6 +10,8 @@
 8. lancer le script run.sh en local
 9. configurer cloudflare et ajouter la règle de sécurité "BAN asia"
 
+# update SQL pour tous les pays ensemble
+1. il faut lancer bash bash /var/www/vhosts/for-sale.ie/scripts/crawler/schedulers/sqlupdate.sh
 
 # déployer en production
 0. compiler le CSS avec NPX
@@ -17,6 +19,7 @@
 2. lancer le script "bash /var/www/vhosts/for-sale.ie/deploy.sh"
 3. update SQL si nécessaire
 4. update htaccess si nécessaire
+5. déployer les crawlers dans /var/www/vhosts/crawlers/
 
 # compilation Tailwind CSS
 npx tailwindcss -i /Applications/MAMP/htdocs/SH/archive/input.css -o /Applications/MAMP/htdocs/SH/assets/tailwind.css --minify

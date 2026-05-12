@@ -1,3 +1,5 @@
 inc/config.php
+inc/google_indexing_sa.json
 node_modules/
 cache/
+content-sites/.env

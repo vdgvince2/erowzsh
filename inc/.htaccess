@@ -1,0 +1,11 @@
+# Block direct HTTP access to all files in this directory.
+# PHP files are only meant to be included server-side, never requested directly.
+# The service account JSON key must never be publicly accessible.
+
+<FilesMatch "\.json$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>

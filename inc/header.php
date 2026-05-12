@@ -6,58 +6,15 @@ inline_css_for_page();
 ?>
 
 <header class="w-full bg-white shadow">
-  <!-- Top bar -->
-  <div class="bg-blue-500 text-white text-sm">
-    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-center gap-2 text-center">
-
-      <!-- Location icon -->
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-           viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 21s-6-5.686-6-10a6 6 0 1 1 12 0c0 4.314-6 10-6 10z" />
-        <circle cx="12" cy="11" r="2.5" />
-      </svg>
-
-      <a href="<?=$rootDomain.$base;?>s/bargain" class="inline-flex items-center gap-2 text-xl font-medium focus:outline-none">
-        <?= $label_bargain_topheader;?>
-      </a>
-
-    </div>
-  </div>
-
   <!-- Main header row -->
   <div class="mx-auto px-4 py-4">
     <div class="flex items-center justify-between gap-4">
-      <!-- Left : title -->
-      <div class="flex items-center">
+      <!-- Center : title -->
+      <div class="flex-1 flex items-center justify-center">
         <a href="<?= $rootDomain.$base;?>" class="text-3xl md:text-4xl font-bold text-blue-500 leading-none">
           <?=$WebsiteName;?>
         </a>
       </div>
-
-      <!-- Center : search desktop -->
-      <form class="hidden md:flex flex-1 mx-4" action="<?=$rootDomain.$base;?>s/bargain" method="get">
-        <div class="flex w-full bg-gray-50 rounded-full shadow-sm overflow-hidden">
-          <input type="hidden" name="mode" value="standard" />
-          <input
-            type="text"
-            placeholder="ipad, smartphone, ..."
-            data-hj-allow
-            class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none"
-            name="q"
-          />
-          <button
-            type="submit"
-            class="flex items-center justify-center px-5 bg-blue-500 text-white"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                    d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
-            </svg>
-          </button>
-        </div>
-      </form>
 
       <!-- Right desktop icons -->
        
@@ -107,20 +64,6 @@ inline_css_for_page();
         </svg>
       </button>
     </div>
-
-    <!-- Mobile search -->
-    <form class="mt-3 md:hidden" action="<?=$rootDomain.$base;?>s/bargain" method="get">
-      <div class="flex w-full bg-gray-50 rounded-full shadow-sm overflow-hidden">
-        <input type="hidden" name="mode" value="standard" />
-        <input type="text" name="q" placeholder="ipad, smartphone, ..." data-hj-allow
-               class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none" />
-        <button class="flex items-center justify-center px-5 bg-blue-500 text-white">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
-          </svg>
-        </button>
-      </div>
-    </form>
 
     <!-- Mobile actions -->
     <div id="mobileActions" class="md:hidden hidden mt-3 flex items-center gap-6">

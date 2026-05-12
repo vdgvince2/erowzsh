@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -l /Applications/MAMP/htdocs/SH/bargain.php)",
+      "Bash(php -l /Applications/MAMP/htdocs/SH/inc/functions-bargain.php)",
+      "Bash(php -l /Applications/MAMP/htdocs/SH/assets/bargain.js)",
+      "Read(//Applications/MAMP/logs/**)",
+      "Read(//var/log/apache2/**)",
+      "Bash(php -l /Applications/MAMP/htdocs/SH/deals.php)",
+      "Bash(php -l /Applications/MAMP/htdocs/SH/pager.php)",
+      "Bash(php -l /Applications/MAMP/htdocs/SH/inc/head-scripts.php)",
+      "Bash(chmod +x /Applications/MAMP/htdocs/SH/content-sites/scripts/schedulers/article-cron.sh /Applications/MAMP/htdocs/SH/content-sites/scripts/generate-article.php /Applications/MAMP/htdocs/SH/content-sites/scripts/publish-article.php /Applications/MAMP/htdocs/SH/content-sites/scripts/import-niches.php)",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"SHOW TABLES;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"DESCRIBE niches; DESCRIBE sub_niches; DESCRIBE categories;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"SELECT id, name, slug FROM niches ORDER BY name;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"SELECT id, name, slug FROM sub_niches ORDER BY name;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE --batch -e \"SELECT id, name, slug FROM sub_niches ORDER BY name;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"SELECT COUNT\\(*\\) FROM sub_niches;\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"SELECT COUNT\\(*\\) FROM niches; SELECT COUNT\\(*\\) FROM categories;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"SELECT id, name, slug_path FROM categories ORDER BY name LIMIT 30;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"DESCRIBE articles;\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql -h 127.0.0.1 -P 8889 -u root -proot IE -e \"SELECT id, name, slug_path, level FROM categories WHERE level = 1 ORDER BY name LIMIT 50;\")"
+    ]
+  }
+}

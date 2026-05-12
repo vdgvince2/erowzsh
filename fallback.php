@@ -86,6 +86,12 @@ if (!empty($redirectMap[$matchKey])) {
     exit;
 }
 
+// convert if exist to fill in input
+$keywordForInput = "";
+if(isset($requestUri)){
+  $keywordForInput = str_replace("-", " ", $requestUri);
+}
+
 // 2) Sinon, 404 propre + search
 http_response_code(404);
 header('X-Robots-Tag: noindex, nofollow');
@@ -123,6 +129,7 @@ $pageTitle = $label_search_notfound;
               placeholder="ipad, smartphone, ..."
               data-hj-allow
               class="flex-1 px-4 py-3 text-gray-700 bg-gray-50 outline-none"
+              <?php if(isset($keywordForInput)){ echo 'value="'.$keywordForInput.'"'; } ?>
               name="keyword_search"
             />
             <button

@@ -9,8 +9,9 @@
  */
 $noAds   = true;
 $pageTitle = $label_crawling_title ?? 'Loading listings…';
-$crawlUrl  = $rootDomain . $base . 'crawl-now.php?kid=' . (int)$crawlKeywordId;
-$reloadUrl = $SERVER_PageFullURL;
+$crawlToken = hash_hmac('sha256', (int)$crawlKeywordId . '|' . (int)floor(time() / 300), VISITED_SECRET);
+$crawlUrl   = $rootDomain . $base . 'crawl-now.php?kid=' . (int)$crawlKeywordId . '&token=' . $crawlToken;
+$reloadUrl  = $SERVER_PageFullURL;
 ?>
 <!DOCTYPE html>
 <html lang="<?= strtolower($mainLanguage) ?>" class="js">
@@ -42,8 +43,9 @@ $reloadUrl = $SERVER_PageFullURL;
     (function () {
       const url      = <?= json_encode($crawlUrl) ?>;
       const reload   = <?= json_encode($reloadUrl) ?>;
-      const msgOk    = <?= json_encode($label_crawling_success  ?? 'Listings found! Loading…') ?>;
-      const msgErr   = <?= json_encode($label_crawling_notfound ?? 'No listings found for this keyword.') ?>;
+      const msgOk    = <?= json_encode($label_crawling_success    ?? 'Listings found! Loading…') ?>;
+      const msgErr   = <?= json_encode($label_crawling_notfound   ?? 'No listings found for this keyword.') ?>;
+      const msgRate  = <?= json_encode($label_crawling_ratelimited ?? 'eBay is busy right now. Please try again in a few minutes.') ?>;
 
       fetch(url, { method: 'GET' })
         .then(r => r.json())
@@ -54,6 +56,10 @@ $reloadUrl = $SERVER_PageFullURL;
             document.getElementById('crawl-title').className   = 'crawl-msg-ok';
             document.getElementById('crawl-desc').textContent  = '';
             setTimeout(() => { window.location.href = reload; }, 800);
+          } else if (data.ratelimited) {
+            document.getElementById('crawl-title').textContent = msgRate;
+            document.getElementById('crawl-title').className   = 'crawl-msg-err';
+            document.getElementById('crawl-desc').textContent  = '';
           } else {
             document.getElementById('crawl-title').textContent = msgErr;
             document.getElementById('crawl-title').className   = 'crawl-msg-err';

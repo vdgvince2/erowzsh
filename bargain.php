@@ -154,6 +154,14 @@ if ($isAjax) {
 <!DOCTYPE html>
 <html lang="<?=strtolower($mainLanguage);?>" class="js">
 <?php require __DIR__ . '/inc/head-scripts.php'; ?>
+
+<?php if (!empty($_GET)): ?>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="<?= strtok($_SERVER['REQUEST_URI'], '?') ?>">
+<?php else: ?>
+  <link rel="canonical" href="<?= $_SERVER['REQUEST_URI'] ?>">
+<?php endif; ?>
+
 <body>
 <?php require __DIR__ . '/inc/header.php'; ?>
 

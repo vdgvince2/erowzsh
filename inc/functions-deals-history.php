@@ -206,3 +206,108 @@ function deals_compute_trend(array $daily): array
         'pct'       => round(abs($pct), 1),
     ];
 }
+
+
+// ── Market demand snapshots (DB) ──────────────────────────────────────────────
+
+/**
+ * Ensure the deals_market_snapshots table exists (auto-create on first call).
+ */
+function deals_ensure_market_table(PDO $pdo): void
+{
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS deals_market_snapshots (
+            id               INT AUTO_INCREMENT PRIMARY KEY,
+            slug_key         VARCHAR(255)   NOT NULL,
+            snap_date        DATE           NOT NULL,
+            watch_total      INT            NOT NULL DEFAULT 0,
+            bid_total        INT            NOT NULL DEFAULT 0,
+            free_ship_pct    DECIMAL(5,2)   NOT NULL DEFAULT 0,
+            avg_discount_pct DECIMAL(5,2)   NOT NULL DEFAULT 0,
+            top_rated_count  INT            NOT NULL DEFAULT 0,
+            listings_count   INT            NOT NULL DEFAULT 0,
+            created_at       TIMESTAMP      DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE KEY uniq_slug_date (slug_key(200), snap_date)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+    ");
+}
+
+/**
+ * Record one market snapshot per day for a keyword (skip if already recorded today).
+ * Aggregates watchCount, bidCount, free-shipping %, avg discount %, top-rated count.
+ */
+function deals_record_market_snapshot(PDO $pdo, string $slugKey, array $products): void
+{
+    if (empty($products)) return;
+
+    deals_ensure_market_table($pdo);
+
+    $today = date('Y-m-d');
+
+    // Skip if we already have today's entry
+    $check = $pdo->prepare("SELECT id FROM deals_market_snapshots WHERE slug_key = ? AND snap_date = ? LIMIT 1");
+    $check->execute([$slugKey, $today]);
+    if ($check->fetch()) return;
+
+    $watchTotal    = 0;
+    $bidTotal      = 0;
+    $freeShipCount = 0;
+    $discountSum   = 0.0;
+    $discountCount = 0;
+    $topRatedCount = 0;
+    $total         = count($products);
+
+    foreach ($products as $p) {
+        $watchTotal += (int)($p['watch_count'] ?? 0);
+        $bidTotal   += (int)($p['bid_count']   ?? 0);
+        if (!empty($p['is_free_shipping'])) $freeShipCount++;
+        if (!empty($p['marketing_discount_pct'])) {
+            $discountSum += (float)$p['marketing_discount_pct'];
+            $discountCount++;
+        }
+        if (!empty($p['top_rated'])) $topRatedCount++;
+    }
+
+    $freeShipPct    = $total > 0 ? round($freeShipCount / $total * 100, 2) : 0.0;
+    $avgDiscountPct = $discountCount > 0 ? round($discountSum / $discountCount, 2) : 0.0;
+
+    $stmt = $pdo->prepare("
+        INSERT INTO deals_market_snapshots
+            (slug_key, snap_date, watch_total, bid_total, free_ship_pct, avg_discount_pct, top_rated_count, listings_count)
+        VALUES
+            (?, ?, ?, ?, ?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+            watch_total      = VALUES(watch_total),
+            bid_total        = VALUES(bid_total),
+            free_ship_pct    = VALUES(free_ship_pct),
+            avg_discount_pct = VALUES(avg_discount_pct),
+            top_rated_count  = VALUES(top_rated_count),
+            listings_count   = VALUES(listings_count)
+    ");
+    $stmt->execute([$slugKey, $today, $watchTotal, $bidTotal, $freeShipPct, $avgDiscountPct, $topRatedCount, $total]);
+}
+
+/**
+ * Load the last $days days of market snapshots for a slug key.
+ *
+ * @return array  Ordered oldest → newest, each entry:
+ *                {snap_date, watch_total, bid_total, free_ship_pct, avg_discount_pct, top_rated_count, listings_count}
+ */
+function deals_load_market_history(PDO $pdo, string $slugKey, int $days = 7): array
+{
+    deals_ensure_market_table($pdo);
+
+    $stmt = $pdo->prepare("
+        SELECT snap_date, watch_total, bid_total, free_ship_pct, avg_discount_pct, top_rated_count, listings_count
+        FROM deals_market_snapshots
+        WHERE slug_key = ?
+        ORDER BY snap_date DESC
+        LIMIT ?
+    ");
+    $stmt->bindValue(1, $slugKey);
+    $stmt->bindValue(2, $days, PDO::PARAM_INT);
+    $stmt->execute();
+    $rows = $stmt->fetchAll();
+
+    return array_reverse($rows); // oldest → newest
+}

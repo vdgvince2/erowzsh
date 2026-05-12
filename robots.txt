@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /fallback.php
 Disallow: /data/
 Disallow: /scripts/
+Disallow: /s/bargain*?*
 
 # agressives bots.
 User-agent: Yandex

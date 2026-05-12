@@ -1,0 +1,12 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirige toutes les requêtes vers index.php (SPA-style)
+# Le routing niche/subniche est géré via le hostname dans inc/routing.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L,QSA]
+
+# En local MAMP, si accès direct via /SH/content-sites/
+# on peut aussi passer niche/subniche via GET params (?niche=art&subniche=antique-clocks)

@@ -236,6 +236,7 @@ if(isset($_GET['categ']) && $_GET['categ'] != null){
     }
 
     // META tag for SEO
+    
     $pageTitle = $rowKeyword['keyword_name'] ?? 'Produits';
     $pageTitle = $pageTitle.$_TAIL. " | $WebsiteName";
     $additionnalMetaDesc = $label_product_metadesc_generic;

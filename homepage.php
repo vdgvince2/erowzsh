@@ -128,7 +128,7 @@ $categories = $stmt->fetchAll();
   $dealsCatalog     = file_exists($dealsCatalogFile) ? (json_decode(file_get_contents($dealsCatalogFile), true) ?? []) : [];
 
   foreach ($dealsCatalog as $catKey => $cat):
-      $allKw   = $cat['keywords'] ?? [];
+      $allKw   = $cat['countries'][$countryCode]['keywords'] ?? [];
       $display = array_slice($allKw, 0, 10);
       if (empty($display)) continue;
 

@@ -5,6 +5,8 @@
     <meta name="description" content="<?=ucfirst($pageTitle)." "; if(isset($additionnalMetaDesc)) echo $additionnalMetaDesc;?>">
     <link rel="icon" type="image/png" sizes="96x96" href="<?=$rootDomainForAssets;?>favicon.ico"> 
     <meta name="google-site-verification" content="7Pw3UtAoJp2P_V9zSeV3LhHz7NlX0BQM-OY9337K8M8" />
+    <meta name="msvalidate.01" content="6C707F5AA3D99CA19BC79FDB1783F53A" />
+    <!-- 696937660ec04b332ed16cf6ac1ce370 -->
     <?php 
     // don't show ads for local 
     if (!$isLocal && !isset($noAds)) { 
@@ -15,7 +17,8 @@
      } 
     
     // Specific hotjar for Bargain page    
-    if(!$isLocal && $scriptName == "bargain"){        
+    /*
+    if(!$isLocal){        // && $scriptName == "bargain"
         ?>
             <!-- Hotjar Tracking Code for SH -->
             <script>
@@ -31,6 +34,7 @@
         <?php
         
     }
+    */
 
     // Analytics Tracker : simpleAnalytic or Umami    
     if (!$isLocal) {

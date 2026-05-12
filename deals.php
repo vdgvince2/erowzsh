@@ -11,6 +11,7 @@ $noAds = true;
 require __DIR__ . '/scripts/crawler/ebay_browse_crawler.php';
 require __DIR__ . '/inc/functions-bargain.php';
 require __DIR__ . '/inc/functions-deals-history.php';
+require __DIR__ . '/inc/functions-indexing.php';
 
 // ── Load catalog ─────────────────────────────────────────────────────────────
 $catalogFile = __DIR__ . '/assets/JSON/deals_catalog.json';
@@ -22,9 +23,10 @@ $keywordSlug = trim($_GET['deal_keyword'] ?? '');
 
 // Validate against catalog (any unknown slug → 404)
 $catData     = $catalog[$catSlug] ?? null;
+$ccKeywords  = $catData['countries'][$countryCode]['keywords'] ?? [];
 $kwData      = null;
 if ($catData) {
-    foreach ($catData['keywords'] as $kw) {
+    foreach ($ccKeywords as $kw) {
         if ($kw['slug'] === $keywordSlug) { $kwData = $kw; break; }
     }
 }
@@ -113,10 +115,26 @@ if (!$cacheValid || empty($products)) {
             });
         }
         file_put_contents($cacheFile, json_encode($products));
+
+        // Notify search engines that this deals page has fresh content
+        deals_page_ping($countryCode, $WebsiteName, '/deals/' . $catSlug . '/' . $keywordSlug);
     } else {
         $errorMsg = 'Unable to load deals at this time. Please try again later.';
     }
 }
+
+// ── Market demand snapshot (DB) ───────────────────────────────────────────────
+$marketSlugKey = $catSlug . '_' . $keywordSlug . '_' . $countryCode;
+if (!empty($products) && !$cacheValid) {
+    // only record on a real fresh API fetch (cache miss)
+    try {
+        deals_record_market_snapshot($pdo, $marketSlugKey, $products);
+    } catch (Throwable $e) { /* silently ignore DB errors */ }
+}
+$marketHistory = [];
+try {
+    $marketHistory = deals_load_market_history($pdo, $marketSlugKey, 7);
+} catch (Throwable $e) { /* table may not exist yet on first load */ }
 
 // ── Price history ─────────────────────────────────────────────────────────────
 $rawHistory   = deals_load_history($historyFile);
@@ -125,6 +143,31 @@ $dailyHistory = deals_smooth_medians($dailyHistory);
 $priceTrend   = deals_compute_trend($dailyHistory);
 $latestSnap   = !empty($dailyHistory) ? end($dailyHistory) : null;
 $chartDays    = count($dailyHistory);
+
+// ── AI content — DISABLED ─────────────────────────────────────────────────────
+// require_once __DIR__ . '/inc/functions-deals-ai.php';
+// $aiSlugKey = $catSlug . '_' . $keywordSlug . '_' . $countryCode . '_' . $mainLanguage;
+// $aiResult  = deals_ai_load(
+//     $pdo, $aiSlugKey, $keywordDisplay, $mainLanguage,
+//     $countryCode, $currency, $products, $latestSnap, $priceTrend
+// );
+$aiResult = [];
+$aiData   = null;
+
+// ── Pre-process products (B: below-market badge, E: top-deal flag) ────────────
+if (!empty($products) && $latestSnap && !empty($latestSnap['median']) && !empty($latestSnap['p25'])) {
+    $snapMedian = (float)$latestSnap['median'];
+    $snapP25    = (float)$latestSnap['p25'];
+    foreach ($products as &$prod) {
+        $p = (float)($prod['price'] ?? 0);
+        if ($p > 0 && $p < $snapP25 && $snapMedian > 0) {
+            $pct = (int)round((1 - $p / $snapMedian) * 100);
+            if ($pct >= 5) $prod['below_market_pct'] = $pct;
+        }
+    }
+    unset($prod);
+}
+if (!empty($products)) $products[0]['is_top_deal'] = true;
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function deals_sort_link(string $value, string $label, string $currentSort, string $base_url): string {
@@ -273,7 +316,7 @@ function deals_sort_link(string $value, string $label, string $currentSort, stri
                     <?= htmlspecialchars($label_deals_more_in, ENT_QUOTES); ?> <?= htmlspecialchars($catData['label'], ENT_QUOTES); ?>
                 </h2>
                 <ul class="space-y-1">
-                    <?php foreach ($catData['keywords'] as $kw2): ?>
+                    <?php foreach ($ccKeywords as $kw2): ?>
                     <li>
                         <?php if ($kw2['slug'] === $keywordSlug): ?>
                             <span class="text-sm font-semibold text-blue-600">→ <?= htmlspecialchars($kw2['label'], ENT_QUOTES); ?></span>
@@ -291,9 +334,9 @@ function deals_sort_link(string $value, string $label, string $currentSort, stri
         </aside>
 
         <!-- Results ──────────────────────────────────────────────────────────── -->
-        <section class="lg:col-span-2">
+        <section class="lg:col-span-2" id="results">
 
-            <!-- Count + sort chips (desktop) -->
+            <!-- Sort chips (desktop) -->
             <div class="hidden lg:flex items-center justify-between mb-4 flex-wrap gap-2">
                 <p class="text-sm text-gray-500">
                     <?php if (!empty($products)): ?>
@@ -328,20 +371,269 @@ function deals_sort_link(string $value, string $label, string $currentSort, stri
                 <?php endif; ?>
             </p>
 
-            <!-- Products -->
-            <div id="results">
-                <?php render_bargain_results('', $searchTerm, $errorMsg, $products, $currency, $rootDomain, $base, $label_viewdetails, 'standard'); ?>
+            <?php
+            // Helpers for AI labels
+            $langLabels = [
+                'qa_title'  => ['EN'=>'Questions & Answers','FR'=>'Questions & Réponses','DE'=>'Fragen & Antworten','IT'=>'Domande & Risposte'],
+                'tip_label' => ['EN'=>'💡 Expert tip','FR'=>'💡 Conseil expert','DE'=>'💡 Expertentipp','IT'=>'💡 Consiglio esperto'],
+                'updated'   => ['EN'=>'Updated','FR'=>'Mis à jour','DE'=>'Aktualisiert','IT'=>'Aggiornato'],
+                'expert'    => ['EN'=>'Marketplace & deals expert','FR'=>'Expert marketplace & deals','DE'=>'Marktplatz- & Deals-Experte','IT'=>'Esperto marketplace & deals'],
+            ];
+            $ll = fn(string $k) => $langLabels[$k][$mainLanguage] ?? $langLabels[$k]['EN'];
+
+            // Split products into 3 chunks: 6 / 6 / rest
+            $chunk1 = array_slice($products, 0,  6);
+            $chunk2 = array_slice($products, 6,  6);
+            $chunk3 = array_slice($products, 12);
+            $qaItems  = $aiData['qa']  ?? [];
+            $faqItems = $aiData['faq'] ?? [];
+            ?>
+
+            <?php /* ── A: Price context bar ────────────────────────────── */ ?>
+            <?php if ($latestSnap && !empty($latestSnap['median']) && !empty($products)): ?>
+            <?php
+            $pcVars = [
+                'count'    => count($products),
+                'currency' => $currency,
+                'median'   => number_format((float)$latestSnap['median'], 0),
+                'p25'      => number_format((float)($latestSnap['p25'] ?? 0), 0),
+                'p75'      => number_format((float)($latestSnap['p75'] ?? 0), 0),
+            ];
+            $pcText = deals_fill($label_deals_price_context ?? '', $pcVars);
+            ?>
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500 mb-4 px-1">
+                <span>📊 <?= htmlspecialchars($pcText, ENT_QUOTES) ?></span>
+                <?php if ($priceTrend['direction'] === 'up'): ?>
+                    <span class="text-red-600 font-semibold">↑ +<?= $priceTrend['pct'] ?>%</span>
+                <?php elseif ($priceTrend['direction'] === 'down'): ?>
+                    <span class="text-emerald-600 font-semibold">↓ −<?= $priceTrend['pct'] ?>%</span>
+                <?php endif; ?>
             </div>
+            <?php endif; ?>
+
+            <?php /* ── Market Pulse panel ──────────────────────────────── */ ?>
+            <?php if (!empty($products)): ?>
+            <?php
+            // Aggregate market signals from current product set
+            $mp_watch_total    = array_sum(array_column($products, 'watch_count'));
+            $mp_bid_total      = array_sum(array_column($products, 'bid_count'));
+            $mp_free_ship      = count(array_filter($products, fn($p) => !empty($p['is_free_shipping'])));
+            $mp_free_ship_pct  = count($products) > 0 ? round($mp_free_ship / count($products) * 100) : 0;
+            $mp_top_rated      = count(array_filter($products, fn($p) => !empty($p['top_rated'])));
+            $mp_disc_products  = array_filter($products, fn($p) => !empty($p['marketing_discount_pct']));
+            $mp_avg_disc       = count($mp_disc_products) > 0
+                ? round(array_sum(array_column(array_values($mp_disc_products), 'marketing_discount_pct')) / count($mp_disc_products))
+                : 0;
+
+            // Condition breakdown
+            $mp_conditions = [];
+            foreach ($products as $p) {
+                $c = $p['condition'] ?? 'Unknown';
+                $mp_conditions[$c] = ($mp_conditions[$c] ?? 0) + 1;
+            }
+            arsort($mp_conditions);
+            $mp_total = count($products);
+            ?>
+            <div class="mb-5 bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <div class="flex items-center gap-2 bg-gray-50 border-b border-gray-200 px-4 py-2.5">
+                    <span class="text-sm">📊</span>
+                    <h2 class="text-sm font-semibold text-gray-800">Market pulse &mdash; <?= htmlspecialchars($keywordDisplay, ENT_QUOTES) ?></h2>
+                </div>
+                <div class="p-4">
+                    <!-- KPI row -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+                        <?php if ($mp_watch_total > 0): ?>
+                        <div class="bg-blue-50 rounded-lg p-3 text-center">
+                            <p class="text-xl font-bold text-blue-700"><?= number_format($mp_watch_total) ?></p>
+                            <p class="text-[11px] text-blue-500 mt-0.5">👁 Watchers</p>
+                        </div>
+                        <?php endif; ?>
+                        <?php if ($mp_bid_total > 0): ?>
+                        <div class="bg-orange-50 rounded-lg p-3 text-center">
+                            <p class="text-xl font-bold text-orange-700"><?= number_format($mp_bid_total) ?></p>
+                            <p class="text-[11px] text-orange-500 mt-0.5">⚡ Active bids</p>
+                        </div>
+                        <?php endif; ?>
+                        <div class="bg-green-50 rounded-lg p-3 text-center">
+                            <p class="text-xl font-bold text-green-700"><?= $mp_free_ship_pct ?>%</p>
+                            <p class="text-[11px] text-green-500 mt-0.5">🚚 Free shipping</p>
+                        </div>
+                        <?php if ($mp_top_rated > 0): ?>
+                        <div class="bg-amber-50 rounded-lg p-3 text-center">
+                            <p class="text-xl font-bold text-amber-700"><?= $mp_top_rated ?></p>
+                            <p class="text-[11px] text-amber-500 mt-0.5">🏅 Top Rated</p>
+                        </div>
+                        <?php endif; ?>
+                        <?php if ($mp_avg_disc > 0): ?>
+                        <div class="bg-red-50 rounded-lg p-3 text-center">
+                            <p class="text-xl font-bold text-red-700">-<?= $mp_avg_disc ?>%</p>
+                            <p class="text-[11px] text-red-400 mt-0.5">🏷 Avg. seller discount</p>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <!-- Condition breakdown -->
+                    <?php if (count($mp_conditions) > 1): ?>
+                    <div>
+                        <p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide mb-2">Condition breakdown</p>
+                        <div class="space-y-1.5">
+                            <?php
+                            $condColors = ['New' => 'bg-emerald-500', 'Used' => 'bg-blue-400', 'Refurbished' => 'bg-purple-400', 'For parts or not working' => 'bg-gray-400'];
+                            foreach ($mp_conditions as $cond => $cnt):
+                                $pct = $mp_total > 0 ? round($cnt / $mp_total * 100) : 0;
+                                $barColor = $condColors[$cond] ?? 'bg-gray-300';
+                            ?>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="w-28 text-gray-600 truncate flex-shrink-0"><?= htmlspecialchars($cond, ENT_QUOTES) ?></span>
+                                <div class="flex-1 bg-gray-100 rounded-full h-2 overflow-hidden">
+                                    <div class="<?= $barColor ?> h-2 rounded-full" style="width:<?= $pct ?>%"></div>
+                                </div>
+                                <span class="text-gray-500 w-10 text-right"><?= $pct ?>%</span>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php /* ── C: Condition filter ──────────────────────────────── */ ?>
+            <?php if (!empty($products)): ?>
+            <?php
+            $conditions = array_values(array_unique(array_filter(array_map(
+                fn($p) => $p['condition'] ?? '', $products
+            ))));
+            ?>
+            <?php if (count($conditions) > 1): ?>
+            <div class="flex gap-2 flex-wrap mb-4" id="cond-filter">
+                <button class="cond-btn active text-xs px-3 py-1 rounded-full border border-blue-500 bg-blue-600 text-white font-medium transition" data-cond="">
+                    <?= htmlspecialchars($label_deals_cond_all ?? 'All', ENT_QUOTES) ?>
+                </button>
+                <?php foreach ($conditions as $cond): ?>
+                <button class="cond-btn text-xs px-3 py-1 rounded-full border border-gray-300 bg-white text-gray-600 font-medium hover:border-blue-400 hover:text-blue-600 transition" data-cond="<?= htmlspecialchars($cond, ENT_QUOTES) ?>">
+                    <?= htmlspecialchars($cond, ENT_QUOTES) ?>
+                </button>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+            <?php endif; ?>
+
+            <?php /* ── Author + intro ─────────────────────────────────── */ if ($aiData): ?>
+            <div class="mb-5 bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xs flex-shrink-0">VV</div>
+                    <div class="min-w-0">
+                        <p class="text-xs font-semibold text-gray-800 flex flex-wrap items-center gap-x-1">
+                            <a href="https://www.linkedin.com/in/vincentvandegans/" target="_blank" rel="noopener" class="hover:text-blue-600 underline decoration-dotted">Vincent Vandegans</a>
+                            <span class="text-gray-300">·</span>
+                            <span class="text-gray-500 font-normal"><?= htmlspecialchars($ll('expert')) ?></span>
+                            <span class="text-gray-300">·</span>
+                            <span class="text-gray-400 font-normal"><?= htmlspecialchars($ll('updated')) ?>: <?= date('F j, Y', strtotime($aiResult['updated_at'])) ?></span>
+                        </p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-700 leading-relaxed"><?= htmlspecialchars($aiData['intro'] ?? '', ENT_QUOTES) ?></p>
+            </div>
+
+            <?php /* ── D: key_specs checklist ─────────────────────────── */ ?>
+            <?php $keySpecs = $aiData['key_specs'] ?? []; ?>
+            <?php if (!empty($keySpecs)): ?>
+            <div class="mb-5 bg-amber-50 border border-amber-200 rounded-xl p-4">
+                <p class="text-xs font-semibold text-amber-800 mb-2">✅ <?= htmlspecialchars($label_deals_key_specs_title ?? 'What to check before buying', ENT_QUOTES) ?></p>
+                <ul class="space-y-1">
+                    <?php foreach ($keySpecs as $spec): ?>
+                    <li class="text-xs text-amber-900 flex items-start gap-2">
+                        <span class="mt-0.5 flex-shrink-0 text-amber-600">›</span>
+                        <span><?= htmlspecialchars($spec, ENT_QUOTES) ?></span>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+            <?php endif; ?>
+            <?php endif; ?>
+
+            <?php /* ── Chunk 1: first 6 products ───────────────────────── */ ?>
+            <?php if (!empty($chunk1)): ?>
+            <?php render_bargain_results('', $searchTerm, $errorMsg, $chunk1, $currency, $rootDomain, $base, $label_viewdetails, 'standard'); ?>
+            <?php endif; ?>
+
+            <?php /* ── Q&A (3 questions) ────────────────────────────────── */ if (!empty($qaItems)): ?>
+            <div class="my-6 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                <h2 class="text-sm font-semibold text-gray-800 mb-3"><?= htmlspecialchars($ll('qa_title')) ?></h2>
+                <div class="space-y-2">
+                    <?php foreach ($qaItems as $i => $item):
+                        $q = htmlspecialchars($item['q'] ?? '', ENT_QUOTES);
+                        $a = htmlspecialchars($item['a'] ?? '', ENT_QUOTES);
+                        if (!$q || !$a) continue; ?>
+                    <details class="bg-white rounded-lg overflow-hidden border border-gray-100 group" <?= $i === 0 ? 'open' : '' ?>>
+                        <summary class="px-3 py-2.5 cursor-pointer text-sm font-medium text-gray-800 flex items-start justify-between gap-2 select-none list-none marker:hidden [&::-webkit-details-marker]:hidden">
+                            <span class="flex-1"><?= $q ?></span>
+                            <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+                        </summary>
+                        <div class="px-3 pb-3 pt-1 text-sm text-gray-600 leading-relaxed border-t border-gray-100"><?= $a ?></div>
+                    </details>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php /* ── Chunk 2: next 6 products ───────────────────────── */ ?>
+            <?php if (!empty($chunk2)): ?>
+            <?php render_bargain_results('', $searchTerm, null, $chunk2, $currency, $rootDomain, $base, $label_viewdetails, 'standard'); ?>
+            <?php endif; ?>
+
+            <?php /* ── Buying tip + FAQ ─────────────────────────────────── */ if ($aiData): ?>
+            <?php $buyingTip = $aiData['buying_tip'] ?? ''; ?>
+            <?php if ($buyingTip): ?>
+            <div class="my-5 bg-blue-50 border border-blue-200 rounded-xl p-4">
+                <p class="text-sm font-semibold text-blue-800 mb-1"><?= htmlspecialchars($ll('tip_label')) ?></p>
+                <p class="text-sm text-blue-700 leading-relaxed"><?= htmlspecialchars($buyingTip, ENT_QUOTES) ?></p>
+            </div>
+            <?php endif; ?>
+            <?php if (!empty($faqItems)): ?>
+            <div class="my-5 space-y-2">
+                <?php foreach ($faqItems as $item):
+                    $q = htmlspecialchars($item['q'] ?? '', ENT_QUOTES);
+                    $a = htmlspecialchars($item['a'] ?? '', ENT_QUOTES);
+                    if (!$q || !$a) continue; ?>
+                <details class="border border-gray-200 rounded-xl overflow-hidden group">
+                    <summary class="px-3 py-2.5 cursor-pointer text-sm font-medium text-gray-700 flex items-start justify-between gap-2 select-none list-none marker:hidden [&::-webkit-details-marker]:hidden">
+                        <span class="flex-1"><?= $q ?></span>
+                        <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="px-3 pb-3 pt-1 text-sm text-gray-600 leading-relaxed border-t border-gray-100"><?= $a ?></div>
+                </details>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; endif; ?>
+
+            <?php /* ── Chunk 3: remaining products ──────────────────────── */ ?>
+            <?php if (!empty($chunk3)): ?>
+            <?php render_bargain_results('', $searchTerm, null, $chunk3, $currency, $rootDomain, $base, $label_viewdetails, 'standard'); ?>
+            <?php endif; ?>
 
             <!-- CTA → Bargain Finder -->
             <div class="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-5 text-center">
-                <p class="text-gray-700 font-medium mb-2">
-                    <?= htmlspecialchars($label_deals_cta_text, ENT_QUOTES); ?>
-                </p>
+                <p class="text-gray-700 font-medium mb-2"><?= htmlspecialchars($label_deals_cta_text, ENT_QUOTES); ?></p>
                 <a href="<?= $rootDomain . $base; ?>s/bargain?q=<?= rawurlencode($searchTerm); ?>&min_price=<?= (int)$catData['min_price']; ?>"
                    class="inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
                     <?= htmlspecialchars($label_deals_cta_button, ENT_QUOTES); ?>
                 </a>
+            </div>
+
+            <!-- F: Mobile keyword chips -->
+            <div class="lg:hidden mt-8">
+                <p class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide"><?= htmlspecialchars($label_deals_more_in, ENT_QUOTES) ?> <?= htmlspecialchars($catData['label'], ENT_QUOTES) ?></p>
+                <div class="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1" style="scrollbar-width:none;">
+                    <?php foreach ($ccKeywords as $kw2):
+                        if ($kw2['slug'] === $keywordSlug) continue; ?>
+                    <a href="<?= $rootDomain . $base ?>deals/<?= $catSlug ?>/<?= rawurlencode($kw2['slug']) ?>"
+                       class="flex-shrink-0 text-xs bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-700 px-3 py-1.5 rounded-full border border-gray-200 transition whitespace-nowrap">
+                        <?= htmlspecialchars($kw2['label'], ENT_QUOTES) ?>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
             </div>
 
         </section>
@@ -481,6 +773,98 @@ function deals_sort_link(string $value, string $label, string $currentSort, stri
     });
     </script>
 
+    <?php /* ── Market demand chart (7-day sparklines) ────────────────── */ ?>
+    <?php if (count($marketHistory) >= 2): ?>
+    <?php
+    $mhLabels   = array_column($marketHistory, 'snap_date');
+    $mhWatchers = array_map('intval', array_column($marketHistory, 'watch_total'));
+    $mhBids     = array_map('intval', array_column($marketHistory, 'bid_total'));
+    $mhFreeShip = array_map('floatval', array_column($marketHistory, 'free_ship_pct'));
+    $hasWatchers = array_sum($mhWatchers) > 0;
+    $hasBids     = array_sum($mhBids) > 0;
+    ?>
+    <div class="bg-white rounded-xl shadow p-5 mb-6">
+        <h2 class="text-base font-semibold text-gray-800 mb-1">📈 Market demand — last <?= count($marketHistory) ?> days</h2>
+        <p class="text-xs text-gray-400 mb-4">Watchers, bids &amp; free-shipping % tracked from eBay listings</p>
+        <canvas id="marketDemandChart" height="180"></canvas>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var mhLabels   = <?= json_encode($mhLabels) ?>;
+        var mhWatchers = <?= json_encode($mhWatchers) ?>;
+        var mhBids     = <?= json_encode($mhBids) ?>;
+        var mhFreeShip = <?= json_encode($mhFreeShip) ?>;
+        var hasWatchers = <?= $hasWatchers ? 'true' : 'false' ?>;
+        var hasBids     = <?= $hasBids ? 'true' : 'false' ?>;
+
+        var datasets = [];
+        if (hasWatchers) {
+            datasets.push({
+                type: 'line',
+                label: 'Watchers',
+                data: mhWatchers,
+                borderColor: '#2563eb',
+                backgroundColor: 'rgba(37,99,235,0.08)',
+                fill: true,
+                tension: 0.35,
+                yAxisID: 'yLeft',
+                pointRadius: 4,
+                pointBackgroundColor: '#2563eb',
+            });
+        }
+        if (hasBids) {
+            datasets.push({
+                type: 'line',
+                label: 'Bids',
+                data: mhBids,
+                borderColor: '#f97316',
+                backgroundColor: 'transparent',
+                tension: 0.35,
+                yAxisID: 'yLeft',
+                pointRadius: 4,
+                pointBackgroundColor: '#f97316',
+                borderDash: [4, 3],
+            });
+        }
+        datasets.push({
+            type: 'bar',
+            label: 'Free shipping %',
+            data: mhFreeShip,
+            backgroundColor: 'rgba(16,185,129,0.18)',
+            borderColor: '#10b981',
+            borderWidth: 1,
+            yAxisID: 'yRight',
+        });
+
+        var ctx2 = document.getElementById('marketDemandChart').getContext('2d');
+        new Chart(ctx2, {
+            data: { labels: mhLabels, datasets: datasets },
+            options: {
+                responsive: true,
+                interaction: { mode: 'index', intersect: false },
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, padding: 14 } },
+                    tooltip: {
+                        callbacks: {
+                            label: function(c) {
+                                if (c.dataset.label === 'Free shipping %') return 'Free shipping: ' + c.parsed.y.toFixed(0) + '%';
+                                return c.dataset.label + ': ' + c.parsed.y;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    yLeft:  { position: 'left',  beginAtZero: true, ticks: { precision: 0 } },
+                    yRight: { position: 'right', beginAtZero: true, max: 100, grid: { drawOnChartArea: false },
+                              ticks: { callback: function(v) { return v + '%'; } } },
+                    x: { ticks: { maxTicksLimit: 7 } }
+                }
+            }
+        });
+    });
+    </script>
+    <?php endif; ?>
+
     <?php else: ?>
     <div class="bg-white rounded-xl shadow p-10 text-center text-gray-500">
         <p class="text-4xl mb-4">📊</p>
@@ -532,6 +916,32 @@ function deals_sort_link(string $value, string $label, string $currentSort, stri
         .deals-tab-badge { font-size: .65rem; font-weight: 700; padding: .1rem .38rem; border-radius: 999px; flex-shrink: 0; line-height: 1.4; }
     </style>
     <script>
+    // ── C: Condition filter ───────────────────────────────────────────────────
+    (function() {
+        var filterEl = document.getElementById('cond-filter');
+        if (!filterEl) return;
+        filterEl.addEventListener('click', function(e) {
+            var btn = e.target.closest('.cond-btn');
+            if (!btn) return;
+            var selected = btn.dataset.cond;
+            filterEl.querySelectorAll('.cond-btn').forEach(function(b) {
+                var active = b.dataset.cond === selected;
+                b.classList.toggle('bg-blue-600',   active);
+                b.classList.toggle('text-white',     active);
+                b.classList.toggle('border-blue-500',active);
+                b.classList.toggle('bg-white',      !active);
+                b.classList.toggle('text-gray-600', !active);
+                b.classList.toggle('border-gray-300',!active);
+                b.classList.toggle('active', active);
+            });
+            document.querySelectorAll('.product-card').forEach(function(card) {
+                var show = !selected || card.dataset.cond === selected;
+                card.style.display = show ? '' : 'none';
+            });
+        });
+    })();
+
+    // ── Tab navigation ────────────────────────────────────────────────────────
     (function() {
         var tabs   = document.querySelectorAll('.deals-tab');
         var panels = document.querySelectorAll('.tab-content');
@@ -595,6 +1005,13 @@ function deals_sort_link(string $value, string $label, string $currentSort, stri
 }
 </script>
 <?php endif; ?>
+
+<?php
+// FAQPage JSON-LD (from AI content) — DISABLED
+// if (!empty($aiResult['data'])) {
+//     deals_ai_jsonld($aiResult['data'], $canonicalUrl);
+// }
+?>
 
 <?php require __DIR__ . '/inc/footer.php'; ?>
 </body>

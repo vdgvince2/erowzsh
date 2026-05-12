@@ -210,6 +210,13 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
     // Get the JSON.
     $result = browse_search($keywordArray['keyword_name'], $effectiveMarket, $maxAds, 0, ['fieldgroups' => 'PRODUCT']);
+
+    // Abort cleanly on rate limit — do not deactivate the keyword
+    if (($result['http'] ?? 0) === 429) {
+        echo "Rate limited by eBay (429) — skipping keyword {$keywordId}.\n";
+        return 'rate_limited';
+    }
+
     $rawJson = json_encode($result, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
     // Retrieve eBay data
@@ -224,10 +231,17 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
 
 
     // If not enough results with marketplace-specific search, try a global search (no marketplace)
-    if (!$useGlobalMarket && count($items) <= 5) {
+    // Skip when already in global mode ($effectiveMarket === '') to avoid a duplicate identical call
+    if (!$useGlobalMarket && $effectiveMarket !== '' && count($items) <= 5) {
         echo "Few/no results with marketplace {$ebay_marketplace}, trying global search...\n";
         $globalResult = browse_search($keywordArray['keyword_name'], '', $maxAds, 0, ['fieldgroups' => 'PRODUCT']);
-        $globalItems  = $globalResult['itemSummaries'] ?? [];
+
+        if (($globalResult['http'] ?? 0) === 429) {
+            echo "Rate limited by eBay (429) on global fallback — skipping.\n";
+            return 'rate_limited';
+        }
+
+        $globalItems = $globalResult['itemSummaries'] ?? [];
 
         if (count($globalItems) > 5) {
             // Global search has results — mark keyword and use global items
@@ -382,10 +396,13 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
                 }
             }
 
-            // Photo (image principale puis fallback sur thumbnail)
+            // Photo (image principale puis fallback sur thumbnail) — upscale vers s-l500
             $photo = $it['image']['imageUrl'] ?? null;
             if (!$photo && !empty($it['thumbnailImages'][0]['imageUrl'])) {
                 $photo = $it['thumbnailImages'][0]['imageUrl'];
+            }
+            if ($photo) {
+                $photo = preg_replace('/s-l\d+(\.\w+)$/i', 's-l500$1', $photo);
             }
 
             // Prix (value -> decimal)
@@ -422,9 +439,10 @@ function updateAds($pdo, $ebay_marketplace, $maxAds, $countryCode, $nfId = null,
         echo "Import OK for keyword_id={$keywordId}. Inserted " . count($items) . " ads.\n";
 
         if(count($items) == 0){
+            // deactivated : high risk to remove all keywords.
             // update the keyword last_update datetime
-            $upd = $pdo->prepare("UPDATE $TABLE_keywords SET active=0 WHERE id = :kid");
-            $upd->execute([':kid' => $keywordId]);            
+            //$upd = $pdo->prepare("UPDATE $TABLE_keywords SET active=0 WHERE id = :kid");
+            //$upd->execute([':kid' => $keywordId]);            
         }
 
         // update the keyword last_update datetime

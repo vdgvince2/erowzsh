@@ -1,0 +1,8 @@
+/* Styles article complémentaires à Tailwind — non purgés */
+
+/* Reset basique pour le contenu généré par l'IA */
+.article-body strong { font-weight: 700; }
+.article-body em     { font-style: italic; }
+.article-body a      { color: #e85d26; text-decoration: underline; }
+.article-body a:hover{ color: #c94e1e; }
+.article-body time   { font-style: normal; }
