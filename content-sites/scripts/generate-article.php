@@ -16,7 +16,7 @@
  */
 
 define('CS_CLI', true);
-$currentDomain = $argv[1] ?? 'IE'; // code pays (IE/GB…) ou domaine prod (antiques.ie)
+$currentDomain = $argv[1] ?? 'IE';
 
 require_once __DIR__ . '/../inc/config.php';
 

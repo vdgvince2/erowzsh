@@ -7,7 +7,7 @@
  *             $ebayRootURL, $ebay_mkrid, $ebay_campid
  */
 
-$bodyHtml = cs_inject_product_blocks($article['content_html'], $products, $currency);
+$bodyHtml = cs_inject_product_blocks($article['content_html'], $products, $currency, $ebay_mkrid ?? '', $ebay_campid ?? '');
 
 // EEAT — load expert profile for this sub-niche
 $eeatProfile = eeat_load($pdo, (int)$subNiche['id'], $mainLanguage);

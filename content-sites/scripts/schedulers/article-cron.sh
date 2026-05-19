@@ -3,6 +3,7 @@
 # article-cron.sh — Génère et publie un article par pays à chaque déclenchement.
 #
 # Crontab suggéré (1 article par pays toutes les 4h) :
+#  PROD : bash /httpdocs/content-sites/scripts/schedulers/article-cron.sh
 #   0 */4 * * * /bin/bash /path/to/content-sites/scripts/schedulers/article-cron.sh >> /path/to/logs/article-cron.log 2>&1
 #
 # Chaque run génère exactement 1 article par pays configuré.
@@ -23,12 +24,12 @@ for CC in "${COUNTRIES[@]}"; do
     echo "--- Pays: ${CC} ---"
 
     # Génération
-    "${PHP_BIN}" "${SCRIPT_DIR}/scripts/generate-article.php" "${CC}"
+    /opt/plesk/php/8.3/bin/php "${SCRIPT_DIR}/scripts/generate-article.php" "${CC}"
     GEN_STATUS=$?
 
     if [ $GEN_STATUS -eq 0 ]; then
         # Publication immédiate après génération réussie
-        "${PHP_BIN}" "${SCRIPT_DIR}/scripts/publish-article.php" "${CC}"
+        /opt/plesk/php/8.3/bin/php "${SCRIPT_DIR}/scripts/publish-article.php" "${CC}"
     else
         echo "[article-cron] WARN: Génération échouée pour ${CC}, publication ignorée."
     fi

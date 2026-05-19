@@ -93,3 +93,41 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* product grid — arbitrary text sizes not purged by Tailwind */
+.text-10 { font-size: 10px; line-height: 1.3; }
+.text-11 { font-size: 11px; line-height: 1.35; }
+
+/* Grid density slider */
+.grid-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 99px;
+    outline: none;
+    cursor: pointer;
+}
+.grid-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2563eb;
+    box-shadow: 0 1px 4px rgba(37,99,235,.4);
+    cursor: pointer;
+    transition: transform .1s, box-shadow .1s;
+}
+.grid-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 2px 8px rgba(37,99,235,.5);
+}
+.grid-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: #2563eb;
+    box-shadow: 0 1px 4px rgba(37,99,235,.4);
+    cursor: pointer;
+}

@@ -15,6 +15,13 @@
     "ebay_campid": "5339107427", "ebay_siteid": 3,
     "ebay_root_url": "https://www.ebay.co.uk"
   },
+  "US": {
+    "country": "US", "language": "EN", "currency": "$", "currency_schema": "USD",
+    "country_label": "United States",
+    "ebay_marketplace": "EBAY_US", "ebay_mkrid": "711-53200-19255-0",
+    "ebay_campid": "5339107427", "ebay_siteid": 0,
+    "ebay_root_url": "https://www.ebay.com"
+  },
   "FR": {
     "country": "FR", "language": "FR", "currency": "€", "currency_schema": "EUR",
     "country_label": "France",
@@ -44,53 +51,6 @@
     "ebay_root_url": "https://www.ebay.be"
   },
 
-  "antiques.localhost":    { "ref": "IE", "niche": "Antiques" },
-  "collections.localhost": { "ref": "IE", "niche": "collectables" },
-  "games.localhost":       { "ref": "IE", "niche": "games-and-toys" },
-  "sports.localhost":      { "ref": "IE", "niche": "sports" },
-  "leisure.localhost":     { "ref": "IE", "niche": "home-and-do-it-yourself" },
-  "vehicles.localhost":    { "ref": "IE", "niche": "cars" },
-  "minderlist.localhost":  "IE",
-
-  "antiques.ie":           { "ref": "IE", "niche": "Antiques" },
-  "collections.ie":        { "ref": "IE", "niche": "collectables" },
-  "games.ie":              { "ref": "IE", "niche": "games-and-toys" },
-  "sports.ie":             { "ref": "IE", "niche": "sports" },
-  "leisure.ie":            { "ref": "IE", "niche": "home-and-do-it-yourself" },
-  "vehicles.ie":           { "ref": "IE", "niche": "cars" },
-
-  "antiques.co.uk":        { "ref": "GB", "niche": "Antiques" },
-  "collections.co.uk":     { "ref": "GB", "niche": "collectables" },
-  "games.co.uk":           { "ref": "GB", "niche": "games-and-toys" },
-  "sports.co.uk":          { "ref": "GB", "niche": "sports" },
-  "leisure.co.uk":         { "ref": "GB", "niche": "home-and-do-it-yourself" },
-  "vehicles.co.uk":        { "ref": "GB", "niche": "cars" },
-
-  "antiques.fr":           { "ref": "FR", "niche": "Antiques" },
-  "collections.fr":        { "ref": "FR", "niche": "collectables" },
-  "games.fr":              { "ref": "FR", "niche": "games-and-toys" },
-  "sports.fr":             { "ref": "FR", "niche": "sports" },
-  "leisure.fr":            { "ref": "FR", "niche": "home-and-do-it-yourself" },
-  "vehicles.fr":           { "ref": "FR", "niche": "cars" },
-
-  "antiques.de":           { "ref": "DE", "niche": "Antiques" },
-  "collections.de":        { "ref": "DE", "niche": "collectables" },
-  "games.de":              { "ref": "DE", "niche": "games-and-toys" },
-  "sports.de":             { "ref": "DE", "niche": "sports" },
-  "leisure.de":            { "ref": "DE", "niche": "home-and-do-it-yourself" },
-  "vehicles.de":           { "ref": "DE", "niche": "cars" },
-
-  "antiques.it":           { "ref": "IT", "niche": "Antiques" },
-  "collections.it":        { "ref": "IT", "niche": "collectables" },
-  "games.it":              { "ref": "IT", "niche": "games-and-toys" },
-  "sports.it":             { "ref": "IT", "niche": "sports" },
-  "leisure.it":            { "ref": "IT", "niche": "home-and-do-it-yourself" },
-  "vehicles.it":           { "ref": "IT", "niche": "cars" },
-
-  "antiques.be":           { "ref": "BE", "niche": "Antiques" },
-  "collections.be":        { "ref": "BE", "niche": "collectables" },
-  "games.be":              { "ref": "BE", "niche": "games-and-toys" },
-  "sports.be":             { "ref": "BE", "niche": "sports" },
-  "leisure.be":            { "ref": "BE", "niche": "home-and-do-it-yourself" },
-  "vehicles.be":           { "ref": "BE", "niche": "cars" }
+  "bolsoverantiquescentre.co.uk": { "ref": "GB", "niche": "antiques" },
+  "antiques.localhost":    { "ref": "IE", "niche": "Antiques" }
 }

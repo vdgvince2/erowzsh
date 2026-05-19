@@ -341,13 +341,13 @@ function cs_keywords_exist(PDO $pdo, int $subNicheId, string $domain): bool
  * Injecte les blocs produits eBay dans le HTML.
  * Remplace <!-- PRODUCT_BLOCK_1 -->, _2, _3 par des grilles.
  */
-function cs_inject_product_blocks(string $html, array $products, string $currency = '£'): string
+function cs_inject_product_blocks(string $html, array $products, string $currency = '£', string $mkrid = '', string $campid = ''): string
 {
     $chunks = array_chunk($products, (int) ceil(count($products) / 3));
 
     for ($i = 1; $i <= 3; $i++) {
-        $block   = $chunks[$i - 1] ?? [];
-        $gridHtml = cs_render_product_grid($block, $currency);
+        $block    = $chunks[$i - 1] ?? [];
+        $gridHtml = cs_render_product_grid($block, $currency, $mkrid, $campid);
         $html     = str_replace("<!-- PRODUCT_BLOCK_{$i} -->", $gridHtml, $html);
     }
 
@@ -357,7 +357,7 @@ function cs_inject_product_blocks(string $html, array $products, string $currenc
 /**
  * Rendu HTML d'une grille de produits eBay.
  */
-function cs_render_product_grid(array $products, string $currency = '£'): string
+function cs_render_product_grid(array $products, string $currency = '£', string $mkrid = '', string $campid = ''): string
 {
     if (empty($products)) return '';
 
@@ -365,7 +365,12 @@ function cs_render_product_grid(array $products, string $currency = '£'): strin
     foreach ($products as $p) {
         $title    = htmlspecialchars($p['title'],     ENT_QUOTES, 'UTF-8');
         $imgUrl   = htmlspecialchars($p['image_url'], ENT_QUOTES, 'UTF-8');
-        $ebayUrl  = htmlspecialchars($p['ebay_url'],  ENT_QUOTES, 'UTF-8');
+        $rawUrl   = $p['ebay_url'];
+        if ($mkrid !== '' && $campid !== '') {
+            $sep     = (str_contains($rawUrl, '?')) ? '&' : '?';
+            $rawUrl .= $sep . 'mkcid=1&mkrid=' . urlencode($mkrid) . '&campid=' . urlencode($campid) . '&mkevt=1&toolid=10001';
+        }
+        $ebayUrl  = htmlspecialchars($rawUrl, ENT_QUOTES, 'UTF-8');
         $price    = number_format((float)$p['price'], 2);
         $cur      = htmlspecialchars($p['currency'] ?? $currency, ENT_QUOTES, 'UTF-8');
 

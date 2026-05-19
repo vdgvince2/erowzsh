@@ -106,7 +106,7 @@ function get_access_token(): string {
     return $json['access_token'];
 }
 
-function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 50, int $offset = 0, array $opts = []): array {
+function browse_search(string $q, string $market = 'EBAY_FR', int $limit = 100, int $offset = 0, array $opts = []): array {
 
     global $isLocal;
     $token = get_access_token();

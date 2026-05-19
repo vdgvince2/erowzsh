@@ -21,6 +21,11 @@ require_once __DIR__ . '/routing.php';
 $_sitesFile = __DIR__ . '/../sites.json';
 $_sites     = file_exists($_sitesFile) ? json_decode(file_get_contents($_sitesFile), true) : [];
 
+foreach (require __DIR__ . '/country-defaults.php' as $_cc => $_cd) {
+    if (!isset($_sites[$_cc])) $_sites[$_cc] = $_cd;
+}
+unset($_cc, $_cd);
+
 // Pour CLI : $currentDomain est déjà le code pays (IE, GB…) ou un domaine
 $_key   = $currentDomain;
 $_entry = $_sites[$_key] ?? null;

@@ -56,7 +56,8 @@ function rec_requested_slug(bool $isLocal): string
     if ($isLocal) {
         return trim($_GET['rslug'] ?? '', '/');
     }
-    return trim($_SERVER['REQUEST_URI'] ?? '/', '/');
+    $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
+    return trim($path, '/');
 }
 
 /**
@@ -83,6 +84,27 @@ $recBaseUrl  = rec_base_url($recoveredSite, $SERVER_Protocol, $portStr, $isLocal
 $recSiteId   = (int)$recoveredSite['id'];
 $recLang     = $recoveredSite['language'];
 $recNicheId  = $recoveredSite['niche_id'] ? (int)$recoveredSite['niche_id'] : null;
+
+// ── Debug (token protégé) ─────────────────────────────────────────────────────
+if (isset($_GET['_rdbg']) && $_GET['_rdbg'] === (getenv('RECOVER_API_TOKEN') ?: 'off')) {
+    header('Content-Type: text/plain; charset=utf-8');
+    echo "rawHost      : $rawHost\n";
+    echo "currentDomain: $currentDomain\n";
+    echo "countryCode  : $countryCode\n";
+    echo "nicheSlug    : $nicheSlug\n";
+    echo "recSiteId    : $recSiteId\n";
+    echo "recNicheId   : $recNicheId\n\n";
+
+    $_sitesDbg = json_decode(file_get_contents(__DIR__ . '/../sites.json'), true);
+    echo "json_last_error: " . json_last_error_msg() . "\n";
+    echo "sites.json key 'bolsoverantiquescentre.co.uk': ";
+    var_export($_sitesDbg['bolsoverantiquescentre.co.uk'] ?? 'KEY MISSING');
+    echo "\n";
+    echo "sites.json key 'GB': ";
+    var_export($_sitesDbg['GB'] ?? 'KEY MISSING');
+    echo "\n";
+    exit;
+}
 
 // ── 1a. Sitemap XML ───────────────────────────────────────────────────────────
 
@@ -273,7 +295,69 @@ if ($foundByPath) {
     exit;
 }
 
-// ── 5. Fallback → 301 homepage ────────────────────────────────────────────────
+// ── 5. Sous-niche du site lié ─────────────────────────────────────────────────
+// Si le slug correspond à une sous-niche de la niche liée, on sert sa homepage.
+
+if ($recNicheId) {
+    $stmtSN = $pdo->prepare('
+        SELECT sn.*, n.slug AS niche_slug FROM sub_niches sn
+        JOIN niches n ON n.id = sn.niche_id
+        WHERE sn.niche_id = ? AND sn.slug = ? LIMIT 1
+    ');
+    $stmtSN->execute([$recNicheId, $requestedSlug]);
+    $subNiche = $stmtSN->fetch();
+
+    if ($subNiche) {
+        // Charge les articles + nav pour la homepage sous-niche
+        $nicheSlug    = $subNiche['niche_slug'];
+        $subNicheSlug = $subNiche['slug'];
+        $articleSlug  = null;
+        $stmtNiche    = $pdo->prepare('SELECT * FROM niches WHERE id = ? LIMIT 1');
+        $stmtNiche->execute([$recNicheId]);
+        $niche        = $stmtNiche->fetch() ?: null;
+        $snArticles   = cs_get_articles_for_subniche($pdo, (int)$subNiche['id'], $currentDomain);
+        $subNiches    = cs_get_subniche_nav($pdo, $nicheSlug);
+        require __DIR__ . '/../templates/subniche-homepage.php';
+        exit;
+    }
+
+    // Tente aussi le niveau article : slug = subniche-article ou chemin à 2 segments
+    // ex: /antique-furniture/guide-buying-victorian-chairs
+    $rawUri      = trim($_SERVER['REQUEST_URI'] ?? '/', '/');
+    $uriSegments = array_values(array_filter(explode('/', parse_url('/' . $rawUri, PHP_URL_PATH) ?? '/')));
+    if (count($uriSegments) === 2) {
+        [$snSlug, $artSlug] = $uriSegments;
+        $stmtSN2 = $pdo->prepare('
+            SELECT sn.*, n.slug AS niche_slug FROM sub_niches sn
+            JOIN niches n ON n.id = sn.niche_id
+            WHERE sn.niche_id = ? AND sn.slug = ? LIMIT 1
+        ');
+        $stmtSN2->execute([$recNicheId, $snSlug]);
+        $subNiche2 = $stmtSN2->fetch();
+
+        if ($subNiche2) {
+            $nicheSlug    = $subNiche2['niche_slug'];
+            $subNicheSlug = $subNiche2['slug'];
+            $articleSlug  = $artSlug;
+            $stmtNiche2   = $pdo->prepare('SELECT * FROM niches WHERE id = ? LIMIT 1');
+            $stmtNiche2->execute([$recNicheId]);
+            $niche        = $stmtNiche2->fetch() ?: null;
+            $article      = cs_get_article_by_slug($pdo, $nicheSlug, $subNicheSlug, $currentDomain, $articleSlug);
+            if ($article) {
+                $products        = cs_get_article_products($pdo, $article['id']);
+                $relatedArticles = cs_get_articles_for_subniche($pdo, (int)$subNiche2['id'], $currentDomain, 6, $article['id']);
+                $subNiches       = cs_get_subniche_nav($pdo, $nicheSlug);
+                $subNiche        = $subNiche2;
+                $pageUrl         = $SERVER_PageFullURL ?? $recBaseUrl;
+                $marketPulse     = null;
+                require __DIR__ . '/../templates/article.php';
+                exit;
+            }
+        }
+    }
+}
+
+// ── 6. Fallback → 301 homepage ────────────────────────────────────────────────
 
 header('Location: ' . $recBaseUrl, true, 301);
 exit;
