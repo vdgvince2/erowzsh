@@ -10,7 +10,7 @@ $itemListElements = [];
 $i = 1;
 foreach ($products as $prod) {
     if ($prod['price'] == "") $prod['price'] = "10.00";
-    $photoURL = $rootDomain . $base . "image.php?url=" . base64_encode($prod['photo']);
+    $photoURL = $rootDomain . $base . "image.php?url=" . rawurlencode(base64_encode($prod['photo']));
     $prodUrl  = !empty($prod['url']) ? $prod['url'] : $SERVER_PageFullURL . '#' . $prod['id'];
 
     $itemListElements[] = [

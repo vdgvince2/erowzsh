@@ -9,7 +9,7 @@ declare(strict_types=1);
  *   image.php?url=<base64(url)>&sig=<base64(hmac_sha256(url, secret))>&q=82&webp=1
  */
 
-ini_set('display_errors', '0');
+//ini_set('display_errors', '0');
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: no-referrer');
 header('Access-Control-Allow-Origin: *');
@@ -169,8 +169,7 @@ function get_header(array $headers, string $key, ?string $def = null): ?string {
 $b64Url = $_GET['url'] ?? null;
 $b64Sig = $_GET['sig'] ?? null;
 $q      = isset($_GET['q']) ? max(60, min(100, (int)$_GET['q'])) : 82;
-$force  = isset($_GET['webp']) && $_GET['webp'] === '1';
-$preferWebp = $force || client_wants_webp();
+$preferWebp = false; // WebP via GD désactivé — trop fragile en mémoire
 
 // Vérif + récupération
 $srcUrl = check_signature_or_placeholder($b64Url, $b64Sig, $preferWebp, $q);

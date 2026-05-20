@@ -4,3 +4,4 @@ node_modules/
 cache/
 content-sites/.env
 content-sites/sites.json
+archive/logs/

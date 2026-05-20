@@ -19,7 +19,7 @@ ob_start();
 $noAds = true;
 
 require __DIR__ . '/scripts/crawler/ebay_browse_crawler.php'; 
-require __DIR__ . '/inc/functions-bargain.php'; 
+require_once __DIR__ . '/inc/functions-bargain.php';
 
 $pageTitle = $label_bargain_standard;
 

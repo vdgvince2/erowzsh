@@ -22,7 +22,7 @@
 
         <!-- Title + tagline + grid selector + related categories -->
         <div class="bg-white rounded-lg shadow px-4 py-3 mb-3">
-            <div class="flex flex-wrap items-start gap-3">
+            <div class="flex flex-wrap items-center gap-3">
                 <!-- H1 -->
                 <div class="flex-1 min-w-0">
                     <?php if (isset($matched)): ?>
@@ -32,7 +32,6 @@
                     <?php else: ?>
                     <h1 class="text-xl font-bold"><?= ucfirst($ebaySearchKeyword); ?></h1>
                     <?php endif; ?>
-                    <h2 class="text-sm text-gray-500 mt-0.5"><?=ucfirst($ebaySearchKeyword." ".$tagline);?></h2>
                 </div>
 
                 <!-- Grid density slider -->
@@ -54,6 +53,7 @@
                     <span id="cols-label" class="text-xs text-gray-500 w-4 text-right tabular-nums">4</span>
                 </div>
             </div>
+            <h2 class="text-sm text-gray-500 mt-1.5"><?=ucfirst($ebaySearchKeyword." ".$tagline);?></h2>
 
             <?php if (!empty($relatedCategories)): ?>
             <section class="mt-3">
@@ -68,6 +68,9 @@
             </section>
             <?php endif; ?>
         </div>
+
+        <!-- Filters bar -->
+        <?php require __DIR__ . '/inc/filters-bar.php'; ?>
 
         <!-- Top description -->
         <div class="mb-3 px-1">
@@ -104,11 +107,26 @@
 
             <!-- Image — no background, edge to edge -->
             <div class="relative overflow-hidden" style="padding-top:85%">
-                <img src="<?=$rootDomainForAssets;?>image.php?url=<?= base64_encode($prod['photo']) ?>"
+                <?php
+                $imgSrc = $rootDomainForAssets . 'image.php?url=' . rawurlencode(rtrim(base64_encode(trim($prod['photo'])), '='));
+                $placeholder = $rootDomainForAssets . 'assets/img/placeholder.svg';
+                if ($productIndex <= 4): ?>
+                <img src="<?= $imgSrc ?>"
                      alt="<?= $adTitle ?>"
                      class="absolute inset-0 w-full h-full object-cover object-center"
-                     fetchpriority="<?= $productIndex <= 12 ? 'high' : 'auto' ?>"
-                     width="200" height="200">
+                     fetchpriority="high"
+                     width="200" height="200"
+                     onerror="this.onerror=null;this.src='<?= $placeholder ?>'"
+                >
+                <?php else: ?>
+                <img src="<?= $placeholder ?>"
+                     data-src="<?= $imgSrc ?>"
+                     alt="<?= $adTitle ?>"
+                     class="absolute inset-0 w-full h-full object-cover object-center lazy-img"
+                     loading="lazy"
+                     width="200" height="200"
+                >
+                <?php endif; ?>
                 <?php if ($watchCount > 0): ?>
                 <span class="absolute top-1 left-1 bg-white/90 text-gray-700 text-[10px] font-semibold px-1.5 py-0.5 rounded-full leading-none flex items-center gap-0.5 shadow-sm">
                     <?= $watchCount ?> <span class="text-red-400">♥</span>
@@ -309,6 +327,48 @@
     <?php require __DIR__ . '/inc/footer.php'; ?>
     <?php require __DIR__ . '/inc/jsonld.php'; ?>
 
+    <!-- Lazy image loader — max 3 concurrent proxy requests -->
+    <script>
+    (function () {
+        var MAX = 3, active = 0, queue = [];
+        var placeholder = '<?= $rootDomainForAssets ?>assets/img/placeholder.svg';
+
+        function next() {
+            while (active < MAX && queue.length) {
+                var img = queue.shift();
+                var src = img.dataset.src;
+                delete img.dataset.src;
+                active++;
+                img.onload  = function () { active--; next(); };
+                img.onerror = function () { this.onerror = null; this.src = placeholder; active--; next(); };
+                img.src = src;
+            }
+        }
+
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting && e.target.dataset.src) {
+                        queue.push(e.target);
+                        io.unobserve(e.target);
+                        next();
+                    }
+                });
+            }, { rootMargin: '400px 0px' });
+
+            document.querySelectorAll('img.lazy-img').forEach(function (img) {
+                io.observe(img);
+            });
+        } else {
+            // Fallback sans IntersectionObserver : chargement direct mais sérialisé
+            document.querySelectorAll('img.lazy-img').forEach(function (img) {
+                queue.push(img);
+            });
+            next();
+        }
+    })();
+    </script>
+
     <!-- Grid density slider script -->
     <script>
     (function() {
@@ -317,10 +377,11 @@
         var label   = document.getElementById('cols-label');
         var key     = 'sh_grid_cols';
 
-        // Breakpoint-aware defaults: desktop ≥768px → 6, mobile → 4
-        var defaultCols = window.innerWidth >= 768 ? 6 : 4;
+        // Breakpoint-aware defaults: desktop ≥1024px → 8, tablet ≥768px → 6, mobile → 4
+        var w = window.innerWidth;
+        var defaultCols = w >= 1024 ? 8 : (w >= 768 ? 6 : 4);
         slider.min   = 2;
-        slider.max   = window.innerWidth >= 768 ? 8 : 6;
+        slider.max   = w >= 768 ? 8 : 4;
         slider.value = defaultCols;
 
         function applyGrid(n) {

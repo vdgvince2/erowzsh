@@ -796,7 +796,7 @@ function render_best_deals_strip(
                 <!-- Image -->
                 <div class="relative w-full bg-gray-50 flex items-center justify-center overflow-hidden"
                      style="min-height:180px;">
-                    <img src="<?= $rootDomainForAssets ?>image.php?url=<?= base64_encode($prod['photo']) ?>"
+                    <img src="<?= $rootDomainForAssets ?>image.php?url=<?= rawurlencode(base64_encode($prod['photo'])) ?>"
                          alt="<?= htmlspecialchars($prod['title_original'] ?? '', ENT_QUOTES) ?>"
                          class="w-full h-44 object-contain p-2" loading="lazy" width="200" height="176">
                     <?php if ($isLowest): ?>

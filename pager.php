@@ -7,7 +7,7 @@
 
 require __DIR__ . '/inc/config.php';
 require __DIR__ . '/inc/functions.php';
-require __DIR__ . '/inc/functions-bargain.php';
+require_once __DIR__ . '/inc/functions-bargain.php';
 
 
 /*****  TEST IF SUBDOMAIN   */
