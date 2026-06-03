@@ -21,7 +21,9 @@ $label_filters = "Appliquer les filtres";
 $sortingArray = array("Pertinence", "Prix + Livraison : du moins cher au plus cher", "Prix + Livraison : du plus cher au moins cher", "Temps restant : fin prochaine");
 $tagline = "d'occasion et petites annonces";
 $label_addtocart = "Ajouter au panier";
-$label_viewdetails = "Voir les détails sur eBay";
+$label_viewdetails    = "Voir les détails sur eBay";
+$label_listing_bin    = "Achat immédiat";
+$label_listing_auction = "Enchère";
 $label_related = "Recherches associées";
 $label_affiliate = "Ce site propose des offres liées à un partenariat rémunéré. Quand vous cliquez sur une annonce étiquettée \"#sponsored\", nous sommes susceptibles de toucher une commission sur la vente. Cela nous permet de garder ce site gratuit et de payer l'hébergement de celui-ci.";
 $label_bargain_topheader = "Les bonnes affaires près de chez moi!";
@@ -109,15 +111,36 @@ $label_cart_lastBrowsed_title = "Les derniers produits vus";
 $label_cart_search_title = "Démarrer une nouvelle recherche ici";
 
 /* HOMEPAGE */
-$label_hero_title = "Trouvez des bonnes affaires d’occasion qui ne coûtent pas un bras";
-$label_hero_subtitle = "Recherchez parmi des millions d’annonces sur notre réseau international. Réutilisez plus, gaspillez moins.";
+$label_hero_title         = "Trouvez des bonnes affaires d’occasion qui ne coûtent pas un bras";
+$label_hero_subtitle      = "Recherchez parmi des millions d’annonces sur notre réseau international. Réutilisez plus, gaspillez moins.";
+$label_hero_what_hunting  = "Vous chassez quoi aujourd’hui ?";
+$label_hero_pick_category = "Choisissez une catégorie — les meilleures affaires en direct sur eBay.";
 $label_search_placeholder = "Essayez : appareil photo vintage, tente, poussette…";
-$label_search_button = "Rechercher";
+$label_search_button      = "Rechercher";
 $label_popular_categories = "Catégories populaires";
-$label_no_categories = "Aucune catégorie trouvée.";
-$label_top20_title = "Top 20 des bonnes affaires du moment";
-$label_fallback_untitled = "Sans titre";
-$label_international_title = "Un réseau international";
+$label_no_categories      = "Aucune catégorie trouvée.";
+$label_top20_title        = "Top 20 des bonnes affaires du moment";
+$label_fallback_untitled  = "Sans titre";
+$label_live_deals         = "Affaires en direct —";
+$label_no_deals           = "Aucune affaire disponible pour l’instant. Réessayez dans quelques minutes.";
+$label_loading_deals      = "Chargement des affaires…";
+$label_see_all_deals      = "Voir toutes les affaires en";
+
+/* Features */
+$label_your_edge_title          = "Votre avantage sur les autres acheteurs";
+$label_feature_misspelled_title = "Annonces avec fautes de frappe";
+$label_feature_misspelled_desc  = "Les vendeurs qui font des fautes dans le titre reçoivent moins d’offres. On les trouve pour vous.";
+$label_feature_ending_title     = "Enchères qui se terminent";
+$label_feature_ending_desc      = "Voyez uniquement ce qui se clôture bientôt. Snipez les dernières minutes.";
+$label_feature_score_title      = "Bargain Score";
+$label_feature_score_desc       = "Chaque annonce notée de 0 à 100 : fiabilité vendeur, prix marché et urgence d’enchère.";
+$label_feature_try              = "Essayer";
+$label_filter_all               = "Toutes les offres";
+$label_filter_nobids            = "0 enchère";
+
+/* International */
+$label_international_title   = "Un réseau international";
+$label_international_tagline = "Trouvez des affaires dans 7 pays — mis à jour toutes les heures.";
 $label_international_p1 = "eRowz est un agrégateur mondial de petites annonces qui collecte les annonces de centaines de marketplaces et de sites locaux sur une plateforme unique. Il permet de rechercher des objets d’occasion, des voitures, de l’immobilier, des emplois et plus encore à travers plusieurs sources simultanément. Au lieu de visiter chaque site séparément, Erowz centralise les données pour une navigation plus rapide et efficace. La plateforme explore et met à jour en continu les annonces pour garantir leur fraîcheur et leur exactitude. Les utilisateurs peuvent filtrer les résultats par localisation, prix, catégorie et mots-clés pour trouver exactement ce qu’ils recherchent. Chaque annonce renvoie directement vers la source d’origine, assurant transparence et confiance. Erowz utilise des algorithmes intelligents pour supprimer les doublons et harmoniser les données entre les sites. La plateforme prend en charge plusieurs langues et pays, s’adaptant aux marchés locaux du monde entier. Elle est conçue à la fois pour les utilisateurs finaux et les entreprises cherchant des insights basés sur les données du secteur des petites annonces. En bref, Erowz rend la découverte d’opportunités d’occasion sur le web plus rapide, plus intelligente et plus simple.";
 $label_country_france = "France";
 $label_country_italy = "Italie";
@@ -134,6 +157,18 @@ $label_last_news = "Les dernières actus";
 $label_readmore = "Lire l'article";
 $label_publishedon = "Publié le";
 $label_checkitnow = "Voir plus";
+
+/* REVIEWS */
+$label_reviews_title    = "Ce que disent nos utilisateurs";
+$label_reviews_subtitle = "Des milliers d'acheteurs satisfaits à travers l'Europe";
+$label_reviews = [
+    ['name' => 'Marie L.',   'location' => 'France',         'stars' => 5, 'text' => "J'ai trouvé un vélo pour mon fils en quelques minutes. Excellent outil, je le recommande vivement !"],
+    ['name' => 'Thomas B.',  'location' => 'Allemagne',      'stars' => 5, 'text' => "J'ai économisé plus de 200 € sur une perceuse professionnelle. Le système de score est vraiment utile."],
+    ['name' => 'Aoife R.',   'location' => 'Irlande',        'stars' => 5, 'text' => "Parfait pour dénicher de bonnes affaires. Bien moins cher qu'en neuf, je reviendrai !"],
+    ['name' => 'Laura V.',   'location' => 'Belgique',       'stars' => 5, 'text' => "Interface claire et résultats pertinents. Trouvé un appareil photo vintage à moitié prix."],
+    ['name' => 'James O.',   'location' => 'Irlande',        'stars' => 4, 'text' => "Très bonne plateforme. Le fait de couvrir autant de sites en même temps est un vrai gain de temps."],
+    ['name' => 'Elena P.',   'location' => 'Italie',         'stars' => 5, 'text' => "Outil incroyable pour trouver des affaires. Le réseau international fait vraiment la différence."],
+];
 
 // Error page
 $label_nokwfound = "Aucun mot-clé trouvé";

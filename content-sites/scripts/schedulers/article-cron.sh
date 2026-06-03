@@ -17,7 +17,8 @@ echo "========================================"
 echo "[article-cron] ${LOG_DATE}"
 echo "========================================"
 
-COUNTRIES=("GB" "FR" "DE" "IT" "BE" "IE")
+# en pause pour l'instant : "FR" "DE" "IT" "BE" "IE"
+COUNTRIES=("GB")
 
 for CC in "${COUNTRIES[@]}"; do
     echo ""

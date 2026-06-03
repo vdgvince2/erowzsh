@@ -25,7 +25,9 @@
 npx tailwindcss -i /Applications/MAMP/htdocs/SH/archive/input.css -o /Applications/MAMP/htdocs/SH/assets/tailwind.css --minify
 
 # configure a subdomain
-0. charger les mots-clés dans la DB via insertKeyword.php + lancer le crawler pageAccessorSubDom.php
+0. mot-clé dans le répertoire pays : /assets/JSON/ > subdomain
+0. charger les mots-clés dans la DB via /opt/plesk/php/8.3/bin/php insertKeyword.php FR 
+0. lancer le crawler pageAccessorSubDom.php
 1. in plesk, create the wildcard subdomain *.for-sale.ie
 2. dans documentRoot du * , laisser httpdocs
 3. configurer le cronTAB de pageAccessorSubDom.php

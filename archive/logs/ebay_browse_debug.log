@@ -64,3 +64,12 @@ IE >> 2026-05-20 13:49:57 Array
 )
 
 IE >> 2026-05-20 13:49:59  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=papillon%20dog&limit=50&offset=0&fieldgroups=EXTENDED%2CMATCHING_ITEMS&auto_correct=KEYWORD&filter=deliveryCountry%3AIE | filter: deliveryCountry:IE
+IE >> 2026-06-02 15:28:58  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=vintage&limit=50&offset=0&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE | filter: deliveryCountry:IE
+IE >> 2026-06-03 11:31:04  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Antiques&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE&sort=endingSoonest | filter: deliveryCountry:IE
+IE >> 2026-06-03 11:31:12  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Art&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE&sort=endingSoonest | filter: deliveryCountry:IE
+IE >> 2026-06-03 11:37:46  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Antiques&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE&sort=endingSoonest | filter: deliveryCountry:IE
+IE >> 2026-06-03 11:38:10  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Computers%2FTablets%20%26%20Networking&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE&sort=endingSoonest | filter: deliveryCountry:IE
+IE >> 2026-06-03 11:38:18  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Cameras%20%26%20Photography&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE&sort=endingSoonest | filter: deliveryCountry:IE
+IE >> 2026-06-03 11:38:25  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Clothes%2C%20Shoes%20%26%20Accessories&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE&sort=endingSoonest | filter: deliveryCountry:IE
+IE >> 2026-06-03 13:23:06  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Antiques&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE&sort=endingSoonest | filter: deliveryCountry:IE
+IE >> 2026-06-03 13:23:25  URL: https://api.ebay.com/buy/browse/v1/item_summary/search?q=Antiques&limit=30&fieldgroups=EXTENDED%2CMATCHING_ITEMS&filter=deliveryCountry%3AIE%2CbuyingOptions%3A%7BAUCTION%7D%2CbidCount%3A%5B0..0%5D&sort=endingSoonest | filter: deliveryCountry:IE,buyingOptions:{AUCTION},bidCount:[0..0]

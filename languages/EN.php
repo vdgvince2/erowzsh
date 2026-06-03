@@ -22,7 +22,9 @@ $label_filters = "Apply Filters";
 $sortingArray = array("Best Match", "Price + Shipping: lowest first", "Price + Shipping: highest first", "Time: ending soonest");
 $tagline = "for sale on Ireland's largest auction and classifieds sites";
 $label_addtocart = "Add to cart";
-$label_viewdetails = "View details on eBay";
+$label_viewdetails    = "View details on eBay";
+$label_listing_bin    = "Buy It Now";
+$label_listing_auction = "Auction";
 $label_related = "Related searches";
 $label_affiliate = "This website features offers related to a paid partnership. When you click on an ad labeled \"#sponsored\", we may earn a commission from the sale. This helps us keep the site free and cover its hosting costs.";
 $label_bargain_topheader = "Great deals near me!";
@@ -110,16 +112,37 @@ $label_cart_search_title = "Start a new search here";
 
 
 /* HOMEPAGE */
-$label_hero_title = "Find second-hand deals that don’t cost the Earth";
-$label_hero_subtitle = "Search millions of listings across our international network. Reuse more, waste less.";
+$label_hero_title        = "Find second-hand deals that don’t cost the Earth";
+$label_hero_subtitle     = "Search millions of listings across our international network. Reuse more, waste less.";
+$label_hero_what_hunting = "What are you hunting today?";
+$label_hero_pick_category = "Pick a category — see the best live deals on eBay right now.";
 $label_search_placeholder = "Try: vintage camera, tent, stroller…";
-$label_search_button = "Search";
+$label_search_button     = "Search";
 $label_popular_categories = "Popular categories";
-$label_no_categories = "No categories found.";
-$label_top20_title = "Top 20 deals right now";
+$label_no_categories     = "No categories found.";
+$label_top20_title       = "Top 20 deals right now";
 $label_fallback_untitled = "Untitled";
-$label_international_title = "An International Network";
-$label_international_p1 = "Erowz is a global classifieds aggregator that collects listings from hundreds of marketplaces and local ad sites into one unified platform. Check the best bargains at <a href='https://www.baycrazy.net'>BayCrazy.net</a> !! It allows users to search for second-hand items, cars, real estate, jobs, and more across multiple sources simultaneously. Instead of visiting each classifieds site separately, Erowz centralizes the data for faster and more efficient browsing. The platform continuously crawls and updates listings to ensure freshness and accuracy. Users can filter results by location, price, category, and keywords to find exactly what they’re looking for. Each listing links directly to the original source, ensuring transparency and trust. Erowz uses intelligent algorithms to remove duplicates and standardize data across diverse websites. The platform supports multiple languages and countries, adapting to local markets worldwide. It’s designed for both end users and businesses seeking data-driven insights from the classifieds ecosystem. In short, Erowz makes discovering second-hand opportunities on the web faster, smarter, and simpler.";
+$label_live_deals        = "Live deals —";
+$label_no_deals          = "No live deals right now. Try again in a few minutes.";
+$label_loading_deals     = "Loading live deals…";
+$label_see_all_deals     = "See all deals in";
+
+/* Homepage — feature education */
+$label_your_edge_title         = "Your edge over other buyers";
+$label_feature_misspelled_title = "Misspelled deals";
+$label_feature_misspelled_desc  = "Sellers who typo their listing title get far fewer bids. We find them for you.";
+$label_feature_ending_title     = "Ending auctions";
+$label_feature_ending_desc      = "See only what’s closing soon. Snipe the last minutes of eBay auctions.";
+$label_feature_score_title      = "Bargain Score";
+$label_feature_score_desc       = "Every listing rated 0–100 for seller trust, price vs. market & auction urgency.";
+$label_feature_try              = "Try it";
+$label_filter_all               = "All deals";
+$label_filter_nobids            = "0 bids yet";
+
+/* International network */
+$label_international_title   = "An International Network";
+$label_international_tagline = "Find deals across 7 countries — updated every hour.";
+$label_international_p1 = "Erowz is a global classifieds aggregator that collects listings from hundreds of marketplaces and local ad sites into one unified platform. It allows users to search for second-hand items, cars, real estate, jobs, and more across multiple sources simultaneously. Instead of visiting each classifieds site separately, Erowz centralizes the data for faster and more efficient browsing. The platform continuously crawls and updates listings to ensure freshness and accuracy. Users can filter results by location, price, category, and keywords to find exactly what they’re looking for. Each listing links directly to the original source, ensuring transparency and trust. Erowz uses intelligent algorithms to remove duplicates and standardize data across diverse websites. The platform supports multiple languages and countries, adapting to local markets worldwide. It’s designed for both end users and businesses seeking data-driven insights from the classifieds ecosystem. In short, Erowz makes discovering second-hand opportunities on the web faster, smarter, and simpler.";
 $label_country_france = "France";
 $label_country_italy = "Italy";
 $label_country_germany = "Germany";
@@ -135,6 +158,18 @@ $label_last_news = "Latest news";
 $label_readmore = "Read the article";
 $label_publishedon = "Published on";
 $label_checkitnow = "Check it now";
+
+/* REVIEWS */
+$label_reviews_title    = "What our users say";
+$label_reviews_subtitle = "Thousands of satisfied buyers across Europe";
+$label_reviews = [
+    ['name' => 'Sarah M.',   'location' => 'United Kingdom', 'stars' => 5, 'text' => 'Found my vintage camera for half the price I expected. The search is fast and listings are always fresh.'],
+    ['name' => 'Thomas B.',  'location' => 'Germany',        'stars' => 5, 'text' => 'Saved over €200 on a professional drill press. The bargain scoring system is genuinely useful.'],
+    ['name' => 'Aoife R.',   'location' => 'Ireland',        'stars' => 5, 'text' => 'Brilliant for finding second-hand bargains. So much cheaper than buying new — highly recommend!'],
+    ['name' => 'Laura V.',   'location' => 'Belgium',        'stars' => 5, 'text' => 'Interface is clear and results are spot-on. Found a quality kids\' bike in under 5 minutes.'],
+    ['name' => 'James O.',   'location' => 'Ireland',        'stars' => 4, 'text' => 'Great platform for second-hand goods. Covers so many sites at once, saves a lot of time.'],
+    ['name' => 'Elena P.',   'location' => 'Italy',          'stars' => 5, 'text' => 'Incredible tool for finding deals. The international network means I always find what I need.'],
+];
 
 // Error page
 $label_nokwfound = "No keyword found";

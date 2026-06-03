@@ -21,7 +21,9 @@ $label_filters = "Filter anwenden";
 $sortingArray = array("Relevanz", "Preis + Versand: vom günstigsten zum teuersten", "Preis + Versand: vom teuersten zum günstigsten", "Verbleibende Zeit: endet bald");
 $tagline = "gebraucht und Kleinanzeigen";
 $label_addtocart = "In den Warenkorb";
-$label_viewdetails = "Details ansehen auf eBay";
+$label_viewdetails    = "Details ansehen auf eBay";
+$label_listing_bin    = "Sofort-Kaufen";
+$label_listing_auction = "Auktion";
 $label_related = "Ähnliche Suchanfragen";
 $label_affiliate = "Diese Website bietet Angebote im Zusammenhang mit einer bezahlten Partnerschaft an. Wenn du auf eine mit \"#sponsored\" gekennzeichnete Anzeige klickst, erhalten wir möglicherweise eine Verkaufsprovision. So können wir die Seite kostenlos halten und die Hosting-Kosten decken.";
 $label_bargain_topheader = "Tolle Angebote in meiner Nähe!";
@@ -119,15 +121,32 @@ $label_cart_search_title = "Hier eine neue Suche starten";
 
 
 /* HOMEPAGE */
-$label_hero_title = "Finde großartige Gebrauchtangebote, die dich nichts kosten";
-$label_hero_subtitle = "Durchsuche Millionen von Anzeigen auf unserem internationalen Netzwerk. Wiederverwenden statt verschwenden.";
+$label_hero_title         = "Finde großartige Gebrauchtangebote, die dich nichts kosten";
+$label_hero_subtitle      = "Durchsuche Millionen von Anzeigen auf unserem internationalen Netzwerk. Wiederverwenden statt verschwenden.";
+$label_hero_what_hunting  = "Was suchst du heute?";
+$label_hero_pick_category = "Wähle eine Kategorie – die besten Live-Angebote auf eBay.";
 $label_search_placeholder = "Versuche: Vintage-Kamera, Zelt, Kinderwagen…";
-$label_search_button = "Suchen";
+$label_search_button      = "Suchen";
 $label_popular_categories = "Beliebte Kategorien";
-$label_no_categories = "Keine Kategorie gefunden.";
-$label_top20_title = "Top 20 der aktuellen Schnäppchen";
-$label_fallback_untitled = "Ohne Titel";
-$label_international_title = "Ein internationales Netzwerk";
+$label_no_categories      = "Keine Kategorie gefunden.";
+$label_top20_title        = "Top 20 der aktuellen Schnäppchen";
+$label_fallback_untitled  = "Ohne Titel";
+$label_live_deals         = "Live-Angebote —";
+$label_no_deals           = "Gerade keine Angebote. Versuche es in ein paar Minuten erneut.";
+$label_loading_deals      = "Angebote werden geladen…";
+$label_see_all_deals      = "Alle Angebote in";
+$label_your_edge_title          = "Dein Vorteil gegenüber anderen Käufern";
+$label_feature_misspelled_title = "Tippfehler-Angebote";
+$label_feature_misspelled_desc  = "Verkäufer mit Tippfehlern im Titel bekommen deutlich weniger Gebote. Wir finden sie für dich.";
+$label_feature_ending_title     = "Auktionen mit Ablauf";
+$label_feature_ending_desc      = "Sieh nur, was bald endet. Snipen in letzter Minute.";
+$label_feature_score_title      = "Schnäppchen-Score";
+$label_feature_score_desc       = "Jedes Angebot wird von 0 bis 100 bewertet: Verkäufervertrauen, Preis und Dringlichkeit.";
+$label_feature_try              = "Ausprobieren";
+$label_filter_all               = "Alle Angebote";
+$label_filter_nobids            = "0 Gebote";
+$label_international_title      = "Ein internationales Netzwerk";
+$label_international_tagline    = "Finde Angebote in 7 Ländern – stündlich aktualisiert.";
 $label_international_p1 = "Erowz ist ein globaler Aggregator für Kleinanzeigen, der Inserate von Hunderten von Marktplätzen und lokalen Websites auf einer einzigen Plattform zusammenführt. Er ermöglicht die gleichzeitige Suche nach Gebrauchtwaren, Autos, Immobilien, Jobs und mehr aus verschiedenen Quellen. Anstatt jede Website einzeln zu besuchen, zentralisiert Erowz die Daten für ein schnelleres und effizienteres Browsen. Die Plattform durchsucht und aktualisiert ständig Anzeigen, um ihre Aktualität und Genauigkeit zu gewährleisten. Benutzer können die Ergebnisse nach Standort, Preis, Kategorie und Schlüsselwörtern filtern, um genau das zu finden, was sie suchen. Jede Anzeige verweist direkt auf die Originalquelle, was Transparenz und Vertrauen schafft. Erowz verwendet intelligente Algorithmen, um Duplikate zu entfernen und Daten zwischen den Websites zu harmonisieren. Die Plattform unterstützt mehrere Sprachen und Länder und passt sich lokalen Märkten weltweit an. Sie ist sowohl für Endnutzer als auch für Unternehmen konzipiert, die datengestützte Erkenntnisse aus dem Kleinanzeigenmarkt suchen. Kurz gesagt, Erowz macht die Entdeckung von Gebrauchtmöglichkeiten im Web schneller, intelligenter und einfacher.";
 $label_country_france = "Frankreich";
 $label_country_italy = "Italien";
@@ -144,6 +163,18 @@ $label_last_news = "Neueste Nachrichten";
 $label_readmore = "Lesen Sie den Artikel";
 $label_publishedon = "Veröffentlicht am";
 $label_checkitnow = "Jetzt ansehen";
+
+/* REVIEWS */
+$label_reviews_title    = "Was unsere Nutzer sagen";
+$label_reviews_subtitle = "Tausende zufriedene Käufer in ganz Europa";
+$label_reviews = [
+    ['name' => 'Thomas B.',  'location' => 'Deutschland',    'stars' => 5, 'text' => 'Über 200 € bei einer professionellen Standbohrmaschine gespart. Das Bewertungssystem ist wirklich hilfreich.'],
+    ['name' => 'Marie L.',   'location' => 'Frankreich',     'stars' => 5, 'text' => 'Habe in wenigen Minuten ein Fahrrad für meinen Sohn gefunden. Tolles Werkzeug, sehr empfehlenswert!'],
+    ['name' => 'Laura V.',   'location' => 'Belgien',        'stars' => 5, 'text' => 'Übersichtliche Oberfläche und relevante Ergebnisse. Vintage-Kamera zum halben Preis gefunden.'],
+    ['name' => 'Aoife R.',   'location' => 'Irland',         'stars' => 5, 'text' => 'Perfekt für Schnäppchen. Viel günstiger als neu kaufen — ich komme immer wieder!'],
+    ['name' => 'James O.',   'location' => 'Irland',         'stars' => 4, 'text' => 'Sehr gute Plattform. So viele Seiten gleichzeitig zu durchsuchen spart enorm viel Zeit.'],
+    ['name' => 'Elena P.',   'location' => 'Italien',        'stars' => 5, 'text' => 'Unglaubliches Tool für Schnäppchenjäger. Das internationale Netzwerk macht wirklich den Unterschied.'],
+];
 
 // Error page
 $label_nokwfound = "Kein Schlüsselwort gefunden";

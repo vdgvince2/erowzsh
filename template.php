@@ -6,22 +6,12 @@
 <?php require __DIR__ . '/inc/head-scripts.php'; ?>
 <body>
 <?php require __DIR__ . '/inc/header.php'; ?>
-    <!-- Breadcrumbs -->
-    <div class="container mx-auto px-4 py-3 text-sm">
-        <div class="flex items-center space-x-2 text-gray-600">
-            <a href="<?=$rootDomain.$base;?>" class="hover:text-blue-600"><?=$breadcrumb_home;?></a>
-            <span>/</span>
-            <span class="maxHeightLine"><?php if(isset($breadcrumbLink)) echo $breadcrumbLink; else echo $breadcrumb_all;?></span>
-            <span>/</span>
-            <span class="font-medium maxHeightLine"><?=ucfirst($pageTitle);?></span>
-        </div>
-    </div>
 
     <!-- Main Content — full width -->
     <div class="container mx-auto px-2 sm:px-4">
 
         <!-- Title + tagline + grid selector + related categories -->
-        <div class="bg-white rounded-lg shadow px-4 py-3 mb-3">
+        <div class="rounded-lg px-4 py-3 mb-3">
             <div class="flex flex-wrap items-center gap-3">
                 <!-- H1 -->
                 <div class="flex-1 min-w-0">
@@ -53,7 +43,16 @@
                     <span id="cols-label" class="text-xs text-gray-500 w-4 text-right tabular-nums">4</span>
                 </div>
             </div>
-            <h2 class="text-sm text-gray-500 mt-1.5"><?=ucfirst($ebaySearchKeyword." ".$tagline);?></h2>
+            <h2 class="text-sm text-gray-500 mt-1"><?=ucfirst($ebaySearchKeyword." ".$tagline);?></h2>
+
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-1 text-xs text-gray-400 mt-1">
+                <a href="<?=$rootDomain.$base;?>" class="hover:text-blue-500"><?=$breadcrumb_home;?></a>
+                <span>/</span>
+                <span class="maxHeightLine"><?php if(isset($breadcrumbLink)) echo $breadcrumbLink; else echo $breadcrumb_all;?></span>
+                <span>/</span>
+                <span class="text-gray-500 maxHeightLine"><?=ucfirst($pageTitle);?></span>
+            </div>
 
             <?php if (!empty($relatedCategories)): ?>
             <section class="mt-3">
@@ -141,7 +140,9 @@
                 </p>
                 <p class="text-[11px] sm:text-xs leading-none">
                     <strong class="text-gray-900"><?=$currency;?><?= htmlspecialchars($prod['price'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></strong>
-                    <span class="text-gray-400 text-[10px]"> · Buy It Now</span>
+                    <span class="text-[10px] <?= !empty($prod['is_auction']) ? 'text-orange-500' : 'text-gray-400' ?>">
+                        · <?= !empty($prod['is_auction']) ? htmlspecialchars($label_listing_auction, ENT_QUOTES, 'UTF-8') : htmlspecialchars($label_listing_bin, ENT_QUOTES, 'UTF-8') ?>
+                    </span>
                 </p>
                 <span class="block w-full bg-blue-500 text-white text-[10px] sm:text-xs font-semibold py-1 rounded text-center leading-tight">
                     &#187; <?= $label_viewdetails ?? 'See on eBay' ?>

@@ -21,7 +21,9 @@ $label_filters = "Applica filtri";
 $sortingArray = array("Rilevanza", "Prezzo + Spedizione: dal meno caro al più caro", "Prezzo + Spedizione: dal più caro al meno caro", "Tempo rimanente: fine prossima");
 $tagline = "usato e annunci";
 $label_addtocart = "Aggiungi al carrello";
-$label_viewdetails = "Vedi dettagli su eBay";
+$label_viewdetails    = "Vedi dettagli su eBay";
+$label_listing_bin    = "Compralo Subito";
+$label_listing_auction = "Asta";
 $label_related = "Ricerche correlate";
 $label_affiliate = "Questo sito propone offerte legate a una collaborazione retribuita. Quando clicchi su un annuncio etichettato \"#sponsored\", potremmo ricevere una commissione sulla vendita. Questo ci permette di mantenere il sito gratuito e di coprire i costi di hosting.";
 
@@ -123,15 +125,32 @@ $label_subscription_thankyou = "Grazie per la tua iscrizione.";
 
 
 /* HOMEPAGE */
-$label_hero_title = "Trova grandi affari sull’usato senza spendere una fortuna";
-$label_hero_subtitle = "Cerca tra milioni di annunci sul nostro network internazionale. Riusa di più, spreca di meno.";
+$label_hero_title         = "Trova grandi affari sull’usato senza spendere una fortuna";
+$label_hero_subtitle      = "Cerca tra milioni di annunci sul nostro network internazionale. Riusa di più, spreca di meno.";
+$label_hero_what_hunting  = "Cosa stai cacciando oggi?";
+$label_hero_pick_category = "Scegli una categoria — le migliori offerte eBay in tempo reale.";
 $label_search_placeholder = "Prova: fotocamera vintage, tenda, passeggino…";
-$label_search_button = "Cerca";
+$label_search_button      = "Cerca";
 $label_popular_categories = "Categorie popolari";
-$label_no_categories = "Nessuna categoria trovata.";
-$label_top20_title = "Top 20 delle migliori offerte del momento";
-$label_fallback_untitled = "Senza titolo";
-$label_international_title = "Una rete internazionale";
+$label_no_categories      = "Nessuna categoria trovata.";
+$label_top20_title        = "Top 20 delle migliori offerte del momento";
+$label_fallback_untitled  = "Senza titolo";
+$label_live_deals         = "Offerte in diretta —";
+$label_no_deals           = "Nessuna offerta disponibile al momento. Riprova tra qualche minuto.";
+$label_loading_deals      = "Caricamento offerte…";
+$label_see_all_deals      = "Vedi tutte le offerte in";
+$label_your_edge_title          = "Il tuo vantaggio sugli altri acquirenti";
+$label_feature_misspelled_title = "Annunci con errori di battitura";
+$label_feature_misspelled_desc  = "I venditori che fanno errori nel titolo ricevono meno offerte. Le troviamo per te.";
+$label_feature_ending_title     = "Aste in scadenza";
+$label_feature_ending_desc      = "Vedi solo ciò che sta per chiudersi. Fai il tuo snipe finale.";
+$label_feature_score_title      = "Bargain Score";
+$label_feature_score_desc       = "Ogni annuncio valutato da 0 a 100: affidabilità venditore, prezzo e urgenza asta.";
+$label_feature_try              = "Prova";
+$label_filter_all               = "Tutte le offerte";
+$label_filter_nobids            = "0 offerte";
+$label_international_title      = "Una rete internazionale";
+$label_international_tagline    = "Trova offerte in 7 paesi — aggiornate ogni ora.";
 $label_international_p1 = "Erowz è un aggregatore globale di annunci che raccoglie inserzioni da centinaia di marketplace e siti locali su un’unica piattaforma. Permette di cercare oggetti usati, auto, immobili, lavoro e altro ancora da più fonti contemporaneamente. Invece di visitare ogni sito separatamente, Erowz centralizza i dati per una navigazione più rapida ed efficiente. La piattaforma esplora e aggiorna costantemente gli annunci per garantirne la freschezza e l’accuratezza. Gli utenti possono filtrare i risultati per posizione, prezzo, categoria e parole chiave per trovare esattamente ciò che cercano. Ogni annuncio rimanda direttamente alla fonte originale, garantendo trasparenza e fiducia. Erowz utilizza algoritmi intelligenti per eliminare i duplicati e armonizzare i dati tra i siti. La piattaforma supporta più lingue e paesi, adattandosi ai mercati locali di tutto il mondo. È pensata sia per gli utenti finali sia per le aziende che cercano insight basati sui dati del settore degli annunci. In breve, Erowz rende la scoperta di opportunità di seconda mano sul web più veloce, più intelligente e più semplice.";
 $label_country_france = "Francia";
 $label_country_italy = "Italia";
@@ -145,6 +164,18 @@ $label_country_argentina = "Argentina";
 $label_country_mexico = "Messico";
 $label_country_belgium = "Belgio";
 $label_last_news = "Ultime notizie";
+
+/* REVIEWS */
+$label_reviews_title    = "Cosa dicono i nostri utenti";
+$label_reviews_subtitle = "Migliaia di acquirenti soddisfatti in tutta Europa";
+$label_reviews = [
+    ['name' => 'Elena P.',   'location' => 'Italia',         'stars' => 5, 'text' => "Strumento incredibile per trovare offerte. La rete internazionale fa davvero la differenza."],
+    ['name' => 'Thomas B.',  'location' => 'Germania',       'stars' => 5, 'text' => "Ho risparmiato oltre 200 € su una trapano a colonna professionale. Il sistema di punteggio è davvero utile."],
+    ['name' => 'Marie L.',   'location' => 'Francia',        'stars' => 5, 'text' => "Ho trovato una bicicletta per mio figlio in pochi minuti. Ottimo strumento, lo consiglio vivamente!"],
+    ['name' => 'Laura V.',   'location' => 'Belgio',         'stars' => 5, 'text' => "Interfaccia chiara e risultati pertinenti. Trovata una macchina fotografica vintage a metà prezzo."],
+    ['name' => 'Aoife R.',   'location' => 'Irlanda',        'stars' => 5, 'text' => "Perfetto per trovare affari di seconda mano. Molto più economico del nuovo, tornerò sicuramente!"],
+    ['name' => 'James O.',   'location' => 'Irlanda',        'stars' => 4, 'text' => "Ottima piattaforma. Cercare su tanti siti contemporaneamente fa risparmiare un sacco di tempo."],
+];
 
 // Error page
 $label_nokwfound = "Nessuna parola chiave trovata";
